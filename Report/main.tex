@@ -1,0 +1,68 @@
+\documentclass[a4paper]{report}
+
+\title{Master
+    \begin{center}
+        \textsc{Large and Heavily Armored Warships}
+    \end{center}
+    \begin{center}
+        {\normalsize 
+        Some text
+        } \\
+    \end{center}
+}
+
+\author{Even Stene, Marius Nedal Glittum}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{colortbl}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,%
+    citecolor=black,%
+    filecolor=black,%
+    linkcolor=black,%
+    urlcolor=black
+}
+
+\begin{document}
+
+\maketitle
+\pagenumbering{roman}
+
+\input{Abstract}
+
+\tableofcontents
+
+\clearpage
+\pagenumbering{arabic} 
+
+
+\input{Introduction}
+
+\input{Drivers}
+
+\input{Stakeholders}
+
+\input{Viewpoint}
+
+\input{Tactics}
+
+\input{Patterns}
+
+\input{Views}
+
+\input{ViewConsistency}
+
+\input{Rationale}
+
+\input{Issues}
+
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\input{Changes}
+
+\end{document}
