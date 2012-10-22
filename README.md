@@ -4,6 +4,15 @@ Master in progress
 Skrevet av Even Stene og Marius Nedal Glittum
 
 ## TODO
+
+Møte med Monica 22.10 : 
+- Brukerhistorier : For å se hva vi trenger av data og hvordan det skal brukes til refleksjon. 
+2/3 scenarios: Bruk av verktøyet under retrospektive møter(1 / 2 ukers). Bruk av verktøyet under en workshop etter faget er ferdig. Kanskje også som et daglig verktøy?
+- Sjekk ut TRAC igjen og se om Github virkelig er det beste alternativet(ofc it is)
+- Lag et skjelett av rapporten så vi vet hvordan vi ligger an der. 
+- Tenke på github , er det noe for skolen å bruke?
+
+
 Fremdriftsplan ligger på gdocs. Skal ha en fungerende prototype innen 15.desember
 
 Vi ønsker å benytte GitHub som integrasjon, da GitHub har et stort og forholdsvis enkelt API å forholde seg til. 
