@@ -1,0 +1,35 @@
+\chapter{Peaceful Banana Application}
+\label{peacefulBananaApplication}
+Peaceful Banana integrates with Github, collecting the most relevant data for reflection use. 
+\section{What is it?}
+The prototype will be a tool supporting reflection. The tool will integrate with Github, which features version-tracking support and several useful tools for version control. The tool will not provide the same possibilities already found on Github, but integrate with it using the existing data and provide an additional layer of features specific for aiding reflection for the duration of an agile project.
+
+\section{What does it do?}
+
+\section{Main goal}
+
+\section{Functionality}
+
+Reflection directed functionality:
+\begin{itemize}
+\item Collecting data - How a user can retrieve data and annotate it. 
+\item Sharing data - How users can work together in groups to collaborate with data. 
+\item Reflection triggers - Functionality developed specifically for helping users reflect on their work.
+\end{itemize}
+
+\subsection{Authentication}
+The application will feature an independent authentication, with the possibility of getting access to data from Github by using OAUTH2 tokens. When the user first uses the tool, he will be asked to authenticate with Githubs authentication page asking the user to log in and authorize the PeacefulBanana tool. When this is done the tool receives a token it can use on behalf of the user to retrieve data from Github. The token is stored in a secure database and linked with the user logged in at the time. 
+
+\subsection{Reflection triggers}
+\paragraph{Scaffolded notes}\mbox{}\\
+Tool should provide the ability to take notes but in a scaffolded way. It should not be possible to make too general notes. The tool will provide this through coupling with certain elements in the milestones. This will make notes connected to a certain commit or event in the project trajectory. 
+
+\paragraph{Tagclouds}\mbox{}\\
+Tagclouds
+
+\paragraph{Sharing of data}\mbox{}\\
+What data should be shared and how should the sharing be done in order to promote reflection? What functions should the tool provide to the user in addition to the github data that can be used for reflection?
+
+\paragraph{Mood graphs}\mbox{}\\
+A user can connect his mood to data. 
+User will have the option to share mood-data, creating a shared average mood of the project, a milestone or even on a single commit, giving an indication of how the work is perceived by the other group members. 
