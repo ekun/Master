@@ -3,6 +3,10 @@ Master in progress
 
 Skrevet av Even Stene og Marius Nedal Glittum
 
+## Important :
+Før vi gjør noe mer må vi finne ut hva slags funksjonalitet vi skal ha, hvordan den skal brukes for å støtte refleksjon. vi har ikke mer tid enn at vi kun kan utvikle det som er viktigst og faktisk skal brukes.  
+Skal vi lage en lokal tag funksjonalitet, skal vi lage en slags parser som finner tags i commit meldinger? Eller skal vi bruke issues/milestone comments/labels?  
+Utfordringen blir å koble disse tagsene opp mot issues/milestones for å se ulike trender/problemer i denne perioden, som igjen kan brukes i refleksjon.  
 
 ## TODO + feedback fra monica fra 05.11:
 ~~Dropbox folder to share report and documents with Monica: Check</strike~~
