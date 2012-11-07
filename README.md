@@ -3,26 +3,55 @@ Master in progress
 
 Skrevet av Even Stene og Marius Nedal Glittum
 
-## TODO
+## Important :
+Før vi gjør noe mer må vi finne ut hva slags funksjonalitet vi skal ha, hvordan den skal brukes for å støtte refleksjon. vi har ikke mer tid enn at vi kun kan utvikle det som er viktigst og faktisk skal brukes.  
+Skal vi lage en lokal tag funksjonalitet, skal vi lage en slags parser som finner tags i commit meldinger? Eller skal vi bruke issues/milestone comments/labels?  
+Utfordringen blir å koble disse tagsene opp mot issues/milestones for å se ulike trender/problemer i denne perioden, som igjen kan brukes i refleksjon.  
 
-Møte med Monica 22.10 : 
-- Brukerhistorier : For å se hva vi trenger av data og hvordan det skal brukes til refleksjon. 
-2/3 scenarios: Bruk av verktøyet under retrospektive møter(1 / 2 ukers). Bruk av verktøyet under en workshop etter faget er ferdig. Kanskje også som et daglig verktøy?
-- Sjekk ut TRAC igjen og se om Github virkelig er det beste alternativet(ofc it is)
-- Lag et skjelett av rapporten så vi vet hvordan vi ligger an der. 
-- Tenke på github , er det noe for skolen å bruke?
+## TODO + feedback fra monica fra 05.11:
+~~Dropbox folder to share report and documents with Monica: Check</strike~~
+
+### General
+
+* Add Tracking table to report
+* Better contextualization of the work in state of the art and ,ore systematic analysis of the problem and rationale of the design
+* Add analysis of the scenarios that provides some highlevel challenges to support reflection in our specific context. 
+* Specify whether our tool is general and evaluated in IT2901 or developed specific for IT2901! 
+* Further specify a timetable. What should be done and when.  
+
+### Research Method
+Where are we getting requirements from?  
+What will guide our design?  
+How will we evaluate the tool?  
+
+### Scenarios
+Scenarios need to be more grounded.  
+Before we start with the scenarios themselves we should provide some context.  
+Scenario 3 is the less relevant one, as it focuses on individual aspects, and we are mainly interested in collaboration.  
+This could be made more relevant if we focus it on "MY work vs the TEAM" .  
+Also add another scenario on reflection across teams, f.ex how to learn from different projects. 
+
+#### Introduction
+Briefly talk about reflection and software development in the introduction. 
+
+#### Problem elaboration
+Explain more about agile methods, why reflection is important, what are the challenges etc. Then we can discuss the scenarios.  
+Important to build an argumentation that justifies our focus, and since we develop a tool for use with github, our discussion should focus on the role of the artifact in the process(and the collaboration around it). This bart should be based on literature on agile software development and reflection. 
+
+### MIRROR reflection model
+What role do we see fpr the Computer-supported reflection model of MIRROR? Make use of the different phases of work/reflection and consider the support that can be provided in each step.  
+Model can be found: http://www.mirror-project.eu/showroom-a-publications/deliverables/174-d14model  
+Using the model should make it easier to further specify the scenarios. 
+
+### Related work
+
+* Start with some of the papers from Birgit. Also her PhD: http://www.idi.ntnu.no/research/doctor_theses/birgitkr.pdf  
+* Focus should be on tools for reflection in software development
+* Birgits overview in her thesis should be expanded and updated. Important to work on related work so that we know we develop something innovative.  
+
+### How to use the data when not on a computer/web?
+Work is mainly done on the computer, reflection however is often done without a screen in small workshops. What challenges are there to making the data available in a suitable form? - Focus on reflection use not on everyday use. Tailor the webapp to be used in these workshops, and/or collect data from the tool for this use.  
 
 
-Fremdriftsplan ligger på gdocs. Skal ha en fungerende prototype innen 15.desember
 
-Vi ønsker å benytte GitHub som integrasjon, da GitHub har et stort og forholdsvis enkelt API å forholde seg til. 
-Dette krever dog at testgruppen må ønske å bruke GitHub som versjonskontrollverktøy. GitHub er allerede et veletablert og mye brukt versjonskontrollsystem, noe mange allerede har vært borti, så dette burde ikke være. 
-
-Tekniske valg: Benytter Grails til å lage en web-app som kan brukes på flere platformer. 
-
-Funksjoner: Integrere PeacefulBanana med Git. Dette gjøres ved at brukeren redirectes til OAUTH siden til Github. Github returnerer oauth tokenet som vi da kan bruke på brukernes vegne til å hente ulike data som ligger på github. Dette være seg milestones/deliveries/commits/tags/labels osv osv. Utfordringen ligger i hvilken informasjon vi skal bruke og hvordan denne kan brukes for å promotere refleksjon. Hva slags data skal brukeren selv legge inn utenom github og hvordan skal denne deles/brukes for å promotere refleksjon. Ikke sikkert all informasjonen fra github er relevant for vårt prosjekt. Vi må velge hvilke deler vi skal bruke og hvordan. 
-Teste applikasjonen som et utviklingsverktøy for smidige team i IT2901 faget på NTNU.   
-
-Utfordringer i den eksisterende timeline appen: 1. Scaffolding, det er for generelt å ta notater. Man skriver hva som helst som ikke nødvendigvis hjelper til refleksjon.  
-2. Koble data sammen for deling. Hva skal deles og når det er delt hva skal det brukes til som bidrar til refleksjon.  
 
