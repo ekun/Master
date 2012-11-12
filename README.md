@@ -4,12 +4,13 @@ Master in progress
 Skrevet av Even Stene og Marius Nedal Glittum
 
 ## Important :
-Før vi gjør noe mer må vi finne ut hva slags funksjonalitet vi skal ha, hvordan den skal brukes for å støtte refleksjon. vi har ikke mer tid enn at vi kun kan utvikle det som er viktigst og faktisk skal brukes.  
-Skal vi lage en lokal tag funksjonalitet, skal vi lage en slags parser som finner tags i commit meldinger? Eller skal vi bruke issues/milestone comments/labels?  
-Utfordringen blir å koble disse tagsene opp mot issues/milestones for å se ulike trender/problemer i denne perioden, som igjen kan brukes i refleksjon.  
+Commit meldinger støtter integrasjon med issues ved hjelp av #tags. En typisk commit melding kan se slik ut:
+git commit -m "La til noen endringer #2" , hvor #2 refererer til issue #2 . 
+Et issue er assignet til en/flere personer og også en milestone. På denne måten kan commits kobles opp til ulike issues og indirekte til milestones. 
+Videre kan vi legge til funksjonalitet slik at brukerne kan bruke andre tags i commit meldingen på samme måte, som vi kan bruke til tagclouds. 
 
 ## TODO + feedback fra monica fra 05.11:
-~~Dropbox folder to share report and documents with Monica: Check</strike~~
+~~Dropbox folder to share report and documents with Monica: Check~~
 
 ### General
 
