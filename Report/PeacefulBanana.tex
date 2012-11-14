@@ -1,5 +1,6 @@
 \chapter{Peaceful Banana Application}
 \label{peacefulBananaApplication}
+In this chapter we will introduce the PeacefulBanana tool, which is the prototype we developed to support this thesis. The focus will be to explain the concept of the tool and the features and functionality it provides. 
 Peaceful Banana integrates with Github, collecting the most relevant data for reflection use. In order to describe the PeacefulBanana tool, an introduction of Github is required.\\
 
 \section{Github}
@@ -26,27 +27,35 @@ To leave a note on issues can be done by simply mentioning the issue number with
 \end{itemize}
 
 \section{What is PeacefulBanana?}
-The prototype will be a tool supporting reflection. The tool will integrate with Github and the features it provides, see section \ref{githubchapter}. The tool will not provide the same possibilities already found on Github, but integrate with it using the existing data and provide an additional layer of features specific for aiding reflection in software development projects. 
+The prototype will be a tool supporting reflection. The PeacefulBanana tool will integrate with Github and the features Github provides, see section \ref{githubchapter}. The tool will not provide the same possibilities already found on Github, but integrate with it using the existing data and provide an additional layer of features specific for aiding reflection in software development projects. PeacefulBanana is developed as a web-application using the Grails web framework and Java programming language. The tool will work in all modern web-browsers, on platforms like the PC, smartphones and tablets. 
 
 \section{What does it do?}
-* Provide an overview of the project
-* When the team closed what issue
-* Which milestones where closed when
-* What issues where connected to which milestone
-* Did the team meet its milestone deadlines.
-* Who did what
+The prototype is a tool that allow users to share and reflect upon their experiences in development projects. The tool is designed to support both individual and collaborative usage, and provides several opportunities to the users:
+\begin{description}
 
-* Reflectiv sessions
-	* What did we do well in milestone x
-	* What could have been done differently when solving issue nr x
-	* Why didn't we meet our deadline on milestone x
-	+ Quick summaries
+	\item{Provide a scaffolded overview of the project} 
+	\begin{itemize}
+	\item Users can choose what project to retrieve data from, see the projects milestones, issues and generate data relevant for reflection from these.
+	\item The team can see when an issue has been closed, and what milestones they are connected to.
+	\item The team can see which milestones were closed and when, and easily see if the team met its milestone deadlines. 
+	\item The team can see which team members have done what.
+	\end{itemize}
 
-* Quick 5-min reflection
-	* Why did I do that yesterday
-	* What did we do well last sprint
-	* Identify top two factors the team can improve
+	\item {Reflection sessions} 
+	\begin{itemize}
+	\item What did the team do well in milestone x
+	\item What could have been done differently when solving issue nr x
+	\item Why didn't the team meet the deadline for milestone x
+	\item Quick summaries of statistics, trending issues, tagclouds etc.
+	\end{itemize}
 
+	\item {Quick 5-minutes reflection sessions} 
+	\begin{itemize}
+	\item Why did I do things a certain way yesterday
+	\item What did the team do well last sprint
+	\item Identify top two factors the team can improve
+	\end{itemize}
+\end{description}
 
 \section{Main goal}
 Is to create a reflection to for software development teams with multiple representation of data. % Short story
