@@ -1,6 +1,13 @@
 Master in progress
 ======
 
+Prototype stæsj:
+
+- Lage et slags refleksjonsscenarie / sekvens. En milestone har en status som reviewed/not reviewed. Har en milestone som er  closed status som not reviewed kan det stå: "Needs review".
+Da har vi mulighet for et reviewscenarie eller en sekvens de går igjennom, f.eks først få opp generell info om milestonen , trykke next -> få opp tagcloud / mood map eller whatever. Gi gruppen pointers til hvilke spørsmål som bør stilles under hvert steg. Når gruppen har "checket" de stegene de har gjort, kan de gå videre til neste. Når man så er ferdig får milestonen status som reviewed.
+
+Dette skaper en refleksjonssekvens. 
+
 Skrevet av Even Stene og Marius Nedal Glittum
 
 ## Important :
