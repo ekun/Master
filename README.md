@@ -10,19 +10,20 @@ Dette skaper en refleksjonssekvens.
 
 Skrevet av Even Stene og Marius Nedal Glittum
 
-## Important :
-Commit meldinger støtter integrasjon med issues ved hjelp av #tags. En typisk commit melding kan se slik ut:
-git commit -m "La til noen endringer #2" , hvor #2 refererer til issue #2 . 
-Et issue er assignet til en/flere personer og også en milestone. På denne måten kan commits kobles opp til ulike issues og indirekte til milestones. 
-Videre kan vi legge til funksjonalitet slik at brukerne kan bruke andre tags i commit meldingen på samme måte, som vi kan bruke til tagclouds. 
+## Feedback fra monica fra 26.11:
+TODO: Fokusere på et scenario eller to. Bruke modellen til krogstie og gå gjennom for å se om vi kan forbedre applikasjonen til å møte disse punktene.  
+Forskjellige måter å gjøre scenariene på. Brukerne kan ledes til å bruke systemet på en viss måte, tvinges, eller bruke det fritt. Eller begge deler!  
+En mulighet er å ha en 5-10minutters session på slutten av dagen, hvor brukerne logger inn, får opp en daglig feed over hva som har skjedd , inputer info som humør, fornøydhet, utfordringer/gode sider og lagrer. Kanskje også se personlig data vs team data? Dette blir da den daglige bruken.  
+Kanskje også få opp et sammendrag av de daglige rapportene i den to ukentlige scenariet?  
 
-## TODO + feedback fra monica fra 05.11:
-~~Dropbox folder to share report and documents with Monica: Check~~
+Kan så se på ukentlige/to-ukers scenariet, der man har en team-reflection-session. Dette kan som sagt være sterkt ledet, der man leder gruppen gjennom ulike data og spørsmål de inputer ting til, for så å generere en rapport til slutt(fordi data må kunne bli brukt senere, altså det man fikk ut av refleksjonen).  
+
+Dersom vi har tid/aktuelt kan vi innføre flere scenarier, som f.eks bruk under workshoppen på slutten av faget. Det kan vi utvikle mens faget pågår og toolet blir brukt.  
 
 ### General
 
 * Add Tracking table to report
-* Better contextualization of the work in state of the art and ,ore systematic analysis of the problem and rationale of the design
+* Better contextualization of the work in state of the art and ,core systematic analysis of the problem and rationale of the design
 * Add analysis of the scenarios that provides some highlevel challenges to support reflection in our specific context. 
 * Specify whether our tool is general and evaluated in IT2901 or developed specific for IT2901! 
 * Further specify a timetable. What should be done and when.  
