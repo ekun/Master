@@ -48,24 +48,58 @@ In this scenario, our students will be using the tool on a daily basis at the en
  When the students enter the web-app, they will get a notification with a prompt to do the daily status update.
 
 \begin{figure}[h!]
-\label{newnotification}
-\centering
-	\includegraphics[width=\textwidth]{newnotification}
-\caption{The user has clicked the notification icon and can see his new notifications}
+	\label{newnotification}
+	\centering
+		\includegraphics[width=\textwidth]{newnotification}
+	\caption{The user has clicked the notification icon and can see his new notifications}
 \end{figure}
 
   When clicking the notification, the student is presented with a summary of their individual activity in the last 24 hours.
-  This summary compares the commit activity of the user with the team's, and also presents a tagcloud representing the trending issues of the last day. The user is then prompted to input todays mood, their top two contributions \emph{"What did I do good?"} , and their top 2 points to improve on \emph{"What could I do better?"}. Finally the user can submit the form and choose to share these experiences with the team for collaborative use.
+  This summary compares the commit activity of the user with the team's, and also presents a tagcloud representing the trending issues of the last day. The user is then prompted to input todays mood, their top two contributions \emph{"What did I do good?"} , and their top 2 points to improve on \emph{"What could I do better?"}. By asking these questions, users are encouraged to actually think back on the experiences they have encountered, allowing for reflection and learning from these. Finally the user can submit the form and choose to share these experiences with the team for collaborative use. \pagebreak
 
 \begin{figure}[h!]
-\label{newnotification}
-\centering
-	\includegraphics[width=\textwidth]{dailysummary_onlycommit}
-\caption{The user has clicked the notification icon and can see his new notifications}
+	\label{dailysummary}
+	\centering
+		\includegraphics[width=\textwidth]{dailysummary_squashed}
+	\caption{Daily summary with commit impact and personal tagcloud for that day's activity}
 \end{figure}
 
-   The daily reflection notes are saved and can be reviewed at any time, and also shared any time by the user. The idea is that the tool will be used to revisit todays experiences with collected information presented in a way that triggers reflection upon these experiences. Information is collected and inspire new experiences. After working on a project that day, students "step back" to reflect on what happened during the day, and on the experiences they encountered. The tool provides scaffolded data to further trigger this reflection process. This process consist of returning to the experiences of that day, re-visit the experiences and attend to the feelings, like inputing todays mood. This reflection will help users to derive their top two improvements and contributions of the day\cite{Krogstie2011}. The tool thus captures the experiences and reflections made by the user and allows for re-visiting of these at a later date by storing them in the system. 
+   The daily reflection notes are saved and can be reviewed at any time, and also shared any time by the user. The idea is that the tool will be used to revisit todays experiences with collected information presented in a way that triggers reflection upon these experiences. Information is collected and inspire new experiences. After working on a project that day, students "step back" to reflect on what happened during the day, and on the experiences they encountered. The tool provides scaffolded data to further trigger this reflection process. This process consist of returning to the experiences of that day, re-visit the experiences and attend to the feelings, like inputing todays mood. This reflection will help users to derive their top two improvements and contributions of the day\cite{Krogstie2011}. The tool thus captures the experiences and reflections made by the user and allows for re-visiting of these at a later date by storing them in the system.
+
+\begin{figure}[h!]
+	\label{mynotes}
+	\centering
+		\includegraphics[width=\textwidth]{MyNotes}
+	\caption{The user can revisit old reflection notes and also sees that these are currently shared with this repositories team. }
+\end{figure}
+\pagebreak
 
 \subsection{Scenario 2 - Team use after each iteration}
 \label{scenario2}
-In this scenario, the students will be using the tool as part of the agile methodic two-week reflection sessions. Students will in this scenario use the tool to indicate how the project has been progressing over the last iteration, tightly coupled with one or several milestones. The students will generate tagclouds based on the trending issues in the relevant milestones, activity graphs and mood trajectories. Also if the users have chosen to share any of the individual reflection notes from scenario 1, these will be visible and can be used to draw conclusions from the previous iteration, and make comparisons. The tool will enable a group to see the whole iteration more clearly, but also be able to dive into certain issues or milestones that showed to be of particular interest, and thus create a discussion around the experiences made by the team members.  
+In this scenario, the students will be using the tool as part of the agile methodic two-week reflection sessions. Students will in this scenario use the tool to indicate how the project has been progressing over the last iteration, tightly coupled with one or several milestones. 
+
+\begin{figure}[h!]
+	\label{milestones}
+	\centering
+		\includegraphics[width=\textwidth]{milestones_full}
+	\caption{Overview of the current repositories' milestones and issues related to the milestones. }
+\end{figure}
+
+
+The students will generate tagclouds based on the trending issues in the relevant milestones, activity graphs and mood trajectories. 
+
+\begin{figure}[h!]
+	\label{tagcloud}
+	\centering
+		\includegraphics[width=\textwidth]{tagcloud_full}
+	\caption{The current repositories' most trending issues represented in a tagcloud. One tagcloud for the team and one for the current users individual trending issues, which makes comparisons vs the team possible}
+\end{figure}
+
+Also if the users have chosen to share any of the individual reflection notes from scenario 1, these will be visible and can be used to draw conclusions from the previous iteration, and make comparisons. The tool will enable a group to see the whole iteration more clearly, but also be able to dive into certain issues or milestones that showed to be of particular interest, and thus create a discussion around the experiences made by the team members.  
+
+\begin{figure}[h!]
+	\label{issueexample}
+	\centering
+		\includegraphics[width=\textwidth]{issueexample_full}
+	\caption{Users can dive into a certain issue and easily see what it describes, the commits related to this issue with it and at what time the events took place}
+\end{figure}
