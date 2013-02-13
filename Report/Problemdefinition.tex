@@ -7,7 +7,7 @@ We will also present our two main scenarios and the context of these.
 \label{problemdefinition}
 
 To answer our research questions we will develop a web-tool aimed at software development teams adopting an agile process model. Most agile process models adopt reflection sessions, and it is for this purpose the tool is to be helpful. Using the tool at a daily basis, like described in Scenario 1 on page \pageref{scenario1}, allows for collection of fresh data and triggers reflection upon experiences connected to these data. These daily summaries are saved and can also be shared with the rest of the development team. In Scenario 2, these daily reflection notes can be reviewed individually and/or by the team in order to identify experiences over the whole iteration. The team can also use the shared notes to compare experiences and trigger discussion and reflection upon these. 
-Most of these teams use some sort of a project tracker with project artifacts, like programming code, text documents etc. We have chosen to focus on GitHub, but the tool could be adapted to work with any version tracker that allows for data collection. The tool will collect relevant data from the project repository on GitHub without any action needed from the user to do so. The tool will then scaffold and present these data in order to allow users to create, share and reflect upon agile project experiences.
+Most of these teams use some sort of a project tracker with project artifacts, like programming code, text documents etc. We have chosen to focus on GitHub, but the tool could be adapted to work with any version tracker that allows for data collection. The tool will collect relevant data from the project repository on GitHub without any action needed from the user to do so. The tool will then scaffold and present these data in order to allow users to revisit, share and reflect upon agile project experiences.
 The experiences will be presented in several different ways like activity-graphs, mood-graphs and tagclouds. These will act as reflection triggers and help the users to reflect on their work. These experiences will be collected and made available for the users and/or the team later. The tool will be designed with reflection in mind, but the tool will also function as 
 a tool that fits several scenarios and can be used by different groups of users. The tool also functions well on its own, and can be explored and provide data from experiences outside of the mentioned scenarios. Users can at any time look into a repository, a milestone or a single issue and the tool will provide data that is useful for recollecting experiences and providing a basis for reflection upon these. 
 The tool will be evaluated with software development teams in a course at the Norwegian University of Science and Technology. We have worked out two main scenarios described below, that these groups will be evaluated against in order to answer our research questions, but as mentioned our goal is to develop the tool to be usable towards a wide range of other scenarios. 
@@ -48,58 +48,15 @@ In this scenario, our students will be using the tool on a daily basis at the en
  When the students enter the web-app, they will get a notification with a prompt to do the daily status update.
 
 \begin{figure}[h!]
-	\label{newnotification}
-	\centering
-		\includegraphics[width=\textwidth]{newnotification}
-	\caption{The user has clicked the notification icon and can see his new notifications}
+\label{newnotification}
+\centering
+	\includegraphics[width=\textwidth]{newnotification}
+\caption{The user has clicked the notification icon and can see his new notifications}
 \end{figure}
 
   When clicking the notification, the student is presented with a summary of their individual activity in the last 24 hours.
-  This summary compares the commit activity of the user with the team's, and also presents a tagcloud representing the trending issues of the last day. The user is then prompted to input todays mood, their top two contributions \emph{"What did I do good?"} , and their top 2 points to improve on \emph{"What could I do better?"}. By asking these questions, users are encouraged to actually think back on the experiences they have encountered, allowing for reflection and learning from these. Finally the user can submit the form and choose to share these experiences with the team for collaborative use. \pagebreak
-
-\begin{figure}[h!]
-	\label{dailysummary}
-	\centering
-		\includegraphics[width=\textwidth]{dailysummary_squashed}
-	\caption{Daily summary with commit impact and personal tagcloud for that day's activity}
-\end{figure}
-
-   The daily reflection notes are saved and can be reviewed at any time, and also shared any time by the user. The idea is that the tool will be used to revisit todays experiences with collected information presented in a way that triggers reflection upon these experiences. Information is collected and inspire new experiences. After working on a project that day, students "step back" to reflect on what happened during the day, and on the experiences they encountered. The tool provides scaffolded data to further trigger this reflection process. This process consist of returning to the experiences of that day, re-visit the experiences and attend to the feelings, like inputing todays mood. This reflection will help users to derive their top two improvements and contributions of the day\cite{Krogstie2011}. The tool thus captures the experiences and reflections made by the user and allows for re-visiting of these at a later date by storing them in the system.
-
-\begin{figure}[h!]
-	\label{mynotes}
-	\centering
-		\includegraphics[width=\textwidth]{MyNotes}
-	\caption{The user can revisit old reflection notes and also sees that these are currently shared with this repositories team. }
-\end{figure}
-\pagebreak
+  This summary compares the commit activity of the user with the team's, and also presents a tagcloud representing the trending issues of the last day. The user is then prompted to input todays mood, their top two contributions \emph{"What did I do good?"} , and their top 2 points to improve on \emph{"What could I do better?"}. Finally the user can submit the form and choose to share these experiences with the team for collaborative use. The daily reflection notes are saved and can be reviewed at any time, and also shared any time by the user. The idea is that the tool will be used to revisit todays experiences with collected information presented in a way that triggers reflection upon these experiences. Information is collected and inspire new experiences. After working on a project that day, students "step back" to reflect on what happened during the day, and on the experiences they encountered. The tool provides scaffolded data to further trigger this reflection process. This process consist of returning to the experiences of that day, re-visit the experiences and attend to the feelings, like inputing todays mood. This reflection will help users to derive their top two improvements and contributions of the day\cite{Krogstie2011}. The tool thus captures the experiences and reflections made by the user and allows for re-visiting of these at a later date by storing them in the system. 
 
 \subsection{Scenario 2 - Team use after each iteration}
 \label{scenario2}
-In this scenario, the students will be using the tool as part of the agile methodic two-week reflection sessions. Students will in this scenario use the tool to indicate how the project has been progressing over the last iteration, tightly coupled with one or several milestones. 
-
-\begin{figure}[h!]
-	\label{milestones}
-	\centering
-		\includegraphics[width=\textwidth]{milestones_full}
-	\caption{Overview of the current repositories' milestones and issues related to the milestones. }
-\end{figure}
-
-
-The students will generate tagclouds based on the trending issues in the relevant milestones, activity graphs and mood trajectories. 
-
-\begin{figure}[h!]
-	\label{tagcloud}
-	\centering
-		\includegraphics[width=\textwidth]{tagcloud_full}
-	\caption{The current repositories' most trending issues represented in a tagcloud. One tagcloud for the team and one for the current users individual trending issues, which makes comparisons vs the team possible}
-\end{figure}
-
-Also if the users have chosen to share any of the individual reflection notes from scenario 1, these will be visible and can be used to draw conclusions from the previous iteration, and make comparisons. The tool will enable a group to see the whole iteration more clearly, but also be able to dive into certain issues or milestones that showed to be of particular interest, and thus create a discussion around the experiences made by the team members.  
-
-\begin{figure}[h!]
-	\label{issueexample}
-	\centering
-		\includegraphics[width=\textwidth]{issueexample_full}
-	\caption{Users can dive into a certain issue and easily see what it describes, the commits related to this issue with it and at what time the events took place}
-\end{figure}
+In this scenario, the students will be using the tool as part of the agile methodic two-week reflection sessions. Students will in this scenario use the tool to indicate how the project has been progressing over the last iteration, tightly coupled with one or several milestones. The students will generate tagclouds based on the trending issues in the relevant milestones, activity graphs and mood trajectories. Also if the users have chosen to share any of the individual reflection notes from scenario 1, these will be visible and can be used to draw conclusions from the previous iteration, and make comparisons. The tool will enable a group to see the whole iteration more clearly, but also be able to dive into certain issues or milestones that showed to be of particular interest, and thus create a discussion around the experiences made by the team members.  
