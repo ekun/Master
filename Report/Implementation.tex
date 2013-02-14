@@ -3,6 +3,31 @@ In many cases, you will not be able to realize the full design. Often the implem
 It is therefore important that you focus on the most important aspects of your system (depending on research questions). 
 In the report you have to justify the choices that are done.
 
+\subsection{Server}
+Here we will give an overview on how the server is implemented, since the application is implemented with a framework called Grails(which you can read about below).
+
+\subsubsection{Grails}
+Grails is an open source web application framework which uses the programming language Groovy(which is based on Java). When Grails was developed, it's developers aimed to re-use proven technologies such as Hibernate and Spring 
+
+\subsubsection{Github API}
+http://developer.github.com/v3/
+For gathering data from Github, this data is transfered as JSON(JavaScript Object Notation), a lightweigh data interchange language
+
+\subsubsection{Database}
+% Include domain diagram
+
+% explain everything
+This is how the database is designed and why perhaps?
+\subsubsubsection{Reflection}
+Notes
+How notes are stored
+
+Workshop <-- WorkshopQuestions
+how workshop data is stored and workshop questions etc
+
+\subsubsubsection{Github data}
+Github data is stored localy to enhance performance and ease up on the requirement for github-connection.
+
 Milestones:
 The milestone feature in Github feature the possibility of setting up the different deliveries, iterations etc.
 
@@ -14,3 +39,11 @@ Git(the version control system which Github is based on) also allows tagging spe
 
 Repositories
 A projects artifact base is stored as repositories on Github. We can extract this data.
+
+\subsubsubsection{User}
+Show what data is stored about a user and explain the fields.
+
+\subsection{User Interface}
+Explain it
+\subsubsection{Twitter bootstrap}
+explain it
