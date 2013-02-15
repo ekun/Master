@@ -7,43 +7,107 @@ In the report you have to justify the choices that are done.
 Here we will give an overview on how the server is implemented, since the application is implemented with a framework called Grails(which you can read about below).
 
 \subsubsection{Grails}
-Grails is an open source web application framework which uses the programming language Groovy(which is based on Java). When Grails was developed, it's developers aimed to re-use proven technologies such as Hibernate and Spring 
+Grails is an open source web application framework which uses the programming language Groovy(which is based on Java). When Grails was developed, it's developers aimed to re-use proven technologies such as Hibernate and Spring.
+
+\textbf{Hibernate}
+Describe it
+
+\textbf{Spring}
+Describe it
 
 \subsubsection{Github API}
-http://developer.github.com/v3/
-For gathering data from Github, this data is transfered as JSON(JavaScript Object Notation), a lightweigh data interchange language
+For gathering data from Github, this data is transfered as JSON(JavaScript Object Notation), a lightweigh data interchange language. You can see all the possible data-types gathered from the Github API.
+
+\textbf{Issues}:
+The issues from created on Github can be bugs or features the developers are planning to implement.
+
+\textbf{Milestones}:
+The milestone feature in Github feature the possibility of setting up the different deliveries, iterations etc. These milestones can have issues added to them, so you can track your progress on these milestones.
+
+\textbf{Commits}:
+The tool can retrieve all commits done by a user, or even all commits for a given project/repository. This includes commit comments, timestamps and other relevant data. This can be used together with milestones to see commit activity, commit spikes and such. We can also through comments etc. see if there were any specific problems during a certain period. This will be tightly integrated with the milestones set up in the github project. 
+
+\textbf{Repositories}:
+A projects artifact base is stored as repositories on Github.
 
 \subsubsection{Database}
 % Include domain diagram
 
 % explain everything
-This is how the database is designed and why perhaps?
-\subsubsubsection{Reflection}
-Notes
-How notes are stored
-
-Workshop <-- WorkshopQuestions
-how workshop data is stored and workshop questions etc
-
-\subsubsubsection{Github data}
-Github data is stored localy to enhance performance and ease up on the requirement for github-connection.
-
-Milestones:
-The milestone feature in Github feature the possibility of setting up the different deliveries, iterations etc.
-
-Commits:
-The tool can retrieve all commits done by a user, or even all commits for a given project/repository. This includes commit comments, timestamps and other relevant data. This can be used together with milestones to see commit activity, commit spikes and such. We can also through comments etc. see if there were any specific problems during a certain period. This will be tightly integrated with the milestones set up in the github project. 
-
-Tags/Labels:
-Git(the version control system which Github is based on) also allows tagging specific points in history with labels. Since this is different from the tagging we had in mind we need to provide our own tagging methods to produce tagclouds. Our approach is based on the way twitter uses tagging(hashtags), but there might be useful to show git specific tags as well.
-
-Repositories
-A projects artifact base is stored as repositories on Github. We can extract this data.
+This is how the database is designed and why it was designed the way it was?
 
 \subsubsubsection{User}
-Show what data is stored about a user and explain the fields.
+Show what data is stored about each user.
+
+\textbf{Id}: This field stores the id generated when the user is first created.
+\textbf{Username}: This field stores the users username.
+\textbf{Password}: This field stores the users password as a encrypted string, the password is encryptet with blabla encryption. **And explain the encryption**
+\textbf{Email}: This field stores the users email.
+\textbf{Firstname}: This field stores the users firstname.
+\textbf{Lastname}: This field stores the users lastname.
+\textbf{Date created}: This field stores the date when the user was created.
+
+\subsubsubsection{Github data}
+Github data is stored localy to enhance performance and ease up on the requirement for github-connection. 
+
+\textbf{Milestones}:
+GithubId - Unique id from github.com
+Name
+Description
+Status (Open / Closed)
+DueDate
+ClosedDate
+CreatedDate
+
+\textbf{Commits}:
+GithubId - Unique id from github.com
+Message - The commit message which we gather tags from, these tags are marked hashtags.
+Author - The user which did the commit
+The tool can retrieve all commits done by a user, or even all commits for a given project/repository. This includes commit comments, timestamps and other relevant data. This can be used together with milestones to see commit activity, commit spikes and such. We can also through comments etc. see if there were any specific problems during a certain period. This will be tightly integrated with the milestones set up in the github project. 
+
+\textbf{Issues}
+GithubId - Unique id from github.com
+Name
+Description
+Number - A number used for reference in commit messages.
+
+\textbf{Repositories}
+GithubId - Unique id from github.com
+Name
+Description
+Creator - The user which created the repository.
+
+\subsubsubsection{Team}
+Teams are bound uniquelie to a repositorie, each repository will only have one team bound to it. %%Every user with access to the prepository on Github will see this team.%%
+
+Team Users
+User - Foreign key to a user
+Team - Foreign key to a team
+TeamRole - A role 
+
+\subsubsubsection{Reflection}
+Notes
+These notes are bound to a team and there can only be one not created for each team by a user each day.
+Contribution - contains the top 2 contributions done by the user the last day.
+Improvement - contains the top 2 things the user might improve on from the last day.
+User - What user created the note
+Team - A foreign key to the team the user have active when he crated the note.
+
+How notes are stored
+
+\textbf{Workshop} 
+Id - Generated when the workshop was created
+Duration
+DurationStart
+DateCreated
+
+
+\textbf{WorkshopQuestions}
+These questions are generated from the commit messages.
+how workshop data is stored and workshop questions etc
 
 \subsection{User Interface}
 Explain it
+
 \subsubsection{Twitter bootstrap}
 explain it
