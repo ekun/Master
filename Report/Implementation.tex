@@ -47,16 +47,45 @@ Show what data is stored about each user.
     \item[\textbf{FirstName}]{This field stores the users firstname.}
     \item[\textbf{LastName}]{This field stores the users lastname.}
     \item[\textbf{SelectedRepo}]{The Github generated id of the repository currently selected by the user.}
-    \item[\textbf{GitLogin}]{The users github login, used to bind commits to the user.}
+    \item[\textbf{GitLogin}]{The users github username, used to bind commits to the user.}
     \item[\textbf{DateCreated}]{TThis field stores the date when the user was first created.}
 \end{itemize}
 \vspace{0.5cm}
+
+\subsubsection{Team}
+Teams are bound uniquelie to a repositorie, each repository will only have one team bound to it. %%Every user with access to the prepository on Github will see this team.%%
+
+Team Users
+User - Foreign key to a user
+Team - Foreign key to a team
+TeamRole - A role 
+
+\subsubsection{Reflection}
+Notes
+These notes are bound to a team and there can only be one not created for each team by a user each day.
+Contribution - contains the top 2 contributions done by the user the last day.
+Improvement - contains the top 2 things the user might improve on from the last day.
+User - What user created the note
+Team - A foreign key to the team the user have active when he crated the note.
+
+How notes are stored
+
+\textbf{Workshop} 
+Id - Generated when the workshop was created
+Duration
+DurationStart
+DateCreated
+
+
+\textbf{WorkshopQuestions}
+These questions are generated from the commit messages.
+how workshop data is stored and workshop questions etc
 
 \subsubsection{Github data}
 Github data is stored localy to enhance performance and ease up on the requirement for github-connection. The following data-types are storred localy.
 
 \subsubsection*{Milestones}
-A description of milestones?
+The following fields are stored about each Milestone.
 \vspace{0.5cm}
 \begin{itemize}
     \item[\textbf{GithubIdH}]{Unique id from github.com}
@@ -110,35 +139,6 @@ The current data is storred about each repositori, in the corresponding fields i
     \item[\textbf{UpdatedAt}]{The timestamp recorded when the milestone last was updated.}
 \end{itemize}
 \vspace{0.5cm}
-
-\subsubsection{Team}
-Teams are bound uniquelie to a repositorie, each repository will only have one team bound to it. %%Every user with access to the prepository on Github will see this team.%%
-
-Team Users
-User - Foreign key to a user
-Team - Foreign key to a team
-TeamRole - A role 
-
-\subsubsection{Reflection}
-Notes
-These notes are bound to a team and there can only be one not created for each team by a user each day.
-Contribution - contains the top 2 contributions done by the user the last day.
-Improvement - contains the top 2 things the user might improve on from the last day.
-User - What user created the note
-Team - A foreign key to the team the user have active when he crated the note.
-
-How notes are stored
-
-\textbf{Workshop} 
-Id - Generated when the workshop was created
-Duration
-DurationStart
-DateCreated
-
-
-\textbf{WorkshopQuestions}
-These questions are generated from the commit messages.
-how workshop data is stored and workshop questions etc
 
 \section{User Interface}
 Explain it and how we designed it. Show sketches etc.....
