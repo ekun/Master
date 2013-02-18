@@ -3,30 +3,6 @@
 In this chapter we will introduce the PeacefulBanana tool, which is the prototype we developed to support this thesis. The focus will be to explain the concept of the tool and the features and functionality it provides. 
 Peaceful Banana integrates with Github, collecting the most relevant data for reflection use. In order to describe the PeacefulBanana tool, an introduction of Github is required.\\
 
-\section{Github}
-\label{githubchapter}
-GitHub is a web-based hosting service for software development projects that use the Git revision control system\cite{git,github}. GitHub offers both paid plans for private repositories, and free accounts for open source projects.
-
-GitHub provides users with integrated issue tracking, code review, project wiki, useful statistics and more. 
-Motivational points for choosing GitHub as the revision control system to integrate with are several. Some technical aspects are that GitHub provides developers with a simple to use API\cite{githubapi}, with libraries for integration with most of the commonly used programming languages, like Java\cite{jgit}.\\
-In addition to the technical aspects, GitHub is the most used revision control system ,as of January 2013 GitHub announced it had passed the 3 million users mark and now hosting more than 5 million repositories and is a tool many in our evaluation group already use in their development projects\cite{githubnumbers}.
-
-\subsection{Repositories}
-GitHub is a repository hosting service for software development projects. A repository contains all the project files, may it be code, images, and other documentation. This means that all content in a project is connected to this repository. In addition to documentation and file content, GitHub provides integrated issue tracking, which is connected to this repository and could also be connected to one or several milestones. 
-\subsection{Commits}
-Say some of your project files have been changed, for example some code snippet in a Java file. The way to save these changes to your local branch is by commits. A commit can consist of code line additions, deletions, files added, changed or removed. When you are ready to save the changes, you commit them in a commandline together with a commit message which is a short text describing the changes you have done. \\
-When a user is ready to push one or more local commits to the project repository, it can be done via the command git push in the commandline. It is now the HEAD revision and the new code and commits can be seen on the github page.
-\subsection{Milestones and Issues}
-\begin{quote}
-\em GitHub Issues can be assigned to a user to make it easy to know who's working on what, or which issues you need to tackle next.
-\end{quote}
-Every GitHub repository has an issue tracker, that allows users to track bugs and focus on features. Milestones and issues help manage large projects, where issues especially makes for a great TODO list, similar to a product backlog. Only {\bf collaborators} can create and view issues on private repositories. On public repositories anyone can create and view issues. 
-\begin{itemize}
-\item GitHub issues can be assigned to a user, which makes it easy to know who's working on what, or which issues should be handled next. Milestones are a good way of helping team members to work towards a goal. A team can set a due date, name a milestone and then start assigning issues to that milestone. An example of a Milestone could be a due date of a project demo or delivery. Any number of issues can then be assigned to this milestone, and thus be connected to it. 
-\item Issues know all about commits. Github enables referencing and closing issues with Commit Messages. By using a few simple keywords you can close an issue right from a commit message, or just leave a note on the issue.The syntax to do this is as follows: To close issue \#35 , a commit message containing 'closes \#35' , will close issue number 35 when pushed to github. Other keywords are: close, closes, closed, fixes, fixed. \\
-To leave a note on issues can be done by simply mentioning the issue number without any keywords in a commit message. F.ex "This commit references \#35". Anyone with write access to a repository may close an issue or leave a note.
-\end{itemize}
-
 \section{What is PeacefulBanana?}
 The prototype will be a tool supporting reflection. The PeacefulBanana tool will integrate with Github and the features Github provides, see section \ref{githubchapter}. The tool will not provide the same possibilities already found on Github, but integrate with it by using the existing data and provide an additional layer of features specific for aiding reflection in software development projects, for example prompting the user for their mood each day allows for a mood graph over time. PeacefulBanana is developed as a web-application using the Grails web framework and Java programming language. The tool will work in all modern web-browsers, on platforms like the PC, smartphones and tablets. 
 The tool was developed with software development related artifacts collected from GitHub in mind. PeacefulBanana will be evaluated with software development teams that have adopted an agile process model. Most agile process models feature reflection sessions in some form, where this tool will be used to promote reflection. Although it is aimed at agile teams, any process model featuring some kind of reflection could benefit from using this tool in some way.  

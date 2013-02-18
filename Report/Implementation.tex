@@ -3,89 +3,69 @@ In many cases, you will not be able to realize the full design. Often the implem
 It is therefore important that you focus on the most important aspects of your system (depending on research questions). 
 In the report you have to justify the choices that are done.
 
+\section{Github}
+\label{githubchapter}
+GitHub is a web-based hosting service for software development projects that use the Git revision control system\cite{git,github}. GitHub offers both paid plans for private repositories, and free accounts for open source projects.
+
+GitHub provides users with integrated issue tracking, code review, project wiki, useful statistics and more. 
+Motivational points for choosing GitHub as the revision control system to integrate with are several. Some technical aspects are that GitHub provides developers with a simple to use API\cite{githubapi}, with libraries for integration with most of the commonly used programming languages, like Java\cite{jgit}.\\
+In addition to the technical aspects, GitHub is the most used revision control system ,as of January 2013 GitHub announced it had passed the 3 million users mark and now hosting more than 5 million repositories and is a tool many in our evaluation group already use in their development projects\cite{githubnumbers}.
+
+For gathering data from Github, this data is transfered as JSON(JavaScript Object Notation), a lightweigh data interchange language. You can see all the possible data-types gathered from the Github API.
+\subsection{Repositories}
+GitHub is a repository hosting service for software development projects. A repository contains all the project files, may it be code, images, and other documentation. This means that all content in a project is connected to this repository. In addition to documentation and file content, GitHub provides integrated issue tracking, which is connected to this repository and could also be connected to one or several milestones. 
+\subsection{Commits}
+Say some of your project files have been changed, for example some code snippet in a Java file. The way to save these changes to your local branch is by commits. A commit can consist of code line additions, deletions, files added, changed or removed. When you are ready to save the changes, you commit them in a commandline together with a commit message which is a short text describing the changes you have done. \\
+When a user is ready to push one or more local commits to the project repository, it can be done via the command git push in the commandline. It is now the HEAD revision and the new code and commits can be seen on the github page.
+\subsection{Milestones and Issues}
+\begin{quote}
+\em GitHub Issues can be assigned to a user to make it easy to know who's working on what, or which issues you need to tackle next.
+\end{quote}
+Every GitHub repository has an issue tracker, that allows users to track bugs and focus on features. Milestones and issues help manage large projects, where issues especially makes for a great TODO list, similar to a product backlog. Only {\bf collaborators} can create and view issues on private repositories. On public repositories anyone can create and view issues. 
+\begin{itemize}
+\item GitHub issues can be assigned to a user, which makes it easy to know who's working on what, or which issues should be handled next. Milestones are a good way of helping team members to work towards a goal. A team can set a due date, name a milestone and then start assigning issues to that milestone. An example of a Milestone could be a due date of a project demo or delivery. Any number of issues can then be assigned to this milestone, and thus be connected to it. 
+\item Issues know all about commits. Github enables referencing and closing issues with Commit Messages. By using a few simple keywords you can close an issue right from a commit message, or just leave a note on the issue.The syntax to do this is as follows: To close issue \#35 , a commit message containing 'closes \#35' , will close issue number 35 when pushed to github. Other keywords are: close, closes, closed, fixes, fixed. \\
+To leave a note on issues can be done by simply mentioning the issue number without any keywords in a commit message. F.ex "This commit references \#35". Anyone with write access to a repository may close an issue or leave a note.
+\end{itemize}
+
 \section{Server}
 Here we will give an overview on how the server is implemented, since the application is implemented with a framework called Grails(which you can read about below).
 
 \subsection{Grails}
 Grails is an open source web application framework which uses the programming language Groovy(which is based on Java). When Grails was developed, it's developers aimed to re-use proven technologies such as Hibernate and Spring.
 
-\textbf{Hibernate}
-Describe it
-
-\textbf{Spring}
-Describe it
-
-\subsection{Github API}
-For gathering data from Github, this data is transfered as JSON(JavaScript Object Notation), a lightweigh data interchange language. You can see all the possible data-types gathered from the Github API.
-
-\textbf{Issues}:
-The issues from created on Github can be bugs or features the developers are planning to implement.
-
-\textbf{Milestones}:
-The milestone feature in Github feature the possibility of setting up the different deliveries, iterations etc. These milestones can have issues added to them, so you can track your progress on these milestones.
-
-\textbf{Commits}:
-The tool can retrieve all commits done by a user, or even all commits for a given project/repository. This includes commit comments, timestamps and other relevant data. This can be used together with milestones to see commit activity, commit spikes and such. We can also through comments etc. see if there were any specific problems during a certain period. This will be tightly integrated with the milestones set up in the github project. 
-
-\textbf{Repositories}:
-A projects artifact base is stored as repositories on Github.
-
-\subsection{Database}
+\section{Database}
 % Include domain diagram
 
 % explain everything
 This is how the database is designed and why it was designed the way it was?
 
-\subsubsection*{User}
-Show what data is stored about each user.
+\subsection*{User}
+Show what data is stored about each user\\
 \vspace{0.5cm}
-\begin{itemize}
-    \item[\textbf{Id}]{Unique generated when the user is first craeted.}
-    \item[\textbf{UserName}]{This field stores the users username.}
-    \item[\textbf{Password}]{This field stores the users password as a encrypted string, the password is encryptet with **blabla** encryption.}
-    \item[\textbf{Email}]{This field stores the users email.}
-    \item[\textbf{FirstName}]{This field stores the users firstname.}
-    \item[\textbf{LastName}]{This field stores the users lastname.}
-    \item[\textbf{SelectedRepo}]{The Github generated id of the repository currently selected by the user.}
-    \item[\textbf{GitLogin}]{The users github username, used to bind commits to the user.}
-    \item[\textbf{DateCreated}]{TThis field stores the date when the user was first created.}
-\end{itemize}
-\vspace{0.5cm}
-
-\subsubsection{Team}
-Teams are bound uniquelie to a repositorie, each repository will only have one team bound to it. %%Every user with access to the prepository on Github will see this team.%%
-
-Team Users
-User - Foreign key to a user
-Team - Foreign key to a team
-TeamRole - A role 
-
-\subsubsection{Reflection}
-Notes
-These notes are bound to a team and there can only be one not created for each team by a user each day.
-Contribution - contains the top 2 contributions done by the user the last day.
-Improvement - contains the top 2 things the user might improve on from the last day.
-User - What user created the note
-Team - A foreign key to the team the user have active when he crated the note.
-
-How notes are stored
-
-\textbf{Workshop} 
-Id - Generated when the workshop was created
-Duration
-DurationStart
-DateCreated
+ \begin{tabularx}{\linewidth}{| c | X |}
+    \hline
+    \rowcolor[gray]{0.8}
+    \textbf{Field} & \textbf{Description} \\
+    \hline
+    Id & Unique generated when the user is first created\\ \hline
+    UserName & This field stores the users username\\ \hline
+   	Password & This field stores the users password as a encrypted string, the password is encryptet with SHA-512 encryption\\ \hline
+    Email & This field stores the users email\\ \hline
+    FirstName & This field stores the users first name\\ \hline
+    LastName & This field stores the users last name\\ \hline
+    SelectedRepo & The GitHub generated id of the repository currently selected by the user\\ \hline
+    GitLogin & The users GitHub login, used to bind commits to the user\\ \hline
+    DateCreated & This field stores the date when the user was first created\\
+    \hline
+\end{tabularx}
 
 
-\textbf{WorkshopQuestions}
-These questions are generated from the commit messages.
-how workshop data is stored and workshop questions etc
-
-\subsubsection{Github data}
+\subsection{Github data}
 Github data is stored localy to enhance performance and ease up on the requirement for github-connection. The following data-types are storred localy.
 
 \subsubsection*{Milestones}
-The following fields are stored about each Milestone.
+A description of milestones?
 \vspace{0.5cm}
 \begin{itemize}
     \item[\textbf{GithubIdH}]{Unique id from github.com}
@@ -139,6 +119,35 @@ The current data is storred about each repositori, in the corresponding fields i
     \item[\textbf{UpdatedAt}]{The timestamp recorded when the milestone last was updated.}
 \end{itemize}
 \vspace{0.5cm}
+
+\subsection{Team}
+Teams are bound uniquelie to a repositorie, each repository will only have one team bound to it. %%Every user with access to the prepository on Github will see this team.%%
+
+Team Users
+User - Foreign key to a user
+Team - Foreign key to a team
+TeamRole - A role 
+
+\subsection{Reflection}
+Notes
+These notes are bound to a team and there can only be one not created for each team by a user each day.
+Contribution - contains the top 2 contributions done by the user the last day.
+Improvement - contains the top 2 things the user might improve on from the last day.
+User - What user created the note
+Team - A foreign key to the team the user have active when he crated the note.
+
+How notes are stored
+
+\textbf{Workshop} 
+Id - Generated when the workshop was created
+Duration
+DurationStart
+DateCreated
+
+
+\textbf{WorkshopQuestions}
+These questions are generated from the commit messages.
+how workshop data is stored and workshop questions etc
 
 \section{User Interface}
 Explain it and how we designed it. Show sketches etc.....
