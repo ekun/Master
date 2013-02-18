@@ -3,10 +3,10 @@ In many cases, you will not be able to realize the full design. Often the implem
 It is therefore important that you focus on the most important aspects of your system (depending on research questions). 
 In the report you have to justify the choices that are done.
 
-\subsection{Server}
+\section{Server}
 Here we will give an overview on how the server is implemented, since the application is implemented with a framework called Grails(which you can read about below).
 
-\subsubsection{Grails}
+\subsection{Grails}
 Grails is an open source web application framework which uses the programming language Groovy(which is based on Java). When Grails was developed, it's developers aimed to re-use proven technologies such as Hibernate and Spring.
 
 \textbf{Hibernate}
@@ -15,7 +15,7 @@ Describe it
 \textbf{Spring}
 Describe it
 
-\subsubsection{Github API}
+\subsection{Github API}
 For gathering data from Github, this data is transfered as JSON(JavaScript Object Notation), a lightweigh data interchange language. You can see all the possible data-types gathered from the Github API.
 
 \textbf{Issues}:
@@ -30,54 +30,88 @@ The tool can retrieve all commits done by a user, or even all commits for a give
 \textbf{Repositories}:
 A projects artifact base is stored as repositories on Github.
 
-\subsubsection{Database}
+\subsection{Database}
 % Include domain diagram
 
 % explain everything
 This is how the database is designed and why it was designed the way it was?
 
-\subsubsubsection{User}
+\subsubsection*{User}
 Show what data is stored about each user.
+\vspace{0.5cm}
+\begin{itemize}
+    \item[\textbf{Id}]{Unique generated when the user is first craeted.}
+    \item[\textbf{UserName}]{This field stores the users username.}
+    \item[\textbf{Password}]{This field stores the users password as a encrypted string, the password is encryptet with **blabla** encryption.}
+    \item[\textbf{Email}]{This field stores the users email.}
+    \item[\textbf{FirstName}]{This field stores the users firstname.}
+    \item[\textbf{LastName}]{This field stores the users lastname.}
+    \item[\textbf{SelectedRepo}]{The Github generated id of the repository currently selected by the user.}
+    \item[\textbf{GitLogin}]{The users github login, used to bind commits to the user.}
+    \item[\textbf{DateCreated}]{TThis field stores the date when the user was first created.}
+\end{itemize}
+\vspace{0.5cm}
 
-\textbf{Id}: This field stores the id generated when the user is first created.
-\textbf{Username}: This field stores the users username.
-\textbf{Password}: This field stores the users password as a encrypted string, the password is encryptet with blabla encryption. **And explain the encryption**
-\textbf{Email}: This field stores the users email.
-\textbf{Firstname}: This field stores the users firstname.
-\textbf{Lastname}: This field stores the users lastname.
-\textbf{Date created}: This field stores the date when the user was created.
+\subsubsection{Github data}
+Github data is stored localy to enhance performance and ease up on the requirement for github-connection. The following data-types are storred localy.
 
-\subsubsubsection{Github data}
-Github data is stored localy to enhance performance and ease up on the requirement for github-connection. 
+\subsubsection*{Milestones}
+A description of milestones?
+\vspace{0.5cm}
+\begin{itemize}
+    \item[\textbf{GithubIdH}]{Unique id from github.com}
+    \item[\textbf{Name}]{The milestones name.}
+    \item[\textbf{Description}]{A description of the milestone, like what features is to be implemented.}
+    \item[\textbf{Status}]{A variable to say if its open or closed.}
+    \item[\textbf{CreatedDate}]{The timestamp which the milestone is created.}
+    \item[\textbf{DueDate}]{A date which the milestone is due on. This is null if the milestone does not got a due date.}
+    \item[\textbf{ClosedDate}]{A timestamp when the milestone is closed.}
+\end{itemize}
+\vspace{0.5cm}
 
-\textbf{Milestones}:
-GithubId - Unique id from github.com
-Name
-Description
-Status (Open / Closed)
-DueDate
-ClosedDate
-CreatedDate
+\subsubsection*{Commits}
+\vspace{0.5cm}
+\begin{itemize}
+    \item[\textbf{GithubIdH}]{Unique id from github.com}
+    \item[\textbf{Message}]{The commit message which we gather tags from, these tags are marked hashtags.}
+    \item[\textbf{Login}]{The github user which did the commit.}
+    \item[\textbf{CreatedAt}]{The timestamp which the milestone is created.}
+    \item[\textbf{Additions}]{Lines added in the commit.}
+    \item[\textbf{Deletions}]{Lines removed in the commit.}
+    \item[\textbf{Total}]{A total of lines in the commit.}
+\end{itemize}
+\vspace{0.5cm}
 
-\textbf{Commits}:
-GithubId - Unique id from github.com
-Message - The commit message which we gather tags from, these tags are marked hashtags.
-Author - The user which did the commit
 The tool can retrieve all commits done by a user, or even all commits for a given project/repository. This includes commit comments, timestamps and other relevant data. This can be used together with milestones to see commit activity, commit spikes and such. We can also through comments etc. see if there were any specific problems during a certain period. This will be tightly integrated with the milestones set up in the github project. 
 
-\textbf{Issues}
-GithubId - Unique id from github.com
-Name
-Description
-Number - A number used for reference in commit messages.
+\subsubsection*{Issues}
+\vspace{0.5cm}
+\begin{itemize}
+    \item[\textbf{GithubIdH}]{Unique id from github.com}
+    \item[\textbf{Title}]{The issues name.}
+    \item[\textbf{Body}]{A description of the issue, like the features/bug.}
+    \item[\textbf{CreatedAt}]{The timestamp when the milestone was created.}
+    \item[\textbf{UpdatedAt}]{The timestamp which the milestone last was updated.}
+    \item[\textbf{Repository}]{A forreign key to the repository it is bound to.}
+    \item[\textbf{MilestoneNumber}]{The milestone which the issue is bound to.}
+    \item[\textbf{Number}]{A number unique to the repository which is used for refering the issue in the commit messages.}
+    \item[\textbf{State}]{A variable to say if its open or closed.}
+\end{itemize}
+\vspace{0.5cm}
 
-\textbf{Repositories}
-GithubId - Unique id from github.com
-Name
-Description
-Creator - The user which created the repository.
+\subsubsection*{Repositories}
+The current data is storred about each repositori, in the corresponding fields in the table bellow.
+\vspace{0.5cm}
+\begin{itemize}
+    \item[\textbf{GithubIdH}]{Unique id from github.com}
+    \item[\textbf{Name}]{The repositorys name.}
+    \item[\textbf{Description}]{A description of the repository.}
+    \item[\textbf{CreatedAt}]{The timestamp when the milestone was created.}
+    \item[\textbf{UpdatedAt}]{The timestamp recorded when the milestone last was updated.}
+\end{itemize}
+\vspace{0.5cm}
 
-\subsubsubsection{Team}
+\subsubsection{Team}
 Teams are bound uniquelie to a repositorie, each repository will only have one team bound to it. %%Every user with access to the prepository on Github will see this team.%%
 
 Team Users
@@ -85,7 +119,7 @@ User - Foreign key to a user
 Team - Foreign key to a team
 TeamRole - A role 
 
-\subsubsubsection{Reflection}
+\subsubsection{Reflection}
 Notes
 These notes are bound to a team and there can only be one not created for each team by a user each day.
 Contribution - contains the top 2 contributions done by the user the last day.
@@ -106,8 +140,10 @@ DateCreated
 These questions are generated from the commit messages.
 how workshop data is stored and workshop questions etc
 
-\subsection{User Interface}
-Explain it
+\section{User Interface}
+Explain it and how we designed it. Show sketches etc.....
 
-\subsubsection{Twitter bootstrap}
+\subsection{Twitter bootstrap}
 explain it
+
+\subsection{Amazingcloud}
