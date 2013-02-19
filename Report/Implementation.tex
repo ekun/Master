@@ -42,8 +42,9 @@ This is how the database is designed and why it was designed the way it was?
 
 \subsection*{User}
 Show what data is stored about each user\\
+
 \vspace{0.5cm}
- \begin{tabularx}{\linewidth}{| c | X |}
+\begin{tabularx}{\linewidth}{| c | X |}
     \hline
     \rowcolor[gray]{0.8}
     \textbf{Field} & \textbf{Description} \\
@@ -59,86 +60,167 @@ Show what data is stored about each user\\
     DateCreated & This field stores the date when the user was first created\\
     \hline
 \end{tabularx}
-
+\vspace{0.5cm}
 
 \subsection{Github data}
 Github data is stored localy to enhance performance and ease up on the requirement for github-connection. The following data-types are storred localy.
 
 \subsubsection*{Milestones}
-A description of milestones?
+A description of milestones? \\
+
 \vspace{0.5cm}
-\begin{itemize}
-    \item[\textbf{GithubIdH}]{Unique id from github.com}
-    \item[\textbf{Name}]{The milestones name.}
-    \item[\textbf{Description}]{A description of the milestone, like what features is to be implemented.}
-    \item[\textbf{Status}]{A variable to say if its open or closed.}
-    \item[\textbf{CreatedDate}]{The timestamp which the milestone is created.}
-    \item[\textbf{DueDate}]{A date which the milestone is due on. This is null if the milestone does not got a due date.}
-    \item[\textbf{ClosedDate}]{A timestamp when the milestone is closed.}
-\end{itemize}
+\begin{tabularx}{\linewidth}{| c | X |}
+    \hline
+    \rowcolor[gray]{0.8}
+    \textbf{Field} & \textbf{Description} \\
+    \hline
+    GithubIdH & Unique id from github.com\\ \hline
+    Name & The milestones name.\\ \hline
+   	Description & A description of the milestone, like what features is to be implemented.\\ \hline
+    Status & A variable to say if its open or closed.\\ \hline
+    CreatedDate & The timestamp which the milestone is created.\\ \hline
+    DueDate & A date which the milestone is due on. This is null if the milestone does not got a due date.\\ \hline
+    ClosedDate & A timestamp when the milestone is closed.\\ 
+    \hline
+\end{tabularx}
+\vspace{0.5cm}
+
+\subsubsection*{Issues}
+A description of issues? \\
+
+\vspace{0.5cm}
+\begin{tabularx}{\linewidth}{| c | X |}
+    \hline
+    \rowcolor[gray]{0.8}
+    \textbf{Field} & \textbf{Description} \\
+    \hline
+    GithubIdH & Unique id from github.com\\ \hline
+    Name & The issues name.\\ \hline
+   	Body & A description of the milestone, like what features is to be implemented.\\ \hline
+    State & A variable to say if its open or closed.\\ \hline
+    Number & A number unique to the repository which is used for refering the issue in the commit messages.\\ \hline
+    Repository & A forreign key to the repository it is bound to.\\ \hline
+    MilestoneNumber & The milestone which the issue is bound to.\\ \hline
+    CreatedAt & The timestamp which the milestone is created.\\ \hline
+    UpdatedAt & The timestamp which the milestone last was updated.\\ 
+    \hline
+\end{tabularx}
 \vspace{0.5cm}
 
 \subsubsection*{Commits}
+The tool can retrieve all commits done by a user, or even all commits for a given project/repository. This includes commit comments, timestamps and other relevant data. This can be used together with milestones to see commit activity, commit spikes and such. We can also through comments etc. see if there were any specific problems during a certain period. This will be tightly integrated with the milestones set up in the github project. \\
+
 \vspace{0.5cm}
-\begin{itemize}
-    \item[\textbf{GithubIdH}]{Unique id from github.com}
-    \item[\textbf{Message}]{The commit message which we gather tags from, these tags are marked hashtags.}
-    \item[\textbf{Login}]{The github user which did the commit.}
-    \item[\textbf{CreatedAt}]{The timestamp which the milestone is created.}
-    \item[\textbf{Additions}]{Lines added in the commit.}
-    \item[\textbf{Deletions}]{Lines removed in the commit.}
-    \item[\textbf{Total}]{A total of lines in the commit.}
-\end{itemize}
+\begin{tabularx}{\linewidth}{| c | X |}
+    \hline
+    \rowcolor[gray]{0.8}
+    \textbf{Field} & \textbf{Description} \\
+    \hline
+    GithubIdH & Unique id from github.com\\ \hline
+    Message & The commit message which we gather tags from, these tags are marked hashtags.\\ \hline
+   	Login & The github user which did the commit.\\ \hline
+    CreatedDate & The timestamp which the commit is created.\\ \hline
+    Additions & A date which the milestone is due on. This is null if the milestone does not got a due date.\\ \hline
+    Deletions & A timestamp when the milestone is closed.\\ \hline
+    Total & A total of lines in the commit.\\
+    \hline
+\end{tabularx}
 \vspace{0.5cm}
 
-The tool can retrieve all commits done by a user, or even all commits for a given project/repository. This includes commit comments, timestamps and other relevant data. This can be used together with milestones to see commit activity, commit spikes and such. We can also through comments etc. see if there were any specific problems during a certain period. This will be tightly integrated with the milestones set up in the github project. 
+\subsubsection*{Repository}
+The current data is storred about each repositori, in the corresponding fields in the table bellow. \\
 
-\subsubsection*{Issues}
 \vspace{0.5cm}
-\begin{itemize}
-    \item[\textbf{GithubIdH}]{Unique id from github.com}
-    \item[\textbf{Title}]{The issues name.}
-    \item[\textbf{Body}]{A description of the issue, like the features/bug.}
-    \item[\textbf{CreatedAt}]{The timestamp when the milestone was created.}
-    \item[\textbf{UpdatedAt}]{The timestamp which the milestone last was updated.}
-    \item[\textbf{Repository}]{A forreign key to the repository it is bound to.}
-    \item[\textbf{MilestoneNumber}]{The milestone which the issue is bound to.}
-    \item[\textbf{Number}]{A number unique to the repository which is used for refering the issue in the commit messages.}
-    \item[\textbf{State}]{A variable to say if its open or closed.}
-\end{itemize}
-\vspace{0.5cm}
-
-\subsubsection*{Repositories}
-The current data is storred about each repositori, in the corresponding fields in the table bellow.
-\vspace{0.5cm}
-\begin{itemize}
-    \item[\textbf{GithubIdH}]{Unique id from github.com}
-    \item[\textbf{Name}]{The repositorys name.}
-    \item[\textbf{Description}]{A description of the repository.}
-    \item[\textbf{CreatedAt}]{The timestamp when the milestone was created.}
-    \item[\textbf{UpdatedAt}]{The timestamp recorded when the milestone last was updated.}
-\end{itemize}
+\begin{tabularx}{\linewidth}{| c | X |}
+    \hline
+    \rowcolor[gray]{0.8}
+    \textbf{Field} & \textbf{Description} \\
+    \hline
+    GithubIdH & Unique id from github.com\\ \hline
+    Name & The repositorys name.\\ \hline
+   	Description & A description of the repository.\\ \hline
+    CreatedAt & The timestamp which the commit is created.\\ \hline
+    UpdatedAt & The timestamp recorded when the milestone last was updated.\\ 
+    \hline
+\end{tabularx}
 \vspace{0.5cm}
 
-\subsection{Team}
-Teams are bound uniquelie to a repositorie, each repository will only have one team bound to it. %%Every user with access to the prepository on Github will see this team.%%
+\subsection{Collaboration}
+Teams are bound uniquelie to a repositorie, each repository will only have one team bound to it and every user with access(being a contributor) to the repository on Github will have the possibility to join the team.  \\%%Every user with access to the prepository on Github will see this team.%%
+\subsubsection*{Team}
+These teams are bound to a repository and there can only be one not created for each team by a user each day. \\
 
-Team Users
-User - Foreign key to a user
-Team - Foreign key to a team
-TeamRole - A role 
+\vspace{0.5cm}
+\begin{tabularx}{\linewidth}{| c | X |}
+    \hline
+    \rowcolor[gray]{0.8}
+    \textbf{Field} & \textbf{Description} \\
+    \hline
+    Id & Unique id generated when the team is created.\\ \hline
+   	Owner & A forreign key to the user that created the team.\\ \hline
+   	Name & The teams name.\\ \hline
+    Repository & The githubId of the repository bound to the team.\\ 
+    \hline
+\end{tabularx}
+\vspace{0.5cm}
+
+\subsubsection*{TeamUser}
+The users attached to the team. \\
+
+\vspace{0.5cm}
+\begin{tabularx}{\linewidth}{| c | X |}
+    \hline
+    \rowcolor[gray]{0.8}
+    \textbf{Field} & \textbf{Description} \\
+    \hline
+    UserId & A forreign key to the user.\\ \hline
+   	TeamId & A forreign key to the team.\\ \hline
+   	Role & The users role in the team. There are possible roles are 'Manager' and 'Developer'\\ \hline
+    Active & A variable that states if the user has selected this team as his active. Only one can be active per user at any given time.\\ 
+    \hline
+\end{tabularx}
+\vspace{0.5cm}
 
 \subsection{Reflection}
-Notes
-These notes are bound to a team and there can only be one not created for each team by a user each day.
-Contribution - contains the top 2 contributions done by the user the last day.
-Improvement - contains the top 2 things the user might improve on from the last day.
-User - What user created the note
-Team - A foreign key to the team the user have active when he crated the note.
+\subsubsection*{Notes}
+These notes are bound to a team and there can only be created one for each team by a user each day. \\
 
-How notes are stored
+\vspace{0.5cm}
+\begin{tabularx}{\linewidth}{| c | X |}
+    \hline
+    \rowcolor[gray]{0.8}
+    \textbf{Field} & \textbf{Description} \\
+    \hline
+    Id & Unique id generated when the note is created.\\ \hline
+    Team & A forreign key to the team the note is bound to.\\ \hline
+   	User & A forreign key to the user that created the note.\\ \hline
+   	Mood & A level regarding the current mood the user that created the note recorded for that day. Mood is recoreded as a number between 1-100 where 100 is very happy and 1 is very sad.\\ \hline
+   	Contribution & The top 2 contributions done that day for the team by the user.\\ \hline
+   	Improvements & The 2 things that can be improved by the user that day for the team.\\ \hline
+   	Shared & Variable that states that the note is shared with the team.\\ \hline
+    CreatedAt & The timestamp which the commit is created.\\ \hline
+    UpdatedAt & The timestamp recorded when the milestone last was updated.\\ 
+    \hline
+\end{tabularx}
+\vspace{0.5cm}
 
-\textbf{Workshop} 
+\subsubsection*{Workshop}
+Managers and owners of teams can create reflection workshops, where it is generated a questionare based on the tags used by the teams members in the selected periode. \\
+
+\vspace{0.5cm}
+\begin{tabularx}{\linewidth}{| c | X |}
+    \hline
+    \rowcolor[gray]{0.8}
+    \textbf{Field} & \textbf{Description} \\
+    \hline
+    Id & Unique id generated when the workshop is created.\\ \hline
+   	TeamId & A forreign key to the team.\\ \hline
+   	CreatedAt & The timestamp which the workshop is created.\\ \hline
+   	DurationStart & The timestamp which the workshop periode starts.\\ \hline
+   	DateStart & The timestamp which the workshop periode ends.\\ 
+    \hline
+\end{tabularx}
+\vspace{0.5cm}
 Id - Generated when the workshop was created
 Duration
 DurationStart
@@ -146,8 +228,22 @@ DateCreated
 
 
 \textbf{WorkshopQuestions}
-These questions are generated from the commit messages.
-how workshop data is stored and workshop questions etc
+This table holds the questions generated from the commit messages. \\
+
+\vspace{0.5cm}
+\begin{tabularx}{\linewidth}{| c | X |}
+    \hline
+    \rowcolor[gray]{0.8}
+    \textbf{Field} & \textbf{Description} \\
+    \hline
+    Id & Unique id generated when the workshop is created.\\ \hline
+   	TeamId & A forreign key to the team.\\ \hline
+   	CreatedAt & The timestamp which the workshop is created.\\ \hline
+   	DurationStart & The timestamp which the workshop periode starts.\\ \hline
+   	DateStart & The timestamp which the workshop periode ends.\\ 
+    \hline
+\end{tabularx}
+\vspace{0.5cm}
 
 \section{User Interface}
 Explain it and how we designed it. Show sketches etc.....
