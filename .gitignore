@@ -9,6 +9,7 @@
 *.pdf
 *.log
 *.bbl
+*.lof
 
 # localstorrage
 thumbs.db

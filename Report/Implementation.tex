@@ -36,13 +36,18 @@ Grails is an open source web application framework which uses the programming la
 
 \section{Database}
 % Include domain diagram
-
+\begin{figure}[h!]
+\label{newnotification}
+\centering
+	\includegraphics[width=\textwidth]{databaseDomainDiagram}
+\caption{Domain diagram, the relationship between database classes.}
+\end{figure}
 % explain everything
-This is how the database is designed and why it was designed the way it was?
 
-\subsection*{User}
+
+\subsection{User data}
 Show what data is stored about each user\\
-
+\subsubsection*{User}
 \vspace{0.5cm}
 \begin{tabularx}{\linewidth}{| c | X |}
     \hline
@@ -62,11 +67,62 @@ Show what data is stored about each user\\
 \end{tabularx}
 \vspace{0.5cm}
 
+\subsubsection*{Role}
+The different roles that the users can be assigned to. These are hierarchy so that the highest gains access to the subset of this access level. \\
+
+\vspace{0.5cm}
+\begin{tabularx}{\linewidth}{| c | X |}
+    \hline
+    \rowcolor[gray]{0.8}
+    \textbf{Field} & \textbf{Description} \\
+    \hline
+    Id & Unique generated when the role is first created.\\ \hline
+    Authority & This field contains the level of authority.\\
+    \hline
+\end{tabularx}
+\vspace{0.5cm}
+
+\subsubsection*{UserRole}
+Contains the roles asigned to users. \\
+
+\vspace{0.5cm}
+\begin{tabularx}{\linewidth}{| c | X |}
+    \hline
+    \rowcolor[gray]{0.8}
+    \textbf{Field} & \textbf{Description} \\
+    \hline
+    User & Foreign key for the user\\ \hline
+    Role & Foreign key for the role \\
+    \hline
+\end{tabularx}
+\vspace{0.5cm}
+
+\subsubsection*{Notification}
+Notifications are used to prompt users about reflection sessions and such. \\
+
+\vspace{0.5cm}
+\begin{tabularx}{\linewidth}{| c | X |}
+    \hline
+    \rowcolor[gray]{0.8}
+    \textbf{Field} & \textbf{Description} \\
+    \hline
+    Id & Unique generated when the notification is first created\\ \hline
+    Title & This field stores the title\\ \hline
+   	Body & This field stores the entire message.\\ \hline
+    DateCreated & Timestamp generated when the notification is first created.\\ \hline
+    Unread & Variable to state if the message is read.\\ \hline
+    Cleared & Variable to state if the message is cleared or not.\\ \hline
+    NotificationType & The notification type, possible types are 'Reflection' or 'Other'.\\ \hline
+    User & A forreign key to the user that received the notification.\\ 
+    \hline
+\end{tabularx}
+\vspace{0.5cm}
+
 \subsection{Github data}
-Github data is stored localy to enhance performance and ease up on the requirement for github-connection. The following data-types are storred localy.
+Github data is stored localy to enhance performance. During initial testing it was discovered that polling github.com for data each time it was needed, made the application very slow and put unnecessary stress on the github servers. The following data-types where therefor storred localy.
 
 \subsubsection*{Milestones}
-A description of milestones? \\
+Milestones are major goals consisting of several minor goals called issue, with or without a due date. \\
 
 \vspace{0.5cm}
 \begin{tabularx}{\linewidth}{| c | X |}
@@ -116,7 +172,7 @@ The tool can retrieve all commits done by a user, or even all commits for a give
     \rowcolor[gray]{0.8}
     \textbf{Field} & \textbf{Description} \\
     \hline
-    GithubIdH & Unique id from github.com\\ \hline
+    GithubId & Unique id from github.com\\ \hline
     Message & The commit message which we gather tags from, these tags are marked hashtags.\\ \hline
    	Login & The github user which did the commit.\\ \hline
     CreatedDate & The timestamp which the commit is created.\\ \hline
@@ -145,7 +201,7 @@ The current data is storred about each repositori, in the corresponding fields i
 \end{tabularx}
 \vspace{0.5cm}
 
-\subsection{Collaboration}
+\subsection{Collaboration data}
 Teams are bound uniquelie to a repositorie, each repository will only have one team bound to it and every user with access(being a contributor) to the repository on Github will have the possibility to join the team.  \\%%Every user with access to the prepository on Github will see this team.%%
 \subsubsection*{Team}
 These teams are bound to a repository and there can only be one not created for each team by a user each day. \\
@@ -181,7 +237,7 @@ The users attached to the team. \\
 \end{tabularx}
 \vspace{0.5cm}
 
-\subsection{Reflection}
+\subsection{Reflection data}
 \subsubsection*{Notes}
 These notes are bound to a team and there can only be created one for each team by a user each day. \\
 
@@ -221,11 +277,6 @@ Managers and owners of teams can create reflection workshops, where it is genera
     \hline
 \end{tabularx}
 \vspace{0.5cm}
-Id - Generated when the workshop was created
-Duration
-DurationStart
-DateCreated
-
 
 \textbf{WorkshopQuestions}
 This table holds the questions generated from the commit messages. \\
@@ -236,19 +287,26 @@ This table holds the questions generated from the commit messages. \\
     \rowcolor[gray]{0.8}
     \textbf{Field} & \textbf{Description} \\
     \hline
-    Id & Unique id generated when the workshop is created.\\ \hline
-   	TeamId & A forreign key to the team.\\ \hline
-   	CreatedAt & The timestamp which the workshop is created.\\ \hline
-   	DurationStart & The timestamp which the workshop periode starts.\\ \hline
-   	DateStart & The timestamp which the workshop periode ends.\\ 
+    Id & Unique id generated when the question is created.\\ \hline
+   	Workshop & A forreign key to the workshop.\\ \hline
+   	QuestionText & The generated question.\\ \hline
+   	CommitTag & The tag which the question is generated from.\\ \hline
     \hline
 \end{tabularx}
 \vspace{0.5cm}
 
 \section{User Interface}
-Explain it and how we designed it. Show sketches etc.....
+Explain it and how we implemented it. Show sketches etc.....
+
+\subsection{Responsive webdesign}
+Explain the benefits with reponsive webdesign.
 
 \subsection{Twitter bootstrap}
-explain it
+Open source and awesome!
 
-\subsection{Amazingcloud}
+\subsection{jQuery}
+It was initualy released under the MIT licence in 2006 to make it easier to select DOM\footnote{Document-Object-Model} objects and create powerful dynamic web pages and applications. 
+
+\subsubsection{Amazingcloud}
+Open source and cool! Uses jQuery
+
