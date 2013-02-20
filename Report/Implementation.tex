@@ -29,10 +29,10 @@ To leave a note on issues can be done by simply mentioning the issue number with
 \end{itemize}
 
 \section{Server}
-Here we will give an overview on how the server is implemented, since the application is implemented with a framework called Grails(which you can read about below).
+Here we will give an overview of the server implementation.
 
 \subsection{Grails}
-Grails is an open source web application framework which uses the programming language Groovy(which is based on Java). When Grails was developed, it's developers aimed to re-use proven technologies such as Hibernate and Spring.
+Grails is an open source web application framework which uses the programming language Groovy(which is based on Java). When Grails was developed, it's developers aimed to re-use proven technologies such as Hibernate and Spring. It uses a MVC\footnote{Model View Controller} pattern, where it changes .gsp(Groovy server page) file these files represents the different views related to each controller. The data retrieved by the controller from the database.
 
 \section{Database}
 % Include domain diagram
@@ -42,12 +42,18 @@ Grails is an open source web application framework which uses the programming la
 	\includegraphics[width=\textwidth]{databaseDomainDiagram}
 \caption{Domain diagram, the relationship between database classes.}
 \end{figure}
-% explain everything
+
+** Trenger vi skrive noe mer her? **
 
 
 \subsection{User data}
-Show what data is stored about each user\\
+Users are a important part of Peaceful Banana and it is important that all relevant data is stored. \\
+
 \subsubsection*{User}
+In this table general data is stored about each user and field relevant to authenticate them.
+
+The password are encrypted with SHA-512 encryption.\\
+
 \vspace{0.5cm}
 \begin{tabularx}{\linewidth}{| c | X |}
     \hline
@@ -83,7 +89,7 @@ The different roles that the users can be assigned to. These are hierarchy so th
 \vspace{0.5cm}
 
 \subsubsection*{UserRole}
-Contains the roles asigned to users. \\
+Both fields in this table are combined for the primary key such that each role can only be given to each user once. \\
 
 \vspace{0.5cm}
 \begin{tabularx}{\linewidth}{| c | X |}
@@ -142,7 +148,7 @@ Milestones are major goals consisting of several minor goals called issue, with 
 \vspace{0.5cm}
 
 \subsubsection*{Issues}
-A description of issues? \\
+Issues are minor goals or bugs, these issues can be bould to a milestone or independent. \\
 
 \vspace{0.5cm}
 \begin{tabularx}{\linewidth}{| c | X |}
@@ -164,7 +170,7 @@ A description of issues? \\
 \vspace{0.5cm}
 
 \subsubsection*{Commits}
-The tool can retrieve all commits done by a user, or even all commits for a given project/repository. This includes commit comments, timestamps and other relevant data. This can be used together with milestones to see commit activity, commit spikes and such. We can also through comments etc. see if there were any specific problems during a certain period. This will be tightly integrated with the milestones set up in the github project. \\
+At any given time a developer changes something in the sourcecode it can be commited to the version controll system, in this case git/github. These are the commits we store and use for reflection. \\
 
 \vspace{0.5cm}
 \begin{tabularx}{\linewidth}{| c | X |}
@@ -184,7 +190,7 @@ The tool can retrieve all commits done by a user, or even all commits for a give
 \vspace{0.5cm}
 
 \subsubsection*{Repository}
-The current data is storred about each repositori, in the corresponding fields in the table bellow. \\
+The current data is storred about each repository, in the corresponding fields in the table bellow. \\
 
 \vspace{0.5cm}
 \begin{tabularx}{\linewidth}{| c | X |}
@@ -296,7 +302,7 @@ This table holds the questions generated from the commit messages. \\
 \vspace{0.5cm}
 
 \section{User Interface}
-Explain it and how we implemented it. Show sketches etc.....
+Show examples and sketches?
 
 \subsection{Responsive webdesign}
 Explain the benefits with reponsive webdesign.
