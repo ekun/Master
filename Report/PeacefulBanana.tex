@@ -9,26 +9,25 @@ The tool was developed with software development artifacts collected from GitHub
 \section{What does it do?}
 PeacefulBanana is a tool that allows users to share and reflect upon their experiences in development projects. The tool integrates with GitHub and focus on collecting data from commits, milestones, issues as well as comments and references connected to these. The tool will scaffold these data and present them to the users, acting as input for triggering reflection. The reflection will then be captured and stored so the user can review these at a later date, or they can also be shared and used in team reflection sessions. The tool is designed to support both individual and collaborative reflection. It can be used during the team reflection workshop or just browsed individually when the user wishes to. The tool provides several opportunities to the users:
 \begin{description}
-
-	\item{Provide a scaffolded overview of the project} 
+	\item[Provide a scaffolded overview of the project] \hfill \\
 	PeacefulBanana provides users and teams with an overview of the project:
-		\begin{itemize}
+	\begin{itemize}
 		\item Users can choose what team-project to retrieve data from, see the projects milestones, issues and generate data relevant for reflection from these.
 		\item The team can see when an issue has been closed, and what milestones they are connected to.
 		\item The team can see which milestones were closed and when, and easily see if the team met its milestone deadlines. 
 		\item The team can see which team members have done what.
-		\end{itemize}
+	\end{itemize}
 
-	\item {Individual 5-minute daily reflection} 
+	\item[Individual 5-minute daily reflection] \hfill \\
 	Each day a notification will prompt the user to do a daily 5-minute reflection. This daily reflection presents the user with data for the last 24 hours, like commit activity and a tagcloud. This data provides the user with additional information and triggers reflection upon that days work. The daily summary collects input from the user:
-		\begin{itemize}
+	\begin{itemize}
 		\item The users mood that particular day, ranging 5 steps from 0 (Very sad) to 100 (Very happy)
 		\item The users top 2 contributions
 		\item The users top 2 improvements
-		\end{itemize}
+	\end{itemize}
 	PeacefulBanana stores each of these daily summaries in a database. Each reflection summary can be shared with the users team if they choose to. The mood data from each day is used towards a collaborative mood-average graph, which can be used in the team reflection sessions described below
 
-	\item {Reflection sessions} 
+	\item[Reflection sessions] \hfill \\
 	The team, or the team leader can use a datepicker and create a workshop from a selected time and date. The workshop features some mandatory questions
 	related to team work and reflection. Additionally the team can choose a set of tags to generate questions from. Quick summaries of project statistics, trending issues, tagclouds and more.The finished workshop template can be printed and
 	handed out to the team at the workshop, providing quick summaries of project statistics, trending issues, tagclouds and questions that acts as reflection triggers\\
@@ -38,7 +37,7 @@ PeacefulBanana is a tool that allows users to share and reflect upon their exper
 			\item What could be done to improve team collaboration?
 			\item Talk about any disappointments or successes of your project. What did you learn from it?
 			\item You have had a high activity working with \#framework Did you experience any particular problems with this tag? Why or why not?
-			\item What did you learn from working with the issue 'daily summary \& reflection notes' (\#17)?
+			\item What did you learn from working with the issue \textit{daily summary \& reflection notes (\#17)}?
 			\item The team didn't meet the deadline for milestone \#20 - Midterm Report, did the team experience any particular problems?
 		\end{itemize}
 \end{description}
