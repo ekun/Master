@@ -16,6 +16,8 @@
 \usepackage{colortbl}
 \usepackage{hyperref}
 \usepackage{tabularx}
+\usepackage{url}
+\usepackage[titletoc]{appendix}
 \hypersetup{
     colorlinks,%
     citecolor=black,%
@@ -61,7 +63,11 @@
 
 \input{Issues}
 
-\bibliographystyle{plain}
+\begin{appendices}
+\input{quickstart}
+\end{appendices}
+
+\bibliographystyle{unsrt}
 \bibliography{literature}
 
 \input{Changes}
