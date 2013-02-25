@@ -15,15 +15,15 @@ PeacefulBanana is a tool that allows users to share and reflect upon their exper
 		\item Users can choose what team-project to retrieve data from, see the projects milestones, issues and generate data relevant for reflection from these.
 		\item The team can see when an issue has been closed, and what milestones they are connected to.
 		\item The team can see which milestones were closed and when, and easily see if the team met its milestone deadlines. 
-		\item The team can see which team members have done what.
+		\item The team can see which team members have contributed to which issues.
 	\end{itemize}
 
 	\item[Individual 5-minute daily reflection] \hfill \\
 	Each day a notification will prompt the user to do a daily 5-minute reflection. This daily reflection presents the user with data for the last 24 hours, like commit activity and a tagcloud. This data provides the user with additional information and triggers reflection upon that days work. The daily summary collects input from the user:
 	\begin{itemize}
 		\item The users mood that particular day, ranging 5 steps from 0 (Very sad) to 100 (Very happy)
-		\item The users top 2 contributions
-		\item The users top 2 improvements
+		\item The users top 2 contributions done by the user to the project for that day.
+		\item The users top 2 things the user can improveme for the project.
 	\end{itemize}
 	PeacefulBanana stores each of these daily summaries in a database. Each reflection summary can be shared with the users team if they choose to. The mood data from each day is used towards a collaborative mood-average graph, which can be used in the team reflection sessions described below
 
@@ -55,7 +55,7 @@ Reflection directed functionality:
 \end{itemize}
 
 \subsection{Authentication}
-The application will feature an independent authentication, with the possibility of getting access to data from Github by using OAUTH2 tokens. When the user first uses the tool, he will be asked to authenticate with Githubs authentication page asking the user to log in and authorize the PeacefulBanana tool. When this is done the tool receives a token it can use on behalf of the user to retrieve data from Github. The token is stored in a secure database and linked with the user logged in at the time. 
+The application will feature an independent authentication, with the possibility of getting access to data from Github by using OAUTH2 tokens. When the user first uses the tool, he will be asked to authenticate with Githubs authentication page asking the user to log in and authorize the PeacefulBanana tool. When this is done the tool receives a token it can use on behalf of the user to retrieve data from Github. The token itself is not stored, but retrieved in the background when required and bound to the users HTTP-session which expires when the user closes the browser window. This is done for safety reasons cause it would be devestating if these tokes got in the hands of the wrong people, they could for example delete the entire repository.
 
 \subsection{Reflection triggers}
 \paragraph{Scaffolded notes}\mbox{}\\
