@@ -1,5 +1,53 @@
 \chapter{Design}
-In this chapter the design process will be explained in detail.
+In this chapter the design process will be explained in detail. We will show how our tool went from sketch to a full live web-page. 
+Through the different iterations of development, we made different design choices that helped design the application. Before the actual development began, we went
+through a design process that resulted in a basis for implementation. In this section we will elaborate on how these steps culminated into the final design choice.
+\section{Mockups}
+At the very beginning we had an idea of what we wanted to do and how to do it. At the time we had not decided on a platform for our application. Because of this we sketched up some different design choices.
 
-\section{Mockup}
-Show some mockups
+\subsection{Smartphone App}
+Our first alternative was creating a native app for smartphones, on iOS or Android. We had experience with creating android applications before, so this was our first thought. 
+\begin{figure}[h!]
+\label{smartphonemock}
+\centering
+	\includegraphics[width=\textwidth]{smartphonemock}
+\caption{Smartphone mockup}
+\end{figure}
+
+\subsection{Web-Application tool}
+Our second option was creating our tool as a web-application. Web-applications are platform independant and can be accessed on a wide range of devices, as long as it has a fairly updated browser. The idea was to also make the web application responsive\cite{responsivearticle}, which would provide an optimized viewing experience allowing for easy reading and navigation with minimal resizing, panning, and scrolling—across a wide range of devices (from large monitors to mobile phones .\\
+This is how our first sketch for a web-app looked like: 
+\begin{figure}[h!]
+\label{webappmock}
+\centering
+	\includegraphics[width=\textwidth]{webappmock}
+\caption{Web-app mockup}
+\end{figure}
+
+As this was the main design options, we did some research on existing frameworks which might suit our requirements. We wanted the tool to be available on a wide range of devices, and the tool needed to be responsive.\\ 
+We quickly found the Twitter Bootstrap framework\cite{twitterbootstrap}. Twitter bootstrap is a powerful front-end framework for faster and easier web development, and it's publically available to use by anyone.\\Bootstrap was made to to not only look and behave optimally in desktop browsers, but in tablet and smartphone browsers via responsive CSS and HTML5 as well. The framework features responsive grids, components like tabs and dropdowns, JavaScript plugins, typography options and forms. \\
+\newpage
+At their site they feature some examples that can be used as a basis for development. We decided to base our web application design on this layout, as it suited our needs and was very close to our initial mockup
+\begin{figure}[h!]
+\label{bootstrapexample}
+\centering
+	\includegraphics[width=\textwidth]{bootstrapexample}
+\caption{Twitter bootstrap fluid layout with header and sidebar}
+\end{figure}
+\\
+Visiting the site on a mobile device with a smaller screen, the responsive fluid layout would optimize the page to look like this:
+\begin{figure}[h!]
+\label{bootstrapresponsive}
+\centering
+	\includegraphics[width=\textwidth]{responsivemenuexample}
+\caption{Twitter Bootstrap fluid layout with responsive menu and content}
+\end{figure}
+\newpage
+And this is how our web-app looked after implementing bootstrap for a fully fluid and responsive web-application:
+\begin{figure}[h!]
+\label{teamscreen}
+\centering
+	\includegraphics[width=\textwidth]{initial}
+\caption{PeacefulBanana - Initial setup with Twitter Bootstrap}
+\end{figure}
+
