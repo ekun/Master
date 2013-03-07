@@ -10,6 +10,7 @@
 *.log
 *.bbl
 *.lof
+*.gz(busy)
 
 # localstorrage
 thumbs.db
