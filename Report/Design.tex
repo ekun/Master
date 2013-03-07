@@ -13,8 +13,9 @@ Any site designed to be responsive, adapts the layout to the viewing environment
 \end{figure}
 
 \subsection{Fluid grid}
-
-The fluid grid\cite{fluidarticle, fluidgrid} concept states that page elements should be sized in relative units, like percentages or ems, instead of absolute units like pixels or points.  In the fluid grid, flexible images are also sized in relative units (up to 100\%), in order to prevent them from stretching outside their containing element\cite{fluidimages}. The concept is that all kinds of elements on a web-page can be treated as proportions measured against their container, and not in absolute pixels. 
+A definition on fluid is : ``A fluid is a substance that continually deforms (flows) under an applied shear stress''\cite{fluidgrid}. In a web-design context, fluid will be the design and layout, and shear stress will be the device used to access the content.
+Regardless of what the device or screen size is, components in fluid designs are going to flow and adapt to the user environment. Fluid grids define a maximum layout size and the grid is divided into columns for easier handling. These grids can then be designed with proportional widths and heights. The fluid grid and it's columns can be seen in Figure \ref{responsivelayout}.
+The fluid grid\cite{fluidgrid, fluidarticle} concept states that page elements should be sized in relative units, like percentages or ems, instead of absolute units like pixels or points. Since fluid grids flow naturally based on the dimensions of its parent container-component, specific adjustments for various devices are therefore kept to a minimum. In the fluid grid, flexible images are also sized in relative units (up to 100\%), in order to prevent them from stretching outside their containing element\cite{fluidimages}. This means all kinds of elements on a web-page can be treated as proportions measured against their container, and not in absolute pixels. 
 
 \section{Mockups}
 At the very beginning we had an idea of what we wanted to do and how to do it. At the time we had not decided on a platform for our application. Because of this we sketched up some different design choices.
@@ -38,8 +39,8 @@ This is how our first sketch for a web-app looked like:
 \caption{Web-app mockup}
 \end{figure}
 
-As this was the main design options, we did some research on existing frameworks which might suit our requirements. We wanted the tool to be available on a wide range of devices, and the tool needed to be responsive.\\ 
-We quickly found the Twitter Bootstrap framework\cite{twitterbootstrap}. Twitter bootstrap is a powerful front-end framework for faster and easier web development, and it's publically available to use by anyone.\\Bootstrap was made to to not only look and behave optimally in desktop browsers, but in tablet and smartphone browsers via responsive CSS and HTML5 as well. The framework features responsive grids, components like tabs and dropdowns, JavaScript plugins, typography options and forms. \\
+As this was the main design options, we did some research on existing frameworks which might suit our requirements. The tool needed to be responsive and work on a wide range of devices, which made a fluid design suitable.\\ 
+We quickly found the Twitter Bootstrap framework\cite{twitterbootstrap} which features exactly this. Twitter bootstrap is a powerful front-end framework for faster and easier web development, and it's publically available to use by anyone.\\Bootstrap was made to to not only look and behave optimally in desktop browsers, but in tablet and smartphone browsers via responsive CSS and HTML5 as well. The framework features responsive grids, components like tabs and dropdowns, JavaScript plugins, typography options and forms. \\
 \newpage
 At their site they feature some examples that can be used as a basis for development. We decided to base our web application design on this layout, as it suited our needs and was very close to our initial mockup
 \begin{figure}[h!]
