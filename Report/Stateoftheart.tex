@@ -21,12 +21,11 @@ This tool features the idea of scaffolding issues and milestones into something 
 \subsection*{Agile Bench}
 Agile Bench integrates with Github so programmers do not have to duplicate comments between two systems\footnote{Agile Bench Github integration: \url{http://support.agilebench.com/entries/21307153-GitHub-Integration}}. Instead they can make a comment via Github(the codebase) commits and this will push comments into the project management system. AgileBench supports these commit formats: \\
 \begin{itemize}
-\item [\#story_id] comment - i.e. “[\#5] Added documentation” - will add “Added documentation” to story \#5
-\item [\#story_id \#story_id] comment. i.e. “[\#5 \#6] Added even more documentation” - will add “Added documentation” to story \#5 and \#6
-\item [Workflow State \#story_id \#story_id] comment. i.e. “[In Progress \#5 \#6] Added even more documentation” - will add “Added even more documentation” to story \#5 and \#6 and move stories \#5 & \#6 into the In Progress workflow state.
+\item \verb|[#story_id] comment - i.e. “[#5] Added documentation” - will add “Added documentation” to story #5|
+\item \verb|[#story_id #story_id] comment. i.e. “[#5 #6] Added even more documentation” - will add “Added documentation” to story #5 and #6|
+\item \verb|[Workflow State #story_id #story_id] comment. i.e. “[In Progress #5 #6] Added even more documentation” - will add “Added even more documentation” to story #5 and #6 and move stories #5 & #6 into the In Progress workflow state.|
 \end{itemize}
 Agile Bench do not facilitate for experience collection in order to promote reflection.
-[#story_id] comment
 \subsection*{AgileZen}
 AgileZen also organizes work in a Kanban board, with user-stories\footnote{AgileZen: \url{http://www.agilezen.com}}. Zen features teams with users and different user-roles. It also allows artifacts like screenshots or specification documents to be attached to a story. It integrates with GitHub as a service hook\footnote{\url{https://help.github.com/articles/post-receive-hooks}}. In order for Zen to include your changesets from github, you need to refer to the story ID in your commits using the format \#123 or zen-123. This further builds on the idea of using \#hashtags to \textit{tag} relevant messages and identify them in your commits. 
 
@@ -34,4 +33,4 @@ AgileZen also organizes work in a Kanban board, with user-stories\footnote{Agile
 % Bare å lese den da ....
 
 \subsection{Some other reflection stuff}
-asdf
+To do
