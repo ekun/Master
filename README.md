@@ -10,57 +10,37 @@ Dette skaper en refleksjonssekvens.
 
 Skrevet av Even Stene og Marius Nedal Glittum
 
-## Feedback fra monica fra 26.11:
-TODO: Fokusere på et scenario eller to. Bruke modellen til krogstie og gå gjennom for å se om vi kan forbedre applikasjonen til å møte disse punktene.  
-Forskjellige måter å gjøre scenariene på. Brukerne kan ledes til å bruke systemet på en viss måte, tvinges, eller bruke det fritt. Eller begge deler!  
-En mulighet er å ha en 5-10minutters session på slutten av dagen, hvor brukerne logger inn, får opp en daglig feed over hva som har skjedd , inputer info som humør, fornøydhet, utfordringer/gode sider og lagrer. Kanskje også se personlig data vs team data? Dette blir da den daglige bruken.  
-Kanskje også få opp et sammendrag av de daglige rapportene i den to ukentlige scenariet?  
+# Notater / Feedback fra 14.03 
+* Is our focus software development in general or a project based course?
+* Description of the rationale -> Could be done connecting functionalities to the MIRROR model and a clear connection to agile development.
+* Decide whether the thesis should introduce github in the research question and build on it, or if it should be general and introduce github as an example. 
+* Introduce GitHub in the Problem elaboration chapter before scenarios. 
 
-Kan så se på ukentlige/to-ukers scenariet, der man har en team-reflection-session. Dette kan som sagt være sterkt ledet, der man leder gruppen gjennom ulike data og spørsmål de inputer ting til, for så å generere en rapport til slutt(fordi data må kunne bli brukt senere, altså det man fikk ut av refleksjonen).  
+## Research Question
+Reformulate questions so we can get feedback on the tool and the evaluation we are planning. 
 
-Dersom vi har tid/aktuelt kan vi innføre flere scenarier, som f.eks bruk under workshoppen på slutten av faget. Det kan vi utvikle mens faget pågår og toolet blir brukt.  
+## PeacefulBanana
+This chapter should be very high-level, a simple overview of what the application does. Should only contain information on what it does exactly, and not why and how. Some of the data here should be moved to implementation. F.ex functionality chapters should be moved to implementation. 
 
-### General
+## Background
+Create a background chapter where agile software development is introduced, and the MIRROR model + Birgits model,since these should come early on. Then we can build the problem elaboration on this.
 
-* Add Tracking table to report
-* Better contextualization of the work in state of the art and ,core systematic analysis of the problem and rationale of the design
-* Add analysis of the scenarios that provides some highlevel challenges to support reflection in our specific context. 
-* Specify whether our tool is general and evaluated in IT2901 or developed specific for IT2901! 
-* Further specify a timetable. What should be done and when.  
+## Problem elaboration
+This should build on the background above, so it is clear and natural where the scenarios come from, and why we chose these scenarios(how representative they are).   
+Also be aware of the level of detail in this chapter. The objective of the chapter is to describe high level requirements. What purpose does the scenario serve?   
 
-### Research Method
-Where are we getting requirements from?  
-What will guide our design?  
-How will we evaluate the tool?  
+## State of the art
+* Move literature review here
+* Should refer more directly to tools & support of software development and reflection(related work)
 
-### Scenarios
-Scenarios need to be more grounded.  
-Before we start with the scenarios themselves we should provide some context.  
-Scenario 3 is the less relevant one, as it focuses on individual aspects, and we are mainly interested in collaboration.  
-This could be made more relevant if we focus it on "MY work vs the TEAM" .  
-Also add another scenario on reflection across teams, f.ex how to learn from different projects. 
+## Requirements
+The user stories here mention f.ex github which havent been discussed above. Either github needs to be introduced, or change them to a general version-control system. This is a choice we need to make, is github just an example of an implementation, or do we build the RQ on Github and the data Github provides(f.ex do other tracking systems have milestones & issues in the same way?). 
 
-#### Introduction
-Briefly talk about reflection and software development in the introduction. 
+## Implementation
+Missing an overview of the general architecture.   
+Move the Github introduction/details to come earlier, perhaps in problem elaboration or even earlier, since it is not really an implementation choice. 
 
-#### Problem elaboration
-Explain more about agile methods, why reflection is important, what are the challenges etc. Then we can discuss the scenarios.  
-Important to build an argumentation that justifies our focus, and since we develop a tool for use with github, our discussion should focus on the role of the artifact in the process(and the collaboration around it). This bart should be based on literature on agile software development and reflection. 
-
-### MIRROR reflection model
-What role do we see fpr the Computer-supported reflection model of MIRROR? Make use of the different phases of work/reflection and consider the support that can be provided in each step.  
-Model can be found: http://www.mirror-project.eu/showroom-a-publications/deliverables/174-d14model  
-Using the model should make it easier to further specify the scenarios. 
-
-### Related work
-
-* Start with some of the papers from Birgit. Also her PhD: http://www.idi.ntnu.no/research/doctor_theses/birgitkr.pdf  
-* Focus should be on tools for reflection in software development
-* Birgits overview in her thesis should be expanded and updated. Important to work on related work so that we know we develop something innovative.  
-
-### How to use the data when not on a computer/web?
-Work is mainly done on the computer, reflection however is often done without a screen in small workshops. What challenges are there to making the data available in a suitable form? - Focus on reflection use not on everyday use. Tailor the webapp to be used in these workshops, and/or collect data from the tool for this use.  
-
-
-
-
+## Quick start
+Why is it important to improve reflection in teams?  
+Make the student presentation more task-oriented(storyboard), instead of a pure user-manual  
+Design choices should be explained in design also. 
