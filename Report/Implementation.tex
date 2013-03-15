@@ -45,16 +45,12 @@ Here we will give an overview of the server implementation.
 Grails is an open source web application framework which uses the programming language Groovy(which is based on Java). When Grails was developed, it's developers aimed to re-use proven technologies such as Hibernate and Spring. It uses a MVC\footnote{Model View Controller} pattern, where it changes .gsp(Groovy server page) file these files represents the different views related to each controller. The data retrieved by the controller from the database.
 
 \section{Database}
-% Include domain diagram
 \begin{figure}[h!]
 \label{newnotification}
 \centering
 	\includegraphics[width=\textwidth]{databaseDomainDiagram}
 \caption{Domain diagram, the relationship between database classes.}
 \end{figure}
-
-** Trenger vi skrive noe mer her? **
-
 
 \subsection{User data}
 Users are a important part of Peaceful Banana and it is important that all relevant data is stored. \\
@@ -315,11 +311,6 @@ This table holds the questions generated from the commit messages. \\
 When designing the Peaceful Banana, it was clear that our task required a lot of design work. In order to create a simple yet informative page-layout the twitter boostrap framework was chosen.
 
 The design itself is heavily based on the fluid layout and sign in examples from the official examples.
-
-\subsection{Responsive webdesign}
-Explain the benefits with reponsive webdesign and how we incorporated that. Or why we didn't do it!
-
-The responsive measures implemented is the principles implemented in Twitter Bootstrap by default. Since these features are already present here it a simple task to utilize them.
 
 \subsection{Twitter bootstrap}
 %Tell something about twitter bootstrap and why/how we used it.
