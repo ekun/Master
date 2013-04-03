@@ -55,9 +55,6 @@ Reflection directed functionality:
 \item Reflection triggers - Functionality developed specifically for helping users reflect on their work.
 \end{itemize}
 
-\subsection{Authentication}
-The application will feature an independent authentication, with the possibility of getting access to data from Github by using OAUTH2 tokens. When the user first uses the tool, he will be asked to authenticate with Githubs authentication page asking the user to log in and authorize the PeacefulBanana tool. When this is done the tool receives a token it can use on behalf of the user to retrieve data from Github. The token itself is not stored, but retrieved in the background when required and bound to the users HTTP-session which expires when the user closes the browser window. This is done for safety reasons cause it would be devestating if these tokes got in the hands of the wrong people, they could for example delete the entire repository.
-
 \subsection{Reflection triggers}
 \paragraph{Scaffolded notes}\mbox{}\\
 Tool should provide the ability to take notes but in a scaffolded way. It should not be possible to make too general notes. The tool will provide this through coupling with certain elements in the milestones. This will make notes connected to a certain commit or event in the project trajectory. 
