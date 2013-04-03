@@ -4,8 +4,8 @@
 In this chapter we will introduce the PeacefulBanana tool, which is the prototype we developed to support this thesis. The focus will be to explain the concept of the tool and the features and functionality it provides. 
 
 \section{What is PeacefulBanana?}
-Peaceful Banana is a tool aimed towards aiding reflection in teams. It integrates with GitHub, collects the most relevant project artifacts and scaffolds these in order to trigger and promote reflection in teams. GitHub is explained in section \ref{githubchapter}. The tool will not provide the same possibilities already found on Github, but integrate with it and provide an additional layer of features specific for aiding reflection in software development projects. The tool will collect different data relevant for reflection, for example prompting the user for their mood each day, which allows for a mood graph over time. PeacefulBanana is developed as a web-application using the Grails web framework and Java programming language. The tool will work in all modern web-browsers, on platforms like the PC, smartphones and tablets. 
-The tool was developed with software development artifacts collected from GitHub in mind. PeacefulBanana will be evaluated with software development teams that have adopted an agile process model. Most agile process models feature reflection sessions in some form, where this tool will be used in order to promote and enhance reflection. Although it is aimed at agile teams, any process model featuring some kind of reflection session could benefit from using this tool in some way. Similarly the tool can also be used individually at any time. 
+Peaceful Banana is a tool aimed towards aiding reflection in teams. It integrates with version control systems(VCS), which is widely used in software development. The PeacefulBanana tool collects the most relevant project artifacts from such version control systems and scaffolds these in order to trigger and promote reflection in teams. PeacefulBanana will integrate with VCS and provide an additional layer of features specific for aiding reflection in software development projects. This means that PeacefulBanana will not feature the same functionalities that already exists in these systems, but rather contextualize them and present the data in a manner that can help developing-teams reflect on their experiences. The tool will collect different data relevant for reflection, for example prompting the user for their mood each day, which allows for both team-wide and personal mood graphs over a period of time. PeacefulBanana is developed as a web-application and will work in all modern web-browsers, on platforms like the PC, smartphones and tablets.
+The tool was developed with software development artifacts collected from VCS in mind. The PeacefulBanana tool will be evaluated with software development teams that have adopted an agile process model. Most agile process models feature reflection sessions in some form, where this tool will be used in order to promote and enhance reflection. Although it is aimed at agile teams, any process model featuring some kind of reflection session could benefit from using this tool in some way. Similarly the tool can also be used individually at any time. 
 
 \section{What does it do?}
 PeacefulBanana is a tool that allows users to share and reflect upon their experiences in development projects. The tool integrates with GitHub and focus on collecting data from commits, milestones, issues as well as comments and references connected to these. The tool will scaffold these data and present them to the users, acting as input for triggering reflection. The reflection will then be captured and stored so the user can review these at a later date, or they can also be shared and used in team reflection sessions. The tool is designed to support both individual and collaborative reflection. It can be used during the team reflection workshop or just browsed individually when the user wishes to. The tool provides several opportunities to the users:
@@ -44,10 +44,10 @@ PeacefulBanana is a tool that allows users to share and reflect upon their exper
 \end{description}
 
 \section{Main goal}
+%TODO : More here.. check if something should be moved. Remember: no implementation details here. 
 Is to create a reflection tool for software development teams offering multiple representation of data. % Short story
 
 \section{Functionality}
-
 Reflection directed functionality:
 \begin{itemize}
 \item Collecting data - How a user can retrieve data and annotate it. 
