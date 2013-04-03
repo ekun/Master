@@ -4,9 +4,9 @@ Master in progress
 Skrevet av Even Stene og Marius Nedal Glittum
 
 # Notater / Feedback fra 14.03 
-* Is our focus software development in general or a project based course?
+* ~~Is our focus software development in general or a project based course?~~
 * Description of the rationale -> Could be done connecting functionalities to the MIRROR model and a clear connection to agile development.
-* Decide whether the thesis should introduce github in the research question and build on it, or if it should be general and introduce github as an example. 
+* ~~Decide whether the thesis should introduce github in the research question and build on it, or if it should be general and introduce github as an example. ~~
 * Introduce GitHub in the Problem elaboration chapter before scenarios. 
 
 ## Research Question
