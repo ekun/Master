@@ -23,6 +23,7 @@ This should build on the background above, so it is clear and natural where the 
 Also be aware of the level of detail in this chapter. The objective of the chapter is to describe high level requirements. What purpose does the scenario serve?   
 
 ## State of the art
+* ~~Move literature review here~~
 * Should refer more directly to tools & support of software development and reflection(related work)
 
 ## Requirements
