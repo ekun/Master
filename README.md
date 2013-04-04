@@ -3,6 +3,9 @@ Master in progress
 
 Skrevet av Even Stene og Marius Nedal Glittum
 
+# To do først:
+Har skrevet om PeacefulBanana kapitlet, dette er nå generelt for versjonkontroll systemer og nevner ikke Github. På denne måten vil background kapitlet introdusere teorier som agile, mirror modellen og refleksjon/refleksjonsmodellen. Problem elaboration vil så definere problemet hvor Github blir introdusert som en mulig løsning på spørsmålet vårt(VCS må innføres i et research question vil jeg tro.). Da er det bare å gunne på :D
+
 # Notater / Feedback fra 14.03 
 * ~~Is our focus software development in general or a project based course?~~
 * Description of the rationale -> Could be done connecting functionalities to the MIRROR model and a clear connection to agile development.
