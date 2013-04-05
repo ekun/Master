@@ -6,30 +6,42 @@
 % How will we evaluate the tool?  
 %
 \section{Research Method}
-Table 1 \cite{Esearch2004} will be the basis of this design-science research and represents the following categories evaluation criteria’s will be constructed as described in \cite{Esearch2004}.
 
-\subsection{Approach}
-The approach will be the result of a design-oriented project, where the result will be evaluated based on the research questions defined above.
+% http://desrist2009.ist.psu.edu/Papers/desrist2009_submission_10.pdf nevne denne og cite{Esearch2004} modellene. At vi bruker de som basis for vår research metode. 
+% Lage et diagram som http://daim.idi.ntnu.no/masteroppgave?id=6231 og Timeline masteroppgaven gjør. Altså hvordan vi har gått frem underveis. Skriv så litt om hver periode, hva vi har gjort etc. Veldig likt timeline bare ikke så mye. Dropp såå alle de subsectionsa under. Går sikkert an å bake inn litt fra de ulike stedene, de bør jo nevnes. F.eks research rigor etc. 
+%
+The \emph{Design-Science Research Guidelines} presented in \cite{Esearch2004} will serve as the basis of this design-science research. The guidelines were created in order to assist researchers to understand the necessary requirements for effective design-science research. 
+
+%Evaluation:
+%Core questions described in the toolbox, 9.1:
+%Demographic questions, usage of the app, most relevant app-specific questions - choosing the questions that are most important to our thesis. 
+%In addition we will use the reflection scale, shown in 9.1.4 both before and after the evaluation period, in order to measure the effect on the tendency to reflect on past
+%experiences. Finally we will include the learning outcomes questions and the work behaviour questions, after the evaluation period. 
+
+
+%Evaluation with the students in IT2901: 
+%Students will use the tool for two weeks, daily individual use and as a team after the two week period. 
+%For scenario 2 we will require a team of at least 3 people in order to test. 
+%The first scenario does not require anything but a github repository. 
 
 \subsection{Design as an artifact}
-We will create a proof of concept prototype tool for promoting experienced-based learning from reflection based on project artifacts collected from version-controll systems. From this point the prototype will be referred to as the application.
-
-% DET HER MÅ VÆRE FEIL From this point the artifact will be referred to as the application.
+By definition, the result of design-science research in Information Science is:
+\begin{quote}
+A purposeful IT artifact created to address an important organizational problem. It must be described effectively, enabling its implementation and application in an appropriate domain.
+\end{quote}
+\cite{Markus et al. 2002} identified that a developed artifact is only significant if there is questions like: Can it be constructed, can it perform appropriately and is the result important to the information science community. 
+We will create a proof of concept prototype tool for promoting experienced-based learning from reflection based on project artifacts collected from version-control systems. Our goal was to create a tool that can discover new capabilites in the domain of reflection and experience-based learning, as well as support the existing capabilities in an efficient way. Evaluating the tool in \emph{real use} situations is necessary in order to discover if the artifact can enhance the reflection process as it is today. 
 
 \subsection{Problem relevance}
-We want to explore the use of multiple representations to support collaborative reflection sessions. In order to learn from previous experiences we want to display experiences in ways that enhances the users learning experience. It shall be easy and simple to change between visualizations based on context and preferences. 
-
-For example it shouldn’t be an alternative to watch experiences in a view that will list them at the same time or place.
-
-It should also be listed notes from relevant experiences based on tags related to the experience being reviewed. \cite{Hassan-montero2006}
+We want to explore how the collection and scaffolding of experiences connected to project artifacts can support collaborative reflection sessions. In order to revisit and learn from previous experiences we want to collect and scaffold experiences from users daily. Experiences and memories change over time, so collecting these experiences as quickly as possible is important. The tool will keep a copy of these experiences in order for users to revisit them at a later date, be it individually or in collaborative reflection sessions. These notes will be collected based on tags that are related to the experience being reviewed \cite{Hassan-montero2006}
 
 \subsection{Evaluation}
 Table 2 in \cite{Esearch2004} will be used as a basis for evaluating and notes on how to evaluate each point are listed below in this subsection.
+During evaluation we will be using parts of the evaluation toolbox published by MIRROR\footnote{\url{http://www.mirror-project.eu/showroom-a-publications/downloads/finish/5/67}}. This toolbox is a specification of evaluation methodology and research tooling. 
 
 \subsubsection{Observational}
-** Testcases **
-
-After completing the test period all test-subjects will answer a form with a set of questions to evaluate the application and attend a short interviewed to get a better understanding of why the test-subject answered as he/she did and any other comments would be greatly appreciated.
+Before and after the user evaluation of the tool, all test-subjects will be given a form with a set of questions to evaluate the application. We will be using some core demographic questions, app usage, the most relevant app-specific questions, and also the reflection scale [\ref{reflectionscale}] from the toolbox. The reflection scale assesses participants' general tendency to reflect and the importance they place on reflection. Using this scale, allows us to see whether using the tool prime people to reflect more. Meaning: Does the tool increase the users tendency to reflect on experiences, both individually and as a team. Measuring this before and after using the tool implementation, allows us to measure the expected increase. \\*
+Finally we will include the learning outcomes questions and the work behaviour questions, after the evaluation period.  
 
 \subsubsection{Analytical}
 We will perform a dynamic analysis on the data collected from server and user feedback. During use the application will provide logs on how the users use the application and we will be able to draw simple usage-patterns from this. This will also help us in the analysis of the applications performance as well as if it is a useful tool.
@@ -41,11 +53,16 @@ During development and testing we will be running simulations to ensure that the
 White Box testing will be executed during development of the application with artificial data to ensure that the function is working properly and as specified.
 
 \subsubsection{Descriptive}
-Here we will discuss a scenario where this application will demonstrate its full potential.
+Evaluation proposal with the students in IT2901: 
+Students that accept to evaluate our tool, will use it for two weeks, with daily individual use and as a team after the two week period. This will allow us to measure the
+usage of both scenario 1 and scenario 2.
 
-%On a conference that goes over a weekend with multiple auditoriums there might be multiple sessions overlapping and this makes you pick the sessions you want to attend, by using a collaborative tool like the one we are creating users can contribute with notes from each of the sessions and link them to a place, time and generate tags on the session topic. 
+Requirements: 
+The first scenario does not require anything but a github repository and is doable both for single and for multiples in teams.
+For scenario 2 we will require a team of at least 3 people in order to collect enough data. 
+We have continuously been using and evaluating the tool ourselves, also a fellow student has been using it for a couple of weeks, so we have some additional evaluation
+data also.
 
-%This will then enable users to go back in time after the conference has ended and to relive some of the sessions through another users note. For instance you can go back to a specific stage and review all the notes created in that auditorium spread over a timeline. Or the user can search for experiences by using keyword \cite{Hassan-montero2006}, these keywords can be linked to a set of experiences whit other keywords the experiences got in common and will create a tag-cloud for each set of experiences.
 \subsection{Research Contributions}
 The main goal is to create a proof of concept application that will help users reflect on their past experiences in a collaborative session by using multiple representations as a tool. 
 We will analyse the users experience in order to draw a conclusion on if multiple representations might help the users to reflect on their past experiences in a collaborative session.
