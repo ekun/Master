@@ -3,7 +3,18 @@ Master in progress
 
 Skrevet av Even Stene og Marius Nedal Glittum
 
-# To do først:
+# Evaluation:
+Core questions described in the toolbox, 9.1:
+Demographic questions, usage of the app, most relevant app-specific questions - choosing the questions that are most important to our thesis. 
+In addition we will use the reflection scale, shown in 9.1.4 both before and after the evaluation period, in order to measure the effect on the tendency to reflect on past
+experiences. Finally we will include the learning outcomes questions and the work behaviour questions, after the evaluation period. 
+
+## Evaluation with the students in IT2901: 
+Students will use the tool for two weeks, daily individual use and as a team after the two week period. 
+For scenario 2 we will require a team of at least 3 people in order to test. 
+The first scenario does not require anything but a github repository. 
+
+# Stuff:
 Har skrevet om PeacefulBanana kapitlet, dette er nå generelt for versjonkontroll systemer og nevner ikke Github. På denne måten vil background kapitlet introdusere teorier som agile, mirror modellen og refleksjon/refleksjonsmodellen. Problem elaboration vil så definere problemet hvor Github blir introdusert som en mulig løsning på spørsmålet vårt(VCS må innføres i et research question vil jeg tro.). Da er det bare å gunne på :D
 
 # Notater / Feedback fra 14.03 
