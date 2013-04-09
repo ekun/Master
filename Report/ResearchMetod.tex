@@ -7,10 +7,32 @@
 %
 \section{Research Method}
 
-% http://desrist2009.ist.psu.edu/Papers/desrist2009_submission_10.pdf nevne denne og cite{Esearch2004} modellene. At vi bruker de som basis for vår research metode. 
 % Lage et diagram som http://daim.idi.ntnu.no/masteroppgave?id=6231 og Timeline masteroppgaven gjør. Altså hvordan vi har gått frem underveis. Skriv så litt om hver periode, hva vi har gjort etc. Veldig likt timeline bare ikke så mye. Dropp såå alle de subsectionsa under. Går sikkert an å bake inn litt fra de ulike stedene, de bør jo nevnes. F.eks research rigor etc. 
-%
-The \emph{Design-Science Research Guidelines} presented in \cite{Esearch2004} will serve as the basis of this design-science research. The guidelines were created in order to assist researchers to understand the necessary requirements for effective design-science research. 
+
+The \emph{Design-Science Research Guidelines} presented in \cite{Esearch2004} the  will serve as the basis of this design-science research. The guidelines were created in order to assist researchers to understand the necessary requirements for effective design-science research. We will also be using the regulative cycle\cite{wieringa}.
+\begin{figure}[!htpb]
+\label{regulativecycle}
+\centering
+	\includegraphics[width=\textwidth]{regulativecycle}
+\caption{Regulativecycle development in Design-Science research}
+\end{figure}
+
+\subsection{Development steps}
+Our researchmodel shows our thesis from initial idea to evaluation and results:
+
+\begin{figure}[!htpb]
+\label{researchmodel}
+\centering
+	\includegraphics[width=\textwidth]{researchmodel_and_iterationcycle}
+\caption{The researchmodel}
+\end{figure}
+
+\begin{figure}[!htpb]
+\label{iterationprocess}
+\centering
+	\includegraphics[width=\textwidth]{iterationprocess}
+\caption{The daily delivery cycle}
+\end{figure}
 
 %Evaluation:
 %Core questions described in the toolbox, 9.1:
@@ -36,26 +58,24 @@ We will create a proof of concept prototype tool for promoting experienced-based
 We want to explore how the collection and scaffolding of experiences connected to project artifacts can support collaborative reflection sessions. In order to revisit and learn from previous experiences we want to collect and scaffold experiences from users daily. Experiences and memories change over time, so collecting these experiences as quickly as possible is important. The tool will keep a copy of these experiences in order for users to revisit them at a later date, be it individually or in collaborative reflection sessions. These notes will be collected based on tags that are related to the experience being reviewed \cite{Hassan-montero2006}
 
 \subsection{Evaluation}
-Table 2 in \cite{Esearch2004} will be used as a basis for evaluating and notes on how to evaluate each point are listed below in this subsection.
+Table 2 in \cite{Esearch2004} will be used as guidelines for evaluation of our prototype. 
 During evaluation we will be using parts of the evaluation toolbox published by MIRROR\footnote{\url{http://www.mirror-project.eu/showroom-a-publications/downloads/finish/5/67}}. This toolbox is a specification of evaluation methodology and research tooling. 
 
 \subsubsection{Observational}
-Before and after the user evaluation of the tool, all test-subjects will be given a form with a set of questions to evaluate the application. We will be using some core demographic questions, app usage, the most relevant app-specific questions, and also the reflection scale [\ref{reflectionscale}] from the toolbox. The reflection scale assesses participants' general tendency to reflect and the importance they place on reflection. Using this scale, allows us to see whether using the tool prime people to reflect more. Meaning: Does the tool increase the users tendency to reflect on experiences, both individually and as a team. Measuring this before and after using the tool implementation, allows us to measure the expected increase. \\*
+Before and after the user evaluation of the tool, all test-subjects will be given a form with a set of questions to evaluate the application. We will be using core demographic questions, app usage, the most relevant app-specific questions, and also the reflection scale [\ref{reflectionscale}] from the toolbox. The reflection scale assesses participants' general tendency to reflect and the importance they place on reflection. Using this scale, allows us to see whether using the tool prime people to reflect more. Meaning: Does the tool increase the users tendency to reflect on experiences, both individually and as a team. Measuring this before and after using the tool implementation, allows us to measure the expected increase. \\*
 Finally we will include the learning outcomes questions and the work behaviour questions, after the evaluation period.  
 
 \subsubsection{Analytical}
-We will perform a dynamic analysis on the data collected from server and user feedback. During use the application will provide logs on how the users use the application and we will be able to draw simple usage-patterns from this. This will also help us in the analysis of the applications performance as well as if it is a useful tool.
-
-\subsubsection{Experimental}
-During development and testing we will be running simulations to ensure that the user experience is as expected. Case study and expert review will be with both artificial data and real experiences contributed by these groups, the artificial data will be used as basis for comparison during.
+We will perform a dynamic analysis on the data collected from server and user feedback. During use the application will provide simple usage-patterns on how the users use the application.
+This will also help us in the analysis of the applications performance as well as its usefulness in the reflection and learning domains
 
 \subsubsection{Testing}
-White Box testing will be executed during development of the application with artificial data to ensure that the function is working properly and as specified.
+During development we will continuously test the tool  to ensure that the user experience is as expected, as a means of quality assurance.
+White Box testing will be executed during development of the application with artificial data to ensure that the function is working properly and as specified. 
 
 \subsubsection{Descriptive}
-Evaluation proposal with the students in IT2901: 
-Students that accept to evaluate our tool, will use it for two weeks, with daily individual use and as a team after the two week period. This will allow us to measure the
-usage of both scenario 1 and scenario 2.
+Evaluation proposal with the students in IT2901 - A project course taken by computer science students on the Norwegian University of Science and Technology (NTNU). 
+Students that accept to evaluate our tool, will use it for two weeks, with daily individual use and as a team after the two week period. This will allow us to measure the usage of our scenarios. 
 
 Requirements: 
 The first scenario does not require anything but a github repository and is doable both for single and for multiples in teams.
@@ -64,19 +84,21 @@ We have continuously been using and evaluating the tool ourselves, also a fellow
 data also.
 
 \subsection{Research Contributions}
-The main goal is to create a proof of concept application that will help users reflect on their past experiences in a collaborative session by using multiple representations as a tool. 
-We will analyse the users experience in order to draw a conclusion on if multiple representations might help the users to reflect on their past experiences in a collaborative session.
+The main goal is to create a proof of concept application that will help users reflect on their past experiences individually and in collaborative reflection sessions by collecting experiences daily and revisiting them at any time. We will analyse the users experience and the evaluation results  in order to draw a conclusion on if multiple representations might help the users to reflect on their past experiences in a collaborative session.
 
 \subsection{Research Rigor}
- We will test the application with a group of experts in the fields relevant and gather data during testing with this group and use this to evaluate how good the application is. This will serve as a good basis for analysing, triangulate and evaluate to look for relevant research results elsewhere.
+We will test the tool with a group of experts in the fields relevant and gather data during testing with this group and use this to evaluate the usefulness of the tool. This will serve as a good basis for analysis, triangulate and evaluate to look for relevant research results elsewhere.
 
 \subsection{Design as a research process}
 The application will be developed in two main parts, which is central to this research. The first part is development and the second is testing/evaluating the results.
 
-Implementing the application will be developed over three separate cycles; during the first we will develop a prototype where just the basic features are present. The second cycle will implement the collaboration features in the prototype created in the first cycle and during the third we will be focusing on integrating all the features with each other and create a tool for seamless collaboration sessions. While implementing the application we will use it ourself during development
+Implementing the application will be developed in development cycles; The first goal will be to develop ideas and a basic mock-up of the application and its design. The second goal will be to implement basic features. Implementation of the individual and collaboration features will then be developed on the basis of feedback from the first cycles. Finally we will focus on integrating all the features into the final system, and create a tool for individual and collaborative reflection use. We will use the tool ourselves during development, as it would be used in a real world environment. In this way we will ensure that all functionality is working as expected, and also identify limitations in the design. 
 
-We will then do a iteration where we do testing on the application, both the case study and expert review in that order. We feel that evaluating them separately will enhance their feedback and we can compare them to see if any patterns emerge.
+Finally we will perform the case study evaluation with computer-science students, and the expert review. Evaluating these separately will provide two sets of feedback which we can compare in order to possibly see if any patterns emerge. 
 
 \subsection{Research communication}
-The proof of concept application will be available for testing along with a user guide and the whole process will be well documented and our research results will be made available.
-We also expect to find some limitations which will be documented along the research results
+The proof of concept application will be available for testing along with a user guide, the whole process will be well documented and our research results will be made available.
+Any limitations identified  will be documented along with the research results. 
+
+
+
