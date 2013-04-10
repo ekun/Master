@@ -7,10 +7,10 @@ through a design process that resulted in a basis for implementation. In this se
 Responsive web design\cite{responsivearticle} is a web design approach aimed at developing websites in order to provide an optimal viewing experience on a wide range of devices, from large desktop monitors to smartphones and tablets. This includes easy reading and navigation with minimal resizing, panning, and scrolling.\\
 Any site designed to be responsive, adapts the layout to the viewing environment, along with fluid proportion-based grids and flexible images.\\
 \begin{figure}[h!]
-\label{responsivelayout}
 \centering
 	\includegraphics[width=\textwidth]{responsivelayout}
 \caption{Responsive layout, adapting the same content to different viewing experiences}
+\label{responsivelayout}
 \end{figure}
 
 \subsection{Fluid grid}
@@ -24,20 +24,20 @@ At the very beginning we had an idea of what we wanted to do and how to do it. A
 \subsection{Smartphone App}
 Our first alternative was creating a native app for smartphones, on iOS or Android. We had experience with creating android applications before, so this was our first thought. 
 \begin{figure}[h!]
-\label{smartphonemock}
 \centering
 	\includegraphics[width=\textwidth]{smartphonemock}
 \caption{Smartphone mockup}
+\label{smartphonemock}
 \end{figure}
 
 \subsection{Web-Application tool}
 Our second option was creating our tool as a web-application. Web-applications are platform independant and can be accessed on a wide range of devices, as long as it has a fairly updated browser. The idea was to also make the web application responsive, which would provide an optimized viewing experience allowing for easy reading and navigation with minimal resizing, panning, and scrolling—across a wide range of devices (from large monitors to mobile phones .\\
 This is how our first sketch for a web-app looked like: 
 \begin{figure}[h!]
-\label{webappmock}
 \centering 
 	\includegraphics[width=\textwidth]{webappmock}
 \caption{Web-app mockup}
+\label{webappmock}
 \end{figure}
 As this was the main design options, we did some research on existing frameworks which might suit our requirements. The tool needed to be responsive and work on a wide range of devices, which made a fluid design suitable.
 
@@ -53,10 +53,10 @@ Bootstrap ships with the standard 940 pixel wide, grid layout. Developers can ch
 Bootstrap features a set of CSS stylesheet, which defines styles for the major HTML elements. These stylesheets allow for a platform-independent, multibrowser enabled and consistent appearance for text, tables and other elements. \\
 Bootstrap also comes with additional commonly used interface components. Such components are buttons, button-groups, buttons with drop-down option, navigation lists, tabs, breadcrumbs, pagination, different alerts and so on. 
 \begin{figure}[h!]
-\label{bootstrapbutton}
 \centering
 	\includegraphics[width=\textwidth]{bootstrapbuttons}
 \caption{Example of Twitter Bootstrap button types}
+\label{bootstrapbutton}
 \end{figure}
 
 \subsection{Icons}
@@ -65,43 +65,43 @@ Twitter Bootstrap comes with 140 sprite form icons, in both dark grey and white\
 \newpage
 At their site they feature some examples that can be used as a basis for development. We decided to base our web application design on this layout, as it suited our needs and was very close to our initial mockup
 \begin{figure}[h!]
-\label{bootstrapexample}
 \centering
 	\includegraphics[width=\textwidth]{bootstrapexample}
 \caption{Twitter bootstrap fluid layout with header and sidebar}
+\label{bootstrapexample}
 \end{figure}
 
 Visiting the site on a mobile device with a smaller screen, the responsive fluid layout would optimize the page to look like this:
 \begin{figure}[h!]
-\label{bootstrapresponsive}
 \centering
 	\includegraphics[width=\textwidth]{responsivemenuexample}
 \caption{Twitter Bootstrap fluid layout with responsive menu and content}
+\label{bootstrapresponsive}
 \end{figure}
 \newpage
 And this is how our web-app looked after implementing bootstrap for a fully fluid and responsive web-application:
 \begin{figure}[h!]
-\label{teamscreen}
 \centering
 	\includegraphics[width=\textwidth]{initial}
 \caption{PeacefulBanana - Initial setup with Twitter Bootstrap}
+\label{teamscreen}
 \end{figure}
 
 \section{PeacefulBanana Design}
 After setting up and integrating the twitter bootstrap framework, the PeacefulBanana web-application was born, fully responsive and available on multiple platforms. This is how the final PeacefulBanana design looks like, it is based on the bootstrap example previously shown:
 \begin{figure}[h!]
-\label{finalhome}
 \centering
 	\includegraphics[width=\textwidth]{finalhome}
 \caption{PeacefulBanana - Final home screen}
+\label{finalhome}
 \end{figure}
 The design is based on the Twitter Bootstrap framework and the principles of responsive web-design and a fluid layout. More specifically it is based on the fluid layout example\footnote{\url{http://twitter.github.com/bootstrap/examples/fluid.html}}. The PeacefulBanana layout features a navigation-menu on top with different tabs, leading to different content. Each of these tabs contain sidebars, which acts as submenus. The tool also integrates a user-menu, which is a dropdown with different actions that relates to the user, like settings. 
 
 \subsection{Icons}
 The PeacefulBanana tool makes extensive use of the icons included in Twitter Bootstrap, in order to further define what action you can expect from a tab. For example a home icon on the \textit{Home} tab, a globe on the \textit{Team} tab and a user icon on the \textit{User dropdown}.
 \begin{figure}[h!]
-\label{iconexample}
 \centering
 	\includegraphics[width=\textwidth]{iconexample}
 \caption{Example of Twitter Bootstrap/Glyphicons use in PeacefulBanana}
+\label{iconexample}
 \end{figure}
