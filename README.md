@@ -30,7 +30,7 @@ Reformulate questions so we can get feedback on the tool and the evaluation we a
 This chapter should be very high-level, a simple overview of what the application does. Should only contain information on what it does exactly, and not why and how. Some of the data here should be moved to implementation. F.ex functionality chapters should be moved to implementation. 
 
 ## Background
-Create a background chapter where agile software development is introduced, and the MIRROR model + Birgits model,since these should come early on. Then we can build the problem elaboration on this.
+~~Create a background chapter where agile software development is introduced, and the MIRROR model + Birgits model,since these should come early on. Then we can build the problem elaboration on this.~~
 
 ## Problem elaboration
 This should build on the background above, so it is clear and natural where the scenarios come from, and why we chose these scenarios(how representative they are).   
