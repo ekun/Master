@@ -64,15 +64,38 @@ Table 2 in \cite{Esearch2004} will be used as guidelines for evaluation of our p
 During evaluation we will be using parts of the evaluation toolbox published by MIRROR\footnote{\url{http://www.mirror-project.eu/showroom-a-publications/downloads/finish/5/67}}. This toolbox is a specification of evaluation methodology and research tooling. 
 
 \subsubsection{Observational}
-Before and after the user evaluation of the tool, all test-subjects will be given a form with a set of questions to evaluate the application. We will be using core demographic questions, app usage, the most relevant app-specific questions, and also the reflection scale [\ref{reflectionscale}] from the toolbox. The reflection scale assesses participants' general tendency to reflect and the importance they place on reflection. Using this scale, allows us to see whether using the tool prime people to reflect more. Meaning: Does the tool increase the users tendency to reflect on experiences, both individually and as a team. Measuring this before and after using the tool implementation, allows us to measure the expected increase. \\*
-Finally we will include the learning outcomes questions and the work behaviour questions, after the evaluation period.  
+Before and after the user evaluation of the tool, all test-subjects will be given a form with a set of questions to evaluate the application. We will be using core demographic questions, app usage, the most relevant app-specific questions, and also the reflection scale from the toolbox[Appendix \ref{reflectionscale}]. The reflection scale assesses participants' general tendency to reflect and the importance they place on reflection. Using this scale, allows us to see whether using the tool prime people to reflect more. That is: Does the tool increase the users tendency to reflect on experiences, both individually and as a team. Measuring this on users before and after implementation of the tool, allows us to measure the expected increase. \\*
+After the evaluation period,  we will include the learning outcomes and the work behaviour questions from the evaluation toolbox.
 
 \subsubsection{Analytical}
-We will perform a dynamic analysis on the data collected from server and user feedback. During use the application will provide simple usage-patterns on how the users use the application.
-This will also help us in the analysis of the applications performance as well as its usefulness in the reflection and learning domains
+We will perform a dynamic analysis on the data collected from the application-server and user feedback. During evaluation the application will provide simple usage-patterns on how the users use the application. The usage statistics collected by the application are: 
+\begin{itemize}
+\item Total number of reflection notes
+\item Number of reflection notes per team
+\item Number of reflection notes per user
+\item The average mood, on a scale from 0 - 100.
+\item The ratio of shared notes to private notes. 
+\end{itemize}
+An example of this data can be seen in Figure: \ref{notestatistics}. 
+\begin{figure}[!htpb]
+\centering
+	\includegraphics[width=\textwidth]{notestatistics}
+\caption{Reflection note statistics}
+\label{notestatistics}
+\end{figure}
+\\*
+We will also gather statistical data regarding the Github data present in the application, shown in Figure: \ref{githubstatistics}
+\begin{figure}[!htpb]
+\centering
+	\includegraphics[width=\textwidth]{githubstatistics}
+\caption{Github statistics}
+\label{githubstatistics}
+\end{figure}
+
+This will also help us in the analysis of the applications performance as well as its usefulness in the reflection and learning domains.
 
 \subsubsection{Testing}
-During development we will continuously test the tool  to ensure that the user experience is as expected, as a means of quality assurance.
+During development we will continuously test the tool to ensure that the user experience is as expected, as a means of quality assurance.
 White Box testing will be executed during development of the application with artificial data to ensure that the function is working properly and as specified. 
 
 \subsubsection{Descriptive}
@@ -89,10 +112,10 @@ data also.
 
 % This should come last in the chapter, unsure of how much we need to have here. Incorporate as much as possible into parts above. 
 \subsection{Problem relevance}
-We want to explore how the collection and scaffolding of experiences connected to project artifacts can support collaborative reflection sessions. In order to revisit and learn from previous experiences we want to collect and scaffold experiences from users daily. Experiences and memories change over time, so collecting these experiences as quickly as possible is important. The tool will keep a copy of these experiences in order for users to revisit them at a later date, be it individually or in collaborative reflection sessions. These notes will be collected based on tags that are related to the experience being reviewed \cite{Hassan-montero2006}
+We want to explore how the collection and scaffolding of experiences connected to project artifacts can support collaborative reflection sessions. In order to revisit and learn from previous experiences we want to collect and scaffold experiences from users daily. Experiences and memories change over time, so collecting these experiences as quickly as possible is important. The tool will keep a copy of these experiences in order for users to revisit them at a later date, be it individually or in collaborative reflection sessions. These notes will be collected based on tags that are related to the experience being reviewed \cite{Hassan-montero2006}.
 
 \subsection{Research Contributions}
-The main goal is to create a proof of concept application that will help users reflect on their past experiences individually and in collaborative reflection sessions by collecting experiences daily and revisiting them at any time. We will analyse the users experience and the evaluation results  in order to draw a conclusion on if multiple representations might help the users to reflect on their past experiences in a collaborative session.
+The main goal is to create a proof of concept application that will help users reflect on their past experiences individually and in collaborative reflection sessions by collecting experiences daily and revisiting them at any time. We will analyze the users experience and the evaluation results in order to draw a conclusion on if using the tool might increase the users tendency to reflect on their past experiences in a collaborative session.
 
 \subsection{Research Rigor}
 We will test the tool with a group of experts in the fields relevant and gather data during testing with this group and use this to evaluate the usefulness of the tool. This will serve as a good basis for analysis, triangulate and evaluate to look for relevant research results elsewhere.
