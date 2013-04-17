@@ -20,11 +20,11 @@ Har skrevet om PeacefulBanana kapitlet, dette er nå generelt for versjonkontrol
 # Notater / Feedback fra 14.03 
 * ~~Is our focus software development in general or a project based course?~~
 * Description of the rationale -> Could be done connecting functionalities to the MIRROR model and a clear connection to agile development.
-* ~~Decide whether the thesis should introduce github in the research question and build on it, or if it should be general and introduce github as an example. ~~
+* ~~Decide whether the thesis should introduce github in the research question and build on it, or if it should be general and introduce github as an example.~~
 * Introduce GitHub in the Problem elaboration chapter before scenarios. 
 
 ## Research Question
-Reformulate questions so we can get feedback on the tool and the evaluation we are planning. 
+~~Reformulate questions so we can get feedback on the tool and the evaluation we are planning.~~
 
 ## PeacefulBanana
 This chapter should be very high-level, a simple overview of what the application does. Should only contain information on what it does exactly, and not why and how. Some of the data here should be moved to implementation. F.ex functionality chapters should be moved to implementation. 
