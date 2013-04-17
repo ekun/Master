@@ -24,7 +24,7 @@ Har skrevet om PeacefulBanana kapitlet, dette er nå generelt for versjonkontrol
 * Introduce GitHub in the Problem elaboration chapter before scenarios. 
 
 ## Research Question
-Reformulate questions so we can get feedback on the tool and the evaluation we are planning. 
+~~Reformulate questions so we can get feedback on the tool and the evaluation we are planning.~~
 
 ## PeacefulBanana
 This chapter should be very high-level, a simple overview of what the application does. Should only contain information on what it does exactly, and not why and how. Some of the data here should be moved to implementation. F.ex functionality chapters should be moved to implementation. 
