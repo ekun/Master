@@ -81,6 +81,23 @@ According to someone availability is concerned about making the application as a
         Response measure & Webserver responds with the application when the server is running. \\
         \hline
     \end{tabular}
+
+    \item[\textbf{A2}] Persistent storrage \\
+    \textit{\small{When the system is rebooted it needs to restore to the same state as before.}}
+        
+    \begin{tabular}{| l | p{7cm} |}
+        \hline
+        \rowcolor[gray]{0.8}
+        \textbf{Portion of scenario} & \textbf{Values} \\
+        \hline
+        Source & End User \\
+        Stimulus & Accessing website \\
+        Artifact & System \\
+        Environment & Website \\
+        Response & Show the user the website it desires. \\
+        Response measure & Webserver responds with the application when the server is running. \\
+        \hline
+    \end{tabular}
 \end{itemize}
 
 \section{Security}
@@ -100,7 +117,24 @@ According to someone availability is concerned about making the application as a
         Artifact & System \\
         Environment & Run time \\
         Response & Secure data  \\
-        Response measure & After positioning the ships, the user is able to change these positions, one  at a time. \\
+        Response measure & After positioning the ships, the user is able to change these positions, one at a time. \\
+        \hline
+    \end{tabular}
+
+    \item[\textbf{S2}] Authentication \\
+    \textit{\small{The users shall be authenticated to view sensitiv data.}}
+        
+    \begin{tabular}{| l | p{7cm} |}
+        \hline
+        \rowcolor[gray]{0.8}
+        \textbf{Portion of scenario} & \textbf{Values} \\
+        \hline
+        Source & End User \\
+        Stimulus & Requesting to view sensitiv data. \\
+        Artifact & System \\
+        Environment & Run time \\
+        Response & Check authentication \\
+        Response measure & If authenticated show the appropriate data. \\
         \hline
     \end{tabular}
 
