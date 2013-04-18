@@ -8,8 +8,8 @@
 % around it). This part should be based on literature on agile software development and reflection. 
 %
 \label{problemelaboration}
-In this chapter we will elaborate on our problem by defining our task and presenting our high level requirements.
-We will also present our two main scenarios and the context of these. 
+In this chapter we will elaborate on our problem by defining our task and presenting our high level requirements. We will also introduce GitHub as the choice of version-control system for our implementation.
+On the basis of theory, background and related work we will also also present our two main scenarios and the context of these. 
 
 %### MIRROR reflection model
 % What role do we see fpr the Computer-supported reflection model of MIRROR? Make use of the different phases of work/reflection and consider the support that can be provided in each step.  
@@ -20,16 +20,82 @@ We will also present our two main scenarios and the context of these.
 \label{problemdefinition}
 
 To answer our research questions we will develop a web-tool aimed at software development teams adopting an agile process model. Most agile process models adopt reflection sessions, and it is for this purpose the tool is to be helpful. Using the tool at a daily basis, like described in Scenario 1 on page \pageref{scenario1}, allows for collection of fresh data and triggers reflection upon experiences connected to these data. These daily summaries are saved and can also be shared with the rest of the development team. In Scenario 2, these daily reflection notes can be reviewed individually and/or by the team in order to identify experiences over the whole iteration. The team can also use the shared notes to compare experiences and trigger discussion and reflection upon these. 
-Most of these teams use some sort of a project tracker with project artifacts, like programming code, text documents etc. We have chosen to focus on GitHub, but the tool could be adapted to work with any version tracker that allows for data collection. The tool will collect relevant data from the project repository on GitHub without any action needed from the user to do so. The tool will then scaffold and present these data in order to allow users to revisit, share and reflect upon agile project experiences.
+Most of these teams use some sort of a project tracker with project artifacts, like programming code, text documents etc. We have chosen to focus on GitHub(See section \ref{githubchapter}, but the tool could be adapted to work with any version tracker that allows for data collection. The tool will collect relevant data from the project repository on GitHub without any action needed from the user to do so. The tool will then scaffold and present these data in order to allow users to revisit, share and reflect upon agile project experiences.
 The experiences will be presented in several different ways like activity-graphs, mood-graphs and tagclouds. These will act as reflection triggers and help the users to reflect on their work. These experiences will be collected and made available for the users and/or the team later. The tool will be designed with reflection in mind, but the tool will also function as 
 a tool that fits several scenarios and can be used by different groups of users. The tool also functions well on its own, and can be explored and provide data from experiences outside of the mentioned scenarios. Users can at any time look into a repository, a milestone or a single issue and the tool will provide data that is useful for recollecting experiences and providing a basis for reflection upon these. 
 The tool will be evaluated with software development teams in a course at the Norwegian University of Science and Technology. We have worked out two main scenarios described below, that these groups will be evaluated against in order to answer our research questions, but as mentioned our goal is to develop the tool to be usable towards a wide range of other scenarios. 
 
+\section{Github}
+\label{githubchapter}
+This section will introduce GitHub, the features GitHub provides and the rationale behind choosing GitHub as the VCS for our tool implementation. 
+GitHub is a web-based hosting service for software development projects that use the Git revision control system\cite{git,github}. GitHub offers both paid plans for private repositories, and free accounts for open source projects.
+
+GitHub provides users with integrated issue tracking, code review, project wiki, useful statistics and more. 
+Motivational points for choosing GitHub as the revision control system to integrate with are several. Some technical aspects are that GitHub provides developers with a simple to use API\cite{githubapi}, with libraries for integration with most of the commonly used programming languages, like Java\cite{jgit}.\\
+In addition to the technical aspects, GitHub is the most used revision control system ,as of January 2013 GitHub announced it had passed the 3 million users mark and now hosting more than 5 million repositories and is a tool many in our evaluation group already use in their development projects\cite{githubnumbers}.
+
+\subsection{Authentication}
+The application featuresan authentication with GitHUb, through the use of OAUTH2 tokens. When the user first uses the tool, he will be asked to authenticate with Githubs authentication page, asking the user to log in and authorize the PeacefulBanana tool. When this is done the tool receives a token it can use on behalf of the user to retrieve data from Github. The token itself is not stored, but retrieved in the background when required and bound to the users HTTP-session which expires when the user closes the browser window. This is done for safety reasons cause it would be devestating if these tokes got in the hands of the wrong people, they could for example delete the entire repository.
+
+For gathering data from Github, this data is transfered as JSON(JavaScript Object Notation), a lightweigh data interchange language. You can see all the possible data-types gathered from the Github API.
+\subsection{Repositories}
+GitHub is a repository hosting service for software development projects. A repository contains all the project files, may it be code, images, and other documentation. This means that all content in a project is connected to this repository. In addition to documentation and file content, GitHub provides integrated issue tracking, which is connected to this repository and could also be connected to one or several milestones. 
+\subsection{Commits}
+Say some of your project files have been changed, for example some code snippet in a Java file. The way to save these changes to your local branch is by commits. A commit can consist of code line additions, deletions, files added, changed or removed. When you are ready to save the changes, you commit them in a commandline together with a commit message which is a short text describing the changes you have done. \\
+When a user is ready to push one or more local commits to the project repository, it can be done via the command git push in the commandline. It is now the HEAD revision and the new code and commits can be seen on the github page.
+\subsection{Milestones and Issues}
+\begin{quote}
+\em GitHub Issues can be assigned to a user to make it easy to know who's working on what, or which issues you need to tackle next.
+\end{quote}
+Every GitHub repository has an issue tracker, that allows users to track bugs and focus on features. Milestones and issues help manage large projects, where issues especially makes for a great TODO list, similar to a product backlog. Only {\bf collaborators} can create and view issues on private repositories. On public repositories anyone can create and view issues. 
+\begin{itemize}
+\item GitHub issues can be assigned to a user, which makes it easy to know who's working on what, or which issues should be handled next. Milestones are a good way of helping team members to work towards a goal. A team can set a due date, name a milestone and then start assigning issues to that milestone. An example of a Milestone could be a due date of a project demo or delivery. Any number of issues can then be assigned to this milestone, and thus be connected to it. 
+\item Issues know all about commits. Github enables referencing and closing issues with Commit Messages. By using a few simple keywords you can close an issue right from a commit message, or just leave a note on the issue.The syntax to do this is as follows: To close issue \#35 , a commit message containing 'closes \#35' , will close issue number 35 when pushed to github. Other keywords are: close, closes, closed, fixes, fixed. \\g s
+To leave a note on issues can be done by simply mentioning the issue number without any keywords in a commit message. F.ex "This commit references \#35". Anyone with write access to a repository may close an issue or leave a note.
+\end{itemize}
+
 \section{Reflection and technology}
+% Why is reflecting important and what are the challenges.
 The world wide web and modern technologies provides easy access to enormous amounts of information. This means that in order to learn, learners must be able to make sense of the information collected.  
 In order to achieve this and make conscious decisions of how to use information, learners need to reflect on the information they collect. Reflection upon the process of solving problems is necessary to achieve a good result and to improve the ability to learn from experiences. When supporting learning with technology, this technology should promote these aspects within learning\cite{Lin1999}
 
 The main goal is to provide technology that enables efficient information retrieval, and to provide scaffolds that support reflective thinking and problem solving. In our task this means utilizing collaborative learning experiences. 
+
+\subsection{Agile Retrospective}
+The agile retrospective is held at the end of an iteration in order to learn from the iteration and not repeat mistakes. A model of how a retrospective can be done is shown in \cite{Derby2006}. The purpose is to learn what works and what does not work, and make the adjustments necessary for the next iteration. This way the team makes sure that every iteration introduces some improvements in the team's process. There are two fundamental questions the retrospective is intended to answer:
+\begin{itemize}
+\item What went well during the last iteration that we continue doing?
+\item What could we do differently in order to improve?
+\end{itemize}
+Figure \ref{fig:itcyclemodel} is a model of where the retrospective fits in the agile iteration cycle\cite{Derby2006}, and the table in Figure \ref{fig:retrospectivetable} shows the process in more details, from beginning to end.\cite{Derby2006}:
+\begin{figure}[!htpb]
+\centering
+	\includegraphics[width=\textwidth, keepaspectratio=true]{iterationcyclemodel}
+\caption{Retrospectives in the agile iteration cycle}
+\label{fig:itcyclemodel}
+\end{figure}
+\begin{figure}[!htpb]
+\centering
+	\includegraphics[width=\textwidth, keepaspectratio=true]{retrospectivetable}
+\caption{Agile retrospectives - from beginning to end}
+\label{fig:retrospectivetable}
+\end{figure}
+\\
+The agile manifesto, also introduces some key practices guidelines aimed towards retrospectives in Scrum teams\cite{agilemanifesto}:
+\begin{enumerate}
+\item Meeting Customer satisfaction: The Retrospective can be used to reflect on how well the Scrum Team is addressing the customer satisfaction.
+\item Welcoming Changing requirements: The Retrospective is a good venue to assess if the Product Backlog is evolving and therefore the Scrum Team and Product Owner are flexible enough.
+\item Delivering working software regularly: The result and feedback received during the iteration Review can be analyzed during the iteration Retrospective to assess this element.
+\item Working together: Reflection on how well the business and technical people are working together is a good activity to ensure that the environment fosters communication between those 2 groups.
+\item Giving support and trust: The Scrum Team can self-assess and also assess if management has provided an appropriate infrastructure.
+\item Fostering face-to-face conversation: The quality and frequency of the face-to-face conversation is a point that can be analyzed during a iteration Review.
+\item Delivering working software: Assessing the quality of the key deliverable to date is of essential value.
+\item Having a sustainable structure: Signs that could conclude that the project is not sustainable must be discussed.
+\item Technical excellence: As for point 6, quality is a non-negotiable aspect of Scrum and should be reviewed during the retrospective.
+\item Keeping the system simple: Signs of an unnecessary complex system should be discussed.
+\item Working in self-organizing team: Evidences that the Scrum Team is hindered because not self-managed should be analyzed.
+\item Regular reflection: The Scrum Retrospective being such activity, this will always be true!
+\end{enumerate}
 
 \section{Scenarios}
 \label{problemdefinition}
@@ -65,4 +131,5 @@ In this scenario, our students will be using the tool on a daily basis at the en
 
 \subsection{Scenario 2 - Team use after each iteration}
 \label{scenario2}
-In this scenario, the students will be using the tool as part of the agile scrum methodic two-week reflection sessions. Students will in this scenario use the tool to indicate how the project has been progressing over the last iteration, tightly coupled with one or several milestones. The students will generate tagclouds based on the trending issues in the relevant milestones, activity graphs and mood trajectories. Also if the users have chosen to share any of the individual reflection notes from scenario 1, these will be visible and can be used to draw conclusions from the previous iteration, and make comparisons. The tool will enable a group to see the whole iteration more clearly, but also be able to dive into certain issues or milestones that showed to be of particular interest, and thus create a discussion around the experiences made by the team members.  
+In this scenario, students will be using the tool as part of the agile methodic reflection sessions. Students will individually be able to use the tool as a preparation for these sessions, while the team can use the tool collaboratively towards the session aswell.
+In this scenario, the students will be using the tool as a part of the agile scrum methodic two-week reflection sessions. Students will in this scenario use the tool to indicate how the project has been progressing over the last iteration, tightly coupled with one or several milestones. The students will generate tagclouds based on the trending issues in the relevant milestones, activity graphs and mood trajectories. Also if the users have chosen to share any of the individual reflection notes from scenario 1, these will be visible and can be used to draw conclusions from the previous iteration, and make comparisons. The tool will enable a group to see the whole iteration more clearly, but also be able to dive into certain issues or milestones that showed to be of particular interest, and thus create a discussion around the experiences made by the team members.  

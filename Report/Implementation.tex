@@ -6,35 +6,6 @@
 
 In this chapter we will go through the implementations made in order to develop the PeacefulBanana tool, and the rationale behind the decisions made. 
 
-\section{Github}
-\label{githubchapter}
-GitHub is a web-based hosting service for software development projects that use the Git revision control system\cite{git,github}. GitHub offers both paid plans for private repositories, and free accounts for open source projects.
-
-GitHub provides users with integrated issue tracking, code review, project wiki, useful statistics and more. 
-Motivational points for choosing GitHub as the revision control system to integrate with are several. Some technical aspects are that GitHub provides developers with a simple to use API\cite{githubapi}, with libraries for integration with most of the commonly used programming languages, like Java\cite{jgit}.\\
-In addition to the technical aspects, GitHub is the most used revision control system ,as of January 2013 GitHub announced it had passed the 3 million users mark and now hosting more than 5 million repositories and is a tool many in our evaluation group already use in their development projects\cite{githubnumbers}.
-
-\subsection{Authentication}
-The application featuresan authentication with GitHUb, through the use of OAUTH2 tokens. When the user first uses the tool, he will be asked to authenticate with Githubs authentication page, asking the user to log in and authorize the PeacefulBanana tool. When this is done the tool receives a token it can use on behalf of the user to retrieve data from Github. The token itself is not stored, but retrieved in the background when required and bound to the users HTTP-session which expires when the user closes the browser window. This is done for safety reasons cause it would be devestating if these tokes got in the hands of the wrong people, they could for example delete the entire repository.
-
-For gathering data from Github, this data is transfered as JSON(JavaScript Object Notation), a lightweigh data interchange language. You can see all the possible data-types gathered from the Github API.
-\subsection{Repositories}
-GitHub is a repository hosting service for software development projects. A repository contains all the project files, may it be code, images, and other documentation. This means that all content in a project is connected to this repository. In addition to documentation and file content, GitHub provides integrated issue tracking, which is connected to this repository and could also be connected to one or several milestones. 
-\subsection{Commits}
-Say some of your project files have been changed, for example some code snippet in a Java file. The way to save these changes to your local branch is by commits. A commit can consist of code line additions, deletions, files added, changed or removed. When you are ready to save the changes, you commit them in a commandline together with a commit message which is a short text describing the changes you have done. \\
-When a user is ready to push one or more local commits to the project repository, it can be done via the command git push in the commandline. It is now the HEAD revision and the new code and commits can be seen on the github page.
-\subsection{Milestones and Issues}
-% Skriv som en possible lack of feature at man ikke kun kan sjekke om issues / kommentarer har kommet på github. Disse blir dog oppdatert ved hver commit, så det skal mye til for at viktig informasjon ikke blir tatt med. Men greit å nevne
-\begin{quote}
-\em GitHub Issues can be assigned to a user to make it easy to know who's working on what, or which issues you need to tackle next.
-\end{quote}
-Every GitHub repository has an issue tracker, that allows users to track bugs and focus on features. Milestones and issues help manage large projects, where issues especially makes for a great TODO list, similar to a product backlog. Only {\bf collaborators} can create and view issues on private repositories. On public repositories anyone can create and view issues. 
-\begin{itemize}
-\item GitHub issues can be assigned to a user, which makes it easy to know who's working on what, or which issues should be handled next. Milestones are a good way of helping team members to work towards a goal. A team can set a due date, name a milestone and then start assigning issues to that milestone. An example of a Milestone could be a due date of a project demo or delivery. Any number of issues can then be assigned to this milestone, and thus be connected to it. 
-\item Issues know all about commits. Github enables referencing and closing issues with Commit Messages. By using a few simple keywords you can close an issue right from a commit message, or just leave a note on the issue.The syntax to do this is as follows: To close issue \#35 , a commit message containing 'closes \#35' , will close issue number 35 when pushed to github. Other keywords are: close, closes, closed, fixes, fixed. \\g s
-To leave a note on issues can be done by simply mentioning the issue number without any keywords in a commit message. F.ex "This commit references \#35". Anyone with write access to a repository may close an issue or leave a note.
-\end{itemize}
-
 \section{Server}
 \begin{figure}[h!]
 \centering
