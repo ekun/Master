@@ -39,8 +39,8 @@ A requirement that is hard to implement fully, but is of little importance to th
             \rowcolor[gray]{0.8}
             \textbf{Impact} & \textbf{Values} \\
             \hline
-            Importance priority & \textbf{H} - Essential \\
-            Difficulty & \textbf{M} - Implementation-time 5-10 hours\\
+            Importance priority & \textbf{H} -- Essential \\
+            Difficulty & \textbf{M} -- Implementation-time 5-10 hours\\
             \hline
         \end{tabular}
     \vspace{0.5cm}
@@ -52,8 +52,8 @@ A requirement that is hard to implement fully, but is of little importance to th
             \rowcolor[gray]{0.8}
             \textbf{Impact} & \textbf{Values} \\
             \hline
-            Importance priority & \textbf{H} - Essential \\
-            Difficulty & \textbf{M} - Implementation-time 5-10 hours \\
+            Importance priority & \textbf{H} -- Essential \\
+            Difficulty & \textbf{M} -- Implementation-time 5-10 hours \\
             \hline
         \end{tabular}
     \vspace{0.5cm}
@@ -67,8 +67,8 @@ A requirement that is hard to implement fully, but is of little importance to th
             \rowcolor[gray]{0.8}
             \textbf{Impact} & \textbf{Values} \\
             \hline
-            Importance priority & \textbf{H} - Essential. Users need to allow the application to access data from their GitHub repositories\\
-            Difficulty & \textbf{H} - Could be very time consuming, 10-20 hours \\
+            Importance priority & \textbf{H} -- Essential as users need to allow the application to access data from their GitHub repositories\\
+            Difficulty & \textbf{H} -- Could be very time consuming, 10-20 hours \\
             \hline
         \end{tabular}
     \vspace{0.5cm}
@@ -81,8 +81,206 @@ A requirement that is hard to implement fully, but is of little importance to th
             \rowcolor[gray]{0.8}
             \textbf{Impact} & \textbf{Values} \\
             \hline
-            Importance priority & \textbf{H} - Essential. Synchronization is important in order to present the newest data to the users\\
-            Difficulty & \textbf{H} - Major functionality. 20-30 hours\\
+            Importance priority & \textbf{H} -- Essential. Synchronization is important in order to present the newest data to the users\\
+            Difficulty & \textbf{H} -- Major functionality. 20-30 hours\\
+            \hline
+        \end{tabular}
+    \vspace{0.5cm}
+
+    \subsubsection{Client Requirements}
+    \item[\textbf{CR1}] Reflection Notes\\
+        \textit{\small{As a [User] I want to [save my daily reflection notes] so I can review them at a later time.}}
+
+        \begin{tabular}{| l | p{8cm} |}
+            \hline
+            \rowcolor[gray]{0.8}
+            \textbf{Impact} & \textbf{Values} \\
+            \hline
+            Importance priority & \textbf{H} -- Essential, in order to support reflection, users need to be able to revisit experiences\\
+            Difficulty & \textbf{M} -- Moderately time consuming. 5-10 hours\\
+            \hline
+        \end{tabular}
+    \vspace{0.5cm}
+
+    \item[\textbf{CR2}] Tagcloud\\
+        \textit{\small{As a [User] I want to [see a tagcloud of my most active tags] so I can remember the situations I worked most on and reflect upon them.}}
+
+        \begin{tabular}{| l | p{8cm} |}
+            \hline
+            \rowcolor[gray]{0.8}
+            \textbf{Impact} & \textbf{Values} \\
+            \hline
+            Importance priority & \textbf{H} -- Essential, arranging the most active tags in a tagcloud will help users easily identify and separate the important situations from the less relevant ones\\
+            Difficulty & \textbf{H} -- Highly time consuming. 10-15 hours\\
+            \hline
+        \end{tabular}
+    \vspace{0.5cm}
+
+    \item[\textbf{CR2}] Tagcloud: Personal vs Team\\
+        \textit{\small{As a [User] I want to [compare my personal tagcloud with my team's tagcloud] so I can compare my issues with the teams trending issues}}
+
+        \begin{tabular}{| l | p{8cm} |}
+            \hline
+            \rowcolor[gray]{0.8}
+            \textbf{Impact} & \textbf{Values} \\
+            \hline
+            Importance priority & \textbf{H} -- Essential, comparing personal tagcloud with the team's help identify if the team's trending issues differ from yours\\
+            Difficulty & \textbf{H} -- Highly time consuming. 10-15 hours\\
+            \hline
+        \end{tabular}
+    \vspace{0.5cm}
+
+    \item[\textbf{CR4}] Commit Impact\\
+        \textit{\small{As a [User] I want to [see my commit impact] so I can compare my activity with the team's activity.}}
+
+        \begin{tabular}{| l | p{8cm} |}
+            \hline
+            \rowcolor[gray]{0.8}
+            \textbf{Impact} & \textbf{Values} \\
+            \hline
+            Importance priority & \textbf{M} -- Essential, gives users a general idea of who is contributing to the project\\
+            Difficulty & \textbf{L} -- 5-10 hours\\
+            \hline
+        \end{tabular}
+    \vspace{0.5cm}
+
+    \item[\textbf{CR5}] Issues\\
+        \textit{\small{As a [User] I want to [see my team's issues for the different milestones] so I can see the status of each milestones' issues.}}
+
+        \begin{tabular}{| l | p{8cm} |}
+            \hline
+            \rowcolor[gray]{0.8}
+            \textbf{Impact} & \textbf{Values} \\
+            \hline
+            Importance priority & \textbf{H} -- Essential, gives users a general idea of who is contributing to the project\\
+            Difficulty & \textbf{M} -- Moderately time consuming. 10 hours\\
+            \hline
+        \end{tabular}
+    \vspace{0.5cm}
+
+    \item[\textbf{CR6}] Inspect Specific Issue\\
+        \textit{\small{As a [User] I want to [inspect individual issues in a specific milestone] so I can see the status of the issue and what events that are related to this issue.}}
+
+        \begin{tabular}{| l | p{8cm} |}
+            \hline
+            \rowcolor[gray]{0.8}
+            \textbf{Impact} & \textbf{Values} \\
+            \hline
+            Importance priority & \textbf{H} -- Essential, gives users a general idea of who is contributing to the project\\
+            Difficulty & \textbf{M} -- Moderately time consuming. 10 hours\\
+            \hline
+        \end{tabular}
+    \vspace{0.5cm}
+
+    \item[\textbf{CR7}] General Issues\\
+        \textit{\small{As a [User] I want to [see my projects general issues] so I can see what is beeing worked on outside of particular milestones.}}
+
+        \begin{tabular}{| l | p{8cm} |}
+            \hline
+            \rowcolor[gray]{0.8}
+            \textbf{Impact} & \textbf{Values} \\
+            \hline
+            Importance priority & \textbf{M} -- Essential, gives users a general idea of who is contributing to the project\\
+            Difficulty & \textbf{M} -- Moderately time consuming. 10-15 hours\\
+            \hline
+        \end{tabular}
+    \vspace{0.5cm}
+
+    \item[\textbf{CR8}] Share Reflection Notes\\
+        \textit{\small{As a [User] I want to [share my reflection notes] so team-members can inspect and compare.}}
+
+        \begin{tabular}{| l | p{8cm} |}
+            \hline
+            \rowcolor[gray]{0.8}
+            \textbf{Impact} & \textbf{Values} \\
+            \hline
+            Importance priority & \textbf{H} -- Essential, users need to be able to share their notes with the team.\\
+            Difficulty & \textbf{M} -- Moderately time consuming. 10 hours\\
+            \hline
+        \end{tabular}
+    \vspace{0.5cm}
+
+    \item[\textbf{CR9}] Sort Reflection Notes\\
+        \textit{\small{As a [User] I want to [sort my reflection notes by 'Shared' status] so I can filter out my personal reflection notes from the team's.}}
+
+        \begin{tabular}{| l | p{8cm} |}
+            \hline
+            \rowcolor[gray]{0.8}
+            \textbf{Impact} & \textbf{Values} \\
+            \hline
+            Importance priority & \textbf{M} -- Moderately important, filtering enhances the user experience, but is not essential for the functionality of the application.\\
+            Difficulty & \textbf{L} -- 5 hours\\
+            \hline
+        \end{tabular}
+    \vspace{0.5cm}
+
+    \item[\textbf{CR10}] Reflection Note reminder\\
+        \textit{\small{As a [User] I want to [be reminded to do my daily reflection] so I always reflect and collect my experiences of that particular day.}}
+
+        \begin{tabular}{| l | p{8cm} |}
+            \hline
+            \rowcolor[gray]{0.8}
+            \textbf{Impact} & \textbf{Values} \\
+            \hline
+            Importance priority & \textbf{M} -- Essential, in order to support reflection, users need to be able to revisit experiences\\
+            Difficulty & \textbf{L} -- 5 hours\\
+            \hline
+        \end{tabular}
+    \vspace{0.5cm}
+
+    \subsubsection{Team Requirements}
+    \item[\textbf{TR1}] Create a team\\
+        \textit{\small{As a [User] I want to [create a team] so my fellow collaborators can join the team.}}
+
+        \begin{tabular}{| l | p{8cm} |}
+            \hline
+            \rowcolor[gray]{0.8}
+            \textbf{Impact} & \textbf{Values} \\
+            \hline
+            Importance priority & \textbf{H} -- Essential, a team need to be created for users to join it.\\
+            Difficulty & \textbf{M} -- Moderately time consuming. 10 hours\\
+            \hline
+        \end{tabular}
+    \vspace{0.5cm}
+
+    \item[\textbf{TR2}] Join a team\\
+        \textit{\small{As a [User] I want to [join a team from a list of available teams] so I can share and see shared reflection notes and other team relevant data.}}
+
+        \begin{tabular}{| l | p{8cm} |}
+            \hline
+            \rowcolor[gray]{0.8}
+            \textbf{Impact} & \textbf{Values} \\
+            \hline
+            Importance priority & \textbf{H} -- Essential, a team is required towards the collaborative and cooperative functions of the application, like reflection note sharing.\\
+            Difficulty & \textbf{L} -- 5-10 hours\\
+            \hline
+        \end{tabular}
+    \vspace{0.5cm}
+
+    \item[\textbf{TR3}] Inspect my team\\
+        \textit{\small{As a [User] I want to [inspect a team] so I see active members and their role in the team.}}
+
+        \begin{tabular}{| l | p{8cm} |}
+            \hline
+            \rowcolor[gray]{0.8}
+            \textbf{Impact} & \textbf{Values} \\
+            \hline
+            Importance priority & \textbf{H} -- Essential, users need to be able to see who is in their team in order to identify if someone is missing or an uninvited person is on their team.\\
+            Difficulty & \textbf{L} -- Moderately time consuming. 5 hours\\
+            \hline
+        \end{tabular}
+    \vspace{0.5cm}
+
+    \item[\textbf{TR4}] Change team role\\
+        \textit{\small{As a [Team Manager] I want to [be able to change the role of team members] so that I can ensure that the members have the correct user-role in the application.}}
+
+        \begin{tabular}{| l | p{8cm} |}
+            \hline
+            \rowcolor[gray]{0.8}
+            \textbf{Impact} & \textbf{Values} \\
+            \hline
+            Importance priority & \textbf{H} -- Essential, as only a team manager can access certain restricted functionality in the application.\\
+            Difficulty & \textbf{M} -- Moderately time consuming. 10 hours\\
             \hline
         \end{tabular}
     \vspace{0.5cm}
@@ -90,13 +288,14 @@ A requirement that is hard to implement fully, but is of little importance to th
     \subsubsection{Server Requirements}
     \item[\textbf{SR1}] Persistent Storage\\
         \textit{\small{Create MySQL database support for creating and performing actions on persistent databases by the application}}
+
         \begin{tabular}{| l | p{7cm} |}
             \hline
             \rowcolor[gray]{0.8}
             \textbf{Impact} & \textbf{Values} \\
             \hline
-            Importance priority & \textbf{H} - Essential - Persistent storage is vital for the application to collect and store data\\
-            Difficulty & \textbf{M} - Moderately time consuming. 5-10 hours\\
+            Importance priority & \textbf{H} -- Essential, persistent storage is vital for the application to collect and store data\\
+            Difficulty & \textbf{M} -- Moderately time consuming. 5-10 hours\\
             \hline
         \end{tabular}
     \vspace{0.5cm}
@@ -109,8 +308,8 @@ A requirement that is hard to implement fully, but is of little importance to th
             \rowcolor[gray]{0.8}
             \textbf{Impact} & \textbf{Values} \\
             \hline
-            Importance priority & \textbf{H} - Essential for functionality that requires synchronization with database\\
-            Difficulty & \textbf{M} - Moderately time-consuming. 8-10 hours\\
+            Importance priority & \textbf{H} -- Essential for functionality that requires synchronization with database\\
+            Difficulty & \textbf{M} -- Moderately time-consuming. 8-10 hours\\
             \hline
         \end{tabular}
     \vspace{0.5cm}
@@ -123,8 +322,9 @@ A requirement that is hard to implement fully, but is of little importance to th
             \rowcolor[gray]{0.8}
             \textbf{Impact} & \textbf{Values} \\
             \hline
-            Importance priority & \textbf{H} - Essential for all entities and their relations in the database \\
-            Difficulty & \textbf{H} - Could be very time consuming, 10+ hours \\
+            Importance priority & \textbf{H} -- Essential for all entities and their relations in the database \\
+            Difficulty & \textbf{H} -- Could be very time consuming, 10+ hours \\
             \hline
         \end{tabular}
     \vspace{0.5cm}
+\end{itemize}
