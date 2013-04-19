@@ -9,7 +9,7 @@ Non functional requirements of the application
 According to Bass, Clements and Kazman, \emph{usability} is concerned about making the the tasks involved in the system as easy to accomplish as possible \cite[p.~90]{pensum}. Below we have identified the following use cases for assuring the usability of the application.
 
 \begin{itemize}
-    \item[\textbf{U1}] Support multiple devices \\
+    \item[\textbf{U1}] Support multiple resolutions \\
     \textit{\small{The users should be able to access the application on any device and screen size.}}
         
     \begin{tabular}{| l | p{7cm} |}
@@ -17,29 +17,29 @@ According to Bass, Clements and Kazman, \emph{usability} is concerned about maki
         \rowcolor[gray]{0.8}
         \textbf{Portion of scenario} & \textbf{Values} \\
         \hline
-        Source & End User \\
-        Stimulus & Change position of the ships \\
+        Source & Developer \\
+        Stimulus & Make design responsive \\
         Artifact & System \\
-        Environment & Game play \\
-        Response & Move ships  \\
-        Response measure    & After positioning the ships, the user is able to change these positions, one  at a time. \\
+        Environment & Run-time \\
+        Response & Scale after resolution  \\
+        Response measure & The application shall fit to the screensize \\
         \hline
     \end{tabular}
 
-    \item[\textbf{U2}]  \\
-    \textit{\small{The user shall be able to see each of their ships being placed on the ocean.}}
+    \item[\textbf{U2}] Intuitiv design \\
+    \textit{\small{The user interface must be easy to understand and not to create any confussion.}}
         
     \begin{tabular}{| l | p{7cm} |}
         \hline
         \rowcolor[gray]{0.8}
         \textbf{Portion of scenario} & \textbf{Values} \\
         \hline
-        Source & End User \\
-        Stimulus & Change position of the ships \\
+        Source & Developer \\
+        Stimulus & Make user interface easy to use \\
         Artifact & System \\
-        Environment & Game play \\
-        Response & Move ships  \\
-        Response measure & After positioning the ships, the user is able to change these positions, one  at a time. \\
+        Environment & User interface \\
+        Response & Place buttons in a 'natural' matter. \\
+        Response measure & Users will find the link they are looking for more than 95\% of the time. \\
         \hline
     \end{tabular}
 
@@ -78,7 +78,7 @@ According to someone availability is concerned about making the application as a
         Artifact & System \\
         Environment & Website \\
         Response & Show the user the website it desires. \\
-        Response measure & Webserver responds with the application when the server is running. \\
+        Response measure & Webserver will be working correctly more than 90\% of the time. \\
         \hline
     \end{tabular}
 
@@ -95,7 +95,7 @@ According to someone availability is concerned about making the application as a
         Artifact & System \\
         Environment & Website \\
         Response & Show the user the website it desires. \\
-        Response measure & Webserver responds with the application when the server is running. \\
+        Response measure & After shutdown the application shall recover to the same state as before every time. \\
         \hline
     \end{tabular}
 \end{itemize}
