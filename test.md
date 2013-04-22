@@ -2,4 +2,4 @@
 ## Litt mer testesen
 
 * Test
-* TEst2
+* Ztest
