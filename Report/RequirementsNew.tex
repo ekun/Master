@@ -58,6 +58,34 @@ A requirement that is hard to implement fully, but is of little importance to th
         \end{tabular}
     \vspace{0.5cm}
 
+    \item[\textbf{FR3}] Change password \\
+        \textit{\small{As a [User] I want to [be able to change my password]}}
+
+        \begin{tabular}{| l | p{7cm} |}
+            \hline
+            \rowcolor[gray]{0.8}
+            \textbf{Impact} & \textbf{Values} \\
+            \hline
+            Importance priority & \textbf{H} -- Security wise, the ability to change password is very important\\
+            Difficulty & \textbf{L} -- 5 hours \\
+            \hline
+        \end{tabular}
+    \vspace{0.5cm}
+
+    \item[\textbf{FR4}] Reset password \\
+        \textit{\small{As a [User] I want to [be able to reset my password] if I forget it.}}
+
+        \begin{tabular}{| l | p{7cm} |}
+            \hline
+            \rowcolor[gray]{0.8}
+            \textbf{Impact} & \textbf{Values} \\
+            \hline
+            Importance priority & \textbf{H} -- If a user looses his password, a safe recovery procedure is important.\\
+            Difficulty & \textbf{M} -- Reset-password functionality: 10 hours \\
+            \hline
+        \end{tabular}
+    \vspace{0.5cm}
+
     \section{GitHub Requirements}
     \item[\textbf{GR1}] GitHub account authorization\\
         \textit{\small{The application should be able to authorize the application with users GitHub account}}
@@ -87,6 +115,34 @@ A requirement that is hard to implement fully, but is of little importance to th
         \end{tabular}
     \vspace{0.5cm}
 
+    \item[\textbf{GR3}] GitHub synchronization status \\
+        \textit{\small{As a [User] I want to [be able to see my GitHub synchronization status] so I can see if I need to authenticate or if I haven't set a team.}}
+
+        \begin{tabular}{| l | p{7cm} |}
+            \hline
+            \rowcolor[gray]{0.8}
+            \textbf{Impact} & \textbf{Values} \\
+            \hline
+            Importance priority & \textbf{M} -- Moderately important, gives users feedback over their GitHub synchronization status and lets them know if any action is required.\\
+            Difficulty & \textbf{L} -- 5 hours \\
+            \hline
+        \end{tabular}
+    \vspace{0.5cm}
+
+    \item[\textbf{GR4}] Force GitHub synchronization.\\
+        \textit{\small{As a [User] I want to [be able to force a GitHub synchronization] so that I can ensure all the newest data are synchronized from GitHub.}}
+
+        \begin{tabular}{| l | p{7cm} |}
+            \hline
+            \rowcolor[gray]{0.8}
+            \textbf{Impact} & \textbf{Values} \\
+            \hline
+            Importance priority & \textbf{M} -- Changes on GitHub is automatically detected and updated by the application, but if this synchronization does not occur, allowing users to force it enables them to be sure that the newest data is included.\\
+            Difficulty & \textbf{L} -- 5 hours \\
+            \hline
+        \end{tabular}
+    \vspace{0.5cm}
+
     \section{Client Requirements}
     \item[\textbf{CR1}] Reflection Notes\\
         \textit{\small{As a [User] I want to [save my daily reflection notes] so I can review them at a later time.}}
@@ -97,6 +153,20 @@ A requirement that is hard to implement fully, but is of little importance to th
             \textbf{Impact} & \textbf{Values} \\
             \hline
             Importance priority & \textbf{H} -- Essential, in order to support reflection, users need to be able to revisit experiences\\
+            Difficulty & \textbf{M} -- Moderately time consuming. 5-10 hours\\
+            \hline
+        \end{tabular}
+    \vspace{0.5cm}
+
+    \item[\textbf{CRXX}] Connect feelings/mood with reflection notes\\
+        \textit{\small{As a [User] I want to [connect my mood/feelings to a reflection note] so I can revisit the feelings in the retrospective sessions.}}
+
+        \begin{tabular}{| l | p{8cm} |}
+            \hline
+            \rowcolor[gray]{0.8}
+            \textbf{Impact} & \textbf{Values} \\
+            \hline
+            Importance priority & \textbf{H} -- Essential, connecting a users mood to a specific experience help users revisit the experience\\
             Difficulty & \textbf{M} -- Moderately time consuming. 5-10 hours\\
             \hline
         \end{tabular}
@@ -116,7 +186,7 @@ A requirement that is hard to implement fully, but is of little importance to th
         \end{tabular}
     \vspace{0.5cm}
 
-    \item[\textbf{CR2}] Tagcloud: Personal vs Team\\
+    \item[\textbf{CR3}] Tagcloud: Personal vs Team\\
         \textit{\small{As a [User] I want to [compare my personal tagcloud with my team's tagcloud] so I can compare my issues with the teams trending issues}}
 
         \begin{tabular}{| l | p{8cm} |}
@@ -187,7 +257,7 @@ A requirement that is hard to implement fully, but is of little importance to th
     \vspace{0.5cm}
 
     \item[\textbf{CR8}] Share Reflection Notes\\
-        \textit{\small{As a [User] I want to [share my reflection notes] so team-members can inspect and compare.}}
+        \textit{\small{As a [User] I want to [share my reflection notes] so I can share my experiences with the team.}}
 
         \begin{tabular}{| l | p{8cm} |}
             \hline
@@ -281,6 +351,35 @@ A requirement that is hard to implement fully, but is of little importance to th
             \hline
             Importance priority & \textbf{H} -- Essential, as only a team manager can access certain restricted functionality in the application.\\
             Difficulty & \textbf{M} -- Moderately time consuming. 10 hours\\
+            \hline
+        \end{tabular}
+    \vspace{0.5cm}
+
+    \section{Milestone Requirements}
+    \item[\textbf{MR1}] Active Milestones\\
+        \textit{\small{As a [User] I want to [see what milestones are being worked on] so that I can see if the issues related to these milestones.}}
+
+        \begin{tabular}{| l | p{7cm} |}
+            \hline
+            \rowcolor[gray]{0.8}
+            \textbf{Impact} & \textbf{Values} \\
+            \hline
+            Importance priority & \textbf{M} -- Filtering milestones by their status allow users to see what milestones are unresolved and active, and find issues connected to these.\\
+            Difficulty & \textbf{M} -- Moderately time consuming. 5-10 hours\\
+            \hline
+        \end{tabular}
+    \vspace{0.5cm}
+
+    \item[\textbf{MR2}] My closed issues\\
+        \textit{\small{As a [User] I want to [see what issues have been closed] so that I inspect the issue and recollect how we solved the specific issue.}}
+
+        \begin{tabular}{| l | p{7cm} |}
+            \hline
+            \rowcolor[gray]{0.8}
+            \textbf{Impact} & \textbf{Values} \\
+            \hline
+            Importance priority & \textbf{M} -- Allowing revisiting of resolved issues gives users a chance to revisit and learn from previous mistakes or right-doings.\\
+            Difficulty & \textbf{M} -- Moderately time consuming. 5-10 hours\\
             \hline
         \end{tabular}
     \vspace{0.5cm}
