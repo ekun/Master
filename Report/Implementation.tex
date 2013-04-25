@@ -2,28 +2,42 @@
 \chapter{Implementation}
 % In many cases, you will not be able to realize the full design. Often the implementation is only a demonstrator of ideas. 
 % It is therefore important that you focus on the most important aspects of your system (depending on research questions). 
-% In the report you have to justify the choices that are done.
+% In the report y\begin{figure}[h!]
+Here you can see the ou have to justify the choices that are done.
+\begin{figure}[h!]
+    \centering
+        \includegraphics[width=0.8\textwidth]{Clientservergithub}
+    \caption{Overview of system design.}
+    \label{ClientServerGithub}
+\end{figure}
 
 In this chapter we will go through the implementations made in order to develop the PeacefulBanana tool, and the rationale behind the decisions made. 
 
 \section{Server}
-\begin{figure}[h!]
-\centering
-    \includegraphics[width=\textwidth]{Clientservergithub}
-\caption{Overview of system design.}
-\label{newnotification}
-\end{figure}
-Here we will give an overview of the server implementation.
+The server is implemented with Grails a framework for web applications, it is better described in the section following.
 
 \subsection{Grails}
-Grails is an open source web application framework which uses the programming language Groovy(which is based on Java). When Grails was developed, it's developers aimed to re-use proven technologies such as Hibernate and Spring. It uses a MVC\footnote{Model View Controller} pattern, where it changes .gsp(Groovy server page) file these files represents the different views related to each controller. The data retrieved by the controller from the database.
+\begin{figure}[h!]
+\centering
+    \includegraphics[width=0.8\textwidth]{Grails-Architecture}
+\caption{Overview of Grails architecture.}
+\end{figure}
+
+Grails is an open source web application framework which uses the programming language Groovy(which is based on Java). When Grails was developed, it's developers aimed to re-use proven technologies such as Hibernate and Spring. 
+\begin{figure}[h!]
+    \centering
+        \includegraphics[width=0.8\textwidth]{MVC}
+    \caption{Model-view-controller paradigm}
+\end{figure}
+It uses a MVC\footnote{Model View Controller} pattern, where it changes .gsp(Groovy server page) file these files represents the different views related to each controller. The data retrieved by the controller from the database.
+
 
 \section{Database}
 \begin{figure}[h!]
 \centering
 	\includegraphics[width=\textwidth]{databaseDomainDiagram}
 \caption{Domain diagram, the relationship between database classes.}
-\label{newnotification}
+\label{databaseDomainDiagram}
 \end{figure}
 
 \subsection{User data}
