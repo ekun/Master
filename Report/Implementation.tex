@@ -7,7 +7,7 @@ In this chapter we will go through the implementations made in order to develop 
 
 Below you can see an overview of the entire system design, it was designed so the users can see the data tailored to their team and work.
 
-\begin{figure}[h!]
+\begin{figure}[!htpb]
     \centering
         \includegraphics[width=0.8\textwidth]{Clientservergithub}
     \caption{Overview of system design.}
@@ -18,30 +18,34 @@ Below you can see an overview of the entire system design, it was designed so th
 When choosing a framework for the prototype, several alternatives where discussed and their architecture was a vital part of the selection. Based on these criterias the server was implemented with Grails a framework for web applications, it is better described in the section following.
 
 \subsection{Grails}
-\begin{figure}[h!]
+Grails is an open source web application framework which uses the programming language Groovy(which is buildt on top of the Java Virtual Machine). When Grails was developed, it's developers aimed to re-use proven technologies such as Hibernate, Spring etc. 
+
+\begin{figure}[!htpb]
 \centering
     \includegraphics[width=0.8\textwidth]{Grails-Architecture}
 \caption{Overview of Grails architecture.}
 \end{figure}
 
-Grails is an open source web application framework which uses the programming language Groovy(which is buildt on top of the Java Virtual Machine). When Grails was developed, it's developers aimed to re-use proven technologies such as Hibernate, Spring etc. 
-\begin{figure}[h!]
-    \centering
-        \includegraphics[width=0.8\textwidth]{MVC}
-    \caption{Model-view-controller paradigm}
-\end{figure}
 It uses a MVC\footnote{Model View Controller} pattern, where it changes a gsp-file(Groovy server page), these files represents the different views related to each controller. The data retrieved by the controller from the database.
 
+\begin{figure}[!htpb]
+    \centering
+        \includegraphics[width=0.5\textwidth]{MVC}
+    \caption{Model-view-controller paradigm}
+\end{figure}
+\newpage
 
 \section{Database}
 In this section we will show how the database is designed, the diagram below shows the relationship between the differet data-types. The datatypes have been categorised regarding to their origin and are discussed later in this section.
 
-\begin{figure}[h!]
+% Bør denne legge på høykant i appendix?
+\begin{figure}[!htpb]
 \centering
 	\includegraphics[width=\textwidth]{databaseDomainDiagram}
 \caption{Domain diagram, shows the relationship between different classes.}
 \label{databaseDomainDiagram}
 \end{figure}
+
 
 \subsection{User data}
 In this section we will show and discuss all data stored related to users, the tables below is representing the different data types associated with users. Users are a vital part of the implementation and everything is sentered around these users, it is therefor importat to store as much relevant data as possible. \\
