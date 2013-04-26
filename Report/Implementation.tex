@@ -44,7 +44,7 @@ In this section we will show how the database is designed, the diagram below sho
 \end{figure}
 
 \subsection{User data}
-In this section we will show and discuss all data stored related to users, the tables below is r \\
+In this section we will show and discuss all data stored related to users, the tables below is representing the different data types associated with users. Users are a vital part of the implementation and everything is sentered around these users, it is therefor importat to store as much relevant data as possible. \\
 
 \subsubsection*{User}
 In this table general data is stored about each user and field relevant to authenticate them.
@@ -122,7 +122,7 @@ Notifications are used to prompt users about reflection sessions and such. \\
 \vspace{0.5cm}
 
 \subsection{Github data}
-Github data is stored localy to enhance performance. During initial testing it was discovered that polling github.com for data each time it was needed, made the application very slow and put unnecessary stress on the github servers. The following data-types where therefor storred localy.
+In this section we discuss the storrage of data collected from Github. When we started development we tested with the data stored at github, so we asked github for the data every time it was needed, this made the application slow so we decided to store github data localy to enhance performance. The following data-types where stored in tables as described below.
 
 \subsubsection*{Milestones}
 Milestones are major goals consisting of several minor goals called issue, with or without a due date. \\
