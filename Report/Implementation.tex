@@ -2,8 +2,11 @@
 \chapter{Implementation}
 % In many cases, you will not be able to realize the full design. Often the implementation is only a demonstrator of ideas. 
 % It is therefore important that you focus on the most important aspects of your system (depending on research questions). 
-% In the report y\begin{figure}[h!]
-Here you can see the ou have to justify the choices that are done.
+% In the report you have to justify the choices that are done.
+In this chapter we will go through the implementations made in order to develop the PeacefulBanana tool, and the rationale behind the decisions made. 
+
+Below you can see an overview of the entire system design, it was designed so the users can see the data tailored to their team and work.
+
 \begin{figure}[h!]
     \centering
         \includegraphics[width=0.8\textwidth]{Clientservergithub}
@@ -11,10 +14,8 @@ Here you can see the ou have to justify the choices that are done.
     \label{ClientServerGithub}
 \end{figure}
 
-In this chapter we will go through the implementations made in order to develop the PeacefulBanana tool, and the rationale behind the decisions made. 
-
 \section{Server}
-The server is implemented with Grails a framework for web applications, it is better described in the section following.
+When choosing a framework for the prototype, several alternatives where discussed and their architecture was a vital part of the selection. Based on these criterias the server was implemented with Grails a framework for web applications, it is better described in the section following.
 
 \subsection{Grails}
 \begin{figure}[h!]
@@ -23,25 +24,27 @@ The server is implemented with Grails a framework for web applications, it is be
 \caption{Overview of Grails architecture.}
 \end{figure}
 
-Grails is an open source web application framework which uses the programming language Groovy(which is based on Java). When Grails was developed, it's developers aimed to re-use proven technologies such as Hibernate and Spring. 
+Grails is an open source web application framework which uses the programming language Groovy(which is buildt on top of the Java Virtual Machine). When Grails was developed, it's developers aimed to re-use proven technologies such as Hibernate, Spring etc. 
 \begin{figure}[h!]
     \centering
         \includegraphics[width=0.8\textwidth]{MVC}
     \caption{Model-view-controller paradigm}
 \end{figure}
-It uses a MVC\footnote{Model View Controller} pattern, where it changes .gsp(Groovy server page) file these files represents the different views related to each controller. The data retrieved by the controller from the database.
+It uses a MVC\footnote{Model View Controller} pattern, where it changes a gsp-file(Groovy server page), these files represents the different views related to each controller. The data retrieved by the controller from the database.
 
 
 \section{Database}
+In this section we will show how the database is designed, the diagram below shows the relationship between the differet data-types. The datatypes have been categorised regarding to their origin and are discussed later in this section.
+
 \begin{figure}[h!]
 \centering
 	\includegraphics[width=\textwidth]{databaseDomainDiagram}
-\caption{Domain diagram, the relationship between database classes.}
+\caption{Domain diagram, shows the relationship between different classes.}
 \label{databaseDomainDiagram}
 \end{figure}
 
 \subsection{User data}
-Users are a important part of Peaceful Banana and it is important that all relevant data is stored. \\
+In this section we will show and discuss all data stored related to users, the tables below is r \\
 
 \subsubsection*{User}
 In this table general data is stored about each user and field relevant to authenticate them.
