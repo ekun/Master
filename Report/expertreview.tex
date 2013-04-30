@@ -30,16 +30,51 @@ Here we will present the challenges the evaluator presented in the aspect of tea
     3  & Agile integration   & How can the application be integrated into an agile environment, helping the team to be agile and not removing the agility from the team.                                                                                                                                                                                                                      \\ \hline
     4  & Dynamic Memories    & Memories are dynamic and change over time, so there can be a lack of memorizing all important situations in a retrospective.                                                                                                                                                                                                                                   \\ \hline
     5  & Priorities          & Often agile teams develop what the developers are motivated for, and not what the customer prioritizes highest. These wrong-placed priorities can be hard to pick up.                                                                                                                                                                                          \\ \hline
-    6  & Competence-overlap  & Agile teams are most efficient and deliver the highest quality work when atleast two people have the same competence, so that one can ask for help and code can be reviewed by a peer. When a developer is left alone on a piece of work, integrating these parts with the rest of the project can be an issue                                                 \\ \hline
+    6  & Competence-overlap  & Agile teams are most efficient and deliver the highest quality work when at least two people have the same competence, so that one can ask for help and code can be reviewed by a peer. When a developer is left alone on a piece of work, integrating these parts with the rest of the project can be an issue                                                 \\ \hline
     7  & Re-work:            & Re-doing the same piece of work is also a challenge development teams can meet. When developers constantly revisits work that already has been accepted, to make unnecessary changes, the progress of the project is slowed down. Detection of this can allow for a discussion and allowing the team to progress.                                              \\ \hline
-    9  & Level of expertise: & Developers often have different levels of expertise, and different areas of expertise. Even though a developer have a high amount of impact on the code-lines commited to a project, this does not mean the others don't do important work.                                                                                                                    \\ \hline
+    8  & Level of expertise: & Developers often have different levels of expertise, and different areas of expertise. Even though a developer have a high amount of impact on the code-lines commited to a project, this does not mean the others don't do important work.                                                                                                                    \\ \hline
     \end{tabularx}
     \caption {Expert review feedback}
     \label{experttable}
 \end{table}
 \clearpage
 The challenges identified in Table \ref{experttable} was used to create a discussion around the PeacefulBanana application and how it can solve these problems. 
-\textbullet{Testesen}
+\begin{itemize}
+    \item 1. Non-intrusive:
+\end{itemize}
+The evaluator was satisfied with the design choice we made. By keeping the amount of time users are \strong{required} to put into the application to a minimum, the threshold of usage is kept as low as possible at the same time. As mentioned, the Roger's adoption curve state that integrating a new tool into a daily routine is hard already, so it's important the users don't feel the application is a necessity but a helpful tool. The evaluator specifically mentioned that the daily reflection note was a good choice, since it only takes roughly 5 minutes and serves a purpose for the users. If the users then should wish to dive further into the functionality, it is easy accesible. 
+
+\begin{itemize}
+    \item 2. Uniqueness: 
+\end{itemize}
+The feedback here was that the evaluator had not encountered a similar tool during his research, and he felt the application met a need in the industry. As for the retrospective aspect, the feedback was that the application had features for identifying issues and situations that in a normal retrospective could be lost.  
+
+\begin{itemize}
+    \item 3. Agile integration: 
+\end{itemize}
+The evaluator expressed a certain concern that too much data collection could lead to an overhead in the amount of data that needed to be analyzed during the retrospective. Emphasis here was that the application shouldn't come in the way of the team being agile. 
+
+\begin{itemize}
+    \item 4. Dynamic Memories:
+\end{itemize}
+ The evaluator stated that by implementing the daily reflection note feature, we allowed for the most important experiences of the day being collected and stored for later use. This means that although not all data or experiences are collected, the application encourages users to reflect on fresh memories and can revisit these later during the retrospectives, hopefully omitting the risk of forgetting certain situations. 
+
+\begin{itemize}
+    \item 5. Priorities: 
+\end{itemize}
+The evaluator stated that this is a common problem in development teams, and thus allowing for identification of such mis-priorities are important. The feedback was that the application features for seeing how far the team has come in the particular milestones, and going into the seperate issues to see when it has been worked on and by who, partially had met this challenge. The evaluator still expressed that this could be even more emphasized, and be made more easily accessible. 
+
+\begin{itemize}
+    \item 6. Competence-overlap: Through the different tagclouds featured in the application, a missing overlap in competence can be identified. The evaluator stated that comparing the team tagcloud with the personal tagcloud was a satisfactory way of identifying whether an individual has been working a lot alone. Further feedback was that some sort of comparing tagclouds between individuals would further help towards this challenge, but this could in turn lead to unwanted focus on individuals performance. 
+\end{itemize}
+
+\begin{itemize}
+    \item 7. Re-work: Also here the feedback was that inspection of issues allows for seeing when and how often a problem has been fixed and then re-opened again. Also by comparing tagclouds from different periods allow for identification of much re-work. Even though the functionality was there, the evaluator wanted to make these comparisons more easily accessible in the application. 
+\end{itemize}
+
+\begin{itemize}
+    \item 8. Level of expertise: The feedback here was: Since the application focuses on project commits and comparing the users activity based on the work commited to GitHub, the application could give the wrong impression of how much work individuals in the team have done. Because of this the evaluator emphasized that we kept this fresh in mind, when describing what the tool is, what it does, what it measures and most importantly what it doesn't measure. This is important so that no users feel their work is diminished in importance by using the application.  
+\end{itemize}
 
 \subsubsection{Features}
 The evaluator had some input to what additional functionality that might be implemented: 
@@ -47,35 +82,3 @@ The evaluator had some input to what additional functionality that might be impl
 	\item Show parts of the source-code in the PeacefulBanana application, creating a sort of \emph{What is new?} functionality to the team. 
 	\item Integrate a burndown-chart into the application. 
 \end{itemize}
-
-%  Keeping the required involvement by users of the application to a minimum was a good design choice, 
-% # Feedback fra Torgeir:
-% * Stille alternativer opp mot hverandre i rapporten, f.eks om de ser en nytte versus å kun bruke github. 
-% * Belyser appen nye ting i forhold til vanlige retrospektiver?
-% * Spørre gruppa hva de gjorde på tidligere retrospektiver, og om bruken av appen kan hjelpe. Spør de som ikke har deltatt at dersom de hadde brukt tags osv. hadde de sett nytten? Og da evt til hvilken grad.  
-% * Spør: Hvorfor har de ikke brukt det? Tid? Features? Vanskelig? Var det i veien?
-
-% ## Fordeler
-% * Non-intrusive: Veldig bra
-% * Er unikt: Han hadde ikke sett noe lignende verktøy
-% * Er et kjent problem at man ikke husker alt, notes kan hjelpe men det kan bli mye data å analysere som går litt imot smidig. Viktig spørsmål å se om man husker mer ved bruk av appen, altså om man går glipp av noe uten å bruke appen. 
-%* Finne feilprioriteringer, ofte er det feilvurderinger av hva som er viktig å gjøre. Oftest gjøres det som utviklerne vil og ikke kunden. Med appen kan man se tendenser til mye jobbing på feil ting. Samt. at man ser at milestones går overdue. 
-%* Koble ting opp mot teorimodell: Kompetanseoverlapp. Sitter noen mye alene? Tagclouden kan vise slike tendenser.
-%* Re-work: Oppdage dette, vi har muligheter til å oppdage mye gjenåpninger på issues og forklare dette. Mye jobbing med samme ting kan oppdages i appen. 
-
-%## Utfordringer
-%* Får man noe nyttig utav det
-%* Få personer til å faktisk bruke tags i hverdagen. 
-%* Generelt vanskelig terskel å få folk til å bruke verktøy. -> Rogers curve-diagram. 
-%* Det vil være folk som ikke vil bidra like mye, early adopters vs laggers. 
-%* Forskjellig nivå på utviklere. Noen vil dominere commit statistikken, men betyr det da at de er viktigere enn de andre? (Som kanskje gjør andre viktige ting i prosjektet). Det kan gi feil totalbilde. 
-
-%## Features
-%* Ha deler av kildekoden i peaceful, en slags "hva har skjedd" feature. Overlapper litt med github
-%* Burndown chart. Har github noe lignende kanskje? sjekk
-
-%## Studier
-%* Vitner husker ofte feil i rettsaker -> hukommelse er ikke bombesikker/til å stole på alltid. Derfor lurt å ta ferske erfaringer
-
-%### Related Work:
-%* Hackystat : https://code.google.com/p/hackystat/
