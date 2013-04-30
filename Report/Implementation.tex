@@ -3,9 +3,9 @@
 % In many cases, you will not be able to realize the full design. Often the implementation is only a demonstrator of ideas. 
 % It is therefore important that you focus on the most important aspects of your system (depending on research questions). 
 % In the report you have to justify the choices that are done.
-In this chapter we will go through the implementations made in order to develop the PeacefulBanana tool, and the rationale behind the decisions made. 
+In this chapter we will go through the decisions made in order to develop the PeacefulBanana tool, and the rationale behind the decisions made. 
 
-Below you can see an overview of the entire system design, it was designed so the users can see the data tailored to their team and work.
+Below you can see an overview of the entire system design, how it was implemented so the users can see the data tailored to their team and work.
 
 \begin{figure}[!htpb]
     \centering
@@ -26,17 +26,20 @@ Grails is an open source web application framework which uses the programming la
 \caption{Overview of Grails architecture.}
 \end{figure}
 
-It uses a MVC\footnote{Model View Controller} pattern, where it changes a gsp-file(Groovy server page), these files represents the different views related to each controller. The data retrieved by the controller from the database.
+Architectural grails is designed with the MVC\footnote{Model View Controller} pattern as a basis, this will expose the model\footnote{Data stored about the object.} in the view\footnote{With the restrictions on what data is viewable for the user.} and any manipulations to the model is done through a controller which controlls that the data is inputted correct to the fields and what fields can be manipulated. An overview of the paradigm can be viewed in figure \ref{mvc-paradigm} below.
+
+This pattern makes it easy for the developer to remain in controll when creating a user interface and will ensure that the user can not manipulate fields without going through the controller.
 
 \begin{figure}[!htpb]
     \centering
         \includegraphics[width=0.5\textwidth]{MVC}
     \caption{Model-view-controller paradigm}
+    \label{mvc-paradigm}
 \end{figure}
 \newpage
 
 \section{Database}
-In this section we will show how the database is designed, the diagram below shows the relationship between the differet data-types. The datatypes have been categorised regarding to their origin and are discussed later in this section.
+In this section we will show how the database is designed as the figure \ref{databaseDomainDiagram} below shows the relationship between the differet datatypes. The datatypes have been categorised regarding to their origin and are discussed later together with all the fields in each datatype.
 
 % Bør denne legge på høykant i appendix?
 \begin{figure}[!htpb]
@@ -48,12 +51,11 @@ In this section we will show how the database is designed, the diagram below sho
 
 
 \subsection{User data}
-In this section we will show and discuss all data stored related to users, the tables below is representing the different data types associated with users. Users are a vital part of the implementation and everything is sentered around these users, it is therefor importat to store as much relevant data as possible. \\
+The first section is devoted to show and tell all data related to users, the tables below is representing the different data types associated with users. Users are a vital part of the implementation and everything is sentered around these users, it is therefor important to store as much relevant data as possible. \\
 
 \subsubsection*{User}
-In this table general data is stored about each user and field relevant to authenticate them.
-
-The password are encrypted with SHA-512 encryption.\\
+This table hold data related to each user and only the data which is unique to them.
+The password are encrypted with SHA-512 encryption which is a part of SHA-2 a set of encryption hashing functions created by the U.S. National Security Agency.\\
 
 \vspace{0.5cm}
 \begin{tabularx}{\linewidth}{| c | X |}
@@ -61,7 +63,7 @@ The password are encrypted with SHA-512 encryption.\\
     \rowcolor[gray]{0.8}
     \textbf{Field} & \textbf{Description} \\
     \hline
-    Id & Unique generated when the user is first created\\ \hline
+    Id & Unique id generated when the user is first created\\ \hline
     UserName & This field stores the users username\\ \hline
    	Password & This field stores the users password as a encrypted string, the password is encryptet with SHA-512 encryption\\ \hline
     Email & This field stores the users email\\ \hline
@@ -83,14 +85,14 @@ The different roles that the users can be assigned to. These are hierarchy so th
     \rowcolor[gray]{0.8}
     \textbf{Field} & \textbf{Description} \\
     \hline
-    Id & Unique generated when the role is first created.\\ \hline
+    Id & Unique id generated when the role is first created.\\ \hline
     Authority & This field contains the level of authority.\\
     \hline
 \end{tabularx}
 \vspace{0.5cm}
 
 \subsubsection*{UserRole}
-Both fields in this table are combined for the primary key such that each role can only be given to each user once. \\
+Both fields in this table are combined for the primary key such that each role can only be given to each user once and each users can attain several roles. \\
 
 \vspace{0.5cm}
 \begin{tabularx}{\linewidth}{| c | X |}
@@ -98,8 +100,8 @@ Both fields in this table are combined for the primary key such that each role c
     \rowcolor[gray]{0.8}
     \textbf{Field} & \textbf{Description} \\
     \hline
-    User & Foreign key for the user\\ \hline
-    Role & Foreign key for the role \\
+    User & Foreign key for the users id \\ \hline
+    Role & Foreign key for the role id \\
     \hline
 \end{tabularx}
 \vspace{0.5cm}
@@ -113,7 +115,7 @@ Notifications are used to prompt users about reflection sessions and such. \\
     \rowcolor[gray]{0.8}
     \textbf{Field} & \textbf{Description} \\
     \hline
-    Id & Unique generated when the notification is first created\\ \hline
+    Id & Unique id generated when the notification is first created\\ \hline
     Title & This field stores the title\\ \hline
    	Body & This field stores the entire message.\\ \hline
     DateCreated & Timestamp generated when the notification is first created.\\ \hline
@@ -209,9 +211,11 @@ The current data is storred about each repository, in the corresponding fields i
 \vspace{0.5cm}
 
 \subsection{Collaboration data}
-Teams are bound uniquelie to a repositorie, each repository will only have one team bound to it and every user with access(being a contributor) to the repository on Github will have the possibility to join the team.  \\%%Every user with access to the prepository on Github will see this team.%%
+Teams are bound uniquelie to a repositorie, each repository will only have one team bound to it and every user with access\footnote{Being a collaborator of the project on github.} to the repository on Github will have the possibility to join the team.  
+
+
 \subsubsection*{Team}
-These teams are bound to a repository and there can only be one not created for each team by a user each day. \\
+These teams of users are bound uniquely to a repository and there can only excists one team per repository. \\
 
 \vspace{0.5cm}
 \begin{tabularx}{\linewidth}{| c | X |}
@@ -228,7 +232,7 @@ These teams are bound to a repository and there can only be one not created for 
 \vspace{0.5cm}
 
 \subsubsection*{TeamUser}
-The users attached to the team. \\
+This contains the users attached to each team and data relevant. \\
 
 \vspace{0.5cm}
 \begin{tabularx}{\linewidth}{| c | X |}
@@ -236,8 +240,8 @@ The users attached to the team. \\
     \rowcolor[gray]{0.8}
     \textbf{Field} & \textbf{Description} \\
     \hline
-    UserId & A forreign key to the user.\\ \hline
-   	TeamId & A forreign key to the team.\\ \hline
+    UserId & A forreign key to the users id.\\ \hline
+   	TeamId & A forreign key to the teams id.\\ \hline
    	Role & The users role in the team. There are possible roles are 'Manager' and 'Developer'\\ \hline
     Active & A variable that states if the user has selected this team as his active. Only one can be active per user at any given time.\\ 
     \hline
@@ -285,8 +289,8 @@ Managers or owners of teams can create reflection workshops, where it is generat
 \end{tabularx}
 \vspace{0.5cm}
 
-\textbf{WorkshopQuestions}
-This table holds the questions generated from the commit messages. \\
+\subsubsection*{WorkshopQuestions}
+This table holds the questions for each workshop and indicates if they are mandatory or not. \\
 
 \vspace{0.5cm}
 \begin{tabularx}{\linewidth}{| c | X |}
@@ -303,12 +307,13 @@ This table holds the questions generated from the commit messages. \\
 \vspace{0.5cm}
 
 \section{User Interface}
+When implementing the desing as discussed in the earlier chapter, we had a lot of focus on creating a simplet yet informativ page-layout.
+
 When designing the Peaceful Banana, it was clear that our task required a lot of design work. In order to create a simple yet informative page-layout the twitter boostrap framework was chosen.
 
 The design itself is heavily based on the fluid layout and sign in examples from the official examples.
 
 \subsection{Twitter bootstrap}
-%Tell something about twitter bootstrap and why/how we used it.
 Twitter boostrap is a front-end framework for easier and faster web development, it is widely used and makes it possible to create beautiful webpages without much work. Bootstrap utilizes both ofs the HTML5 and CSS3 standards.
 
 \subsection{jQuery}
