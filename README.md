@@ -3,16 +3,38 @@ Master in progress
 
 Skrevet av Even Stene og Marius Nedal Glittum
 
-# Evaluation:
-Core questions described in the toolbox, 9.1:
-Demographic questions, usage of the app, most relevant app-specific questions - choosing the questions that are most important to our thesis. 
-In addition we will use the reflection scale, shown in 9.1.4 both before and after the evaluation period, in order to measure the effect on the tendency to reflect on past
-experiences. Finally we will include the learning outcomes questions and the work behaviour questions, after the evaluation period. 
+# Feedback fra Torgeir:
+* Stille alternativer opp mot hverandre i rapporten, f.eks om de ser en nytte versus å kun bruke github. 
+* Belyser appen nye ting i forhold til vanlige retrospektiver?
+* Spørre gruppa hva de gjorde på tidligere retrospektiver, og om bruken av appen kan hjelpe. Spør de som ikke har deltatt at dersom de hadde brukt tags osv. hadde de sett nytten? Og da evt til hvilken grad.  
+* Spør: Hvorfor har de ikke brukt det? Tid? Features? Vanskelig? Var det i veien?
 
-## Evaluation with the students in IT2901: 
-Students will use the tool for two weeks, daily individual use and as a team after the two week period. 
-For scenario 2 we will require a team of at least 3 people in order to test. 
-The first scenario does not require anything but a github repository. 
+## Fordeler
+* Non-intrusive: Veldig bra
+* Er unikt: Han hadde ikke sett noe lignende verktøy
+* Er et kjent problem at man ikke husker alt, notes kan hjelpe men det kan bli mye data å analysere som går litt imot smidig. Viktig spørsmål å se om man husker mer ved bruk av appen, altså om man går glipp av noe uten å bruke appen. 
+* Finne feilprioriteringer, ofte er det feilvurderinger av hva som er viktig å gjøre. Oftest gjøres det som utviklerne vil og ikke kunden. Med appen kan man se tendenser til mye jobbing på feil ting. Samt. at man ser at milestones går overdue. 
+* Koble ting opp mot teorimodell: Kompetanseoverlapp. Sitter noen mye alene? Tagclouden kan vise slike tendenser.
+* Re-work: Oppdage dette, vi har muligheter til å oppdage mye gjenåpninger på issues og forklare dette. Mye jobbing med samme ting kan oppdages i appen. 
+
+## Utfordringer
+* Får man noe nyttig utav det
+* Få personer til å faktisk bruke tags i hverdagen. 
+* Generelt vanskelig terskel å få folk til å bruke verktøy. -> Rogers curve-diagram. 
+* Det vil være folk som ikke vil bidra like mye, early adopters vs laggers. 
+* Forskjellig nivå på utviklere. Noen vil dominere commit statistikken, men betyr det da at de er viktigere enn de andre? (Som kanskje gjør andre viktige ting i prosjektet). Det kan gi feil totalbilde. 
+
+## Features
+* Ha deler av kildekoden i peaceful, en slags "hva har skjedd" feature. Overlapper litt med github
+* Burndown chart. Har github noe lignende kanskje? sjekk
+
+## Studier
+* Vitner husker ofte feil i rettsaker -> hukommelse er ikke bombesikker/til å stole på alltid. Derfor lurt å ta ferske erfaringer
+
+### Related Work:
+* Hackystat : https://code.google.com/p/hackystat/
+
+___
 
 # Stuff:
 Har skrevet om PeacefulBanana kapitlet, dette er nå generelt for versjonkontroll systemer og nevner ikke Github. På denne måten vil background kapitlet introdusere teorier som agile, mirror modellen og refleksjon/refleksjonsmodellen. Problem elaboration vil så definere problemet hvor Github blir introdusert som en mulig løsning på spørsmålet vårt(VCS må innføres i et research question vil jeg tro.). Da er det bare å gunne på :D
