@@ -55,7 +55,7 @@ The first section is devoted to show and tell all data related to users, the tab
 
 \subsubsection*{User}
 This table hold data related to each user and only the data which is unique to them.
-The password are encrypted with SHA-512 encryption which is a part of SHA-2 a set of encryption hashing functions created by the U.S. National Security Agency.\\
+The password are encrypted with SHA-512 encryption which is a part of SHA-2 a set of encryption hashing functions created by the U.S. National Security Agency in 2002 and is a known not to be reversal.\\
 
 \vspace{0.5cm}
 \begin{tabularx}{\linewidth}{| c | X |}
@@ -119,8 +119,8 @@ Notifications are used to prompt users about reflection sessions and such. \\
     Title & This field stores the title\\ \hline
    	Body & This field stores the entire message.\\ \hline
     DateCreated & Timestamp generated when the notification is first created.\\ \hline
-    Unread & Variable to state if the message is read.\\ \hline
-    Cleared & Variable to state if the message is cleared or not.\\ \hline
+    Unread & Boolean variable to state if the message is read.\\ \hline
+    Cleared & Boolean variable to state if the message is cleared or not.\\ \hline
     NotificationType & The notification type, possible types are 'Reflection' or 'Other'.\\ \hline
     User & A forreign key to the user that received the notification.\\ 
     \hline
@@ -142,7 +142,7 @@ Milestones are major goals consisting of several minor goals called issue, with 
     GithubId & Unique id from github.com\\ \hline
     Name & The milestones name.\\ \hline
    	Description & A description of the milestone, like what features is to be implemented.\\ \hline
-    Status & A variable to say if its open or closed.\\ \hline
+    Status & Avariable to say if its open or closed.\\ \hline
     CreatedDate & The timestamp which the milestone is created.\\ \hline
     DueDate & A date which the milestone is due on. This is null if the milestone does not got a due date.\\ \hline
     ClosedDate & A timestamp when the milestone is closed.\\ 
