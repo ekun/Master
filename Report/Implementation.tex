@@ -7,7 +7,7 @@ In this chapter we will go through the decisions made in order to develop the Pe
 
 Below you can see an overview of the entire system design, how it was implemented so the users can see the data tailored to their team and work.
 
-\begin{figure}[!htpb]
+\begin{figure}[htpb!]
     \centering
         \includegraphics[width=0.8\textwidth]{Clientservergithub}
     \caption{Overview of system design.}
@@ -20,7 +20,7 @@ When choosing a framework for the prototype, several alternatives where discusse
 \subsection{Grails}
 Grails is an open source web application framework which uses the programming language Groovy(which is buildt on top of the Java Virtual Machine). When Grails was developed, it's developers aimed to re-use proven technologies such as Hibernate, Spring etc. 
 
-\begin{figure}[!htpb]
+\begin{figure}[htpb!]
 \centering
     \includegraphics[width=0.8\textwidth]{Grails-Architecture}
 \caption{Overview of Grails architecture.}
@@ -30,7 +30,7 @@ Architectural grails is designed with the MVC\footnote{Model View Controller} pa
 
 This pattern makes it easy for the developer to remain in controll when creating a user interface and will ensure that the user can not manipulate fields without going through the controller.
 
-\begin{figure}[!htpb]
+\begin{figure}[htpb!]
     \centering
         \includegraphics[width=0.5\textwidth]{MVC}
     \caption{Model-view-controller paradigm}
@@ -48,7 +48,7 @@ In this section we will show how the database is designed as the figure \ref{dat
 \caption{Domain diagram, shows the relationship between different classes.}
 \label{databaseDomainDiagram}
 \end{figure}
-
+\newpage
 
 \subsection{User data}
 The first section is devoted to show and tell all data related to users, the tables below is representing the different data types associated with users. Users are a vital part of the implementation and everything is sentered around these users, it is therefor important to store as much relevant data as possible. \\
@@ -307,7 +307,7 @@ This table holds the questions for each workshop and indicates if they are manda
 \vspace{0.5cm}
 
 \section{User Interface}
-When implementing the desing as discussed in the earlier chapter, we had a lot of focus on creating a simplet yet informativ page-layout.
+When implementing the desing as discussed in the earlier chapter, we had a lot of focus on creating a simplet yet informativ page-layout and it is because of this we 
 
 When designing the Peaceful Banana, it was clear that our task required a lot of design work. In order to create a simple yet informative page-layout the twitter boostrap framework was chosen.
 
