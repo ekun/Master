@@ -16,7 +16,7 @@ Below you can see an overview of the entire system design, how it was implemente
 \end{figure}
 
 \section{Server}
-When choosing a framework for the prototype, several alternatives where discussed and their architecture was a vital part of the selection. Based on these criterias the server was implemented with Grails a framework for web applications, it is better described in the section following.
+When choosing a framework for the prototype, several alternatives like Spring\footnote{\url{http://www.springsource.org/}}, WebObjects\footnote{\url{htpp://www.apple.com/webobjects/}} and Play Framework\footnote{\url{http://www.playframework.com/}} where discussed. Their architecture and our familiarity to the framwork was a vital part of the selection. Based on these criterias the server was implemented with Grails a framework for web applications, it is better described in the section following.
 
 \subsection{Grails}
 Grails is an open source web application framework which uses the programming language Groovy(which is buildt on top of the Java Virtual Machine). When Grails was developed, it's developers aimed to re-use proven technologies such as Hibernate, Spring etc. 
@@ -39,6 +39,8 @@ This pattern makes it easy for the developer to remain in controll when creating
 \end{figure}
 
 \section{Database}
+While developing the tool the database was run as a H2\footnote{\url{http://www.h2database.com/}} in-memory database, however the storrage was not persistent so we later changed to a MySQL database for the data to stay unchanged when we had to update the tool. This was essential for the tool to function as described in the requirements, but the H2 database was more conveniente during development.
+
 In this section we will show how the database is designed as the figure \ref{databaseDomainDiagram} below shows the relationship between the differet datatypes. The datatypes have been categorised regarding to their origin and are discussed later together with all the fields in each datatype.
 
 % Bør denne legge på høykant i appendix?
@@ -127,7 +129,11 @@ Notifications are used to prompt users about reflection sessions and such. \\
 \vspace{0.5cm}
 
 \subsection{Github data}
-In this section we discuss the storrage of data collected from Github. When we started development we tested with the data stored at github, so we asked github for the data every time it was needed, this made the application slow so we decided to store github data localy to enhance performance. The following data-types where stored in tables as described below.
+In this section we discuss the storrage of data collected from Github. When we started development we tested with the data stored at github, so we asked github for the data every time it was needed, this made the application slow so we decided to store github data localy to enhance performance. 
+
+When retriving data from github, we used the provided API as described by their developer-site\footnote{\url{http://developer.github.com/v3/}}.
+
+The following data-types where stored in tables as described below.
 
 \subsubsection*{Milestones}
 Milestones are major goals consisting of several minor goals called issue, with or without a due date. \\
