@@ -11,6 +11,7 @@ In this section we will describe the results and observations gained through usa
 The usability test was conducted on four participants. User-interaction with the PeacefulBanana was done through an Internet Browser. Users answered an entrance questionnaire, in order to collect demographic information. During the usability test we took notes of the user's problems and concerns. When the test was completed, participants could comment with suggestions on improvement of the application or design. Finally we had participants answer a SUS form, which consisted of 10 questions designed to measure user satisfaction. 
 
 \subsection{Context}
+\label{subsec:context}
 The usability test simulated the two scenarios identified in Section \ref{sec:scenarios} and was set in the context of these. We conducted the usability test in order to answer several important questions, regarding these scenarios: 
 \begin{itemize}
 	\item Is the application easy to use, and can users achieve their goals in a timely manner?
@@ -153,16 +154,15 @@ In order to analyze collected data from the usability test, identified issues we
 \subsubsection{Impact}
 \subsubsection{Frequency}
 	\begin{itemize}
-		\item High: 40\% or more of the participants experience the problem.
-		\item Moderate: 20\% - 39\% of participants experience the problem.
-		\item Low: 20\% or fewer of the participants experience the problem
+		\item High: 40\% or more of the participants experienced the problem.
+		\item Moderate: 20\% - 39\% of participants experienced the problem.
+		\item Low: 20\% or fewer of the participants experienced the problem
 	\end{itemize}
 \subsubsection{Problem Severity Classification}
 	\begin{itemize}
-		\item Severity 1: High impact problems that often prevent a user from correctly completing a task. Reward for resolution is reduced redevelopment costs.
-		\item Severity 2: Moderate to high frequency problems with moderate to low impact are typical of erroneous actions that the participant recognizes needs to be undone. Reward for resolution is typically exhibited in reduced time on task.
-		\item Severity 3: Either moderate problems with low frequency or low problems with moderate frequency; these are minor annoyance problems faced by a number of participants. Reward for resolution is typically exhibited in reduced time on task and increased data
-		\item Severity 4: Low impact problems faced by few participants; there is low risk to not resolving these problems. Reward for resolution is typically exhibited in increased user satisfaction.
+		\item High severity: High impact problems that often prevent a user from correctly completing a task. Reward for resolution is reduced redevelopment costs.
+		\item Medium severity: Either moderate problems with low frequency or low problems with moderate frequency; these are minor annoyance problems faced by a number of participants. Reward for resolution is typically exhibited in reduced time on task and increased data
+		\item Low severity: Low impact problems faced by few participants; there is low risk to not resolving these problems. Reward for resolution is typically exhibited in increased user satisfaction.
 	\end{itemize}
 
 \section{Usability Test Results}
@@ -171,12 +171,11 @@ After finalizing the usability test plan: Appendix \ref{chap:usability}, a pilot
 It also allows the "tester" to practice the execution and guidance, before actually performing the tests. \\
 In the pilot test for PeacefulBanana, all of the aspects above were evaluated and a few tweaks were made to the tests, making it more streamlined. Also a few, smaller bugs in the application were discovered and fixed. The test introduction was rewritten, since the pilot-tester showed some confusion in a few of the tasks. 
 The findings acted as valuable feedback to our delivery cycle, and were used for improving the design of the application. 
-\section{Introduction}
+
+\section{Summary}
 We conducted an onsite usability test using a production version of PeacefulBanana, located on the test administrator’s local server. One tester took notes of comments, facial expressions and navigation choices.The administrator acted as guidance during the test. The sessions captured each participant’s navigational choices, task completion rates, comments, overall satisfaction ratings, questions and feedback.
-\section{Executive Summary}
-We conducted an onsite usability test at a private lab-room at NTNU on November 10th. The purpose of the test was to assess the usability of the web application design, information flow, information architecture and the effects of sharing personal reflection notes.
+The usability test was conducted in a private lab-room at NTNU on November 10th. The purpose of the test was to assess the usability of the web application design, information flow, information architecture and the effects of sharing personal reflection notes.
 Four participants attended the test. Typically, three to five test participants is the optimal number for most usability studies\cite{nielsen1993mathematical}. Each individual session lasted approximately twenty minutes.
-% In general ditt og datt , sammendrag av resultatene
 This section contains the participant feedback, satisfactions ratings, task completion rates, ease or difficulty of completion ratings, time on task, errors, and recommendations for improvements.
 \subsection{Presentation of results}
 \subsubsection{Task Completion Success Rate}
@@ -249,23 +248,59 @@ Low completion rate, occurance of critical-errors and high time on task are high
     \caption{Summary of Data}
     \label{datasummary}
 \end{figure}
+
 \subsubsection{Overall Metrics}
-After completing the usability session, participants rated the site for eight overall measures. These can be seen in Figure: \ref{posttaskoverall}. \\
-All participants agreed(i.e., agree or strongly agree) that they would use the application frequently and that the application's content would keep them coming back. The majority of the participants(75\%) agreed they thought the application was easy to use, that the homepage content encouraged them to explore further and that the application was well organized. Half of the participants felt that most people would learn the application quickly and that information was quickly apprehended. Lastly none of the participants agreed that it was difficult to keep track of where they were in the application. 
+After completing the usability session, participants were given a \emph{System Usability Scale} form to answer\cite{brooke1996sus}. These can be seen in Figure: \ref{posttaskoverall}. \\
+
+All participants agreed(i.e., agree or strongly agree) that they would use the application frequently and that the application was easy to use. All participants(100\%) also felt confident when using the application. The majority of the participants(75\%) felt the functions in the application were well integrated, and that most people would learn to use the system very qucikly. Half of the participants(50\%) agreed that there were inconsistencies in the system. None of the participants(0\%) found the system unnecessarily complex or that it was cumbersome to use. Further none of the participants felt users would need support of a technical person to use the system(based on the intended usergroup) or that they needed to learn a lot before getting going with the system. The participants mentioned the quickstart guide as a possible look-to document in case of trouble.  
 \begin{figure}[h!]
     \centering
         \includegraphics[width=\textwidth]{posttaskoverall}
     \caption{Post task}
     \label{posttaskoverall}
 \end{figure}
-Upon completion of the tasks, participants provided feedback for what they liked the most and least about the application, and recommendations for improving the application. \\
+
+\subsubsection{Reflection and sharing}
+\label{subsubsec:reflection}
+Participants were also asked to answer the questions identified in \ref{subsec:context}
+\begin{itemize}
+	\item Is the application easy to use, and can users achieve their goals in a timely manner?
+\end{itemize}
+Feedback here was that participants were satisfied with the ease of use as can be seen above, also time-on-task show that participants were mostly quite similar in the solving of tasks, and very few spikes. 
+\begin{itemize}
+	\item Identify the relationship users have with the aspect of reflection and sharing personal experiences.
+\end{itemize}
+On this context, participants answered that reflecting on their experiences is something they often do, but they don't collect them and thus forgets exactly what the experience was about. The application helped solve this problem by prompting and allowing users to reflect and then store it for later use. \\
+When it comes to sharing, all participants were positive to this, although they strongly emphasized the need for an \emph{unshare} functionality. The missing ability to unshare these notes afterhand could make them reluctant to share them in the first place, since when first shared it was always shared. One participant mentioned the possibility of letting notes be editable and share/unshareable for a specific time period, f.ex 24 hours, where afterwards they would be locked for editing.  
+\begin{itemize}
+	\item Does the tool present data in a way that triggers reflection for the user?
+\end{itemize}
+Participants responded that the tag-cloud and questions in the daily reflection note triggered them to reflect on experiences. Actually reading the questions in their mind, helped them to reflect on the experiences, instead of just having an empty text-field could lead to random thoughts beeing collected and not actually triggering reflection. The commit impact graph was mentioned as less-helpful as it didn't really justify the amount of work done. 
+	
+Participants also provided feedback for what they liked the most and least about the application, and recommendations for improving the application. \\
 \subsubsection*{Most liked}
 The participants liked the design of the application and that it was able to synchronize with their GitHub repositories automatically, without them having to worry about it. The personal tag-cloud and the ability to compare it directly with the team's tagcloud was also a joint feedback.
 \subsubsection*{Least liked}
 Participants commented that the way notifications were given was not optimal, and the registration process was a bit tedious.
 \subsubsection{Recommendations}
-The recommendations section provides recommended changes and justifications driven by the participant success rate, behaviors, and comments. The identified recommendations will improve the overall ease of use and address the areas where participants experienced problems or found the interface/information architecture unclear.
+In addition to the feedback gathered from section \ref{subsubsec:reflection} above this section provides recommended changes and justifications driven by the participant success rate, behaviors, and comments. The identified recommendations will improve the overall ease of use and address the areas where participants experienced problems or found the interface/information architecture unclear.
 Feedback on recommendations on improvement was primarily to streamline the registration process. Also the participants commented that issues connected to a specific milestone, should be more visibly separated from issues connected to the whole repository. \\
+
+\subsubsection*{Add unshare functionality}
+\begin{figure}[h!]
+    \centering
+        \includegraphics[width=\textwidth]{unshareimprovement}
+    \caption{Adding unshare functionality to reflection notes.}
+    \label{unshareimprovement}
+\end{figure}
+
+\subsubsection*{Remove commit impact}
+\begin{figure}[h!]
+    \centering
+        \includegraphics[width=\textwidth]{commitimprovement}
+    \caption{Adding unshare functionality to reflection notes.}
+    \label{commitimprovement}
+\end{figure}
 
 \subsubsection*{Task 1: Start application, login, link account with GitHub and set an active repository. } 
 \begin{figure}[h!]
@@ -305,7 +340,5 @@ Feedback on recommendations on improvement was primarily to streamline the regis
 
 \subsection{Conclusion}
 % Noe mer?
-Most of the participants found the PeacefulBanana application to be well-organized, comprehensive, clean and uncluttered, very useful, and easy to use. Having an application to handle reflection in their daily work is to many if not all of the participants. Implementing the recommendations and further feedback from users will ensure a continued user-friendly application.
-% Skriv litt om de to med høy time on task men ingen critical errors, si at det er noe vi skal se på men ikke får gjort så mye med. 
-% Usability test results: Skrive hvordan de svarte på spørsmålene i test-planen, hvordan det gikk. Evt problemer identifisert og at vi da endret disse tingene/designet på bakgrunn av feedbacken. 
-% Refleksjonsfeedback: Hvordan var det å skrive ned refleksjonene sine om erfaringene, og hvordan er det å dele de med andre? Mer diagrammer hvis nødvendig. 
+Most of the participants found the PeacefulBanana application to be well-organized, comprehensive, clean and uncluttered, very useful, and easy to use. Having an application to handle reflection in their daily work is to many if not all of the participants. Implementing the recommendations and further feedback from users will ensure a continued user-friendly application.\\
+While some tasks had a high time-on-task, this was due to GitHub data collection, and is not something we have control over. It is a simple request to the GitHub API, which we need to receive before continuing. 
