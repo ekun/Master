@@ -131,7 +131,7 @@ Notifications are used to prompt users about reflection sessions and such. \\
 \subsection{Github data}
 In this section we discuss the storrage of data collected from Github. When we started development we tested with the data stored at github, so we asked github for the data every time it was needed, this made the application slow so we decided to store github data localy to enhance performance. 
 
-When retriving data from github, we used the provided API as described by their developer-site\footnote{\url{http://developer.github.com/v3/}}.
+When retriving data from github we used the provided API as described by their developer-site\footnote{\url{http://developer.github.com/v3/}}, this enabled us to controll the sequence of data and when to ask for what type of data. All communication to github servers are asynchronous and whil therefor not introduce any performance related issues. 
 
 The following data-types where stored in tables as described below.
 
