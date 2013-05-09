@@ -1,7 +1,8 @@
 %!TEX root = main.tex
-\chapter{Functional Requirements}
+\chapter{Requirements}
 \label{cha:funcreq}
 In this chapter both functional and non-functional requirements the application should meet, in order to better support elaboration and implementation of the final application. 
+\section{Functional Requirement}
 The requirements detailed in this chapter are prioritized according to how important they are for the implementation, with a three step scale. 
 
 \vspace{0.5cm}
@@ -12,7 +13,7 @@ The requirements detailed in this chapter are prioritized according to how impor
 \end{itemize}
 \vspace{0.5cm}
 
-For this thesis, a three step scale gives us adequate data for decisions without sacrificing too much fidelity.
+For this thesis, a three step scale provides us with adequate data for decisions without sacrificing too much fidelity.
 In addition to prioritizing the requirements based on importance, the requirements will also be prioritized according to how hard and time consuming they are to implement. These priorities will use the H-M-L scale as described below. 
 
 \vspace{0.5cm}
@@ -28,7 +29,7 @@ Net Benefits = Total Benefits - Total Cost
 \end{equation}
 A requirement that is hard to implement fully, but is of little importance to the project as a whole could be dropped in benefit for a more important one (or a less difficult one), if time and/or costs involved are deemed to be to large.
 
-\section{General Requirements}
+\subsection{General Requirements}
 \begin{itemize}
     \vspace{0.5cm}
 	\item[\textbf{FR1}] Users must be able to register a new account. \\
@@ -86,7 +87,7 @@ A requirement that is hard to implement fully, but is of little importance to th
         \end{tabular}
     \vspace{0.5cm}
 
-    \section{GitHub Requirements}
+\subsection{GitHub Requirements}
     \item[\textbf{GR1}] GitHub account authorization\\
         \textit{\small{The application should be able to authorize the application with users GitHub account}}
 
@@ -143,7 +144,7 @@ A requirement that is hard to implement fully, but is of little importance to th
         \end{tabular}
     \vspace{0.5cm}
 
-    \section{Client Requirements}
+\subsection{Client Requirements}
     \item[\textbf{CR1}] Reflection Notes\\
         \textit{\small{As a [User] I want to [save my daily reflection notes] so I can review them at a later time.}}
 
@@ -298,7 +299,7 @@ A requirement that is hard to implement fully, but is of little importance to th
         \end{tabular}
     \vspace{0.5cm}
 
-    \section{Team Requirements}
+\subsection{Team Requirements}
     \item[\textbf{TR1}] Create a team\\
         \textit{\small{As a [User] I want to [create a team] so my fellow collaborators can join the team.}}
 
@@ -355,7 +356,7 @@ A requirement that is hard to implement fully, but is of little importance to th
         \end{tabular}
     \vspace{0.5cm}
 
-    \section{Milestone Requirements}
+\subsection{Milestone Requirements}
     \item[\textbf{MR1}] Active Milestones\\
         \textit{\small{As a [User] I want to [see what milestones are being worked on] so that I can see if the issues related to these milestones.}}
 
@@ -384,7 +385,7 @@ A requirement that is hard to implement fully, but is of little importance to th
         \end{tabular}
     \vspace{0.5cm}
 
-    \section{Server Requirements}
+\subsection{Server Requirements}
     \item[\textbf{SR1}] Persistent Storage\\
         \textit{\small{Create MySQL database support for creating and performing actions on persistent databases by the application}}
 
@@ -427,3 +428,5 @@ A requirement that is hard to implement fully, but is of little importance to th
         \end{tabular}
     \vspace{0.5cm}
 \end{itemize}
+
+\input{NonFuncRequirements}
