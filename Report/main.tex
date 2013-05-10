@@ -9,11 +9,12 @@
 \author{Even Stene, Marius Nedal Glittum}
 
 \usepackage{float}
-\usepackage{natbib}
+\usepackage[square, authoryear]{natbib}
 \usepackage{graphicx}
 \graphicspath{{images//}}
 \usepackage{enumitem}
 \usepackage{colortbl}
+\usepackage{apalike}
 \usepackage{hyperref}
 \usepackage{mathtools}
 \usepackage{tabularx}
@@ -25,7 +26,7 @@
     citecolor=black,%
     filecolor=black,%
     linkcolor=black,%
-    urlcolor=black
+    urlcolor=black,%
 }
 
 \begin{document}
@@ -80,7 +81,7 @@
 	% END appendix s%
 \end{appendices}
 
-\bibliographystyle{unsrt}
+\bibliographystyle{apalike}
 \bibliography{literature}
 
 \input{Changes}

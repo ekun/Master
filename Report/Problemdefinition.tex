@@ -32,12 +32,12 @@ The tool will be evaluated with software development teams in a course at the No
 \section{Github}
 \label{githubchapter}
 This section will introduce GitHub, the features GitHub provides and the rationale behind choosing GitHub as the VCS for our tool implementation. 
-GitHub is a web-based hosting service for software development projects that use the Git revision control system\cite{git,github}. GitHub offers both paid plans for private repositories, and free accounts for open source projects.
+GitHub is a web-based hosting service for software development projects that use the Git revision control system\citep{git,github}. GitHub offers both paid plans for private repositories, and free accounts for open source projects.
 
 GitHub provides users with integrated issue tracking, code review, project wiki, useful statistics and more. 
-Motivational points for choosing GitHub as the revision control system to integrate with are several. Some technical aspects are that GitHub provides developers with a simple to use API\cite{githubapi}, with libraries for integration with most of the commonly used programming languages, like Java\cite{jgit}.
+Motivational points for choosing GitHub as the revision control system to integrate with are several. Some technical aspects are that GitHub provides developers with a simple to use API\citep{githubapi}, with libraries for integration with most of the commonly used programming languages, like Java\citep{jgit}.
 
-In addition to the technical aspects, GitHub is the most used revision control system ,as of January 2013 GitHub announced it had passed the 3 million users mark and now hosting more than 5 million repositories and is a tool many in our evaluation group already use in their development projects\cite{githubnumbers}.
+In addition to the technical aspects, GitHub is the most used revision control system ,as of January 2013 GitHub announced it had passed the 3 million users mark and now hosting more than 5 million repositories and is a tool many in our evaluation group already use in their development projects\citep{githubnumbers}.
 
 \subsection{Authentication}
 The application features an authentication with GitHUb, through the use of OAUTH2 tokens. When the user first uses the tool, he will be asked to authenticate with GitHub's authentication page, asking the user to log in and authorize the PeacefulBanana tool. When this is done the tool receives a token it can use on behalf of the user to retrieve data from GitHub. The token itself is not stored, but retrieved in the background when required and bound to the users HTTP-session which expires when the user closes the browser window. This is done for safety reasons cause it would be devastating if these tokes got in the hands of the wrong people, they could for example delete the entire repository.
@@ -63,17 +63,17 @@ To leave a note on issues can be done by simply mentioning the issue number with
 \section{Reflection and technology}
 % Why is reflecting important and what are the challenges.
 The world wide web and modern technologies provides easy access to enormous amounts of information. This means that in order to learn, learners must be able to make sense of the information collected.  
-In order to achieve this and make conscious decisions of how to use information, learners need to reflect on the information they collect. Reflection upon the process of solving problems is necessary to achieve a good result and to improve the ability to learn from experiences. When supporting learning with technology, this technology should promote these aspects within learning\cite{Lin1999}
+In order to achieve this and make conscious decisions of how to use information, learners need to reflect on the information they collect. Reflection upon the process of solving problems is necessary to achieve a good result and to improve the ability to learn from experiences. When supporting learning with technology, this technology should promote these aspects within learning\citep{Lin1999}
 
 The main goal is to provide technology that enables efficient information retrieval, and to provide scaffolds that support reflective thinking and problem solving. In our task this means utilizing collaborative learning experiences. 
 
 \subsection{Agile Retrospective}
-The agile retrospective is held at the end of an iteration in order to learn from the iteration and not repeat mistakes. A model of how a retrospective can be done is shown in \cite{Derby2006}. The purpose is to learn what works and what does not work, and make the adjustments necessary for the next iteration. This way the team makes sure that every iteration introduces some improvements in the team's process. There are two fundamental questions the retrospective is intended to answer:
+The agile retrospective is held at the end of an iteration in order to learn from the iteration and not repeat mistakes. A model of how a retrospective can be done is shown in \citep{Derby2006}. The purpose is to learn what works and what does not work, and make the adjustments necessary for the next iteration. This way the team makes sure that every iteration introduces some improvements in the team's process. There are two fundamental questions the retrospective is intended to answer:
 \begin{itemize}
 \item What went well during the last iteration that we continue doing?
 \item What could we do differently in order to improve?
 \end{itemize}
-Figure \ref{fig:itcyclemodel} is a model of where the retrospective fits in the agile iteration cycle\cite{Derby2006}, and the table in Figure \ref{fig:retrospectivetable} shows the process in more details, from beginning to end.\cite{Derby2006}:
+Figure \ref{fig:itcyclemodel} is a model of where the retrospective fits in the agile iteration cycle\citep{Derby2006}, and the table in Figure \ref{fig:retrospectivetable} shows the process in more details, from beginning to end.\citep{Derby2006}:
 \begin{figure}[!htpb]
 \centering
 	\includegraphics[width=\textwidth, keepaspectratio=true]{iterationcyclemodel}
@@ -87,7 +87,7 @@ Figure \ref{fig:itcyclemodel} is a model of where the retrospective fits in the 
 \label{fig:retrospectivetable}
 \end{figure}
 \\
-The agile manifesto, also introduces some key practices guidelines aimed towards retrospectives in Scrum teams\cite{agilemanifesto}:
+The agile manifesto, also introduces some key practices guidelines aimed towards retrospectives in Scrum teams\citep{agilemanifesto}:
 \begin{enumerate}
 \item Meeting Customer satisfaction: The Retrospective can be used to reflect on how well the Scrum Team is addressing the customer satisfaction.
 \item Welcoming Changing requirements: The Retrospective is a good venue to assess if the Product Backlog is evolving and therefore the Scrum Team and Product Owner are flexible enough.
@@ -133,7 +133,7 @@ When the students enter the web-application, they will get a notification with a
 \end{figure}
 
   When clicking the notification, the student is presented with a summary of their individual activity in the last 24 hours.
-  This summary compares the commit activity of the user with the team's, and also presents a tag cloud representing the trending issues of the last day. The user is then prompted to input todays mood, their top two contributions \emph{"What did I do good?"} , and their top 2 points to improve on \emph{"What could I do better?"}. Finally the user can submit the form and choose to share these experiences with the team for collaborative use. The daily reflection notes are saved and can be reviewed at any time, and also shared any time by the user. The idea is that the tool will be used to revisit todays experiences with collected information presented in a way that triggers reflection upon these experiences. Information is collected and inspire new experiences. After working on a project that day, students "step back" to reflect on what happened during the day, and on the experiences they encountered. The tool provides scaffolded data to further trigger this reflection process. This process consist of returning to the experiences of that day, re-visit the experiences and attend to the feelings, like inputing todays mood. This reflection will help users to derive their top two improvements and contributions of the day\cite{Krogstie2011}. The tool thus captures the experiences and reflections made by the user and allows for re-visiting of these at a later date by storing them in the system. 
+  This summary compares the commit activity of the user with the team's, and also presents a tag cloud representing the trending issues of the last day. The user is then prompted to input todays mood, their top two contributions \emph{"What did I do good?"} , and their top 2 points to improve on \emph{"What could I do better?"}. Finally the user can submit the form and choose to share these experiences with the team for collaborative use. The daily reflection notes are saved and can be reviewed at any time, and also shared any time by the user. The idea is that the tool will be used to revisit todays experiences with collected information presented in a way that triggers reflection upon these experiences. Information is collected and inspire new experiences. After working on a project that day, students "step back" to reflect on what happened during the day, and on the experiences they encountered. The tool provides scaffolded data to further trigger this reflection process. This process consist of returning to the experiences of that day, re-visit the experiences and attend to the feelings, like inputing todays mood. This reflection will help users to derive their top two improvements and contributions of the day\citep{Krogstie2011}. The tool thus captures the experiences and reflections made by the user and allows for re-visiting of these at a later date by storing them in the system. 
 
 \subsection{Scenario 2 - Team use after each iteration}
 \label{scenario2}

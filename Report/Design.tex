@@ -5,7 +5,7 @@ In this chapter the design process will be explained in detail. We will show how
 Through the different iterations of development, we made different design choices that helped design the application. Before the actual development began, we went
 through a design process that resulted in a basis for implementation. In this section we will elaborate on how these steps culminated into the final design choice.
 \section{Responsive web design}
-Responsive web design\cite{responsivearticle} is a web design approach aimed at developing websites in order to provide an optimal viewing experience on a wide range of devices, from large desktop monitors to smartphones and tablets. This includes easy reading and navigation with minimal resizing, panning, and scrolling.\\
+Responsive web design\citep{responsivearticle} is a web design approach aimed at developing websites in order to provide an optimal viewing experience on a wide range of devices, from large desktop monitors to smartphones and tablets. This includes easy reading and navigation with minimal resizing, panning, and scrolling.\\
 Any site designed to be responsive, adapts the layout to the viewing environment, along with fluid proportion-based grids and flexible images.\\
 \begin{figure}[h!]
 \centering
@@ -15,9 +15,9 @@ Any site designed to be responsive, adapts the layout to the viewing environment
 \end{figure}
 
 \subsection{Fluid grid}
-A definition on fluid is : ``A fluid is a substance that continually deforms (flows) under an applied shear stress''\cite{fluidgrid}. In a web-design context, fluid will be the design and layout, and shear stress will be the device used to access the content.
+A definition on fluid is : ``A fluid is a substance that continually deforms (flows) under an applied shear stress''\citep{fluidgrid}. In a web-design context, fluid will be the design and layout, and shear stress will be the device used to access the content.
 Regardless of what the device or screen size is, components in fluid designs are going to flow and adapt to the user environment. Fluid grids define a maximum layout size and the grid is divided into columns for easier handling. These grids can then be designed with proportional widths and heights. The fluid grid and it's columns can be seen in Figure \ref{responsivelayout}.
-The fluid grid\cite{fluidgrid, fluidarticle} concept states that page elements should be sized in relative units, like percentages or ems, instead of absolute units like pixels or points. Since fluid grids flow naturally based on the dimensions of its parent container-component, specific adjustments for various devices are therefore kept to a minimum. In the fluid grid, flexible images are also sized in relative units, up to 100\%, in order to prevent them from stretching outside their containing element\cite{fluidimages}. This means all kinds of elements on a web-page can be treated as proportions measured against their container, and not in absolute pixels. 
+The fluid grid\citep{fluidgrid, fluidarticle} concept states that page elements should be sized in relative units, like percentages or ems, instead of absolute units like pixels or points. Since fluid grids flow naturally based on the dimensions of its parent container-component, specific adjustments for various devices are therefore kept to a minimum. In the fluid grid, flexible images are also sized in relative units, up to 100\%, in order to prevent them from stretching outside their containing element\citep{fluidimages}. This means all kinds of elements on a web-page can be treated as proportions measured against their container, and not in absolute pixels. 
 
 \section{Mockups}
 At the very beginning we had an idea of what we wanted to do and how to do it. At the time we had not decided on a platform for our application. Because of this we sketched up some different design choices.
@@ -43,8 +43,8 @@ This is how our first sketch for a web-app looked like:
 As this was the main design options, we did some research on existing frameworks which might suit our requirements. The tool needed to be responsive and work on a wide range of devices, which made a fluid design suitable.
 
 \section{Twitter Bootstrap}
-The Twitter Bootstrap framework\cite{twitterbootstrap} features exactly the requirements stated above. Bootstrap was developed by Mark Otto and Jacob Thornton at Twitter, as a framework to promote consistency in internal tools\cite{buildingbootstrap}. Twitter bootstrap is a free powerful front-end framework for faster and easier web development, and it's publicly available to use by anyone.\\ It contains HTML and CSS based design templates for interface elements like buttons, charts, and navigation. Bootstrap was made to to not only look and behave optimally in desktop browsers, but in tablet and smartphone browsers via responsive CSS and HTML5 as well. The framework features responsive grids, components like tabs and dropdowns, JavaScript plugins, typography options and forms. \\
-Twitter Bootstrap is the most popular project in GitHub and is used by amongst others NASA(National Aeronautics and Space Administration)\cite{nasa}
+The Twitter Bootstrap framework\citep{twitterbootstrap} features exactly the requirements stated above. Bootstrap was developed by Mark Otto and Jacob Thornton at Twitter, as a framework to promote consistency in internal tools\citep{buildingbootstrap}. Twitter bootstrap is a free powerful front-end framework for faster and easier web development, and it's publicly available to use by anyone.\\ It contains HTML and CSS based design templates for interface elements like buttons, charts, and navigation. Bootstrap was made to to not only look and behave optimally in desktop browsers, but in tablet and smartphone browsers via responsive CSS and HTML5 as well. The framework features responsive grids, components like tabs and dropdowns, JavaScript plugins, typography options and forms. \\
+Twitter Bootstrap is the most popular project in GitHub and is used by amongst others NASA(National Aeronautics and Space Administration)\citep{nasa}
 Bootstrap is also modular, which means it is composed of a series of components that together make the toolkit. Developers can then cherry pick the components they need from the Bootstrap toolkit. \\
 
 \subsection{Bootstrap grid}
