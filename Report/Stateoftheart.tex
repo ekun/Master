@@ -29,20 +29,20 @@ The Hackystat Framework supports three software development communities:
 	\item Educators. Hackystat is actively used in software engineering courses at the undergraduate and graduate levels to introduce students to software measurement and empirically guided software project management.
 \end{itemize}
 Hackystat uses sensors in f.ex the \emph{Eclipse IDE} to collect data about the developer's activities. Data collected is then used in reports that can be accessed on the hackystat website. 
-The long range goal of Hackystat is to facilitate \emph{"collective intelligence"} in software development, by enabling collection, annotation, and diffusion of information and its subsequent analysis and abstraction into useful insight and knowledge. Hackystat services are designed to co-exist and complement other components in the \emph{"cloud"} of internet information systems and services available for modern software development.\\ 
+The long range goal of Hackystat is to facilitate \emph{"collective intelligence"} in software development, by enabling collection, annotation, and diffusion of information and its subsequent analysis and abstraction into useful insight and knowledge. Hackystat services are designed to co-exist and complement other components in the \emph{"cloud"} of Internet information systems and services available for modern software development.\\ 
 
 \subsection{GitHub tools}
-Is there any other similar tools already developed? There are project development tools which integrates with Github in order to populate and enhance Kanban boards, but these have no features for experience collection and promoting reflection. 
-Tools using github api: \\
+Is there any other similar tools already developed? There are project development tools which integrates with GitHub in order to populate and enhance Kanban boards, but these have no features for experience collection and promoting reflection. 
+Tools using GitHub api: \\
 \subsubsection{GitHub Burndown App}
-Node.js one of a kind app to create burndown charts from GitHub issues. 
+Node.js one of a kind app to create burn-down charts from GitHub issues. 
 https://github.com/radekstepan/github-burndown-chart
 \subsubsection{HuBoard}
 GitHub issues made awesome: \url{http://huboard.com/} \\
 HuBoard is a project management tool, which takes your GitHub issues and milestones and generates a Kanban\footnote{Kanban is a software development method with focus on Just-in-time delivery. Developers pick tasks from a queue. \url{http://www.kanbanblog.com/explained/index.html}} board built from the GitHub api. \\
 This tool features the idea of scaffolding issues and milestones into something useful for a different context, although it is limited to issues and have no features for capturing experience and promoting reflection. 
 \subsubsection*{Agile Bench}
-Agile Bench integrates with Github so programmers do not have to duplicate comments between two systems\footnote{Agile Bench Github integration: \url{http://support.agilebench.com/entries/21307153-GitHub-Integration}}. Instead they can make a comment via Github(the codebase) commits and this will push comments into the project management system. AgileBench supports these commit formats:
+Agile Bench integrates with GitHub so programmers do not have to duplicate comments between two systems\footnote{Agile Bench GitHub integration: \url{http://support.agilebench.com/entries/21307153-GitHub-Integration}}. Instead they can make a comment via GitHub(the code base) commits and this will push comments into the project management system. AgileBench supports these commit formats:
 \begin{itemize}
 \item \verb|[#story_id]| comment - i.e. "[\#5] Added documentation" - will add "Added documentation" to story \#5
 \item \verb|[#story_id #story_id]| comment. i.e. "[\#5 \#6] Added even more documentation" - will add "Added documentation" to story \#5 and \#6
@@ -50,4 +50,4 @@ Agile Bench integrates with Github so programmers do not have to duplicate comme
 \end{itemize}
 Agile Bench do not facilitate for experience collection in order to promote reflection.
 \subsubsection*{AgileZen}
-AgileZen also organizes work in a Kanban board, with user-stories\footnote{AgileZen: \url{http://www.agilezen.com}}. Zen features teams with users and different user-roles. It also allows artifacts like screenshots or specification documents to be attached to a story. It integrates with GitHub as a service hook\footnote{\url{https://help.github.com/articles/post-receive-hooks}}. In order for Zen to include your changesets from github, you need to refer to the story ID in your commits using the format \#123 or zen-123. This further builds on the idea of using \#hashtags to \textit{tag} relevant messages and identify them in your commits. 
+AgileZen also organizes work in a Kanban board, with user-stories\footnote{AgileZen: \url{http://www.agilezen.com}}. Zen features teams with users and different user-roles. It also allows artifacts like screen shots or specification documents to be attached to a story. It integrates with GitHub as a service hook\footnote{\url{https://help.github.com/articles/post-receive-hooks}}. In order for Zen to include your change sets from GitHub, you need to refer to the story ID in your commits using the format \#123 or zen-123. This further builds on the idea of using \#hashtags to \textit{tag} relevant messages and identify them in your commits. 
