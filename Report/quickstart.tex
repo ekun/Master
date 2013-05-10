@@ -24,7 +24,7 @@ So you and your team are developing software, using an agile process model? In t
 \end{itemize}
 
 The PeacefulBanana tool can help you and your team to identify the common ground answers to these questions. But first, we need to ensure you have the tools needed to use PeacefulBanana: \\
-In order to use the Peaceful Banana application you need access to a device with an up-to-date internet browser, such as Firefox, Google Chrome, Safari, Opera or Internet Explorer(version 7 and up). Other browsers present on tablets and smartphones may also work, but we suggest using one of the mentioned here. \\
+In order to use the Peaceful Banana application you need access to a device with an up-to-date Internet browser, such as Firefox, Google Chrome, Safari, Opera or Internet Explorer(version 7 and up). Other browsers present on tablets and smartphones may also work, but we suggest using one of the mentioned here. \\
 That's it! That is all you need to have in order to begin using PeacefulBanana. 
 In order to access the web-application, you need to open your browser and access this url: \url{http://vm-6121.idi.ntnu.no:8080} . Here you will be greeted by our welcome screen\\
 
@@ -72,9 +72,12 @@ Now you are ready to explore what PeacefulBanana can offer you and your team. Th
 \caption{PeacefulBanana - Team page, currently no teams have been created}
 \end{figure}
 
-The first thing you have to do is get the team leader to create a new team. One PeacefulBanana team retrieves data from your chosen GitHub repository and only that. All repository collaborators can join the PeacefulBanana team, so if you are having trouble joining the team - check if you have the collaborator status on the GitHub repository. Creating a team can be done simply by clicking the highlighted \emph{+}\\
-On the next screen, choose a suitable team name and which repository this team should be linked to. As stated earlier, there can only be one team for each repository, and only the team leader needs to create the team. After clicking \textit{Create} PeacefulBanana will working it's magic and retrieve your chosen repositories' data. This includes commits, milestones, issues you are already familiar with on GitHub. This process might take a while the first time around, but don't worry, you will be notified when this process is complete.\\
+The first thing you have to do is get the team leader to create a new team. One PeacefulBanana team retrieves data from your chosen GitHub repository and only that. All repository collaborators can join the PeacefulBanana team, so if you are having trouble joining the team - check if you have the collaborator status on the GitHub repository. Creating a team can be done simply by clicking the highlighted \emph{+}
+
+On the next screen, choose a suitable team name and which repository this team should be linked to. As stated earlier, there can only be one team for each repository, and only the team leader needs to create the team. After clicking \textit{Create} PeacefulBanana will working it's magic and retrieve your chosen repositories' data. This includes commits, milestones, issues you are already familiar with on GitHub. This process might take a while the first time around, but don't worry, you will be notified when this process is complete.
+
 Back at the team page, your team will be created and visible under \emph{Teams}. Also the newly created team will be available to join for the other team members. Go ahead and invite your co-collaborators to join!
+
 \begin{figure}[h!]
 \label{teamcreated}
 \centering
@@ -96,7 +99,7 @@ Clicking the repository tab, you will be presented with a screen like this:
 \end{figure}
 \\
 It's a simple start screen with the overall commit impact for your team's repository and a commit count. This information can be used to gain an indication of who is having the largest impact in the current team and how much overall activity there is. 
-On the menu to the left you can see tabs for your repositories' milestones, issues and tagcloud.
+On the menu to the left you can see tabs for your repositories' milestones, issues and tag cloud.
 \\
 \textbf{The milestones sub-tab:}
 \begin{figure}[h!]
@@ -106,15 +109,16 @@ On the menu to the left you can see tabs for your repositories' milestones, issu
 \caption{PeacefulBanana - All the repositories' milestones}
 \end{figure}
 \newpage
-On the milestones sub-menu you have access to all your milestones and their status(Open, Overdue or Closed). The main tab will by default show all your Open milestones. At the top you can switch to see milestones with other statuses.\\
-It's fast and easy to switch between your currently open milestones,the ones that are overdue and the milestones you already have closed. This functionality makes it useful for individual daily usage, and for preperation to team retrospectives. Say your team missed an important deadline, and you wish to dive into what issues were causing problems. Clicking on this milestone will present you with all the issues that are connected to that milestone, in a clean manner:
+On the milestones sub-menu you have access to all your milestones and their status(Open, Overdue or Closed). The main tab will by default show all your Open milestones. At the top you can switch to see milestones with other statuses.
+
+It's fast and easy to switch between your currently open milestones, the ones that are overdue and the milestones you already have closed. This functionality makes it useful for individual daily usage, and for preparation to team retrospectives. Say your team missed an important deadline, and you wish to dive into what issues were causing problems. Clicking on this milestone will present you with all the issues that are connected to that milestone, in a clean manner:
 \begin{figure}[h!]
 \label{milestonessingular}
 \centering
 	\includegraphics[width=\textwidth]{milestone_medium}
 \caption{PeacefulBanana - Single milestone}
 \end{figure}
-PeacefulBanana shows you that particular milestone's issues and their status, in addition to a milestone specific tagcloud. This tagcloud will help you identify which tags\footnote{\# prepended words in commit-messages} are the most active, related to this particular milestone. This will in turn identify which issues might be worth taking a closer look at, while excluding the less important ones. 
+PeacefulBanana shows you that particular milestone's issues and their status, in addition to a milestone specific tag cloud. This tag cloud will help you identify which tags\footnote{\# perpended words in commit-messages} are the most active, related to this particular milestone. This will in turn identify which issues might be worth taking a closer look at, while excluding the less important ones. 
 Say if you see that issue \#20 has been heavily referenced in commits, and you want to see further details surrounding that issue, simply click it:
 \begin{figure}[h!]
 \label{milestonessingular}
@@ -137,9 +141,9 @@ The reflection tab contains your personal reflection notes, and also your team's
 	\includegraphics[width=\textwidth]{notes_shared}
 \caption{PeacefulBanana - Reflection tab with the currently shared notes}
 \end{figure}
-PeacefulBanana also provides you and your team with a mood-graph under the tab \textit{Mood}, which ranges from members beeing very happy, to very sad. This moodgraph will give you and your team an indication of how the individual moods progressed through the project. Is there any specific period where the team's mood ranged a lot? Then this period would be worth having a second look, as to what exactly was beeing worked on at the time, any specific problems or issues that could have been avoided?\\
+PeacefulBanana also provides you and your team with a mood-graph under the tab \textit{Mood}, which ranges from members being very happy, to very sad. This mood graph will give you and your team an indication of how the individual moods progressed through the project. Is there any specific period where the team's mood ranged a lot? Then this period would be worth having a second look, as to what exactly was being worked on at the time, any specific problems or issues that could have been avoided?\\
 
-Another feature of PeacefulBanana is the the tab \textit{Workshop Preparation}, which helps users prepare for the team's retrospective sessions. You can easily switch between created workshops, and see your individual notes created for that particular workshops'. Revisiting these contributions and improvements helps users recollect the experiences from the particular days, the daily contributions and improvements, and finally that periods moodgraph for both you and your team.\\*
+Another feature of PeacefulBanana is the the tab \textit{Workshop Preparation}, which helps users prepare for the team's retrospective sessions. You can easily switch between created workshops, and see your individual notes created for that particular workshops'. Revisiting these contributions and improvements helps users recollect the experiences from the particular days, the daily contributions and improvements, and finally that periods mood graph for both you and your team.\\*
 \begin{figure}[h!]
 \label{milestonessingular}
 \centering
@@ -161,7 +165,7 @@ If you wish to create a new workshop, simply click the + icon next to the title:
 \caption{PeacefulBanana - Create a new workshop}
 \end{figure}
 
-Which in turn will bring you to a datepicker. Simply pick the from and to date you wish to set up a workshop on and click \textit{Create}.
+Which in turn will bring you to a date picker. Simply pick the from and to date you wish to set up a workshop on and click \textit{Create}.
 After inspecting the newly created workshop you will see 3 tabs and some questions. 
 \subsubsection*{Mandatory questions}
 This tab is visible by default, and these questions are general for all workshops, and so they cannot be removed from the workshop. These questions are designed to help your team reflect on general issues related to team collaboration and improvement. \\
