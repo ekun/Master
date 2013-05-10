@@ -3,9 +3,9 @@
 This thesis will present a design-science project where the goal was to design a web tool for use as support for learning and reflection in agile project development teams. The purpose of the tool is to make collecting of experiences easier during a project development process, and enhance learning outcomes from the reflection sessions. The tool will collect data from the development process and present them to the users in a tailored way. Users can annotate these data with their own experiences, including connecting feelings to these experiences. The web tool will present these data and experiences for use in both individual and collaborative reflection settings. The challenge will be to collect, annotate and present the data in a way that helps the learner to understand what they have experienced and learn from these experiences. That is helping them reflect on the experiences made and learn from them. Boud et.al\cite{boudreflection1985} presents that; \emph{reflection is a process where the experience is revisited, feelings are re-attended and the experience is re-evaluated}. This means that it is important to tailor reflection in order to support and achieve learning.
 
 \section{Context and background}
-For many years now, agile methods in software development have been widely used in software development teams. The agile manifesto presents a principle which states that an agile team should regularly reflect on how to become more effective, and tune its behavior accordingly\cite{Beck2001}. Continuously improving through introspection is a vital part of agile methods and is applied in f.ex retrospectives\cite{Beck1999, Derby2006, Maham2008}. Cockburn impose that a vital part of agile practice should be conducting regular retrospective workshops aimed at reflection and process tune-up\cite{Cockburn2006}. Agile methods focus on continuous iterations repeating the same development steps, and thus progressing. Retrospectives in agile development processes are most often performed after each iteration. This is done by gathering the team and reflecting on their way of working, so that improvements for the next iteration can be identified.\cite{Derby2006, Drury2011}. This enables agile self-governing teams to react quickly to changes, and make modifications accordingly\cite{Drury2011}. Retrospectives could also support communication and interaction within the team, which is important for agile development. There are however shortcomings of applying retrospectives in agile teams. Agile teams tend to focus primarily on short-term issues that were identified for a single iteration, and not on long-term strategic issues\cite{Drury2011}. 
+For many years now, agile methods in software development have been widely used in software development teams. The agile manifesto presents a principle which states that an agile team should regularly reflect on how to become more effective, and tune its behaviour accordingly\cite{Beck2001}. Continuously improving through introspection is a vital part of agile methods and is applied in f.ex retrospectives\cite{Beck1999, Derby2006, Maham2008}. Cockburn impose that a vital part of agile practice should be conducting regular retrospective workshops aimed at reflection and process tune-up\cite{Cockburn2006}. Agile methods focus on continuous iterations repeating the same development steps, and thus progressing. Retrospectives in agile development processes are most often performed after each iteration. This is done by gathering the team and reflecting on their way of working, so that improvements for the next iteration can be identified.\cite{Derby2006, Drury2011}. This enables agile self-governing teams to react quickly to changes, and make modifications accordingly\cite{Drury2011}. Retrospectives could also support communication and interaction within the team, which is important for agile development. There are however shortcomings of applying retrospectives in agile teams. Agile teams tend to focus primarily on short-term issues that were identified for a single iteration, and not on long-term strategic issues\cite{Drury2011}. 
 
-In this thesis we will develop a tool in order to address the challenges described above. The tool is aimed at supporting reflection by a scaffolded collection of relevant project artifacts, and prompting users to annotate these artifacts with their experiences and feelings. The tool is designed and developed for software development projects using an agile method, and will be evaluated with an agile team taking a software development course at NTNU. 
+In this thesis we will develop a tool in order to address the challenges described above. The tool is aimed at supporting reflection by scaffold collection of relevant project artefacts, and prompting users to annotate these artefacts with their experiences and feelings. The tool is designed and developed for software development projects using an agile method, and will be evaluated with an agile team taking a software development course at NTNU. 
 
 \subsection{Domain}
 Brief description of the research domain and the problem that one
@@ -13,7 +13,7 @@ wants to address. It should tell the reader why working on this project is worth
 doing.
 
 \subsubsection{Agile methodology}
-Agile methodology is a methodoloy based on iterative and incremental development, where requirements and solutions evolve through collaboration between self-organizing, cross-functional teams.
+Agile methodology is a methodology based on iterative and incremental development, where requirements and solutions evolve through collaboration between self-organizing, cross-functional teams.
 
 \subsubsection{Reflectiv learning}
 Learning from past experiences is a vital \textbf{blablabla}
@@ -25,22 +25,22 @@ In this section we will look at some of the concepts the application is built on
 The goal is to offer technology that not only makes information search and collection efficient, but also support reflection in a collaborative session. Through reflection learning can be achieved and users can collaborate on gathering information for experiences and the ability to reflect over experiences by displaying data in different methods this might enhance the reflection ability and letting the user view data in another way.
 
 \subsubsection{Learning from experience}
-According to David Kolb\cite{KolbModel} for a learning expericene to occur there must excists certain abilities in the learnier. First the learner must be willing to actively be involved in the experience Secondly the learner must be able to reflect on the experience and third, the learner must possess and be able to use analytical skills to conceptualize the experience. And last the learner must posses decision making and problem solving skills to be able to create new knowledge outcomes based on the experience.
+According to David Kolb\cite{KolbModel} for a learning experience to occur there must exists certain abilities in the learner. First the learner must be willing to actively be involved in the experience Secondly the learner must be able to reflect on the experience and third, the learner must possess and be able to use analytical skills to conceptualize the experience. And last the learner must posses decision making and problem solving skills to be able to create new knowledge outcomes based on the experience.
 % Se på timeline, de har mye gode kilder her
 
 \subsubsection{Software development}
 % Trekke inn modellen til birgit? YES!
-Software developers generate a lot of data when developing software, when commiting data to versioncontrol systems or closing tasks and issues in a project management tool. During a agile development cycle, tasks is distributed among the developers and they make decisions either individualy or in plural. Normaly this data is never looked at again, but they contain vital information on choices the developers make on a daily basis. It is important to make collecting of information a part of developers normal day-to-day activities based on the model\cite{Krogstie2009}.
+Software developers generate a lot of data when developing software, when committing data to version control systems or closing tasks and issues in a project management tool. During a agile development cycle, tasks is distributed among the developers and they make decisions either individually or in plural. Normally this data is never looked at again, but they contain vital information on choices the developers make on a daily basis. It is important to make collecting of information a part of developers normal day-to-day activities based on the model\cite{Krogstie2009}.
 
 \subsubsection{Version-control systems}
-Version-controll system is the management of changes to documents, source files or other collections of information. These artifacts are usually identified by a 'revision'\footnote{An unique identifier normally a number or string.}, when creating a revision a lot of data is stored together with the revisioned files. Like who commited the data, when it was commited and what files that where affected by the change.
+Version-control system is the management of changes to documents, source files or other collections of information. These artefacts are usually identified by a 'revision'\footnote{An unique identifier normally a number or string.}, when creating a revision a lot of data is stored together with the revisioned files. Like who committed the data, when it was committed and what files that where affected by the change.
 
-In software development version-control systems can be used for documentation and configuration files as well as source code. As teams develop software, it is common for different versions to be create and developers to work at the same time, sometimes in the same files. Different version can be tagged in the version-controll system, so it is easy to back in time to that state where the tag for a stable version was created as you can see in \ref{versiontagging}.
+In software development version-control systems can be used for documentation and configuration files as well as source code. As teams develop software, it is common for different versions to be create and developers to work at the same time, sometimes in the same files. Different version can be tagged in the version-control system, so it is easy to back in time to that state where the tag for a stable version was created as you can see in \ref{versiontagging}.
 
 \begin{figure}[!htpb]
 \centering
 	\includegraphics[width=0.8\textwidth]{versioncontrol-versiontagging}
-\caption{Example of versiontagging in version-control systems}
+\caption{Example of version tagging in version-control systems}
 \label{versiontagging}
 \end{figure}
 
@@ -53,13 +53,13 @@ In software development version-control systems can be used for documentation an
 In this section we will describe the organization of the remaining chapters in our thesis. 
 \\*
 \\*
-\textbf{Chapter 2} gives a general overview of the Peacefulbanana application. The intention is to present features and concepts of the application on an abstract level.
+\textbf{Chapter 2} gives a general overview of the PeacefulBanana application. The intention is to present features and concepts of the application on an abstract level.
 \\*
 \\*
 \textbf{Chapter 3} describes the theoretical background behind over thesis, including reflection, experiences and experience based learning. 
 \\*
 \\*
-\textbf{Chapter 4} presents the problem definition, userstories and our scenarios. 
+\textbf{Chapter 4} presents the problem definition, user stories and our scenarios. 
 \\*
 \\*
 \textbf{Chapter 5} describes our State-of-the-art, the literature review that was performed and related work. The chapter presents some of the work performed in the domains of technology for reflection and experience based learning, with related work acting as a basis for our own implementation of technology. 

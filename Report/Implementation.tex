@@ -16,10 +16,10 @@ Below you can see an overview of the entire system design, how it was implemente
 \end{figure}
 
 \section{Server}
-When choosing a framework for the prototype, several alternatives like Spring\footnote{\url{http://www.springsource.org/}}, WebObjects\footnote{\url{htpp://www.apple.com/webobjects/}} and Play Framework\footnote{\url{http://www.playframework.com/}} where discussed. Their architecture and our familiarity to the framwork was a vital part of the selection. Based on these criterias the server was implemented with Grails a framework for web applications, it is better described in the section following.
+When choosing a framework for the prototype, several alternatives like Spring\footnote{\url{http://www.springsource.org/}}, WebObjects\footnote{\url{htpp://www.apple.com/webobjects/}} and Play Framework\footnote{\url{http://www.playframework.com/}} where discussed. Their architecture and our familiarity to the framework was a vital part of the selection. Based on these criteria the server was implemented with Grails a framework for web applications, it is better described in the section following.
 
 \subsection{Grails}
-Grails is an open source web application framework which uses the programming language Groovy(which is buildt on top of the Java Virtual Machine). When Grails was developed, it's developers aimed to re-use proven technologies such as Hibernate, Spring etc. 
+Grails is an open source web application framework which uses the programming language Groovy(which is built on top of the Java Virtual Machine). When Grails was developed, it's developers aimed to re-use proven technologies such as Hibernate, Spring etc. 
 
 \begin{figure}[H]
 \centering
@@ -27,9 +27,9 @@ Grails is an open source web application framework which uses the programming la
 \caption{Overview of Grails architecture.}
 \end{figure}
 
-Architectural grails is designed with the MVC\footnote{Model View Controller} pattern as a basis, this will expose the model\footnote{Data stored about the object.} in the view\footnote{With the restrictions on what data is viewable for the user.} and any manipulations to the model is done through a controller which controlls that the data is inputted correct to the fields and what fields can be manipulated. An overview of the paradigm can be viewed in figure \ref{mvc-paradigm} below.
+Architectural grails is designed with the MVC\footnote{Model View Controller} pattern as a basis, this will expose the model\footnote{Data stored about the object.} in the view\footnote{With the restrictions on what data is viewable for the user.} and any manipulations to the model is done through a controller which controls that the data is correct input to the fields and what fields can be manipulated. An overview of the paradigm can be viewed in figure \ref{mvc-paradigm} below.
 
-This pattern makes it easy for the developer to remain in controll when creating a user interface and will ensure that the user can not manipulate fields without going through the controller.
+This pattern makes it easy for the developer to remain in control when creating a user interface and will ensure that the user can not manipulate fields without going through the controller.
 
 \begin{figure}[H]
     \centering
@@ -39,9 +39,9 @@ This pattern makes it easy for the developer to remain in controll when creating
 \end{figure}
 
 \section{Database}
-While developing the tool the database was run as a H2\footnote{\url{http://www.h2database.com/}} in-memory database, however the storrage was not persistent so we later changed to a MySQL database for the data to stay unchanged when we had to update the tool. This was essential for the tool to function as described in the requirements, but the H2 database was more conveniente during development.
+While developing the tool the database was run as a H2\footnote{\url{http://www.h2database.com/}} in-memory database, however the storage was not persistent so we later changed to a MySQL database for the data to stay unchanged when we had to update the tool. This was essential for the tool to function as described in the requirements, but the H2 database was more convenient during development.
 
-In this section we will show how the database is designed as the figure \ref{databaseDomainDiagram} below shows the relationship between the differet datatypes. The datatypes have been categorised regarding to their origin and are discussed later together with all the fields in each datatype.
+In this section we will show how the database is designed as the figure \ref{databaseDomainDiagram} below shows the relationship between the different data types. The data types have been categorised regarding to their origin and are discussed later together with all the fields in each data type.
 
 % Bør denne legge på høykant i appendix?
 \begin{figure}[H]
@@ -52,7 +52,7 @@ In this section we will show how the database is designed as the figure \ref{dat
 \end{figure}
 
 \subsection{User data}
-The first section is devoted to show and tell all data related to users, the tables below is representing the different data types associated with users. Users are a vital part of the implementation and everything is sentered around these users, it is therefor important to store as much relevant data as possible. \\
+The first section is devoted to show and tell all data related to users, the tables below is representing the different data types associated with users. Users are a vital part of the implementation and everything is centred around these users, it is therefore important to store as much relevant data as possible. \\
 
 \subsubsection*{User}
 This table hold data related to each user and only the data which is unique to them.
@@ -66,7 +66,7 @@ The password are encrypted with SHA-512 encryption which is a part of SHA-2 a se
     \hline
     Id & Unique id generated when the user is first created\\ \hline
     UserName & This field stores the users username\\ \hline
-   	Password & This field stores the users password as a encrypted string, the password is encryptet with SHA-512 encryption\\ \hline
+   	Password & This field stores the users password as a encrypted string, the password is encrypted with SHA-512 encryption\\ \hline
     Email & This field stores the users email\\ \hline
     FirstName & This field stores the users first name\\ \hline
     LastName & This field stores the users last name\\ \hline
@@ -119,19 +119,19 @@ Notifications are used to prompt users about reflection sessions and such. \\
     Id & Unique id generated when the notification is first created\\ \hline
     Title & This field stores the title\\ \hline
    	Body & This field stores the entire message.\\ \hline
-    DateCreated & Timestamp generated when the notification is first created.\\ \hline
+    DateCreated & Time stamp generated when the notification is first created.\\ \hline
     Unread & Boolean variable to state if the message is read.\\ \hline
     Cleared & Boolean variable to state if the message is cleared or not.\\ \hline
     NotificationType & The notification type, possible types are 'Reflection' or 'Other'.\\ \hline
-    User & A forreign key to the user that received the notification.\\ 
+    User & A foreign key to the user that received the notification.\\ 
     \hline
 \end{tabularx}
 \vspace{0.5cm}
 
-\subsection{Github data}
-In this section we discuss the storrage of data collected from Github. When we started development we tested with the data stored at github, so we asked github for the data every time it was needed, this made the application slow so we decided to store github data localy to enhance performance. 
+\subsection{GitHub data}
+In this section we discuss the storage of data collected from GitHub. When we started development we tested with the data stored at GitHub, so we asked GitHub for the data every time it was needed, this made the application slow so we decided to store GitHub data locally to enhance performance. 
 
-When retriving data from github we used the provided API as described by their developer-site\footnote{\url{http://developer.github.com/v3/}}, this enabled us to controll the sequence of data and when to ask for what type of data. All communication to github servers are asynchronous and whil therefor not introduce any performance related issues. 
+When retrieving data from GitHub we used the provided API as described by their developer-site\footnote{\url{http://developer.github.com/v3/}}, this enabled us to control the sequence of data and when to ask for what type of data. All communication to GitHub servers are asynchronous and while therefore not introduce any performance related issues. 
 
 The following data-types where stored in tables as described below.
 
@@ -147,16 +147,16 @@ Milestones are major goals consisting of several minor goals called issue, with 
     GithubId & Unique id from github.com\\ \hline
     Name & The milestones name.\\ \hline
    	Description & A description of the milestone, like what features is to be implemented.\\ \hline
-    Status & Avariable to say if its open or closed.\\ \hline
-    CreatedDate & The timestamp which the milestone is created.\\ \hline
+    Status & A variable to say if its open or closed.\\ \hline
+    CreatedDate & The time stamp which the milestone is created.\\ \hline
     DueDate & A date which the milestone is due on. This is null if the milestone does not got a due date.\\ \hline
-    ClosedDate & A timestamp when the milestone is closed.\\ 
+    ClosedDate & A time stamp when the milestone is closed.\\ 
     \hline
 \end{tabularx}
 \vspace{0.5cm}
 
 \subsubsection*{Issues}
-Issues are minor goals or bugs, these issues can be bould to a milestone or independent. \\
+Issues are minor goals or bugs, these issues can be bound to a milestone or independent. \\
 
 \vspace{0.5cm}
 \begin{tabularx}{\linewidth}{| c | X |}
@@ -168,17 +168,17 @@ Issues are minor goals or bugs, these issues can be bould to a milestone or inde
     Name & The issues name.\\ \hline
    	Body & A description of the milestone, like what features is to be implemented.\\ \hline
     State & A variable to say if its open or closed.\\ \hline
-    Number & A number unique to the repository which is used for refering the issue in the commit messages.\\ \hline
-    Repository & A forreign key to the repository it is bound to.\\ \hline
+    Number & A number unique to the repository which is used for referring the issue in the commit messages.\\ \hline
+    Repository & A foreign key to the repository it is bound to.\\ \hline
     MilestoneNumber & The milestone which the issue is bound to.\\ \hline
-    CreatedAt & The timestamp which the milestone is created.\\ \hline
-    UpdatedAt & The timestamp which the milestone last was updated.\\ 
+    CreatedAt & The time stamp which the milestone is created.\\ \hline
+    UpdatedAt & The time stamp which the milestone last was updated.\\ 
     \hline
 \end{tabularx}
 \vspace{0.5cm}
 
 \subsubsection*{Commits}
-At any given time a developer changes something in the sourcecode it can be commited to the version controll system, in this case git/github. These are the commits we store and use for reflection. \\
+At any given time a developer changes something in the source code it can be committed to the version control system, in this case git/github. These are the commits we store and use for reflection. \\
 
 \vspace{0.5cm}
 \begin{tabularx}{\linewidth}{| c | X |}
@@ -187,18 +187,18 @@ At any given time a developer changes something in the sourcecode it can be comm
     \textbf{Field} & \textbf{Description} \\
     \hline
     GithubId & Unique id from github.com\\ \hline
-    Message & The commit message which we gather tags from, these tags are marked hashtags.\\ \hline
-   	Login & The github user which did the commit.\\ \hline
-    CreatedDate & The timestamp which the commit is created.\\ \hline
+    Message & The commit message which we gather tags from, these tags are marked hash tags.\\ \hline
+   	Login & The GitHub user which did the commit.\\ \hline
+    CreatedDate & The time stamp which the commit is created.\\ \hline
     Additions & A date which the milestone is due on. This is null if the milestone does not got a due date.\\ \hline
-    Deletions & A timestamp when the milestone is closed.\\ \hline
+    Deletions & A time stamp when the milestone is closed.\\ \hline
     Total & A total of lines in the commit.\\
     \hline
 \end{tabularx}
 \vspace{0.5cm}
 
 \subsubsection*{Repository}
-The current data is storred about each repository, in the corresponding fields in the table bellow. \\
+The current data is stored about each repository, in the corresponding fields in the table bellow. \\
 
 \vspace{0.5cm}
 \begin{tabularx}{\linewidth}{| c | X |}
@@ -207,20 +207,20 @@ The current data is storred about each repository, in the corresponding fields i
     \textbf{Field} & \textbf{Description} \\
     \hline
     GithubId & Unique id from github.com\\ \hline
-    Name & The repositorys name.\\ \hline
+    Name & The repository name.\\ \hline
    	Description & A description of the repository.\\ \hline
-    CreatedAt & The timestamp which the commit is created.\\ \hline
-    UpdatedAt & The timestamp recorded when the milestone last was updated.\\ 
+    CreatedAt & The time stamp which the commit is created.\\ \hline
+    UpdatedAt & The time stamp recorded when the milestone last was updated.\\ 
     \hline
 \end{tabularx}
 \vspace{0.5cm}
 
 \subsection{Collaboration data}
-Teams are bound uniquelie to a repositorie, each repository will only have one team bound to it and every user with access\footnote{Being a collaborator of the project on github.} to the repository on Github will have the possibility to join the team.  
+Teams are bound uniquely to a repository, each repository will only have one team bound to it and every user with access\footnote{Being a collaborator of the project on GitHub.} to the repository on GitHub will have the possibility to join the team.  
 
 
 \subsubsection*{Team}
-These teams of users are bound uniquely to a repository and there can only excists one team per repository. \\
+These teams of users are bound uniquely to a repository and there can only exists one team per repository. \\
 
 \vspace{0.5cm}
 \begin{tabularx}{\linewidth}{| c | X |}
@@ -229,7 +229,7 @@ These teams of users are bound uniquely to a repository and there can only excis
     \textbf{Field} & \textbf{Description} \\
     \hline
     Id & Unique id generated when the team is created.\\ \hline
-   	Owner & A forreign key to the user that created the team.\\ \hline
+   	Owner & A foreign key to the user that created the team.\\ \hline
    	Name & The teams name.\\ \hline
     Repository & The githubId of the repository bound to the team.\\ 
     \hline
@@ -245,8 +245,8 @@ This contains the users attached to each team and data relevant. \\
     \rowcolor[gray]{0.8}
     \textbf{Field} & \textbf{Description} \\
     \hline
-    UserId & A forreign key to the users id.\\ \hline
-   	TeamId & A forreign key to the teams id.\\ \hline
+    UserId & A foreign key to the users id.\\ \hline
+   	TeamId & A foreign key to the teams id.\\ \hline
    	Role & The users role in the team. There are possible roles are 'Manager' and 'Developer'\\ \hline
     Active & A variable that states if the user has selected this team as his active. Only one can be active per user at any given time.\\ 
     \hline
@@ -264,20 +264,20 @@ These notes are bound to a team and there can only be created one for each team 
     \textbf{Field} & \textbf{Description} \\
     \hline
     Id & Unique id generated when the note is created.\\ \hline
-    Team & A forreign key to the team the note is bound to.\\ \hline
-   	User & A forreign key to the user that created the note.\\ \hline
-   	Mood & A level regarding the current mood the user that created the note recorded for that day. Mood is recoreded as a number between 1-100 where 100 is very happy and 1 is very sad.\\ \hline
+    Team & A foreign key to the team the note is bound to.\\ \hline
+   	User & A foreign key to the user that created the note.\\ \hline
+   	Mood & A level regarding the current mood the user that created the note recorded for that day. Mood is recorded as a number between 1-100 where 100 is very happy and 1 is very sad.\\ \hline
    	Contribution & The top 2 contributions done that day for the team by the user.\\ \hline
    	Improvements & The 2 things that can be improved by the user that day for the team.\\ \hline
    	Shared & Variable that states that the note is shared with the team.\\ \hline
-    CreatedAt & The timestamp which the commit is created.\\ \hline
-    UpdatedAt & The timestamp recorded when the milestone last was updated.\\ 
+    CreatedAt & The time stamp which the commit is created.\\ \hline
+    UpdatedAt & The time stamp recorded when the milestone last was updated.\\ 
     \hline
 \end{tabularx}
 \vspace{0.5cm}
 
 \subsubsection*{Workshop}
-Managers or owners of teams can create reflection workshops, where it is generated a set of questions based on the tags used by the teams members in the selected periode. \\
+Managers or owners of teams can create reflection workshops, where it is generated a set of questions based on the tags used by the teams members in the selected period. \\
 
 \vspace{0.5cm}
 \begin{tabularx}{\linewidth}{| c | X |}
@@ -286,10 +286,10 @@ Managers or owners of teams can create reflection workshops, where it is generat
     \textbf{Field} & \textbf{Description} \\
     \hline
     Id & Unique id generated when the workshop is created.\\ \hline
-   	TeamId & A forreign key to the team.\\ \hline
-   	CreatedAt & The timestamp which the workshop is created.\\ \hline
-   	DurationStart & The timestamp which the workshop periode starts.\\ \hline
-   	DateStart & The timestamp which the workshop periode ends.\\ 
+   	TeamId & A foreign key to the team.\\ \hline
+   	CreatedAt & The time stamp which the workshop is created.\\ \hline
+   	DurationStart & The time stamp which the workshop period starts.\\ \hline
+   	DateStart & The time stamp which the workshop period ends.\\ 
     \hline
 \end{tabularx}
 \vspace{0.5cm}
@@ -304,7 +304,7 @@ This table holds the questions for each workshop and indicates if they are manda
     \textbf{Field} & \textbf{Description} \\
     \hline
     Id & Unique id generated when the question is created.\\ \hline
-   	Workshop & A forreign key to the workshop.\\ \hline
+   	Workshop & A foreign key to the workshop.\\ \hline
    	QuestionText & The generated question.\\ \hline
    	CommitTag & The tag which the question is generated from.\\ 
     \hline
@@ -312,19 +312,19 @@ This table holds the questions for each workshop and indicates if they are manda
 \vspace{0.5cm}
 
 \section{User Interface}
-When implementing the desing as discussed in the earlier chapter, we had a lot of focus on creating a simplet yet informativ page-layout and it is because of this we 
+When implementing the design as discussed in the earlier chapter, we had a lot of focus on creating a simpler yet informative page-layout and it is because of this we 
 
-When designing the Peaceful Banana, it was clear that our task required a lot of design work. In order to create a simple yet informative page-layout the twitter boostrap framework was chosen.
+When designing the Peaceful Banana, it was clear that our task required a lot of design work. In order to create a simple yet informative page-layout the twitter bootstrap framework was chosen.
 
 The design itself is heavily based on the fluid layout and sign in examples from the official examples.
 
 \subsection{Twitter bootstrap}
-Twitter boostrap is a front-end framework for easier and faster web development, it is widely used and makes it possible to create beautiful webpages without much work. Bootstrap utilizes both ofs the HTML5 and CSS3 standards.
+Twitter bootstrap is a front-end framework for easier and faster web development, it is widely used and makes it possible to create beautiful web pages without much work. Bootstrap utilizes both HTML5 and CSS3 standards.
 
 \subsection{jQuery}
-It was initally released under the MIT licence in 2006 to make it easier to select DOM\footnote{Document-Object-Model} objects and create powerful dynamic web pages and applications.
+It was initially released under the MIT licence in 2006 to make it easier to select DOM\footnote{Document-Object-Model} objects and create powerful dynamic web pages and applications.
 
-JQuery has been used for AJAX\footnote{Asynchronous JavaScript and XML}, this is a way to change the contents DOM objects asynchronous from javascript.
+JQuery has been used for AJAX\footnote{Asynchronous JavaScript and XML}, this is a way to change the contents DOM objects asynchronous from JavaScript.
 
 \subsubsection{AwesomeCloud}
-Awesome cloud is a plugin for jQuery for creating a tagcloud, it retrieves data from DOM-objects and renderes them as a cloud where the font-size increases with the occurence of tags, the tagcloud is then drawn on the HTML5 canvas.
+Awesome cloud is a plugin for jQuery for creating a tag cloud, it retrieves data from DOM-objects and rendered them as a cloud where the font-size increases with the occurrence of tags, the tag cloud is then drawn on the HTML5 canvas.
