@@ -56,17 +56,27 @@ Reflection directed functionality:
 \item Reflection triggers - Functionality developed specifically for helping users reflect on their work.
 \end{itemize}
 
-\paragraph{Scaffold collected data}\mbox{}\\
+\paragraph{Daily reflection note}\mbox{}\\
 Scaffolding is the act of creating a skeleton or a frame for the work to be done. I
-PeacefulBanana provides users with the ability to create reflection notes, where they reflect on that day's work and store it for later use. In this context the scaffolding is creating a frame for the reflection to be done, which includes text input and guiding questions. An example of such a reflection note can be seen in Figure \ref{dailynote}. \\
+PeacefulBanana provides users with the ability to create reflection notes, where they reflect on that day's work and store it for later use. In this context the scaffolding is creating a frame for the reflection to be done, which includes text input and guiding questions. An example of such a reflection note can be seen in Figure \ref{dailynotefunc}. \\
 In order to encourage users to reflect on their daily work and to avoid generic or non-constructive input, we connected questions to each input field, to act as guidance. For each input, the application provides a question, like \emph{How did you feel about todays work?} for the mood input. Adding these questions helps users think back on their experiences that day and perform a reflection on these. 
 \begin{figure}[H]
     \centering
         \includegraphics[width=\textwidth]{dailynote}
     \caption{PeacefulBanana reflection note}
-    \label{dailynote}
+    \label{dailynotefunc}
 \end{figure}
 
+\paragraph{Mood graphs}\mbox{}\\
+When creating a reflection note, users can connect their current mood, that is how they felt, to the reflection note. By adding the ability to connect mood to notes each day, the tool can present meaningful mood-averages back to the users. These mood averages are used by PeacefulBanana to generate a mood-graph, depicting a user's or a team's mood over a period of time. 
+By presenting this shared team-average mood, user's get an indication of how the work is perceived by the other group members and the team can create a discussion around certain trends in mood, or even why certain users stand out from the rest of the team's mood. 
+An example of such a mood graph can be seen in Figure: \ref{moodgraphfunc}
+\begin{figure}[H]
+    \centering
+        \includegraphics[width=\textwidth]{moodgraph}
+    \caption{PeacefulBanana Team Mood-graph}
+    \label{moodgraphfunc}
+\end{figure}
 \paragraph{Tag-clouds}\mbox{}\\
 PeacefulBanana also provides the user with individual and team-wide tag-clouds. These tag-clouds are based on the user's or the team's activity in a GitHub project over a period of time. The tag-cloud elements are weighted according to how much the particular \emph{\#tag} has been worked with, the more activity the bigger the word. Implementation of the tag-clouds allows user's to see trending events in their own activity trajectory, but also compare it with the rest of the team. This enables the user to see how their work is affecting the team's work, but also gives the team an indication on what has been worked with over different periods of time(i.e. a development iteration). 
 \begin{figure}[H]
@@ -91,10 +101,6 @@ Figure \ref{MyNotes} shows how PeacefulBanana user's can see their notes and the
     \caption{PeacefulBanana shared team notes}
     \label{notes_sharedfunc}
 \end{figure}
-
-\paragraph{Mood graphs}\mbox{}\\
-A user can connect his mood to reflection notes. The tool retrieves this mood data daily, in order for the tool to present meaningful mood-averages back to the users. 
-The tool allows for presenting this shared team-average mood, giving an indication of how the work is perceived by the other group members and create a discussion around certain trends in mood, or even why certain users stand out from the rest of the team's mood. 
 
 \subsubsection{Milestone example}
 % Vise et eksempel fra milestone
