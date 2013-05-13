@@ -6,6 +6,8 @@
 % In the report you have to justify the choices that are done.
 In this chapter we will go through the decisions made in order to develop the PeacefulBanana tool, and the rationale behind the decisions made. 
 
+\section{Application Architecture}
+% Skriv mer her, alt som er generelt flyttes hit
 Below you can see an overview of the entire system design, how it was implemented so the users can see the data tailored to their team and work.
 
 \begin{figure}[H]
@@ -15,8 +17,12 @@ Below you can see an overview of the entire system design, how it was implemente
     \label{ClientServerGithub}
 \end{figure}
 
-\section{Server}
+\section{Technology}
+% All info om teknologi flyttes hit
 When choosing a framework for the prototype, several alternatives like Spring\footnote{\url{http://www.springsource.org/}}, WebObjects\footnote{\url{htpp://www.apple.com/webobjects/}} and Play Framework\footnote{\url{http://www.playframework.com/}} where discussed. Their architecture and our familiarity to the framework was a vital part of the selection. Based on these criteria the server was implemented with Grails a framework for web applications, it is better described in the section following.
+
+\subsubsection{GitHub API}
+Skrive litt om github api
 
 \subsection{Grails}
 Grails is an open source web application framework which uses the programming language Groovy(which is built on top of the Java Virtual Machine). When Grails was developed, it's developers aimed to re-use proven technologies such as Hibernate, Spring etc. 
@@ -38,6 +44,65 @@ This pattern makes it easy for the developer to remain in control when creating 
     \label{mvc-paradigm}
 \end{figure}
 
+\subsubsection{Server and Database}
+% Skriv litt om server og database teknologi her. 
+
+\section{Application Functionality}
+% Think it would be wise to show with screenshots the different functionality (the tabs f.ex)
+Reflection directed functionality:
+\begin{itemize}
+\item Collecting data - How a user can retrieve data and annotate it. 
+\item Sharing data - How users can work together in groups to collaborate with data. 
+\item Reflection triggers - Functionality developed specifically for helping users reflect on their work.
+\end{itemize}
+
+\paragraph{Scaffold collected data}\mbox{}\\
+Scaffolding is the act of creating a skeleton or a frame for the work to be done. I
+PeacefulBanana provides users with the ability to create reflection notes, where they reflect on that day's work and store it for later use. In this context the scaffolding is creating a frame for the reflection to be done, which includes text input and guiding questions. An example of such a reflection note can be seen in Figure \ref{dailynote}. \\
+In order to encourage users to reflect on their daily work and to avoid generic or non-constructive input, we connected questions to each input field, to act as guidance. For each input, the application provides a question, like \emph{How did you feel about todays work?} for the mood input. Adding these questions helps users think back on their experiences that day and perform a reflection on these. 
+\begin{figure}[H]
+    \centering
+        \includegraphics[width=\textwidth]{dailynote}
+    \caption{PeacefulBanana reflection note}
+    \label{dailynote}
+\end{figure}
+
+\paragraph{Tag-clouds}\mbox{}\\
+PeacefulBanana also provides the user with individual and team-wide tag-clouds. These tag-clouds are based on the user's or the team's activity in a GitHub project over a period of time. The tag-cloud elements are weighted according to how much the particular \emph{\#tag} has been worked with, the more activity the bigger the word. Implementation of the tag-clouds allows user's to see trending events in their own activity trajectory, but also compare it with the rest of the team. This enables the user to see how their work is affecting the team's work, but also gives the team an indication on what has been worked with over different periods of time(i.e. a development iteration). 
+\begin{figure}[H]
+    \centering
+        \includegraphics[width=\textwidth]{tagcloud_teamvsmy}
+    \caption{PeacefulBanana tag-cloud implementation}
+    \label{tagcloudfunc}
+\end{figure}
+
+\paragraph{Sharing of data}\mbox{}\\
+Reflection notes can be shared with a user's team, should they want to.  PeacefulBanana collects team-relevant data from GitHub , scaffolds and presents these to users. This data gives the team the ability to see who is working on what, are there any trending issues in the team that can be intercepted and solved and more.  
+Figure \ref{MyNotes} shows how PeacefulBanana user's can see their notes and the notes' creation date, owning user, what team that user is on and the share status of the note. The user can also simply filter between their own notes or shared notes by their current team. This is shown in Figure \ref{notes_shared}
+\begin{figure}[H]
+    \centering
+        \includegraphics[width=\textwidth]{MyNotes}
+    \caption{PeacefulBanana user notes}
+    \label{MyNotesFunc}
+\end{figure}
+\begin{figure}[H]
+    \centering
+        \includegraphics[width=\textwidth]{notes_shared}
+    \caption{PeacefulBanana shared team notes}
+    \label{notes_sharedfunc}
+\end{figure}
+
+\paragraph{Mood graphs}\mbox{}\\
+A user can connect his mood to reflection notes. The tool retrieves this mood data daily, in order for the tool to present meaningful mood-averages back to the users. 
+The tool allows for presenting this shared team-average mood, giving an indication of how the work is perceived by the other group members and create a discussion around certain trends in mood, or even why certain users stand out from the rest of the team's mood. 
+
+\subsubsection{Milestone example}
+% Vise et eksempel fra milestone
+\subsubsection{Reflection sessions}
+% Vise workshop og hvordan det er tenkt brukt
+
+
+% Muligens flytte noe av dette til appendix:
 \section{Database}
 While developing the tool the database was run as a H2\footnote{\url{http://www.h2database.com/}} in-memory database, however the storage was not persistent so we later changed to a MySQL database for the data to stay unchanged when we had to update the tool. This was essential for the tool to function as described in the requirements, but the H2 database was more convenient during development.
 
