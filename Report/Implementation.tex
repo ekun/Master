@@ -15,7 +15,7 @@ Below you can see an overview of the entire system design, how it was implemente
     \label{ClientServerGithub}
 \end{figure}
 
-\section{Server}
+\section{Technology}
 When choosing a framework for the prototype, several alternatives like Spring\footnote{\url{http://www.springsource.org/}}, WebObjects\footnote{\url{htpp://www.apple.com/webobjects/}} and Play Framework\footnote{\url{http://www.playframework.com/}} where discussed. Their architecture and our familiarity to the framework was a vital part of the selection. Based on these criteria the server was implemented with Grails a framework for web applications, it is better described in the section following.
 
 \subsection{Grails}
@@ -37,6 +37,33 @@ This pattern makes it easy for the developer to remain in control when creating 
     \caption{Model-view-controller paradigm}
     \label{mvc-paradigm}
 \end{figure}
+
+\section{Functionality}
+% Think it would be wise to show with screenshots the different functionality (the tabs f.ex)
+Reflection directed functionality:
+\begin{itemize}
+\item Collecting data - How a user can retrieve data and annotate it. 
+\item Sharing data - How users can work together in groups to collaborate with data. 
+\item Reflection triggers - Functionality developed specifically for helping users reflect on their work.
+\end{itemize}
+
+\subsection{Reflection triggers}
+\paragraph{Scaffolded notes}\mbox{}\\
+The tool should provide the ability to take notes in a scaffolded way, in order to avoid too generic notes. The tool will provide this functionality through collecting daily reflection notes. These notes will have questions connected to them, which triggers user to reflect on their experiences that day. Scaffolding notes this way, will prompt users to actually think about their day instead of just writing down something not useful. \\
+Figure \ref{dailynote} shows an example of the PeacefulBanana reflection note. 
+\begin{figure}[H]
+    \centering
+        \includegraphics[width=\textwidth]{dailynote}
+    \caption{PeacefulBanana reflection note}
+    \label{dailynote}
+\end{figure}
+\paragraph{Tagclouds}\mbox{}\\
+The tool should provide the ability to create tag clouds based on data divided in time. So that you can see trending events, this will enable the user to see how their work is affecting the teams work overall. These tag clouds will also give the team an indication on what the worked with over a period of time, and tags will be given a weight to show which of them that has been worked with the most. These weights will determine the words size in the tag cloud. 
+\paragraph{Sharing of data}\mbox{}\\
+Reflection notes can be shared with a user's team should they want to. The tool collect team-relevant data from a VCS , scaffolds and presents these to users. This data gives the team the ability to see who is working on what, are there any trending issues in the team that can be intercepted and solved and more.  
+\paragraph{Mood graphs}\mbox{}\\
+A user can connect his mood to reflection notes. The tool retrieves this mood data daily, in order for the tool to present meaningful mood-averages back to the users. 
+The tool allows for presenting this shared team-average mood, giving an indication of how the work is perceived by the other group members and create a discussion around certain trends in mood, or even why certain users stand out from the rest of the team's mood. 
 
 \section{Database}
 While developing the tool the database was run as a H2\footnote{\url{http://www.h2database.com/}} in-memory database, however the storage was not persistent so we later changed to a MySQL database for the data to stay unchanged when we had to update the tool. This was essential for the tool to function as described in the requirements, but the H2 database was more convenient during development.
