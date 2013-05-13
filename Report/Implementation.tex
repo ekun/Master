@@ -6,6 +6,8 @@
 % In the report you have to justify the choices that are done.
 In this chapter we will go through the decisions made in order to develop the PeacefulBanana tool, and the rationale behind the decisions made. 
 
+\section{Application Architecture}
+% Skriv mer her, alt som er generelt flyttes hit
 Below you can see an overview of the entire system design, how it was implemented so the users can see the data tailored to their team and work.
 
 \begin{figure}[H]
@@ -16,7 +18,11 @@ Below you can see an overview of the entire system design, how it was implemente
 \end{figure}
 
 \section{Technology}
+% All info om teknologi flyttes hit
 When choosing a framework for the prototype, several alternatives like Spring\footnote{\url{http://www.springsource.org/}}, WebObjects\footnote{\url{htpp://www.apple.com/webobjects/}} and Play Framework\footnote{\url{http://www.playframework.com/}} where discussed. Their architecture and our familiarity to the framework was a vital part of the selection. Based on these criteria the server was implemented with Grails a framework for web applications, it is better described in the section following.
+
+\subsubsection{GitHub API}
+Skrive litt om github api
 
 \subsection{Grails}
 Grails is an open source web application framework which uses the programming language Groovy(which is built on top of the Java Virtual Machine). When Grails was developed, it's developers aimed to re-use proven technologies such as Hibernate, Spring etc. 
@@ -38,7 +44,10 @@ This pattern makes it easy for the developer to remain in control when creating 
     \label{mvc-paradigm}
 \end{figure}
 
-\section{Functionality}
+\subsubsection{Server and Database}
+Skriv litt om server og database teknologi her. 
+
+\section{Application Functionality}
 % Think it would be wise to show with screenshots the different functionality (the tabs f.ex)
 Reflection directed functionality:
 \begin{itemize}
@@ -65,6 +74,8 @@ Reflection notes can be shared with a user's team should they want to. The tool 
 A user can connect his mood to reflection notes. The tool retrieves this mood data daily, in order for the tool to present meaningful mood-averages back to the users. 
 The tool allows for presenting this shared team-average mood, giving an indication of how the work is perceived by the other group members and create a discussion around certain trends in mood, or even why certain users stand out from the rest of the team's mood. 
 
+
+% Muligens flytte noe av dette til appendix
 \section{Database}
 While developing the tool the database was run as a H2\footnote{\url{http://www.h2database.com/}} in-memory database, however the storage was not persistent so we later changed to a MySQL database for the data to stay unchanged when we had to update the tool. This was essential for the tool to function as described in the requirements, but the H2 database was more convenient during development.
 
