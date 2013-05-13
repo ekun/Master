@@ -45,7 +45,7 @@ This pattern makes it easy for the developer to remain in control when creating 
 \end{figure}
 
 \subsubsection{Server and Database}
-Skriv litt om server og database teknologi her. 
+% Skriv litt om server og database teknologi her. 
 
 \section{Application Functionality}
 % Think it would be wise to show with screenshots the different functionality (the tabs f.ex)
@@ -56,26 +56,53 @@ Reflection directed functionality:
 \item Reflection triggers - Functionality developed specifically for helping users reflect on their work.
 \end{itemize}
 
-\subsection{Reflection triggers}
-\paragraph{Scaffolded notes}\mbox{}\\
-The tool should provide the ability to take notes in a scaffolded way, in order to avoid too generic notes. The tool will provide this functionality through collecting daily reflection notes. These notes will have questions connected to them, which triggers user to reflect on their experiences that day. Scaffolding notes this way, will prompt users to actually think about their day instead of just writing down something not useful. \\
-Figure \ref{dailynote} shows an example of the PeacefulBanana reflection note. 
+\paragraph{Scaffold collected data}\mbox{}\\
+Scaffolding is the act of creating a skeleton or a frame for the work to be done. I
+PeacefulBanana provides users with the ability to create reflection notes, where they reflect on that day's work and store it for later use. In this context the scaffolding is creating a frame for the reflection to be done, which includes text input and guiding questions. An example of such a reflection note can be seen in Figure \ref{dailynote}. \\
+In order to encourage users to reflect on their daily work and to avoid generic or non-constructive input, we connected questions to each input field, to act as guidance. For each input, the application provides a question, like \emph{How did you feel about todays work?} for the mood input. Adding these questions helps users think back on their experiences that day and perform a reflection on these. 
 \begin{figure}[H]
     \centering
         \includegraphics[width=\textwidth]{dailynote}
     \caption{PeacefulBanana reflection note}
     \label{dailynote}
 \end{figure}
-\paragraph{Tagclouds}\mbox{}\\
-The tool should provide the ability to create tag clouds based on data divided in time. So that you can see trending events, this will enable the user to see how their work is affecting the teams work overall. These tag clouds will also give the team an indication on what the worked with over a period of time, and tags will be given a weight to show which of them that has been worked with the most. These weights will determine the words size in the tag cloud. 
+
+\paragraph{Tag-clouds}\mbox{}\\
+PeacefulBanana also provides the user with individual and team-wide tag-clouds. These tag-clouds are based on the user's or the team's activity in a GitHub project over a period of time. The tag-cloud elements are weighted according to how much the particular \emph{\#tag} has been worked with, the more activity the bigger the word. Implementation of the tag-clouds allows user's to see trending events in their own activity trajectory, but also compare it with the rest of the team. This enables the user to see how their work is affecting the team's work, but also gives the team an indication on what has been worked with over different periods of time(i.e. a development iteration). 
+\begin{figure}[H]
+    \centering
+        \includegraphics[width=\textwidth]{tagcloud_teamvsmy}
+    \caption{PeacefulBanana tag-cloud implementation}
+    \label{tagcloudfunc}
+\end{figure}
+
 \paragraph{Sharing of data}\mbox{}\\
-Reflection notes can be shared with a user's team should they want to. The tool collect team-relevant data from a VCS , scaffolds and presents these to users. This data gives the team the ability to see who is working on what, are there any trending issues in the team that can be intercepted and solved and more.  
+Reflection notes can be shared with a user's team, should they want to.  PeacefulBanana collects team-relevant data from GitHub , scaffolds and presents these to users. This data gives the team the ability to see who is working on what, are there any trending issues in the team that can be intercepted and solved and more.  
+Figure \ref{MyNotes} shows how PeacefulBanana user's can see their notes and the notes' creation date, owning user, what team that user is on and the share status of the note. The user can also simply filter between their own notes or shared notes by their current team. This is shown in Figure \ref{notes_shared}
+\begin{figure}[H]
+    \centering
+        \includegraphics[width=\textwidth]{MyNotes}
+    \caption{PeacefulBanana user notes}
+    \label{MyNotesFunc}
+\end{figure}
+\begin{figure}[H]
+    \centering
+        \includegraphics[width=\textwidth]{notes_shared}
+    \caption{PeacefulBanana shared team notes}
+    \label{notes_sharedfunc}
+\end{figure}
+
 \paragraph{Mood graphs}\mbox{}\\
 A user can connect his mood to reflection notes. The tool retrieves this mood data daily, in order for the tool to present meaningful mood-averages back to the users. 
 The tool allows for presenting this shared team-average mood, giving an indication of how the work is perceived by the other group members and create a discussion around certain trends in mood, or even why certain users stand out from the rest of the team's mood. 
 
+\subsubsection{Milestone example}
+% Vise et eksempel fra milestone
+\subsubsection{Reflection sessions}
+% Vise workshop og hvordan det er tenkt brukt
 
-% Muligens flytte noe av dette til appendix
+
+% Muligens flytte noe av dette til appendix:
 \section{Database}
 While developing the tool the database was run as a H2\footnote{\url{http://www.h2database.com/}} in-memory database, however the storage was not persistent so we later changed to a MySQL database for the data to stay unchanged when we had to update the tool. This was essential for the tool to function as described in the requirements, but the H2 database was more convenient during development.
 
