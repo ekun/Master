@@ -21,6 +21,7 @@ Is there any design choices in quickstart that should be in design chapter?
 
 ## Implementation
 Missing an overview of the general architecture. Gjelder dette enda?
+  Det bør ikke gjøre det nei, vi har nevnt MVC og Client-Server så det skal jo være dekkende?!
 
 ## Usability
 Flytte til evaluation chapter?
