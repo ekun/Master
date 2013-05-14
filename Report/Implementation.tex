@@ -121,8 +121,28 @@ This means users or teams can identify certain issues that dominate, and can eas
 \end{figure}
 
 \subsubsection{Reflection sessions}
-% Vise workshop og hvordan det er tenkt brukt
+One of the primary functionalities we implemented, in addition to the daily reflection note, was the \emph{Reflection Workshop}. The manager of each team will see a separate \emph{Workshop} tab. The workshop area allows managers to prepare for retrospective sessions, by creating a workshop for that period of time(i.e. an iteration that have lasted for the last two weeks). Figure \ref{picher} shows an example of such a workshop. \\ 
+When the workshop has been created, users are met with three accordion headers\footnote{An accordion is a collapsible content panel for presenting information in a limited amount of space}. The accordions contain some mandatory questions which is some general reflection questions that is relevant to discuss in retrospective sessions, and so these cannot be removed from the workshop. The PeacefulBanana application also uses gathered data about the most used tags, to generate some proposed questions. The rationale behind this choice is that if the team has had a high activity with a certain tag, it is a high possibility that it's also important to discuss. Examples of these generated questions can be seen in Figure \ref{ref}. Ultimately though, it is the manager of the team that chooses what questions or tags that should be discussed in the retrospective session. Therefore if the manager feels that one or more of the generated questions are unimportant, they can be removed. \\
+Finally the manager can browse a list of all tags, with the most active at the top, and simply click the tag that should be discussed as part of the retrospective session. If a tag is clicked under the \emph{Possible tags questions} they will be instantly moved to the \emph{Questions generated} section, and vice-versa deleted questions will be moved to the list of possible tag questions. Figure \ref{bilde} shows how the possible tag list is presented in the application. 
 
+\begin{figure}[H]
+    \centering
+        \includegraphics[width=\textwidth]{workshopmandatory}
+    \caption{PeacefulBanana Workshop - Mandatory questions}
+    \label{workshopmandatoryfunc}
+\end{figure}
+\begin{figure}[H]
+    \centering
+        \includegraphics[width=\textwidth]{workshopgenerated}
+    \caption{PeacefulBanana Workshop - Generated questions based on active tags}
+    \label{workshopgeneratedfunc}
+\end{figure}
+\begin{figure}[H]
+    \centering
+        \includegraphics[width=\textwidth]{workshoppossible}
+    \caption{PeacefulBanana Workshop - Possible questions based on tags}
+    \label{workshoppossiblefunc}
+\end{figure}
 
 % Muligens flytte noe av dette til appendix:
 \section{Database}
