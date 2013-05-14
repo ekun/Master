@@ -22,7 +22,12 @@ Below you can see an overview of the entire system design, how it was implemente
 When choosing a framework for the prototype, several alternatives like Spring\footnote{\url{http://www.springsource.org/}}, WebObjects\footnote{\url{htpp://www.apple.com/webobjects/}} and Play Framework\footnote{\url{http://www.playframework.com/}} where discussed. Their architecture and our familiarity to the framework was a vital part of the selection. Based on these criteria the server was implemented with Grails a framework for web applications, it is better described in the section following.
 
 \subsubsection{GitHub API}
-Skrive litt om github api
+GitHub provides developers with the opportunity to use an API\footnote{Application programming interface} which gives them the possibility to communicate with GitHub and retrieve data directly from their database.  
+
+When retrieving data from GitHub we used the provided API as described by their developer-site\footnote{\url{http://developer.github.com/v3/}}, this enabled us to control the sequence of data and when to ask for what type of data. All communication to GitHub servers are asynchronous and while therefore not introduce any performance related issues. 
+
+\subsubsection{MySQL}
+MySQL is an open source relational database management system and can be used for a variety of applications. It is most commonly found on Web applications and works very well with dynamic web-pages, meaning that the content of each page is generated based on data loaded from a database as the page loads.
 
 \subsection{Grails}
 Grails is an open source web application framework which uses the programming language Groovy(which is built on top of the Java Virtual Machine). When Grails was developed, it's developers aimed to re-use proven technologies such as Hibernate, Spring etc. 
@@ -48,6 +53,8 @@ This pattern makes it easy for the developer to remain in control when creating 
 During development of the tool the database was run as a H2\footnote{\url{http://www.h2database.com/}} in-memory database, however the need for persistent storage arose, so we migrated to a MySQL database in order for the data to stay unchanged when we had to roll out updates to the tool. This was essential for the tool to function as described in the requirements, but the H2 database was more convenient and faster to debug during development.
 
 In this section we will show how the database is designed as the figure \ref{databaseDomainDiagram} below shows the relationship between the different data types. The data types have been categorized regarding to their origin and are discussed later together with all the fields in each data type.
+
+
 
 \section{Application Functionality}
 \paragraph{Daily reflection note}\mbox{}\\
@@ -226,8 +233,6 @@ Notifications are used to prompt users about reflection sessions and such. \\
 
 \subsection{GitHub data}
 In this section we discuss the storage of data collected from GitHub. When we started development we tested with the data stored at GitHub, so we asked GitHub for the data every time it was needed, this made the application slow so we decided to store GitHub data locally to enhance performance. 
-
-When retrieving data from GitHub we used the provided API as described by their developer-site\footnote{\url{http://developer.github.com/v3/}}, this enabled us to control the sequence of data and when to ask for what type of data. All communication to GitHub servers are asynchronous and while therefore not introduce any performance related issues. 
 
 The following data-types where stored in tables as described below.
 
