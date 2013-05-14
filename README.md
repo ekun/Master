@@ -24,10 +24,10 @@ Missing an overview of the general architecture. Gjelder dette enda?
   Det bør ikke gjøre det nei, vi har nevnt MVC og Client-Server så det skal jo være dekkende?!
 
 ## Usability
-Flytte til evaluation chapter?
+Flytte til evaluation chapter? JA!
 
 ### Focus group
-focus group sectionen burde vi nok vise til noe svar på de app spesifikke spørsmålene. Bak det inn i det vi har av resultater. 
+[x] - focus group sectionen burde vi nok vise til noe svar på de app spesifikke spørsmålene. Bak det inn i det vi har av resultater. 
 
 kanskje skrive et sted f.eks noe om det her : Belyser appen nye ting i forhold til vanlige retrospektiver?
 f.eks gruppa følte at ved å bruke appen og daily reflection så kunne de unngått å glemme ting elns
