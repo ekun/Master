@@ -1,0 +1,264 @@
+\newpage
+\thispagestyle{empty}
+\mbox{}
+\chapter{PeacefulBanana Database Descriptions}
+This part of the appendix will describe a detailed walkthrough of each class in PeacefulBanana. 
+\section{User data}
+The first section is devoted to show and tell all data related to users, the tables described represents the different data types associated with users. Users are a vital part of the implementation and everything is centered around these users, it is therefore important to store as much relevant data as possible. \\
+
+\subsection*{User}
+This table hold data related to each user and only the data which is unique to them.
+The password are encrypted with SHA-512 encryption which is a part of SHA-2 a set of encryption hashing functions created by the U.S. National Security Agency in 2002 and is a known not to be reversal.\\
+
+\vspace{0.5cm}
+\begin{tabularx}{\linewidth}{| c | X |}
+    \hline
+    \rowcolor[gray]{0.8}
+    \textbf{Field} & \textbf{Description} \\
+    \hline
+    Id & Unique id generated when the user is first created\\ \hline
+    UserName & This field stores the users username\\ \hline
+   	Password & This field stores the users password as a encrypted string, the password is encrypted with SHA-512 encryption\\ \hline
+    Email & This field stores the users email\\ \hline
+    FirstName & This field stores the users first name\\ \hline
+    LastName & This field stores the users last name\\ \hline
+    SelectedRepo & The GitHub generated id of the repository currently selected by the user\\ \hline
+    GitLogin & The users GitHub login, used to bind commits to the user\\ \hline
+    DateCreated & This field stores the date when the user was first created\\
+    \hline
+\end{tabularx}
+\vspace{0.5cm}
+
+\subsection*{Role}
+The different roles that the users can be assigned to. These are hierarchy so that the highest gains access to the subset of this access level. \\
+
+\vspace{0.5cm}
+\begin{tabularx}{\linewidth}{| c | X |}
+    \hline
+    \rowcolor[gray]{0.8}
+    \textbf{Field} & \textbf{Description} \\
+    \hline
+    Id & Unique id generated when the role is first created.\\ \hline
+    Authority & This field contains the level of authority.\\
+    \hline
+\end{tabularx}
+\vspace{0.5cm}
+
+\subsection*{UserRole}
+Both fields in this table are combined for the primary key such that each role can only be given to each user once and each users can attain several roles. \\
+
+\vspace{0.5cm}
+\begin{tabularx}{\linewidth}{| c | X |}
+    \hline
+    \rowcolor[gray]{0.8}
+    \textbf{Field} & \textbf{Description} \\
+    \hline
+    User & Foreign key for the users id \\ \hline
+    Role & Foreign key for the role id \\
+    \hline
+\end{tabularx}
+\vspace{0.5cm}
+
+\subsection*{Notification}
+Notifications are used to prompt users about reflection sessions and such. \\
+
+\vspace{0.5cm}
+\begin{tabularx}{\linewidth}{| c | X |}
+    \hline
+    \rowcolor[gray]{0.8}
+    \textbf{Field} & \textbf{Description} \\
+    \hline
+    Id & Unique id generated when the notification is first created\\ \hline
+    Title & This field stores the title\\ \hline
+   	Body & This field stores the entire message.\\ \hline
+    DateCreated & Time stamp generated when the notification is first created.\\ \hline
+    Unread & Boolean variable to state if the message is read.\\ \hline
+    Cleared & Boolean variable to state if the message is cleared or not.\\ \hline
+    NotificationType & The notification type, possible types are 'Reflection' or 'Other'.\\ \hline
+    User & A foreign key to the user that received the notification.\\ 
+    \hline
+\end{tabularx}
+\vspace{0.5cm}
+
+\subsection{GitHub data}
+In this section we discuss the storage of data collected from GitHub. When we started development we tested with the data stored at GitHub, so we asked GitHub for the data every time it was needed, this made the application slow so we decided to store GitHub data locally to enhance performance. 
+
+When retrieving data from GitHub we used the provided API as described by their developer-site\footnote{\url{http://developer.github.com/v3/}}, this enabled us to control the sequence of data and when to ask for what type of data. All communication to GitHub servers are asynchronous and while therefore not introduce any performance related issues. 
+
+The following data-types where stored in tables as described below.
+
+\subsection*{Milestones}
+Milestones are major goals consisting of several minor goals called issue, with or without a due date. \\
+
+\vspace{0.5cm}
+\begin{tabularx}{\linewidth}{| c | X |}
+    \hline
+    \rowcolor[gray]{0.8}
+    \textbf{Field} & \textbf{Description} \\
+    \hline
+    GithubId & Unique id from github.com\\ \hline
+    Name & The milestones name.\\ \hline
+   	Description & A description of the milestone, like what features is to be implemented.\\ \hline
+    Status & A variable to say if its open or closed.\\ \hline
+    CreatedDate & The time stamp which the milestone is created.\\ \hline
+    DueDate & A date which the milestone is due on. This is null if the milestone does not got a due date.\\ \hline
+    ClosedDate & A time stamp when the milestone is closed.\\ 
+    \hline
+\end{tabularx}
+\vspace{0.5cm}
+
+\subsection*{Issues}
+Issues are minor goals or bugs, these issues can be bound to a milestone or independent. \\
+
+\vspace{0.5cm}
+\begin{tabularx}{\linewidth}{| c | X |}
+    \hline
+    \rowcolor[gray]{0.8}
+    \textbf{Field} & \textbf{Description} \\
+    \hline
+    GithubId & Unique id from github.com\\ \hline
+    Name & The issues name.\\ \hline
+   	Body & A description of the milestone, like what features is to be implemented.\\ \hline
+    State & A variable to say if its open or closed.\\ \hline
+    Number & A number unique to the repository which is used for referring the issue in the commit messages.\\ \hline
+    Repository & A foreign key to the repository it is bound to.\\ \hline
+    MilestoneNumber & The milestone which the issue is bound to.\\ \hline
+    CreatedAt & The time stamp which the milestone is created.\\ \hline
+    UpdatedAt & The time stamp which the milestone last was updated.\\ 
+    \hline
+\end{tabularx}
+\vspace{0.5cm}
+
+\subsection*{Commits}
+At any given time a developer changes something in the source code it can be committed to the version control system, in this case git/github. These are the commits we store and use for reflection. \\
+
+\vspace{0.5cm}
+\begin{tabularx}{\linewidth}{| c | X |}
+    \hline
+    \rowcolor[gray]{0.8}
+    \textbf{Field} & \textbf{Description} \\
+    \hline
+    GithubId & Unique id from github.com\\ \hline
+    Message & The commit message which we gather tags from, these tags are marked hash tags.\\ \hline
+   	Login & The GitHub user which did the commit.\\ \hline
+    CreatedDate & The time stamp which the commit is created.\\ \hline
+    Additions & A date which the milestone is due on. This is null if the milestone does not got a due date.\\ \hline
+    Deletions & A time stamp when the milestone is closed.\\ \hline
+    Total & A total of lines in the commit.\\
+    \hline
+\end{tabularx}
+\vspace{0.5cm}
+
+\subsection*{Repository}
+The current data is stored about each repository, in the corresponding fields in the table bellow. \\
+
+\vspace{0.5cm}
+\begin{tabularx}{\linewidth}{| c | X |}
+    \hline
+    \rowcolor[gray]{0.8}
+    \textbf{Field} & \textbf{Description} \\
+    \hline
+    GithubId & Unique id from github.com\\ \hline
+    Name & The repository name.\\ \hline
+   	Description & A description of the repository.\\ \hline
+    CreatedAt & The time stamp which the commit is created.\\ \hline
+    UpdatedAt & The time stamp recorded when the milestone last was updated.\\ 
+    \hline
+\end{tabularx}
+\vspace{0.5cm}
+
+\subsection{Collaboration data}
+Teams are bound uniquely to a repository, each repository will only have one team bound to it and every user with access\footnote{Being a collaborator of the project on GitHub.} to the repository on GitHub will have the possibility to join the team.  
+
+
+\subsection*{Team}
+These teams of users are bound uniquely to a repository and there can only exists one team per repository. \\
+
+\vspace{0.5cm}
+\begin{tabularx}{\linewidth}{| c | X |}
+    \hline
+    \rowcolor[gray]{0.8}
+    \textbf{Field} & \textbf{Description} \\
+    \hline
+    Id & Unique id generated when the team is created.\\ \hline
+   	Owner & A foreign key to the user that created the team.\\ \hline
+   	Name & The teams name.\\ \hline
+    Repository & The githubId of the repository bound to the team.\\ 
+    \hline
+\end{tabularx}
+\vspace{0.5cm}
+
+\subsection*{TeamUser}
+This contains the users attached to each team and data relevant. \\
+
+\vspace{0.5cm}
+\begin{tabularx}{\linewidth}{| c | X |}
+    \hline
+    \rowcolor[gray]{0.8}
+    \textbf{Field} & \textbf{Description} \\
+    \hline
+    UserId & A foreign key to the users id.\\ \hline
+   	TeamId & A foreign key to the teams id.\\ \hline
+   	Role & The users role in the team. There are possible roles are 'Manager' and 'Developer'\\ \hline
+    Active & A variable that states if the user has selected this team as his active. Only one can be active per user at any given time.\\ 
+    \hline
+\end{tabularx}
+\vspace{0.5cm}
+
+\subsection{Reflection data}
+\subsection*{Notes}
+These notes are bound to a team and there can only be created one for each team by a user each day. \\
+
+\vspace{0.5cm}
+\begin{tabularx}{\linewidth}{| c | X |}
+    \hline
+    \rowcolor[gray]{0.8}
+    \textbf{Field} & \textbf{Description} \\
+    \hline
+    Id & Unique id generated when the note is created.\\ \hline
+    Team & A foreign key to the team the note is bound to.\\ \hline
+   	User & A foreign key to the user that created the note.\\ \hline
+   	Mood & A level regarding the current mood the user that created the note recorded for that day. Mood is recorded as a number between 1-100 where 100 is very happy and 1 is very sad.\\ \hline
+   	Contribution & The top 2 contributions done that day for the team by the user.\\ \hline
+   	Improvements & The 2 things that can be improved by the user that day for the team.\\ \hline
+   	Shared & Variable that states that the note is shared with the team.\\ \hline
+    CreatedAt & The time stamp which the commit is created.\\ \hline
+    UpdatedAt & The time stamp recorded when the milestone last was updated.\\ 
+    \hline
+\end{tabularx}
+\vspace{0.5cm}
+
+\subsection*{Workshop}
+Managers or owners of teams can create reflection workshops, where it is generated a set of questions based on the tags used by the teams members in the selected period. \\
+
+\vspace{0.5cm}
+\begin{tabularx}{\linewidth}{| c | X |}
+    \hline
+    \rowcolor[gray]{0.8}
+    \textbf{Field} & \textbf{Description} \\
+    \hline
+    Id & Unique id generated when the workshop is created.\\ \hline
+   	TeamId & A foreign key to the team.\\ \hline
+   	CreatedAt & The time stamp which the workshop is created.\\ \hline
+   	DurationStart & The time stamp which the workshop period starts.\\ \hline
+   	DateStart & The time stamp which the workshop period ends.\\ 
+    \hline
+\end{tabularx}
+\vspace{0.5cm}
+
+\subsection*{WorkshopQuestions}
+This table holds the questions for each workshop and indicates if they are mandatory or not. \\
+
+\vspace{0.5cm}
+\begin{tabularx}{\linewidth}{| c | X |}
+    \hline
+    \rowcolor[gray]{0.8}
+    \textbf{Field} & \textbf{Description} \\
+    \hline
+    Id & Unique id generated when the question is created.\\ \hline
+   	Workshop & A foreign key to the workshop.\\ \hline
+   	QuestionText & The generated question.\\ \hline
+   	CommitTag & The tag which the question is generated from.\\ 
+    \hline
+\end{tabularx}
+\vspace{0.5cm}
