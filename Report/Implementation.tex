@@ -44,20 +44,14 @@ This pattern makes it easy for the developer to remain in control when creating 
     \label{mvc-paradigm}
 \end{figure}
 
-\subsubsection{Server and Database}
-% Skriv litt om server og database teknologi her. 
+\subsection{Server and Database}
+During development of the tool the database was run as a H2\footnote{\url{http://www.h2database.com/}} in-memory database, however the need for persistent storage arose, so we migrated to a MySQL database in order for the data to stay unchanged when we had to roll out updates to the tool. This was essential for the tool to function as described in the requirements, but the H2 database was more convenient and faster to debug during development.
+
+In this section we will show how the database is designed as the figure \ref{databaseDomainDiagram} below shows the relationship between the different data types. The data types have been categorized regarding to their origin and are discussed later together with all the fields in each data type.
 
 \section{Application Functionality}
-% Think it would be wise to show with screenshots the different functionality (the tabs f.ex)
-Reflection directed functionality:
-\begin{itemize}
-\item Collecting data - How a user can retrieve data and annotate it. 
-\item Sharing data - How users can work together in groups to collaborate with data. 
-\item Reflection triggers - Functionality developed specifically for helping users reflect on their work.
-\end{itemize}
-
 \paragraph{Daily reflection note}\mbox{}\\
-Scaffolding is the act of creating a skeleton or a frame for the work to be done. I
+Scaffolding is the act of creating a skeleton or a frame for the work to be done.
 PeacefulBanana provides users with the ability to create reflection notes, where they reflect on that day's work and store it for later use. In this context the scaffolding is creating a frame for the reflection to be done, which includes text input and guiding questions. An example of such a reflection note can be seen in Figure \ref{dailynotefunc}. \\
 In order to encourage users to reflect on their daily work and to avoid generic or non-constructive input, we connected questions to each input field, to act as guidance. For each input, the application provides a question, like \emph{How did you feel about todays work?} for the mood input. Adding these questions helps users think back on their experiences that day and perform a reflection on these. 
 \begin{figure}[H]
@@ -144,13 +138,8 @@ Finally the manager can browse a list of all tags, with the most active at the t
     \label{workshoppossiblefunc}
 \end{figure}
 
-% Muligens flytte noe av dette til appendix:
-\section{Database}
-During development of the tool the database was run as a H2\footnote{\url{http://www.h2database.com/}} in-memory database, however the need for persistent storage arose, so we migrated to a MySQL database in order for the data to stay unchanged when we had to roll out updates to the tool. This was essential for the tool to function as described in the requirements, but the H2 database was more convenient and faster to debug during development.
-
-In this section we will show how the database is designed as the figure \ref{databaseDomainDiagram} below shows the relationship between the different data types. The data types have been categorized regarding to their origin and are discussed later together with all the fields in each data type.
-
-% Bør denne legge på høykant i appendix?
+\section{appendixflytt}
+% Alt dette i appendix:
 \begin{figure}[H]
 \centering
 	\includegraphics[width=\textwidth]{databaseDomainDiagram}
