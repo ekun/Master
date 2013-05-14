@@ -1,3 +1,4 @@
+%!TEX root = main.tex
 \newpage
 \thispagestyle{empty}
 \mbox{}
@@ -82,9 +83,6 @@ Notifications are used to prompt users about reflection sessions and such. \\
 
 \subsection{GitHub data}
 In this section we discuss the storage of data collected from GitHub. When we started development we tested with the data stored at GitHub, so we asked GitHub for the data every time it was needed, this made the application slow so we decided to store GitHub data locally to enhance performance. 
-
-When retrieving data from GitHub we used the provided API as described by their developer-site\footnote{\url{http://developer.github.com/v3/}}, this enabled us to control the sequence of data and when to ask for what type of data. All communication to GitHub servers are asynchronous and while therefore not introduce any performance related issues. 
-
 The following data-types where stored in tables as described below.
 
 \subsection*{Milestones}

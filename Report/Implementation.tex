@@ -22,7 +22,12 @@ Below you can see an overview of the entire system design, how it was implemente
 When choosing a framework for the prototype, several alternatives like Spring\footnote{\url{http://www.springsource.org/}}, WebObjects\footnote{\url{htpp://www.apple.com/webobjects/}} and Play Framework\footnote{\url{http://www.playframework.com/}} where discussed. Their architecture and our familiarity to the framework was a vital part of the selection. Based on these criteria the server was implemented with Grails a framework for web applications, it is better described in the section following.
 
 \subsubsection{GitHub API}
-Skrive litt om github api
+GitHub provides developers with the opportunity to use an API\footnote{Application programming interface} which gives them the possibility to communicate with GitHub and retrieve data directly from their database.  
+
+When retrieving data from GitHub we used the provided API as described by their developer-site\footnote{\url{http://developer.github.com/v3/}}, this enabled us to control the sequence of data and when to ask for what type of data. All communication to GitHub servers are asynchronous and while therefore not introduce any performance related issues. 
+
+\subsubsection{MySQL}
+MySQL is an open source relational database management system and can be used for a variety of applications. It is most commonly found on Web applications and works very well with dynamic web-pages, meaning that the content of each page is generated based on data loaded from a database as the page loads.
 
 \subsection{Grails}
 Grails is an open source web application framework which uses the programming language Groovy(which is built on top of the Java Virtual Machine). When Grails was developed, it's developers aimed to re-use proven technologies such as Hibernate, Spring etc. 
@@ -50,6 +55,8 @@ The PeacefulBanana GitHub specific domain-classes can be seen in Figure \ref{Git
 All \emph{User specific} domain-classes can be seen in Figure \ref{UsersDomainClasses}.
 
 A detailed walkthrough with data type categorization and description can be seen in Appendix \ref{sumtin}
+
+
 
 \section{Application Functionality}
 \paragraph{Daily reflection note}\mbox{}\\
