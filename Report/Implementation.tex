@@ -26,10 +26,7 @@ GitHub provides developers with the opportunity to use an API\footnote{Applicati
 
 When retrieving data from GitHub we used the provided API as described by their developer-site\footnote{\url{http://developer.github.com/v3/}}, this enabled us to control the sequence of data and when to ask for what type of data. All communication to GitHub servers are asynchronous and while therefore not introduce any performance related issues. 
 
-\subsubsection{MySQL}
-MySQL is an open source relational database management system and can be used for a variety of applications. It is most commonly found on Web applications and works very well with dynamic web-pages, meaning that the content of each page is generated based on data loaded from a database as the page loads.
-
-\subsection{Grails}
+\subsubsection{Grails}
 Grails is an open source web application framework which uses the programming language Groovy(which is built on top of the Java Virtual Machine). When Grails was developed, it's developers aimed to re-use proven technologies such as Hibernate, Spring etc. 
 
 \begin{figure}[H]
@@ -49,14 +46,35 @@ This pattern makes it easy for the developer to remain in control when creating 
     \label{mvc-paradigm}
 \end{figure}
 
+\subsubsection{jQuery}
+It was initially released under the MIT license in 2006 to make it easier to select DOM\footnote{Document-Object-Model} objects and create powerful dynamic web pages and applications.
+
+JQuery has been used for AJAX\footnote{Asynchronous JavaScript and XML}, this is a way to change the contents DOM objects asynchronous from JavaScript.
+
+\subsubsection{AwesomeCloud}
+Awesome cloud is a plugin for jQuery for creating a tag cloud, it retrieves data from DOM-objects and rendered them as a cloud where the font-size increases with the occurrence of tags, the tag cloud is then drawn on the HTML5 canvas.
+
 \subsection{Server and Database}
 During development we ran the application on a H2\footnote{\url{http://www.h2database.com/}} in-memory database. However the need for persistent storage arose, so we migrated to a MySQL database in order for the data to stay unchanged when we had to roll out updates to the tool. This choice was essential for the tool to function as described in the requirements, but the H2 database was more convenient and faster to debug during development.
+\subsubsection{MySQL}
+MySQL is an open source relational database management system and can be used for a variety of applications. It is most commonly found on Web applications and works very well with dynamic web-pages, meaning that the content of each page is generated based on data loaded from a database as the page loads.
+
+\subsubsection{Database description}
 The PeacefulBanana GitHub specific domain-classes can be seen in Figure \ref{GithubDomainClasses}, and shows the relationship between the different data retrieved through the GitHub API.
 All \emph{User specific} domain-classes can be seen in Figure \ref{UsersDomainClasses}.
-
-A detailed walkthrough with data type categorization and description can be seen in Appendix \ref{sumtin}
-
-
+A detailed walkthrough with data type categorization and description can be seen in Appendix \ref{app:database}
+\begin{figure}[H]
+    \centering
+        \includegraphics[width=\textwidth]{GithubDomainClasses}
+    \caption{GitHub domain classes}
+    \label{GithubDomainClasses}
+\end{figure}
+\begin{figure}[H]
+    \centering
+        \includegraphics[width=\textwidth]{UsersDomainClasses}
+    \caption{User domain classes}
+    \label{UsersDomainClasses}
+\end{figure}
 
 \section{Application Functionality}
 \paragraph{Daily reflection note}\mbox{}\\
@@ -146,21 +164,3 @@ Finally the manager can browse a list of all tags, with the most active at the t
     \caption{PeacefulBanana Workshop - Possible questions based on tags}
     \label{workshoppossiblefunc}
 \end{figure}
-
-\section{User Interface}
-When implementing the design as discussed in the earlier chapter, we had a lot of focus on creating a simpler yet informative page-layout and it is because of this we 
-
-When designing the Peaceful Banana, it was clear that our task required a lot of design work. In order to create a simple yet informative page-layout the twitter bootstrap framework was chosen.
-
-The design itself is heavily based on the fluid layout and sign in examples from the official examples.
-
-\subsection{Twitter bootstrap}
-Twitter bootstrap is a front-end framework for easier and faster web development, it is widely used and makes it possible to create beautiful web pages without much work. Bootstrap utilizes both HTML5 and CSS3 standards.
-
-\subsection{jQuery}
-It was initially released under the MIT license in 2006 to make it easier to select DOM\footnote{Document-Object-Model} objects and create powerful dynamic web pages and applications.
-
-JQuery has been used for AJAX\footnote{Asynchronous JavaScript and XML}, this is a way to change the contents DOM objects asynchronous from JavaScript.
-
-\subsubsection{AwesomeCloud}
-Awesome cloud is a plugin for jQuery for creating a tag cloud, it retrieves data from DOM-objects and rendered them as a cloud where the font-size increases with the occurrence of tags, the tag cloud is then drawn on the HTML5 canvas.
