@@ -4,24 +4,23 @@
 % In many cases, you will not be able to realize the full design. Often the implementation is only a demonstrator of ideas. 
 % It is therefore important that you focus on the most important aspects of your system (depending on research questions). 
 % In the report you have to justify the choices that are done.
-In this chapter we will go through the decisions made in order to develop the PeacefulBanana tool, and the rationale behind the decisions made. 
+This chapter described the PeacefulBanana architecture, the technology we used to implement it and the functionality it provides. 
+We will elaborate on the decisions made in order to develop the PeacefulBanana tool, and the rationale behind the decisions made connected with the Mirror CSRL cycle model described in section \ref{mirrorsection}. 
 
 \section{Application Architecture}
-% Skriv mer her, alt som er generelt flyttes hit
-Below you can see an overview of the entire system design, how it was implemented so the users can see the data tailored to their team and work.
-
+Figure \ref{ClientServerGithub} shows an overview of the system design and the interaction between users, the web-server and GitHub. Each PeacefulBanana user visits the web-application through a web-browser. PeacefulBanana runs on a dedicated server and is able to serve many users at the same time. In the background the PeacefulBanana application communicates with GitHub through the GitHub API(see Section \ref{githubapi}) and synchronizes project and user-data in real time while users perform their tasks. Users connect their local PeacefulBanana account with their GitHub account in order to gain access to projects. All data collected from GitHub is stored locally on the server in a database(See section \ref{sec:database}). 
 \begin{figure}[H]
     \centering
-        \includegraphics[width=0.8\textwidth]{Clientservergithub}
+        \includegraphics[width=\textwidth]{Clientservergithub}
     \caption{Overview of system design.}
     \label{ClientServerGithub}
 \end{figure}
 
 \section{Technology}
-% All info om teknologi flyttes hit
 When choosing a framework for the prototype, several alternatives like Spring\footnote{\url{http://www.springsource.org/}}, WebObjects\footnote{\url{htpp://www.apple.com/webobjects/}} and Play Framework\footnote{\url{http://www.playframework.com/}} where discussed. Their architecture and our familiarity to the framework was a vital part of the selection. Based on these criteria the server was implemented with Grails a framework for web applications, it is better described in the section following.
 
 \subsubsection{GitHub API}
+\label{githubapi}
 GitHub provides developers with the opportunity to use an API\footnote{Application programming interface} which gives them the possibility to communicate with GitHub and retrieve data directly from their database.  
 
 When retrieving data from GitHub we used the provided API as described by their developer-site\footnote{\url{http://developer.github.com/v3/}}, this enabled us to control the sequence of data and when to ask for what type of data. All communication to GitHub servers are asynchronous and while therefore not introduce any performance related issues. 
@@ -54,9 +53,10 @@ JQuery has been used for AJAX\footnote{Asynchronous JavaScript and XML}, this is
 Awesome cloud is a plugin for jQuery for creating a tag cloud, it retrieves data from DOM-objects and rendered them as a cloud where the font-size increases with the occurrence of tags, the tag cloud is then drawn on the HTML5 canvas.
 
 \subsection{Server and Database}
+\label{sec:database}
 During development we ran the application on a H2\footnote{\url{http://www.h2database.com/}} in-memory database. However the need for persistent storage arose, so we migrated to a MySQL database in order for the data to stay unchanged when we had to roll out updates to the tool. This choice was essential for the tool to function as described in the requirements, but the H2 database was more convenient and faster to debug during development.
 \subsubsection{MySQL}
-MySQL is an open source relational database management system and can be used for a variety of applications. It is most commonly found on Web applications and works very well with dynamic web-pages, meaning that the content of each page is generated based on data loaded from a database as the page loads.
+MySQL\footnote{MySQL: \url{http://www.mysql.com/}} is the world's largest open source relational database management system and can be used for a variety of applications. It is most commonly used with Web applications and works very well with dynamic web-pages, meaning that the content of each page is generated based on data loaded from a database as the page loads.
 
 \subsubsection{Database description}
 The PeacefulBanana GitHub specific domain-classes can be seen in Figure \ref{GithubDomainClasses}, and shows the relationship between the different data retrieved through the GitHub API.
@@ -76,6 +76,42 @@ A detailed walkthrough with data type categorization and description can be seen
 \end{figure}
 
 \section{Application Functionality}
+This section describes the rationale behind the most important functionality implemented to PeacefulBanana, with relation to the Mirror CSRL cycle model. The section ends with a more detailed rationale behind the core functionality implemented. As described in Section \ref{mirrorsection} , the MIRROR CSRL model has four stages: 
+\begin{enumerate}
+    \item Plan and do work
+    \item Initiate Reflection
+    \item Conduct Reflection session
+    \item Apply Outcome
+\end{enumerate}
+In this thesis, our research mostly focuses on the first two stages, since PeacefulBanana is primarily to be used during work and as preparation for retrospective sessions. PeacefulBanana additionally includes some implementations focused towards the third stage \emph{Conduct reflection session}, as it also can be used during the session. 
+
+\subsection{Plan and do work}
+Figure \ref{plananddoworktable} shows the functionality we implemented towards the \emph{Plan and do work} stage, and how our application help user(s) plan and perform their daily work tasks. 
+\begin{figure}[H]
+\centering
+    \includegraphics[width=\textwidth]{plananddoworktable}
+\caption{Mirror CSRL Cycle - Plan and do work functionality \& implementations}
+\label{plananddoworktable}
+\end{figure}
+
+\subsection{Initiate Reflection}
+Figure \ref{initiatereflectiontable} shows the functionality we implemented towards the \emph{Initiate Reflection} stage, and how our application help user(s) initiate reflection. 
+\begin{figure}[H]
+\centering
+    \includegraphics[width=\textwidth]{initiatereflectiontable}
+\caption{Mirror CSRL Cycle - Initiate Reflection functionality \& implementations}
+\label{initiatereflectiontable}
+\end{figure}
+
+\subsection{Conduct Reflection Session}
+Figure \ref{conductreflectiontable} shows the functionality we implemented towards the \emph{Conduct Reflection Session} stage, and how our application help user(s) perform their retrospectives. 
+\begin{figure}[H]
+\centering
+    \includegraphics[width=\textwidth]{conductreflectiontable}
+\caption{Mirror CSRL Cycle - Conduct reflection session functionality \& implementations}
+\label{conductreflectiontable}
+\end{figure}
+
 \paragraph{Daily reflection note}\mbox{}\\
 Scaffolding is the act of creating a skeleton or a frame for the work to be done.
 PeacefulBanana provides users with the ability to create reflection notes, where they reflect on that day's work and store it for later use. In this context the scaffolding is creating a frame for the reflection to be done, which includes text input and guiding questions. An example of such a reflection note can be seen in Figure \ref{dailynotefunc}. \\
