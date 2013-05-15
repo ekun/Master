@@ -75,7 +75,7 @@ A detailed walkthrough with data type categorization and description can be seen
     \label{UsersDomainClasses}
 \end{figure}
 
-\section{Application Functionality}
+\subsection{MIRROR CSRL}
 This section describes the rationale behind the most important functionality implemented to PeacefulBanana, with relation to the Mirror CSRL cycle model. The section ends with a more detailed rationale behind the core functionality implemented. As described in Section \ref{mirrorsection} , the MIRROR CSRL model has four stages: 
 \begin{enumerate}
     \item Plan and do work
@@ -83,15 +83,14 @@ This section describes the rationale behind the most important functionality imp
     \item Conduct Reflection session
     \item Apply Outcome
 \end{enumerate}
-In this thesis, our research mostly focuses on the first two stages, since PeacefulBanana is primarily to be used during work and as preparation for retrospective sessions. PeacefulBanana additionally includes some implementations focused towards the third stage \emph{Conduct reflection session}, as it also can be used during the session. 
-
-% Flett dette inn et sted
-Sub research question 1 was aimed at answering how the data collected from GitHub by the PeacefulBanana application could be scaffolded in order to promote reflection. 
-In order to answer this question we chose to be selective in what data we collected from GitHub. By carefully examining what GitHub offers by itself, we could identify what they didn't offer and retrieve this data if it was relevant to promoting reflection. \\
-The first thing we implemented was the repository overview, where users can retrieve their projects milestones and relating issues in order to quickly get up to speed on what has happened since their last visit. The challenge was not only to identify what data to collect, but also scaffold the collected data and present them to the users in a way that triggers reflection. The mood-graph is an example of how we collect each team user's mood each day, and represents it in a graph. This representation allows for a quick and easy mood comparison, which may encourage user's to look into why their mood differs opposed to the team's in a certain period of time. 
+In this thesis, our research mostly focuses on the first two stages of the model, since PeacefulBanana is primarily to be used during work and as preparation for retrospective sessions. PeacefulBanana additionally includes some implementations focused towards the third stage \emph{Conduct reflection session}, as it also can be used during the session. 
 
 \subsection{Plan and do work}
-Figure \ref{plananddoworktable} shows the functionality we implemented towards the \emph{Plan and do work} stage, and how our application help user(s) plan and perform their daily work tasks. 
+Figure \ref{plananddoworktable} shows functionality we implemented towards the \emph{Plan and do work} stage, and how our application help user(s) plan and perform their daily work tasks. 
+Functionality in this stage is connected to \textbf{Sub research question 1}, which is focused on answering how the data collected from GitHub can be scaffolded in order to promote reflection. By carefully examining what GitHub offers itself, we could identify what they didn't offer and implement this functionality provided it could have a positive effect for promoting reflection for users. The challenge was not only to identify what data to collect, but also scaffold the collected data and present them to the users in a way that triggers reflection. \\
+Adding mood to the \emph{Daily Reflection Note} implementation gave us the opportunity to create a mood-graph based on the team user's mood every day. This representation allows for a quick and easy mood comparison, which may encourage user's to look into why their mood differs opposed to the team's in a certain period of time. Such a discussion might occur at any time, either because a user browses on his own and wants to discuss his findings, or the team browses it together.  
+The rationale of adding notifications to the application was made in order to give users context-relevant feedback and remind them of the daily reflection notes. \\
+This functionality is also connected to \textbf{Sub research question 2}, which focuses on how to improve the tendency to reflect, both individually and in teams. 
 \begin{figure}[H]
 \centering
     \includegraphics[width=\textwidth]{plananddoworktable}
@@ -100,7 +99,7 @@ Figure \ref{plananddoworktable} shows the functionality we implemented towards t
 \end{figure}
 
 \subsection{Initiate Reflection}
-Figure \ref{initiatereflectiontable} shows the functionality we implemented towards the \emph{Initiate Reflection} stage, and how our application help user(s) initiate reflection. 
+Figure \ref{initiatereflectiontable} shows functionality we implemented towards the \emph{Initiate Reflection} stage, and how our application help user(s) initiate reflection. Functionality in this stage is also coupled with \textbf{Sub research question 2}. The \emph{Reflection Workshop} functionality is implemented in order for teams to create a frame for their retrospective session. When a workshop has been added, individuals can also prepare by themselves by comparing their own data with the teams, i.e. the personal tag-cloud vs team tag-cloud and the mood-graph.  
 \begin{figure}[H]
 \centering
     \includegraphics[width=\textwidth]{initiatereflectiontable}
@@ -110,6 +109,7 @@ Figure \ref{initiatereflectiontable} shows the functionality we implemented towa
 
 \subsection{Conduct Reflection Session}
 Figure \ref{conductreflectiontable} shows the functionality we implemented towards the \emph{Conduct Reflection Session} stage, and how our application help user(s) perform their retrospectives. 
+This stage is not something we focused on, since most of the use of PeacefulBanana is doing daily work and using those data to prepare for retrospectives. Still the most notable functionality that is connected to this stage, is the ability to share and inspect reflection notes, meaning that teams can during reflection sessions wish to compare shared notes and create a discussion around these. Similarly teams can inspect repository data, like milestones and issues, and also tag-clouds connected to these. These tag-clouds can identify active issues which the team wishes to discuss during the retrospective. 
 \begin{figure}[H]
 \centering
     \includegraphics[width=\textwidth]{conductreflectiontable}
@@ -117,6 +117,7 @@ Figure \ref{conductreflectiontable} shows the functionality we implemented towar
 \label{conductreflectiontable}
 \end{figure}
 
+\subsection{Core Functionality}
 \paragraph{Daily reflection note}\mbox{}\\
 Scaffolding is the act of creating a skeleton or a frame for the work to be done.
 PeacefulBanana provides users with the ability to create reflection notes, where they reflect on that day's work and store it for later use. In this context the scaffolding is creating a frame for the reflection to be done, which includes text input and guiding questions. An example of such a reflection note can be seen in Figure \ref{dailynotefunc}. \\
