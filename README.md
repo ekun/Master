@@ -3,7 +3,7 @@ Master in progress
 
 Skrevet av Even Stene og Marius Nedal Glittum
 
-# TODOS
+# TODOS 17. mai
 * Description of the rationale -> Could be done connecting functionalities to the MIRROR model and a clear connection to agile development.
 * Birgit sin modell må gjøres og skal inn i background/ inn i problem elaboration. 
 
