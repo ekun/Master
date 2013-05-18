@@ -15,9 +15,13 @@ This chapter should be very high-level, a simple overview of what the applicatio
 
 ## State of the art
 * Should refer more directly to tools & support of software development and reflection(related work)
+ 
+Mener egentlig at det kapittelet her bør være bra nok.
 
 ## Design
 Is there any design choices in quickstart that should be in design chapter?
+
+Usikker, bør kanskje komme frem at de er linket til RQ
 
 ## Implementation
 Missing an overview of the general architecture. Gjelder dette enda?
@@ -37,7 +41,7 @@ f.eks gruppa følte at ved å bruke appen og daily reflection så kunne de unng�
 Svare på RQ's... og alt annet som skal inn her. 
 
 ## Conclusion
-alt
+Not so much anymore?
 ___
 ___
 
