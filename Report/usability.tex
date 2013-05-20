@@ -101,6 +101,10 @@ Usability metrics refers to user performance measured against specific performan
 \subsubsection{Task Completion}
 Each task requires that the participant obtains or inputs specific data that would be used in course of a typical task. The task is noted as \emph{completed} when the participant indicates the task's goal has been obtained (whether successfully or unsuccessfully).  If a participant requires assistance in order to achieve a correct output then the task will be noted as a critical error and the overall completion rate for the task will be affected.
 
+\subsubsection{Completion Rate}
+A completion rate of 100\% is the goal for each task in this usability test. \\
+Completion rate is the percentage of test participants who successfully complete the task without critical errors, an \emph{output} that is correct. If a participant requires assistance in order to achieve a correct output then the task will be scored as a critical error and the overall completion rate for the task will be affected.
+
 \subsubsection{Critical Errors}
 A critical error is an error that results in an incorrect or incomplete outcome. Participants may or may not be aware that the task goal is incorrect or incomplete. In general, critical errors are unresolved errors during the process of completing the task or errors that produce an incorrect outcome.
 
@@ -108,51 +112,31 @@ A critical error is an error that results in an incorrect or incomplete outcome.
 Non-critical errors are errors that are recovered from by the participant or, if not detected, do not result in processing problems or unexpected results. Although non-critical errors can be undetected by the participant, when they are detected they are often frustrating to the participant.
 
 \subsubsection{Subjective Evaluations}
-Subjective evaluations regarding ease of use and satisfaction was collected via questionnaires, and during debriefing at the conclusion of the session.
+Opinions of participators regarding specific tasks, time to perform each task, features, and functionality was collected. At the end of the usability test, participants rated their satisfaction with the overall system. Combined with the interview/debriefing session. 
 
 \subsubsection{Task Completion Time(time on task)}
 The time to complete a task is referred to as \emph{"time on task"}. It is measured from the time the person begins the task to the time the participant indicates completion.
 
-\subsection{Usability Goals}
+\subsection{General Usability Goals}
 The next section describes the usability goals for \emph{PeacefulBanana} in context of the usability metrics. First the general usability test objectives are described, and what usability metric results we aimed for.\\ 
 The goals of usability testing the PeacefulBanana application included establishing a baseline of user performance, validating user performance measures, and identifying potential design issues that needed to be addressed in order to improve efficiency, usability and end-user satisfaction. \\
 The general usability test objectives were:
 \begin{itemize}
-	\item Identify possible problems or breakdowns in the design\citep{ref:30} early on in the design process. Sources of such breakdowns may include:
+	\item Identify possible problems or breakdowns in the design\citep{wright1989evaluation} early on in the design process. Sources of such breakdowns may include:
 		\begin{itemize}
 			\item Navigation errors – failure to locate functions, excessive actions to complete a function, failure to follow recommended screen flow.
 			\item Presentation errors – failure to locate and properly act upon desired information in screens, selection errors due to labeling ambiguities.
 			\item Control usage problems – improper tool bar or entry field usage.
 		\end{itemize}
-	\item Exercise the PeacefulBanana application under controlled test conditions with representative users, which here are individuals with a background in IT. Data will be used to assess whether usability goals regarding an effective, efficient, and well-received user interface have been achieved.
+	\item Exercise the PeacefulBanana application under controlled test conditions with representative users, which here are individuals with a background in Computer-Science
+	. Data will be used to assess whether usability goals regarding an effective, efficient, and well-received user interface have been achieved.
 	\item Establish baseline user performance and user-satisfaction levels of the user interface for future usability evaluations.
 \end{itemize}
-The PeacefulBanana application has been developed with developers in mind, and will be evaluated on students in the field of Computer Science, developing in an agile team. The testing will occur in a controlled environment in a private room.
-
-Typical problems identified in a usability test would be text representations or the placement of design elements, that are not intuitive for the user during use. It would be a concern if the user can't figure out how to use certain features of the application. Identifying these problems as early as possible will lead to a better end design. \\
+Typical problems identified in a usability test would be text representations or the placement of design elements, that are not intuitive for the user during use. It would be a concern if the user can't figure out how to use certain features of the application. Identifying these problems as early as possible will lead to a better end result. \\
 Secondly an objective of the usability test was to identify how users act and think about their daily experiences, how they react to the notion of reflecting on them and if sharing their private thoughts is a problem. 
-
-\subsubsection{Completion Rate}
-A completion rate of 100\% is the goal for each task in this usability test. \\
-Completion rate is the percentage of test participants who successfully complete the task without critical errors, an \emph{output} that is correct. If a participant requires assistance in order to achieve a correct output then the task will be scored as a critical error and the overall completion rate for the task will be affected.
-
-\subsubsection{Error-Free rate}
-An error-free rate of 75\% is the goal for each task in this usability test. \\
-Error-free rate is the percentage of test participants who complete the task without any errors (critical or non-critical errors). A non-critical error is an error that is not critical to get correct task output but would result in the task being completed less efficiently.
-
-\subsubsection{Subjective Measures}
-Opinions of participators regarding specific tasks, time to perform each task, features, and functionality was collected. At the end of the usability test, participants rated their satisfaction with the overall system. Combined with the interview/debriefing session. 
 
 \subsection{Problem Severity}
 In order to analyze collected data from the usability test, identified issues were classified by issue severity. This issue severity is a combination of the impact of the issue and the frequency of users experiencing the issue during the test. 
-
-\subsubsection{Impact}
-\subsubsection{Frequency}
-	\begin{itemize}
-		\item High: 40\% or more of the participants experienced the problem.
-		\item Moderate: 20\% - 39\% of participants experienced the problem.
-		\item Low: 20\% or fewer of the participants experienced the problem
-	\end{itemize}
 \subsubsection{Problem Severity Classification}
 	\begin{itemize}
 		\item High severity: High impact problems that often prevent a user from correctly completing a task. Reward for resolution is reduced redevelopment costs.
@@ -160,16 +144,16 @@ In order to analyze collected data from the usability test, identified issues we
 		\item Low severity: Low impact problems faced by few participants; there is low risk to not resolving these problems. Reward for resolution is typically exhibited in increased user satisfaction.
 	\end{itemize}
 
+\newpage
 \section{Usability Test Results}
 \subsection{Pilot Test}
-After finalizing the usability test plan: Appendix \ref{chap:usability}, a pilot test was conducted prior to the usability-test[ref 22]. The pilot test allows for an evaluation of the test plan itself and the questionnaires before doing the actual usability test. This means the pilot test is a "test of the test", where the goal is to evaluate and verify that the test itself is well-formulated. We chose a fellow student as our pilot-tester, in order to check whether the test script was clear, that the tasks were appropriately difficult, and that the data collected can be meaningfully analyzed. 
+After finalizing the usability test plan: Appendix \ref{chap:usability}, a pilot test was conducted prior to the usability-test\citep{usabilitygov}. The pilot test allows for an evaluation of the test plan itself and the questionnaires before doing the actual usability test. This means the pilot test is a \emph{"test of the test"}, where the goal is to evaluate and verify that the test itself is well-formulated.We chose a fellow student as our pilot-tester, in order to check whether the test script was clear, that the tasks were appropriately difficult, and that the data collected can be meaningfully analyzed. 
 It also allows the "tester" to practice the execution and guidance, before actually performing the tests. \\
 In the pilot test for PeacefulBanana, all of the aspects above were evaluated and a few tweaks were made to the tests, making it more streamlined. Also a few, smaller bugs in the application were discovered and fixed. The test introduction was rewritten, since the pilot-tester showed some confusion in a few of the tasks. 
-The findings acted as valuable feedback to our delivery cycle, and were used for improving the design of the application. 
 
 \section{Summary}
 We conducted an on site usability test using a production version of PeacefulBanana, located on the test administrators local server. One tester took notes of comments, facial expressions and navigation choices.The administrator acted as guidance during the test. The sessions captured each participants navigational choices, task completion rates, comments, overall satisfaction ratings, questions and feedback.
-The usability test was conducted in a private lab-room at NTNU on November 10th. The purpose of the test was to assess the usability of the web application design, information flow, information architecture and the effects of sharing personal reflection notes.
+The usability test was conducted in a private lab-room at NTNU on November 10th. The purpose of the test was to assess the usability of the web application design, information flow, information architecture and the effects of sharing personal reflection notes. The findings acted as valuable feedback to our delivery cycle, and were used for improving the design of the application. 
 Four participants attended the test. Typically, three to five test participants is the optimal number for most usability studies\citep{nielsen1993mathematical}. Each individual session lasted approximately twenty minutes.
 This section contains the participant feedback, satisfactions ratings, task completion rates, ease or difficulty of completion ratings, time on task, errors, and recommendations for improvements.
 \subsection{Presentation of results}
