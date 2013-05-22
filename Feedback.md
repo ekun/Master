@@ -87,15 +87,16 @@
 [] How have we chosen participants, at which stage of development were they recruited and which version of the system did they use,
 [] Reposition Scenario 1 completion rate figure
 [] Say more about task on time complexity
-[] Increase column of Post task questionaire figure
+[] Increase column of Post task questionnaire figure
 [] Recommendations: What have we done with the recommendations results?
-[]
-## Chapter 10
-[]
-[]
-[]
-[]
-[]
-[]
+### Focus group
+[] Write more about the focus group evaluation
+[] Add explicit quotes from the workshop
+
+## Conclusion
+### Future work
+[] Stay at a higher level
+
+
 
 
