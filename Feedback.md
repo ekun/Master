@@ -37,13 +37,13 @@
 [X] Describe how the findings and tool will be made available (github repos).
 
 ## PeacefulBanana
-[] Improve description , so the purpose of the chapter is more clear. 
+[s] Improve description , so the purpose of the chapter is more clear. 
 
-[] Add figures of chapter/screenshots
+[s] Add figures of chapter/screenshots
 
 [] Clarify what we share in the tool. Experience vs reflection outcome vs reflection session
 
-[] Integrate main goal / 2.3 into 2.1 
+[X] Integrate main goal / 2.3 into 2.1 
 
 ## Background
 [] Monica thought most of our work fitted in the conduct reflection phase?
