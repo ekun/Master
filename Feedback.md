@@ -90,9 +90,9 @@
 ## Design
 [] Missing a lot about the overall design of our system. What do we do to meet requirements, f.ex what visualizations you have chosen, what form of cooperation are we supporting. 
 
-[] Could be useful with a presentation of your system with the help of the CSRL mirror model (8.2.2).
+[x] Could be useful with a presentation of your system with the help of the CSRL mirror model (8.2.2).
 
-[] 7.2.2 missing figure reference. 
+[x] 7.2.2 missing figure reference. 
 
 [] 7.3 revise
 
