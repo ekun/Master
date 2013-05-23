@@ -1,7 +1,7 @@
 # Final eval of report
 [X] Add references to all figures that is not our own. 
 
-[] Discuss title
+[s] Discuss title
 
 ## Abstract
 [] Revise the whole shebang
@@ -109,10 +109,10 @@
 [] Recommendations: What have we done with the recommendations results?
 
 ### Focus group
-[] Write more about the focus group evaluation
+[s] Write more about the focus group evaluation
 
 [x] Add explicit quotes from the workshop
 
 ## Conclusion
 ### Future work
-[] Stay at a higher level
+[s] Stay at a higher level
