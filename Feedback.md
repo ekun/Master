@@ -1,5 +1,5 @@
 # Final eval of report
-[] Add references to all figures that is not our own. 
+[X] Add references to all figures that is not our own. 
 
 [] Discuss title
 
@@ -10,9 +10,9 @@
 [] Introduce reflection technology short
 
 ### Context & Domain
-[] Add sentence describing what is an agile method
+[X] Add sentence describing what is an agile method
 
-[] Add something about the date/quality of date.
+[X] Add something about the date/quality of date.
 
 ### Core Concepts
 [] The purpose of the chapter is unclear
@@ -116,7 +116,3 @@
 ## Conclusion
 ### Future work
 [] Stay at a higher level
-
-
-
-
