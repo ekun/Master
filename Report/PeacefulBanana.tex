@@ -1,11 +1,12 @@
 %!TEX root = main.tex
 \chapter{Peaceful Banana - An overview}
 \label{peacefulBananaApplication}
-In this chapter we will introduce the PeacefulBanana tool, which is the prototype we developed to support this thesis. The focus will be to explain the concept of the tool, it's features and the functionality it provides. The tool will be presented at a high-level, while the process of how we developed the prototype, design choices and implementation is further described in Chapter \ref{chap:design} \& \ref{chap:implementation}.
+In this chapter we will introduce the PeacefulBanana tool, which is the prototype we developed for our thesis. The purpose of this chapter is to explain the concept of the tool, it's features and the functionality it provides. The tool will be presented at a high-level, as the process of how we developed the prototype, design choices and implementation is further described in Chapter \ref{chap:design} \& \ref{chap:implementation}.
 \section{What is PeacefulBanana?}
 Peaceful Banana is a tool aimed towards aiding reflection in software development teams. It integrates with version control systems(VCS)\footnote{Version control is the management of changes to documents, computer programs, large web sites, and other collections of information}, which is commonly used in software development. The PeacefulBanana tool collects project artifacts from such version control systems and scaffolds these in order to trigger and promote reflection in teams. PeacefulBanana integrates with VCS and provides a layer of features specific for aiding reflection in software development projects. I.e.  PeacefulBanana will not feature the same functionalities that already exists in these systems, but rather contextualize them and present the data in a manner that can help teams reflect on their experiences. The tool will collect different data relevant for reflection, e.g. prompting the user for their mood each day, which allows for both team-wide and personal mood-graphs over a period of time. \\
 PeacefulBanana is developed as a web-application and will work in all modern web-browsers running on platforms like PCs/MAC, smartphones and tablets.
-The tool was developed with project artifacts collected from VCS in mind. The PeacefulBanana tool is developed for use in software development teams that have adopted an agile process model. Most agile process models feature reflection sessions in some form, in which this tool is used in order to promote and enhance the reflection that takes place in these sessions. Although it is aimed at agile teams, any process model featuring some kind of reflection session could benefit from using this tool. Similarly the tool can also be used individually at any time as a more general project overview tool. 
+The tool was developed with project artifacts collected from VCS in mind. The PeacefulBanana tool is developed for use in software development teams that have adopted an agile process model. Most agile process models feature reflection sessions in some form, in which this tool is used in order to promote and enhance the reflection that takes place in these sessions. Although it is aimed at agile teams, any process model featuring some kind of reflection session could benefit from using this tool. Similarly the tool can also be used individually at any time as a more general project overview tool. \\
+The goal of PeacefulBanana is to present software development teams with a tool that can help them collect, revisit and reflect upon their experiences in both an individual and collaborative setting. Through the process of developing the prototype, it has become a tool that also supports collection of project artifacts and the presentation of these to users, in order to promote and trigger reflection. 
 
 \section{What does it do?}
 PeacefulBanana is a tool that allows users to reflect upon and share their experiences in development projects. The tool focuses on collecting project artifacts from VCS like code commits, milestones and issues as well as comments and references. The tool scaffolds these data and presents them to the users, acting as input for triggering reflection. The reflection that occurs will be captured and stored as reflection notes so the user can review these at a later date. These notes can also be shared with the team and used in team reflection sessions. The tool is designed to support both individual and collaborative reflection.It can be used during the team reflection workshop or just browsed individually when the user wishes to. The tool provides several opportunities to the users:
@@ -26,6 +27,13 @@ PeacefulBanana is a tool that allows users to reflect upon and share their exper
 		\item The top 2 contributions done by the user in the project that day.
 		\item The top 2 fields the user can improve on in the project.
 	\end{itemize}
+	Figure \ref{dailynote2} shows how the daily reflection note looks in the PeacefulBanana application
+		\begin{figure}[!htpb]
+		\centering
+		\includegraphics[width=\textwidth]{dailynote}
+		\caption{PeacefulBanana Daily reflection note}
+		\label{dailynote2}
+	\end{figure}
 	The PeacefulBanana application stores each of these daily summaries in a secure database. Each reflection note can also be shared with the user's team, but sharing notes is not required. The mood data collected each day is used by the application to generate a team-wide mood-average graph. This graph can be used to trigger a discussion and reflection in the team reflection sessions. 
 
 	\item[Reflection sessions] \hfill \\
@@ -41,6 +49,10 @@ PeacefulBanana is a tool that allows users to reflect upon and share their exper
 			\item The team didn't meet the deadline for milestone \#20 - Midterm Report, did the team experience any particular problems?
 		\end{itemize}
 \end{description}
-
-\section{Main goal}
-The goal of the prototype is to present software development teams with a tool that can help them collect, revisit and reflect upon their experiences in both an individual and collaborative setting. Through the process of developing the prototype, it has become a tool that also supports collection of project artifacts and the presentation of these to users, in order to promote and trigger reflection. 
+Figure \ref{workshopquestionspeaceful} shows an example of a project workshop and the questions generated for it based on the project tags. 
+	\begin{figure}[!htpb]
+		\centering
+		\includegraphics[width=\textwidth]{workshopgenerated}
+		\caption{PeacefulBanana Reflection Workshop - Generated Questions based on project tags}
+		\label{workshopquestionspeaceful}
+	\end{figure}

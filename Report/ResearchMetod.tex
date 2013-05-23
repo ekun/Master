@@ -1,16 +1,10 @@
 %!TEX root = main.tex
 %
-% ### Research Method
-% Where are we getting requirements from?  
-% What will guide our design?  
-% How will we evaluate the tool?  
-%
 \section{Research Method}
-
 \subsubsection{Design as an artifact}
 By definition, the result of design-science research in Information Science is:
 \begin{quote}
-A purposeful IT artifact created to address an important organizational problem. It must be described effectively, enabling its implementation and application in an appropriate domain.
+\emph{A purposeful IT artifact created to address an important organizational problem. It must be described effectively, enabling its implementation and application in an appropriate domain.} \citep{Esearch2004}
 \end{quote}
 Markus et al.\citep{markusetal} identified that a developed artifact is only significant if there is questions like: Can it be constructed, can it perform appropriately and is the result important to the information science community. 
 We will create a proof of concept prototype tool for promoting experienced-based learning from reflection based on project artifacts collected from version-control systems. Our goal was to create a tool that can discover new capabilities in the domain of reflection and experience-based learning, as well as support the existing capabilities in an efficient way. Evaluating the tool in \emph{real use} situations is necessary in order to discover if the artifact can enhance the reflection process as it is today.
@@ -61,10 +55,16 @@ While developing the application, we continuously used the application ourselves
 
 Dogfooding is a concept where you 'eat your own dog food', this means that the developers are testing their own product while developing it\citep{dogfooding}. It is normally something larger software development teams are doing as a pre alpha-testing, this will help developers to discover eventual problem-areas early.
 
-\subsection{Evaluation}
-% Read and rewrite this part if needed. Should be checked so that it fits with the rest of the chapter. 
-Table 2 in \citep{Esearch2004} will be used as guidelines for evaluation of our prototype. 
+\subsection{Evaluation} 
+Table 2 , shown in Figure \ref{table2evaluation} from \citep{Esearch2004} will serve as guidelines for evaluation of our prototype.
 During evaluation we will be using parts of the evaluation toolbox published by MIRROR\footnote{\url{http://www.mirror-project.eu/showroom-a-publications/downloads/finish/5/67}}. This toolbox is a specification of evaluation methodology and research tooling. 
+
+\begin{figure}[H]
+\centering
+	\includegraphics[width=\textwidth]{table2evaluation}
+\caption{Design Evaluation Methods}
+\label{table2evaluation}
+\end{figure}
 
 \subsubsection{Focus group}
 Focus groups is a form of qualitative research which can be compared to semi-structured group interviews\citep{rogers2011interaction}. Participants in a group are asked about their opinions and views towards a product or concept based on their background and experiences\citep{krueger2008focus}. The group should consist of six to ten persons, where participants are not inhibited to present their honest opinions and experiences\citep{krueger2008focus}. The discussion is governed by a facilitator which have the task of keeping focus on the discussion in order to get answers to the questions that have been prepared beforehand\citep{krueger2008focus, nielsen1997use}. The facilitator is responsible for keeping the discussion open, uninhibited, non-judgemental and also making sure that all participants are allowed to present their views\citep{powell1996focus}. \\
@@ -114,22 +114,21 @@ The first scenario does not require anything but a GitHub repository and is doab
 For scenario 2 we will require a team of at least 3 people in order to collect enough data. 
 We have continuously been using and evaluating the tool ourselves, also a fellow student has been using it for a couple of weeks, so we have some additional evaluation
 data also.
-% Should be written more structured
-
-
-% Trenger vi noe av det under? 
-\subsection{Problem relevance}
-We want to explore how the collection and scaffolding of experiences connected to project artifacts can support collaborative reflection sessions. In order to revisit and learn from previous experiences we want to collect and scaffold experiences from users daily. The tool will keep a copy of these experiences in order for users to revisit them at a later date, be it individually or in collaborative reflection sessions. These notes will be collected based on tags that are related to the experience being reviewed \citep{Hassan-montero2006}.
 
 \subsection{Research Contributions}
-The main goal is to create a proof of concept application that will help users reflect on their past experiences individually and in collaborative reflection sessions by collecting experiences daily and revisiting them at any time. We will analyze the users experience and the evaluation results in order to draw a conclusion on if using the tool might increase the users tendency to reflect on their past experiences in a collaborative session.
+The main goal was to create a proof of concept application that may help users reflect on their past experiences, both individually and collaboratively in reflection sessions, by collecting experiences daily, storing and revisiting them at any time. The implementation of the application and the evaluation of it gave us a foundation to answer our research questions, and also identify areas that can go into future research and development in the domain of technology supported reflection and collaboration. 
+Future work  and the identified proposed features and improvements can be seen in Section \ref{sec:futurework}
+
+ will provide an increased understanding of how technology can support reflection in software development teams, by collecting and revisiting experiences from everyday work. 
 
 \subsection{Research Rigor}
-We will test the tool with a group of experts in the fields relevant and gather data during testing with this group and use this to evaluate the usefulness of
-the tool. This will serve as a good basis for analysis, triangulate and evaluate to look for relevant research results elsewhere.
+The application was evaluated through a usability test, an expert review and a focus group consisting of a software development team. By evaluating the application with experts in the relevant fields provides an indication for the usefulness of the application.
 
 \subsection{Research communication}
-The proof of concept application will be available for testing along with a user guide, the whole process will be well documented and our research results will be made available.
+The proof of concept application have been released under the GNU Public License v3 and the repository are located at Github: 
+\begin{itemize}
+	\item \url{https://github.com/ekun/PeacefulBanana}
+\end{itemize} 
 Any limitations identified  will be documented along with the research results. 
 
 
