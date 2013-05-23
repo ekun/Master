@@ -111,7 +111,7 @@
 ### Focus group
 [] Write more about the focus group evaluation
 
-[] Add explicit quotes from the workshop
+[x] Add explicit quotes from the workshop
 
 ## Conclusion
 ### Future work
