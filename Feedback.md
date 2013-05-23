@@ -17,7 +17,7 @@
 ### Core Concepts
 [] The purpose of the chapter is unclear
 
-[] Change figure of Figure 1.1 "tagging", figure is unclear
+[X] Change figure of Figure 1.1 "tagging", figure is unclear
 
 ### Research Method
 [] Add sources
