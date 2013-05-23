@@ -7,7 +7,7 @@
 [] Revise the whole shebang
 
 ## Introduction
-[] Introduce reflection technology short
+[s] Introduce reflection technology short
 
 ### Context & Domain
 [X] Add sentence describing what is an agile method
@@ -20,21 +20,21 @@
 [X] Change figure of Figure 1.1 "tagging", figure is unclear
 
 ### Research Method
-[] Add sources
+[X] Add sources
 
 [] Relate more clearly to the steps in figure 1.2, clarify connection between 1.3.1 and 1.3.2
 
 [] Clarify daily delivery cycle and what we build it on
 
-[] Add table 2 from 1.3.4 to report
+[X] Add table 2 from 1.3.4 to report
 
 [] Go through 1.3.4 and rewrite. It is not clear what we have actually done and why. 
 
-[] 1.3.5 what has this to do with problem relevance? 
+[X] 1.3.5 what has this to do with problem relevance? 
 
-[] 1.3.6 Is our tool + evaluation is increased understanding of... something. Not only the tool
+[X] 1.3.6 Is our tool + evaluation is increased understanding of... something. Not only the tool
 
-[] Describe how the findings and tool will be made available (github repos).
+[X] Describe how the findings and tool will be made available (github repos).
 
 ## PeacefulBanana
 [] Improve description , so the purpose of the chapter is more clear. 
