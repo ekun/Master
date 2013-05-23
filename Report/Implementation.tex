@@ -31,7 +31,7 @@ Grails is an open source web application framework which uses the programming la
 \begin{figure}[H]
 \centering
     \includegraphics[width=0.8\textwidth]{Grails-Architecture}
-\caption{Overview of Grails architecture.}
+\caption{Overview of Grails architecture \citep{grailsarchitecturediagram}}
 \end{figure}
 
 Architectural grails is designed with the MVC\footnote{Model View Controller} pattern as a basis, this will expose the model\footnote{Data stored about the object.} in the view\footnote{With the restrictions on what data is viewable for the user.} and any manipulations to the model is done through a controller which controls that the data is correct input to the fields and what fields can be manipulated. An overview of the paradigm can be viewed in figure \ref{mvc-paradigm} below.
@@ -39,8 +39,8 @@ Architectural grails is designed with the MVC\footnote{Model View Controller} pa
 This pattern makes it easy for the developer to remain in control when creating a user interface and will ensure that the user can not manipulate fields without going through the controller\citep{reenskaug2009dci}. Using MVC increases flexibility and re-use by decoupling the user interface from the model and controller parts. The content of the view must reflect the state of the model, meaning when the model changes it notifies the view, which in turns updates itself. 
 \begin{figure}[H]
     \centering
-        \includegraphics[width=0.6\textwidth]{MVC}
-    \caption{Model-view-controller paradigm}
+        \includegraphics[width=0.7\textwidth]{MVC}
+    \caption{Model-view-controller paradigm \citep{mvcmodel}}
     \label{mvc-paradigm}
 \end{figure}
 
