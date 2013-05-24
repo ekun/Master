@@ -55,11 +55,11 @@
 
 [X] Add reference to "most agile process models adopt reflection sessions"
 
-[] Scaffolding vs trigger. Define scaffolding earlier
+[X] Scaffolding vs trigger. Define scaffolding earlier
 
-[] Last part of 4.1 page 28. In what way is this important. We don't demonstrate it. Maybe remove?
+[X] Last part of 4.1 page 28. In what way is this important. We don't demonstrate it. Maybe remove?
 
-[] Maybe add figure of overall process of the tool.
+[X] Maybe add figure of overall process of the tool.
 
 [] 4.2.1 authentication is part of implementation, should not be here. Either move it to implementation or revise it to mention authorization without details. 
 

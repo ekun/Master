@@ -10,7 +10,17 @@ On the basis of theory, background and related work we will also also present ou
 
 To answer our research questions we will develop a web-tool aimed at software development teams adopting an agile process model. Most agile process models adopt reflection sessions \citep{retrospectivedzone}, and helping users prepare for these sessions in order to gain the best possible learning outcome is one of the main issues our tool try to address. Collecting experience related data throughout a working day, allows users to revisit recent(fresh) experiences and trigger reflection upon these experiences. By capturing these daily reflections and storing them for later use allow users to go back to these experiences and recollect the lessons learned. Sharing these notes with the rest of the team allows the team to collaboratively prepare for the retrospective sessions that take place in agile process models. Reviewing these daily reflection notes individually by the user and/or by the team, further helps identify trending issues spanning the iteration and even the whole project over time. The team can also use the shared notes to compare experiences and trigger discussion and reflection upon these. 
 
-Most of these teams use some sort of a version control system with project artifact's, like programming code, text documents etc. We have chosen to focus on GitHub(See section \ref{githubchapter}), but the tool could be adapted to work with any version tracker that allows for data collection. The tool will collect relevant data from the project repository on GitHub without any action needed from the user to do so. The tool will then scaffold and present these data in order to allow users to revisit, share and reflect upon agile project experiences.
+Most of these teams use some sort of a version control system with project artifact's, like programming code, text documents etc. We have chosen to focus on GitHub(See section \ref{githubchapter}), but the tool could be adapted to work with any version tracker that allows for data collection. \\
+Figure \ref{overalltoolprocess} shows the overall process of our application, how user's interact with GitHub and the PeacefulBanana application. 
+
+\begin{figure}[H]
+\centering
+	\includegraphics[width=\textwidth]{overalltoolprocess}
+\caption{Overall application process}
+\label{overalltoolprocess}
+\end{figure}
+
+The tool will collect relevant data from the project repository on GitHub without any action needed from the user to do so. The tool will then \emph{scaffold}, that is present the collected data in a structured frame in order to allow users to revisit and reflect upon agile project experiences, and also share these reflection notes.
 
 The experiences will be presented in several different ways like activity-graphs, mood-graphs and tag clouds. These will act as reflection triggers and help the users to reflect on their work. These experiences will be collected and made available for the users and/or the team later. The tool will be designed with reflection in mind, and scenarios was created to demonstrate the most important functionality regarding enhancing reflection in software development teams. Although we evaluate the application in the context of demonstrative scenarios, we see the possibility of the application being used outside of the context provided by scenarios. Users can at any time look into a repository, a milestone or a single issue and the tool will provide data that is useful for recollecting experiences and providing a basis for reflection upon these. 
 
@@ -52,7 +62,7 @@ To leave a note on issues can be done by simply mentioning the issue number with
 The world wide web and modern technologies provides easy access to enormous amounts of information. This means that in order to learn, learners must be able to make sense of the information collected.  
 In order to achieve this and make conscious decisions of how to use information, learners need to reflect on the information they collect. Reflection upon the process of solving problems is necessary to achieve a good result and to improve the ability to learn from experiences. When supporting learning with technology, this technology should promote these aspects within learning\citep{Lin1999}
 
-The main goal is to provide technology that enables efficient information retrieval, and to provide scaffolds that support reflective thinking and problem solving. In our task this means utilizing collaborative learning experiences. 
+The main goal is to provide technology that enables efficient information retrieval, and to provide scaffolds or frames that support reflective thinking and problem solving. In our task this means utilizing collaborative learning experiences. 
 
 \subsection{Agile Retrospective}
 The agile retrospective is held at the end of an iteration in order to learn from the iteration and not repeat mistakes. A model of how a retrospective can be done is shown in \citep{Derby2006}. The purpose is to learn what works and what does not work, and make the adjustments necessary for the next iteration. This way the team makes sure that every iteration introduces some improvements in the team's process. There are two fundamental questions the retrospective is intended to answer:
