@@ -28,7 +28,7 @@
 
 [X] Add table 2 from 1.3.4 to report
 
-[] Go through 1.3.4 and rewrite. It is not clear what we have actually done and why. 
+[X] Go through 1.3.4 and rewrite. It is not clear what we have actually done and why. 
 
 [X] 1.3.5 what has this to do with problem relevance? 
 
@@ -78,12 +78,12 @@
 [] Explain how we recruited evaluators
 
 ## State of the art
-[] Move this chapter earlier? Discuss
+[X] Move this chapter earlier? Discuss
 
 [] Related work - conclude what it has to do with our work
 
 ## Requirements
-[] Set in perspective to the stuff at end of chapter 4(scenarios)
+[s] Set in perspective to the stuff at end of chapter 4(scenarios)
 
 [x] We assume a client/server architecture but do not state it anywhere.. revise
 
@@ -109,7 +109,7 @@
 [] Recommendations: What have we done with the recommendations results?
 
 ### Focus group
-[s] Write more about the focus group evaluation
+[X] Write more about the focus group evaluation
 
 [x] Add explicit quotes from the workshop
 

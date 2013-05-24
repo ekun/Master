@@ -36,7 +36,7 @@ Finally we performed three different evaluations. First a usability test with co
 
 Figure \ref{researchmodel} shows the research model used for the development of our prototype from initial concept and ideas, to the final implementation and evaluation. The model depicts how we started the process by reading theory(top part of model) in order to get a better understanding of the core concepts of reflection on experiences(See Chapter \ref{chap:background} for the thesis background). We conducted a literature review (Section \ref{sec:literaturereview}) and looked at related work done on computer-supported tools for reflection and GitHub related tools (Section \ref{sec:relatedwork}). This gave us a basis to build a problem elaboration on (See Chapter \ref{chap:problemelaboration}) and this stage can be seen as the second from the top in Figure \ref{researchmodel}. The problem elaboration with our application scenarios, in addition to related tools, led us in turn to the process of creating the requirements for the application (See Chapter \ref{chap:requirements}). The initial design stage to the left in the model, with the application concept and mock-ups also helped further identify requirements for the application, together with feedback from our supervisor. \\
 Based on the stages from literature review to requirements in the model shown in Figure \ref{researchmodel}, we started implementing the PeacefulBanana application. These implementations were conducted using a daily delivery cycle, which we used throughout the development phase of the application. This cycle is further described in Section \ref{sec:dailydeliverycycle}. \\
-The last two stages of our research model is Evaluation and Result analysis. Evaluation consisted of a usability study, an expert review and a focus group (See chapter \ref{chap:implementation}. Based on the findings from these evaluations we were able to perform a result analysis. 
+The last two stages of our research model is Evaluation and Result analysis. Evaluation consisted of a usability study, an expert review and a focus group (See chapter \ref{chap:implementation}). Based on the findings from these evaluations we were able to perform a result analysis. 
 
 \subsection{Daily Delivery Cycle}
 \label{sec:dailydeliverycycle}
@@ -54,13 +54,13 @@ The cycle starts with a set of requirements. These requirements are initially ba
 This ensured an iterative approach to development, expanding our application with more and more quality-assured functionality. 
 
 \subsubsection*{Dogfooding}
+\label{dogfooding}
 While developing the application, we continuously used the application ourselves, this is a concept called dogfooding.
 
 Dogfooding is a concept where you 'eat your own dog food', this means that the developers are testing their own product while developing it\citep{dogfooding}. It is normally something larger software development teams are doing as a pre alpha-testing, this will help developers to discover eventual problem-areas early.
 
 \subsection{Evaluation} 
-Table 2 , shown in Figure \ref{table2evaluation} from \citep{Esearch2004} will serve as guidelines for evaluation of our prototype.
-During evaluation we will be using parts of the evaluation toolbox published by MIRROR\footnote{\url{http://www.mirror-project.eu/showroom-a-publications/downloads/finish/5/67}}. This toolbox is a specification of evaluation methodology and research tooling. 
+Table 2 , shown in Figure \ref{table2evaluation} from \citep{Esearch2004} will serve as guidelines for the different evaluations of our application. The evaluations and the results from these are further described in Chapter \ref{chap:implementation}. During the final focus group evaluation we also used parts of the evaluation toolbox published by MIRROR\footnote{\url{http://www.mirror-project.eu/showroom-a-publications/downloads/finish/5/67}}. This toolbox is a specification of evaluation methodology and research tooling. 
 
 \begin{figure}[H]
 \centering
@@ -68,33 +68,19 @@ During evaluation we will be using parts of the evaluation toolbox published by 
 \caption{Design Evaluation Methods}
 \label{table2evaluation}
 \end{figure}
-
-\subsubsection{Focus group}
-Focus groups is a form of qualitative research which can be compared to semi-structured group interviews\citep{rogers2011interaction}. Participants in a group are asked about their opinions and views towards a product or concept based on their background and experiences\citep{krueger2008focus}. The group should consist of six to ten persons, where participants are not inhibited to present their honest opinions and experiences\citep{krueger2008focus}. The discussion is governed by a facilitator which have the task of keeping focus on the discussion in order to get answers to the questions that have been prepared beforehand\citep{krueger2008focus, nielsen1997use}. The facilitator is responsible for keeping the discussion open, uninhibited, non-judgemental and also making sure that all participants are allowed to present their views\citep{powell1996focus}. \\
-A focus group usually lasts between 90 and 120 minutes, and is conducted in a neutral place. Limitations of a focus group include that you only get information on what potential users say, and not what they do or if it aligns with the reality\citep{nielsen1997use}. Another limitation is that users often think they need something else than what they really need. Therefore it is important to demonstrate something concrete, where users understand fully what the application is, what it does and what it achieves. 
- 
-\subsubsection{Observational}
-Before and after the user evaluation of the tool, all test-subjects will be given a form with a set of questions to evaluate the application. We will be using core demographic questions, app usage, the most relevant app-specific questions, and also the reflection scale from the toolbox[Appendix \ref{reflectionscale}]. The reflection scale assesses participants' general tendency to reflect and the importance they place on reflection. Using this scale, allows us to see whether using the tool prime people to reflect more. That is: Does the tool increase the users tendency to reflect on experiences, both individually and as a team. Measuring this on users before and after implementation of the tool, allows us to measure the expected increase. \\*
-After the evaluation period,  we will include the learning outcomes and the work behavior questions from the evaluation toolbox.
-
-\subsubsection{Analytical}
-We will perform a dynamic analysis on the data collected from the application-server and user feedback. During evaluation the application will provide simple usage-patterns on how the users use the application. The usage statistics collected by the application are: 
-\begin{itemize}
-\item Total number of reflection notes
-\item Number of reflection notes per team
-\item Number of reflection notes per user
-\item The average mood, on a scale from 1 - 100.
-\item The ratio of shared notes to private notes. 
-\end{itemize}
-An example of this data can be seen in Figure: \ref{notestatistics}. 
+\begin{enumerate}
+	\item \textbf{Observational}: Both in the usability study and the focus group evaluation we provided participants with a set of questions where they evaluate the application. In the focus group evaluation we provided participants with application specific questions and the reflection scale from the MIRROR toolbox [Appendix \ref{reflectionscale}]. The reflection scale assesses participants' general tendency to reflect and the importance they place on reflection. Using this scale, allows us to see whether using the tool prime people to reflect more, that is: Does the tool increase the users tendency to reflect on experiences, both individually and as a team.
+	\item \textbf{Analytical}: A separate administration interface were implemented in order to collect data usage statistics from users. These data could provide simple usage-patterns during i.e. a future case-study of a development team using the application. Examples of these data can be seen in Figure: \ref{notestatistics} and  \ref{githubstatistics}. Having such data might also provide a basis for an analysis of the application's performance as well as it's usefulness in the domain of reflection in software development teams. 
+	\item \textbf{Experimental}: we performed a usability study (See section \ref{chap:usability}) as a controlled experiment.
+	\item \textbf{Testing}: During development we continuously tested the tool to ensure that the user experience is as expected, as a means of quality assurance. White Box testing were used during development of the application with artificial data to ensure that the function is working properly and as specified. 
+	\item \textbf{Descriptive}: In order to demonstrate the usefulness of our application we constructed two detailed scenarios, demonstrating it's use for tasks in a real work environment (See Chapter \ref{chap:problemelaboration}, Section \ref{sec:scenarios}). All three evaluations used the context of these scenarios to evaluate the application and provide feedback. In addition to these evaluations we have continuously used the application ourselves in order to identify any problems as we develop the application (See Section \ref{dogfooding}).
+\end{enumerate}
 \begin{figure}[!htpb]
 \centering
 	\includegraphics[width=\textwidth]{notestatistics}
 \caption{Reflection note statistics}
 \label{notestatistics}
 \end{figure}
-\\*
-We will also gather statistical data regarding the GitHub data present in the application, shown in Figure: \ref{githubstatistics}
 \begin{figure}[!htpb]
 \centering
 	\includegraphics[width=\textwidth]{githubstatistics}
@@ -102,33 +88,16 @@ We will also gather statistical data regarding the GitHub data present in the ap
 \label{githubstatistics}
 \end{figure}
 
-This will also help us in the analysis of the applications performance as well as its usefulness in the reflection and learning domains.
-
-\subsubsection{Testing}
-During development we will continuously test the tool to ensure that the user experience is as expected, as a means of quality assurance.
-White Box testing will be executed during development of the application with artificial data to ensure that the function is working properly and as specified. 
-
-\subsubsection{Descriptive}
-Evaluation proposal with the students in IT2901 - A project course taken by computer science students on the Norwegian University of Science and Technology (NTNU). 
-Students that accept to evaluate our tool, will have the possibility to use it for two weeks, with daily individual use and as a team after the two week period. This will allow us to measure the usage of our scenarios. 
-
-Requirements: 
-The first scenario does not require anything but a GitHub repository and is doable both for single and for multiples in teams.
-For scenario 2 we will require a team of at least 3 people in order to collect enough data. 
-We have continuously been using and evaluating the tool ourselves, also a fellow student has been using it for a couple of weeks, so we have some additional evaluation
-data also.
-
 \subsection{Research Contributions}
 The main goal was to create a proof of concept application that may help users reflect on their past experiences, both individually and collaboratively in reflection sessions, by collecting experiences daily, storing and revisiting them at any time. The implementation of the application and the evaluation of it gave us a foundation to answer our research questions, and also identify areas that can go into future research and development in the domain of technology supported reflection and collaboration. 
 Future work  and the identified proposed features and improvements can be seen in Section \ref{sec:futurework}
-
  will provide an increased understanding of how technology can support reflection in software development teams, by collecting and revisiting experiences from everyday work. 
 
 \subsection{Research Rigor}
 The application was evaluated through a usability test, an expert review and a focus group consisting of a software development team. By evaluating the application with experts in the relevant fields provides an indication for the usefulness of the application.
 
 \subsection{Research communication}
-The proof of concept application have been released under the GNU Public License v3 and the repository are located at Github: 
+The proof of concept application have been released under the GNU Public License v3 and the repository are located at GitHub: 
 \begin{itemize}
 	\item \url{https://github.com/ekun/PeacefulBanana}
 \end{itemize} 
