@@ -13,10 +13,11 @@ We will create a proof of concept prototype tool for promoting experienced-based
 The \emph{Design-Science Research Guidelines} presented in \citep{Esearch2004} will serve as the basis of this design-science research. The guidelines were created in order to assist researchers to understand the necessary requirements for effective design-science research. 
 
 \subsection{Design as a research process}
-Development of the application was done in development cycles, inspired be the regulative cycle presented by Wieringa \citep{wieringa}, and is shown in Figure ~\ref{regulativecycle}. 
+Development of the application was done in development cycles, inspired be the regulative cycle presented by Wieringa \citep{wieringa}, and is shown in Figure ~\ref{regulativecycle}. The development process and the regulative cycle we adopted for developing the application is further detailed in Section \ref{subsec:devprocess} and Section \ref{sec:dailydeliverycycle}.
 The early parts of the development process was used to develop ideas and basic mock-ups of the application and its design. The initial prototype design was based heavily on the first concept and mock-ups created, in addition to recurring feedback from users and supervisors. Early parts of development resulted in a prototype with functionality for individual reflection use. The next goal was to incorporate teams and support collaborative reflection in the team, building and improving on the basic functionality present in the tool. In the later parts of the development, the focus was the integration of individual reflection notes, into the team collaborative data. This resulted in a tool for both individual and collaborative aspects for reflection and learning. We used the tool ourselves during development, as it would be used in a real world environment. In this way we ensure that all functionality is as expected, and also identify limitations in the design. 
 
-Finally we performed a case study evaluation with computer-science students, and an expert review. Evaluating these separately provide two sets of feedback which we can compare in order to possibly see if any patterns emerge. 
+Finally we performed three different evaluations. First a usability test with computer-science students, and also an expert review with an expert in the field of agile software development. Finally we conducted a focus group evaluation with an agile software development. Evaluating these separately provide three sets of feedback which we can compare in order to possibly see if any patterns emerge. \\
+
 \begin{figure}[!htpb]
 \centering
 	\includegraphics[width=\textwidth]{regulativecycle}
@@ -25,6 +26,7 @@ Finally we performed a case study evaluation with computer-science students, and
 \end{figure}
 
 \subsection{Development process}
+\label{subsec:devprocess}
 \begin{figure}[!htpb]
 \centering
 	\includegraphics[width=\textwidth]{researchmodel_and_iterationcycle}
@@ -32,15 +34,14 @@ Finally we performed a case study evaluation with computer-science students, and
 \label{researchmodel}
 \end{figure}
 
-Figure \ref{researchmodel} shows the research model used for the development of our prototype from initial concept and ideas, to the final implementation and evaluation. The model depicts how we started the process by reading theory(top part of model) in order to get a better understanding of the core concepts of reflection on experiences(See Chapter \ref{chap:background} for the thesis background). We conducted a literature review (Section \ref{sec:literaturereview}) and looked at related work done on computer-supported tools for reflection and GitHub related tools (Section \ref{sec:relatedwork}). This gave us a basis to build a problem elaboration on (See Chapter \ref{chap:problemelaboration}) and this stage can be seen as the second from the top in Figure \ref{researchmodel}. The problem elaboration with identified scenarios, in addition to related tools, led us in turn to the process of creating the requirements for the application (See Chapter \ref{chap:requirements}). The initial design stage in the model, with the application concept and mock-ups also helped further identify requirements for the application, together with feedback from our supervisor and the scenarios we created in stage 2(Problem Elaboration). \\
-
-All implementations were then done conducted using a daily delivery cycle.
-\clearpage
+Figure \ref{researchmodel} shows the research model used for the development of our prototype from initial concept and ideas, to the final implementation and evaluation. The model depicts how we started the process by reading theory(top part of model) in order to get a better understanding of the core concepts of reflection on experiences(See Chapter \ref{chap:background} for the thesis background). We conducted a literature review (Section \ref{sec:literaturereview}) and looked at related work done on computer-supported tools for reflection and GitHub related tools (Section \ref{sec:relatedwork}). This gave us a basis to build a problem elaboration on (See Chapter \ref{chap:problemelaboration}) and this stage can be seen as the second from the top in Figure \ref{researchmodel}. The problem elaboration with our application scenarios, in addition to related tools, led us in turn to the process of creating the requirements for the application (See Chapter \ref{chap:requirements}). The initial design stage to the left in the model, with the application concept and mock-ups also helped further identify requirements for the application, together with feedback from our supervisor. \\
+Based on the stages from literature review to requirements in the model shown in Figure \ref{researchmodel}, we started implementing the PeacefulBanana application. These implementations were conducted using a daily delivery cycle, which we used throughout the development phase of the application. This cycle is further described in Section \ref{sec:dailydeliverycycle}. \\
+The last two stages of our research model is Evaluation and Result analysis. Evaluation consisted of a usability study, an expert review and a focus group (See chapter \ref{chap:implementation}. Based on the findings from these evaluations we were able to perform a result analysis. 
 
 \subsection{Daily Delivery Cycle}
 \label{sec:dailydeliverycycle}
 
- \ref{iterationprocess} shows an illustration of our daily delivery cycle. The cycle was inspired by the regulative cycle presented by Wieringa\citep{wieringa}, shown in Figure \ref{regulativecycle}. 
+ \ref{iterationprocess} shows an illustration of our daily delivery cycle. This daily delivery cycle was inspired by the regulative cycle presented by Wieringa\citep{wieringa}, shown in Figure \ref{regulativecycle}. How this cycle fits in the overall stages of research is shown in Figure \ref{researchmodel}.
 \begin{figure}[!htpb]
 \centering
 	\includegraphics[width=\textwidth]{iterationprocess}

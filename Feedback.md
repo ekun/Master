@@ -22,9 +22,9 @@
 ### Research Method
 [X] Add sources
 
-[] Relate more clearly to the steps in figure 1.2, clarify connection between 1.3.1 and 1.3.2
+[X] Relate more clearly to the steps in figure 1.2, clarify connection between 1.3.1 and 1.3.2
 
-[] Clarify daily delivery cycle and what we build it on
+[X] Clarify daily delivery cycle and what we build it on
 
 [X] Add table 2 from 1.3.4 to report
 
