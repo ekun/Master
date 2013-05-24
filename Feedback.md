@@ -61,9 +61,9 @@
 
 [X] Maybe add figure of overall process of the tool.
 
-[] 4.2.1 authentication is part of implementation, should not be here. Either move it to implementation or revise it to mention authorization without details. 
+[X] 4.2.1 authentication is part of implementation, should not be here. Either move it to implementation or revise it to mention authorization without details. 
 
-[] 4.2.4 Consider adding some annotated screenshot. Of github I guess?
+[X] 4.2.4 Consider adding some annotated screenshot. Of github I guess?
 
 [] 4.3 Clarify structure
 
