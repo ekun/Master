@@ -85,7 +85,7 @@
 ## Requirements
 [] Set in perspective to the stuff at end of chapter 4(scenarios)
 
-[] We assume a client/server architecture but do not state it anywhere.. revise
+[x] We assume a client/server architecture but do not state it anywhere.. revise
 
 ## Design
 [] Missing a lot about the overall design of our system. What do we do to meet requirements, f.ex what visualizations you have chosen, what form of cooperation are we supporting. 
