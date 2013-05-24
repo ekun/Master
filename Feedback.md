@@ -88,13 +88,13 @@
 [x] We assume a client/server architecture but do not state it anywhere.. revise
 
 ## Design
-[] Missing a lot about the overall design of our system. What do we do to meet requirements, f.ex what visualizations you have chosen, what form of cooperation are we supporting. 
+[x] Missing a lot about the overall design of our system. What do we do to meet requirements, f.ex what visualizations you have chosen, what form of cooperation are we supporting. 
 
 [x] Could be useful with a presentation of your system with the help of the CSRL mirror model (8.2.2).
 
 [x] 7.2.2 missing figure reference. 
 
-[] 7.3 revise
+[x] 7.3 revise
 
 ## Evaluation
 ### Usability
