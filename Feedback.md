@@ -41,12 +41,12 @@
 
 [s] Add figures of chapter/screenshots
 
-[] Clarify what we share in the tool. Experience vs reflection outcome vs reflection session
+[X] Clarify what we share in the tool. Experience vs reflection outcome vs reflection session
 
 [X] Integrate main goal / 2.3 into 2.1 
 
 ## Background
-[] Monica thought most of our work fitted in the conduct reflection phase?
+[X] Monica thought most of our work fitted in the conduct reflection phase?
 
 ## Problem Elaboration
 [] Seems more like an overview than a problem elaboration - Revise
