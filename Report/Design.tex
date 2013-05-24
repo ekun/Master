@@ -45,7 +45,7 @@ Figure \ref{webappmock} shows how our first sketch for a web-app looked like.
 As this was the main design options, we did some research on existing frameworks which might suit our requirements. The tool needed to be responsive and work on a wide range of devices, which made a fluid design suitable.
 
 \section{Twitter Bootstrap}
-The Twitter Bootstrap framework\citep{twitterbootstrap} features exactly the requirements stated above. Bootstrap was developed by Mark Otto and Jacob Thornton at Twitter, as a framework to promote consistency in internal tools\citep{buildingbootstrap}. Twitter bootstrap is a free powerful front-end framework for faster and easier web development, and it's publicly available to use by anyone.
+The Twitter Bootstrap framework\citep{twitterbootstrap} features both the fluid grid and responsive web design requirements stated above. Bootstrap was developed by Mark Otto and Jacob Thornton at Twitter, as a framework to promote consistency in internal tools\citep{buildingbootstrap}. Twitter bootstrap is a free powerful front-end framework for faster and easier web development, and it's publicly available to use by anyone.
 
 It contains HTML and CSS based design templates for interface elements like buttons, charts, and navigation. Bootstrap was made to not only look and behave optimally in desktop browsers, but in tablet and smartphone browsers via responsive CSS and HTML5 as well. The framework features responsive grids, components like tabs and dropdowns, JavaScript plugins, typography options and forms. 
 
@@ -113,6 +113,7 @@ The PeacefulBanana tool makes extensive use of the icons included in Twitter Boo
 \end{figure}
 
 \subsection{MIRROR CSRL}
+\label{subsec:mirrorcsrl}
 This section describes the rationale behind the most important functionality implemented to PeacefulBanana, with relation to the Mirror CSRL cycle model. The section ends with a more detailed rationale behind the core functionality implemented. As described in Section \ref{mirrorsection} , the MIRROR CSRL model has four stages: 
 \begin{enumerate}
     \item Plan and do work
@@ -158,7 +159,7 @@ This stage is not something we focused on, since most of the use of PeacefulBana
 \end{figure}
 
 \subsection{Core Functionality}
-This section will describe the core functionality in the PeacefulBanana application. 
+This section will describe the core functionality in the PeacefulBanana application and the relationship between the application and the CSRL model in section \ref{subsec:mirrorcsrl}. 
 \paragraph{Daily reflection note}\mbox{}\\
 Scaffolding is the act of creating a skeleton or a frame for the work to be done.
 PeacefulBanana provides users with the ability to create reflection notes, where they reflect on that day's work and store it for later use. In this context the scaffolding is creating a frame for the reflection to be done, which includes text input and guiding questions. An example of such a reflection note can be seen in Figure \ref{dailynotefunc}. 
