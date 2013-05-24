@@ -2,6 +2,7 @@
 \chapter{Requirements}
 \label{chap:requirements}
 In this chapter both functional and non-functional requirements the application should meet, in order to better support elaboration and implementation of the final application. 
+
 \section{Functional Requirement}
 \label{cha:funcreq}
 The requirements detailed in this chapter are prioritized according to how important they are for the implementation, with a three step scale. 
@@ -145,7 +146,104 @@ A requirement that is hard to implement fully, but is of little importance to th
         \end{tabular}
     \vspace{0.5cm}
 
-\subsection{Client Requirements}
+\subsubsection{Team Requirements}
+    \item[\textbf{TR1}] Create a team\\
+        \textit{\small{As a [User] I want to [create a team] so my fellow collaborators can join the team.}}
+
+        \begin{tabular}{| l | p{8cm} |}
+            \hline
+            \rowcolor[gray]{0.8}
+            \textbf{Impact} & \textbf{Values} \\
+            \hline
+            Importance priority & \textbf{H} -- Essential, a team need to be created for users to join it.\\
+            Difficulty & \textbf{M} -- Moderately time consuming. 10 hours\\
+            \hline
+        \end{tabular}
+    \vspace{0.5cm}
+
+    \item[\textbf{TR2}] Join a team\\
+        \textit{\small{As a [User] I want to [join a team from a list of available teams] so I can share and see shared reflection notes and other team relevant data.}}
+
+        \begin{tabular}{| l | p{8cm} |}
+            \hline
+            \rowcolor[gray]{0.8}
+            \textbf{Impact} & \textbf{Values} \\
+            \hline
+            Importance priority & \textbf{H} -- Essential, a team is required towards the collaborative and cooperative functions of the application, like reflection note sharing.\\
+            Difficulty & \textbf{L} -- 5-10 hours\\
+            \hline
+        \end{tabular}
+    \vspace{0.5cm}
+
+    \item[\textbf{TR3}] Inspect my team\\
+        \textit{\small{As a [User] I want to [inspect a team] so I see active members and their role in the team.}}
+
+        \begin{tabular}{| l | p{8cm} |}
+            \hline
+            \rowcolor[gray]{0.8}
+            \textbf{Impact} & \textbf{Values} \\
+            \hline
+            Importance priority & \textbf{H} -- Essential, users need to be able to see who is in their team in order to identify if someone is missing or an uninvited person is on their team.\\
+            Difficulty & \textbf{L} -- Moderately time consuming. 5 hours\\
+            \hline
+        \end{tabular}
+    \vspace{0.5cm}
+
+    \item[\textbf{TR4}] Change team role\\
+        \textit{\small{As a [Team Manager] I want to [be able to change the role of team members] so that I can ensure that the members have the correct user-role in the application.}}
+
+        \begin{tabular}{| l | p{8cm} |}
+            \hline
+            \rowcolor[gray]{0.8}
+            \textbf{Impact} & \textbf{Values} \\
+            \hline
+            Importance priority & \textbf{H} -- Essential, as only a team manager can access certain restricted functionality in the application.\\
+            Difficulty & \textbf{M} -- Moderately time consuming. 10 hours\\
+            \hline
+        \end{tabular}
+    \vspace{0.5cm}
+
+\subsubsection{Milestone Requirements}
+    \item[\textbf{MR1}] Active Milestones\\
+        \textit{\small{As a [User] I want to [see what milestones are being worked on] so that I can see if the issues related to these milestones.}}
+
+        \begin{tabular}{| l | p{7cm} |}
+            \hline
+            \rowcolor[gray]{0.8}
+            \textbf{Impact} & \textbf{Values} \\
+            \hline
+            Importance priority & \textbf{M} -- Filtering milestones by their status allow users to see what milestones are unresolved and active, and find issues connected to these.\\
+            Difficulty & \textbf{M} -- Moderately time consuming. 5-10 hours\\
+            \hline
+        \end{tabular}
+    \vspace{0.5cm}
+
+    \item[\textbf{MR2}] My closed issues\\
+        \textit{\small{As a [User] I want to [see what issues have been closed] so that I inspect the issue and recollect how we solved the specific issue.}}
+
+        \begin{tabular}{| l | p{7cm} |}
+            \hline
+            \rowcolor[gray]{0.8}
+            \textbf{Impact} & \textbf{Values} \\
+            \hline
+            Importance priority & \textbf{M} -- Allowing revisiting of resolved issues gives users a chance to revisit and learn from previous mistakes or right-doings.\\
+            Difficulty & \textbf{M} -- Moderately time consuming. 5-10 hours\\
+            \hline
+        \end{tabular}
+    \vspace{0.5cm}
+
+\subsection{Architectural Requirements}
+The application is designed with a client-server architecture in mind, so the requirements here is divided to the specific parts of the architecture. In this case the client requirements are for the the websites graphical user interface and the server requirements are for the servers back end functionality.
+
+\begin{figure}[H]
+\centering
+    \includegraphics[width=0.8\textwidth]{client-server}
+\caption{Client-server model \citep{clientServerModel}}
+\label{csrlmodel}
+\end{figure}
+
+\subsubsection{Client Requirements}
+These requirements are for the server graphical user interface and the functionality they need to have in order for them to do the scenarios defined in section \ref{sec:scenarios}.
     \item[\textbf{CR1}] Reflection Notes\\
         \textit{\small{As a [User] I want to [save my daily reflection notes] so I can review them at a later time.}}
 
@@ -300,93 +398,7 @@ A requirement that is hard to implement fully, but is of little importance to th
         \end{tabular}
     \vspace{0.5cm}
 
-\subsection{Team Requirements}
-    \item[\textbf{TR1}] Create a team\\
-        \textit{\small{As a [User] I want to [create a team] so my fellow collaborators can join the team.}}
-
-        \begin{tabular}{| l | p{8cm} |}
-            \hline
-            \rowcolor[gray]{0.8}
-            \textbf{Impact} & \textbf{Values} \\
-            \hline
-            Importance priority & \textbf{H} -- Essential, a team need to be created for users to join it.\\
-            Difficulty & \textbf{M} -- Moderately time consuming. 10 hours\\
-            \hline
-        \end{tabular}
-    \vspace{0.5cm}
-
-    \item[\textbf{TR2}] Join a team\\
-        \textit{\small{As a [User] I want to [join a team from a list of available teams] so I can share and see shared reflection notes and other team relevant data.}}
-
-        \begin{tabular}{| l | p{8cm} |}
-            \hline
-            \rowcolor[gray]{0.8}
-            \textbf{Impact} & \textbf{Values} \\
-            \hline
-            Importance priority & \textbf{H} -- Essential, a team is required towards the collaborative and cooperative functions of the application, like reflection note sharing.\\
-            Difficulty & \textbf{L} -- 5-10 hours\\
-            \hline
-        \end{tabular}
-    \vspace{0.5cm}
-
-    \item[\textbf{TR3}] Inspect my team\\
-        \textit{\small{As a [User] I want to [inspect a team] so I see active members and their role in the team.}}
-
-        \begin{tabular}{| l | p{8cm} |}
-            \hline
-            \rowcolor[gray]{0.8}
-            \textbf{Impact} & \textbf{Values} \\
-            \hline
-            Importance priority & \textbf{H} -- Essential, users need to be able to see who is in their team in order to identify if someone is missing or an uninvited person is on their team.\\
-            Difficulty & \textbf{L} -- Moderately time consuming. 5 hours\\
-            \hline
-        \end{tabular}
-    \vspace{0.5cm}
-
-    \item[\textbf{TR4}] Change team role\\
-        \textit{\small{As a [Team Manager] I want to [be able to change the role of team members] so that I can ensure that the members have the correct user-role in the application.}}
-
-        \begin{tabular}{| l | p{8cm} |}
-            \hline
-            \rowcolor[gray]{0.8}
-            \textbf{Impact} & \textbf{Values} \\
-            \hline
-            Importance priority & \textbf{H} -- Essential, as only a team manager can access certain restricted functionality in the application.\\
-            Difficulty & \textbf{M} -- Moderately time consuming. 10 hours\\
-            \hline
-        \end{tabular}
-    \vspace{0.5cm}
-
-\subsection{Milestone Requirements}
-    \item[\textbf{MR1}] Active Milestones\\
-        \textit{\small{As a [User] I want to [see what milestones are being worked on] so that I can see if the issues related to these milestones.}}
-
-        \begin{tabular}{| l | p{7cm} |}
-            \hline
-            \rowcolor[gray]{0.8}
-            \textbf{Impact} & \textbf{Values} \\
-            \hline
-            Importance priority & \textbf{M} -- Filtering milestones by their status allow users to see what milestones are unresolved and active, and find issues connected to these.\\
-            Difficulty & \textbf{M} -- Moderately time consuming. 5-10 hours\\
-            \hline
-        \end{tabular}
-    \vspace{0.5cm}
-
-    \item[\textbf{MR2}] My closed issues\\
-        \textit{\small{As a [User] I want to [see what issues have been closed] so that I inspect the issue and recollect how we solved the specific issue.}}
-
-        \begin{tabular}{| l | p{7cm} |}
-            \hline
-            \rowcolor[gray]{0.8}
-            \textbf{Impact} & \textbf{Values} \\
-            \hline
-            Importance priority & \textbf{M} -- Allowing revisiting of resolved issues gives users a chance to revisit and learn from previous mistakes or right-doings.\\
-            Difficulty & \textbf{M} -- Moderately time consuming. 5-10 hours\\
-            \hline
-        \end{tabular}
-    \vspace{0.5cm}
-
-\subsection{Server Requirements}
+\subsubsection{Server Requirements}
     \item[\textbf{SR1}] Persistent Storage\\
         \textit{\small{Create MySQL database support for creating and performing actions on persistent databases by the application}}
 
