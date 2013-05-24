@@ -60,12 +60,11 @@ Every GitHub repository has an issue tracker, that allows users to track bugs an
 To leave a note on issues can be done by simply mentioning the issue number without any keywords in a commit message. F.ex "This commit references \#35". Anyone with write access to a repository may close an issue or leave a note.
 \end{itemize}
 
-\section{Reflection and technology}
-% Why is reflecting important and what are the challenges.
+\section{Using technology to promote learning from reflection}
 The world wide web and modern technologies provides easy access to enormous amounts of information. This means that in order to learn, learners must be able to make sense of the information collected.  
-In order to achieve this and make conscious decisions of how to use information, learners need to reflect on the information they collect. Reflection upon the process of solving problems is necessary to achieve a good result and to improve the ability to learn from experiences. When supporting learning with technology, this technology should promote these aspects within learning\citep{Lin1999}
+In order to achieve this and make conscious decisions of how to use information, learners need to reflect on the information they collect. Reflection upon the process of solving problems is necessary to achieve a good result and to improve the ability to learn from experiences. When supporting learning with technology, this technology should promote these aspects within learning\citep{Lin1999}. 
 
-The main goal is to provide technology that enables efficient information retrieval, and to provide scaffolds or frames that support reflective thinking and problem solving. In our task this means utilizing collaborative learning experiences. 
+By implementing this proof of concept application, we wish to provide technology that enables efficient information retrieval, and to provide scaffolds or structured frames that support reflective thinking and problem solving. In our development of PeacefulBanana this means utilizing both individual and collaborative learning experiences. 
 
 \subsection{Agile Retrospective}
 The agile retrospective is held at the end of an iteration in order to learn from the iteration and not repeat mistakes. A model of how a retrospective can be done is shown in \citep{Derby2006}. The purpose is to learn what works and what does not work, and make the adjustments necessary for the next iteration. This way the team makes sure that every iteration introduces some improvements in the team's process. There are two fundamental questions the retrospective is intended to answer:
@@ -73,7 +72,10 @@ The agile retrospective is held at the end of an iteration in order to learn fro
 \item What went well during the last iteration that we continue doing?
 \item What could we do differently in order to improve?
 \end{itemize}
-Figure \ref{fig:itcyclemodel} is a model of where the retrospective fits in the agile iteration cycle, and the table in Figure \ref{fig:retrospectivetable} shows the process in more details, from beginning to end.\citep{Derby2006}:
+These questions are something we incorporated into both the individual and collaboration parts of the PeacefulBanana application, since they are a vital part of the learning outcomes in agile retrospectives. The application primarily aims at providing a structured frame for the retrospective, although all parts of the retrospective needs to be considered during development. \\
+Figure \ref{fig:itcyclemodel} shows where the retrospective fits in the overall agile iteration cycle, and the table in Figure \ref{fig:retrospectivetable} shows the retrospective process in more details \citep{Derby2006}.
+Knowing the process of the agile retrospective was important during development. The PeacefulBanana application provides teams with a frame for the retrospective, containing the most relevant issues the team should discuss. This fits with the \emph{Set the stage} phase in Figure \ref{fig:retrospectivetable}. This frame also brings the team a shared and collaborative setting, since it contains the most commonly worked on issues for the whole team. This covers the \emph{Gather Data} and \emph{Generate Insights} phase. Additionally user's can use the application to prepare individually for the retrospective. Having these individual points of view may give the team greater insight to issues that may have been lost in the collaborative setting. I.e.if a user's work differs a lot from the rest of the team, this may indicate missing competence-overlap and needs to be discussed. \\
+The application provides the team with a printable template or frame they can follow during the retrospective session, which they can use to write down their thoughts on each of the issues the team discuss. Since a vital part of the retrospective session is to write down the learning outcomes, the printable frame allows the team to collect this, covering the last two phases in a retrospective. Since the retrospective session is conducted analogically, these answers are written down on paper, and is not collected by the system. 
 \begin{figure}[!htpb]
 \centering
 	\includegraphics[width=\textwidth, keepaspectratio=true]{iterationcyclemodel}

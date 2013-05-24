@@ -65,9 +65,9 @@
 
 [X] 4.2.4 Consider adding some annotated screenshot. Of github I guess?
 
-[] 4.3 Clarify structure
+[X] 4.3 Clarify structure
 
-[] Clarify how 4.3.1 influences our work, and relates to our work 
+[X] Clarify how 4.3.1 influences our work, and relates to our work 
 
 [] 4.4 Scenarios need to be read and rewritten. Discard the course of IT2901 and instead call it a development team?
 
