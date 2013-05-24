@@ -4,7 +4,7 @@
 [s] Discuss title
 
 ## Abstract
-[] Revise the whole shebang
+[s] Revise the whole shebang
 
 ## Introduction
 [s] Introduce reflection technology short
@@ -71,7 +71,7 @@
 
 [] 4.4 Scenarios need to be read and rewritten. Discard the course of IT2901 and instead call it a development team?
 
-[] Consider expanding scenario 2
+[s] Consider expanding scenario 2
 
 [] Add analysis of scenarios with requirements
 
