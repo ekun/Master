@@ -106,7 +106,7 @@
 
 [X] Increase column of Post task questionnaire figure
 
-[] Recommendations: What have we done with the recommendations results?
+[X] Recommendations: What have we done with the recommendations results?
 
 ### Focus group
 [X] Write more about the focus group evaluation

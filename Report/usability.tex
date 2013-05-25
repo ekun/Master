@@ -260,15 +260,67 @@ When it comes to sharing, all participants were positive to this, although they 
 \end{itemize}
 Participants responded that the tag-cloud and questions in the daily reflection note triggered them to reflect on experiences. Actually reading the questions in their mind, helped them to reflect on the experiences, instead of just having an empty text-field could lead to random thoughts being collected and not actually triggering reflection. The commit impact graph was mentioned as less-helpful as it didn't really justify the amount of work done. 
 	
-Participants also provided feedback for what they liked the most and least about the application, and recommendations for improving the application. \\
+Participants also provided feedback for what they liked the most and least about the application, and recommendations for improving the application. 
 \subsubsection*{Most liked}
 The participants liked the design of the application and that it was able to synchronize with their GitHub repositories automatically, without them having to worry about it. The personal tag-cloud and the ability to compare it directly with the team's tag cloud was also a joint feedback.
 \subsubsection*{Least liked}
 Participants commented that the way notifications were given was not optimal, and the registration process was a bit tedious.
-\subsubsection{Recommendations}
+\subsection{Recommendations}
 In addition to the feedback gathered from section \ref{subsubsec:reflection}, this section presents proposed changes and their justifications derived from the participant success rate, behaviors, and comments. The identified recommendations will improve the overall ease of use and address the areas where participants experienced problems or found the interface/information architecture unclear.
 Feedback on recommendations on improvement was primarily to streamline the registration process. Also the participants commented that issues connected to a specific milestone, should be more visibly separated from issues connected to the whole repository. 
 
+\subsection*{Implemented Changes}
+This section presents the proposed changes that were implemented into the PeacefulBanana application. 
+\subsubsection*{Task 1: Start application, login, link account with GitHub and set an active repository}
+This recommendation, it's justification and it's priority(Severity) is presented in Figure \ref{task1improvement}.
+The recommendation concerned a proposed streamlining of the registration process. This was applied to the application in the way that we changed to a larger and more stable mail-server provider, in order to reduce the significance of a slow response time from external providers. The registration process itself was also improved by reducing amount of clicks in the process. 
+\begin{figure}[h!]
+    \centering
+        \includegraphics[width=\textwidth]{task1improvement}
+    \caption{Task 1 changes and justification}
+    \label{task1improvement}
+\end{figure}
+
+\subsubsection*{Task 2.2: Find the \emph{Congratulations} notification and archive it. Verify activation.}
+This recommendation, it's justification and it's priority(Severity) is presented in Figure \ref{task22improvement}. 
+Implementation of the change resolved in adding a notification counter with a more vibrant color. The reason for implementing this change is that if users don't realize they have notifications, the message in the notification is lost and could lead to i.e. a user not remembering to do the daily notification, or that he has changed his team. This was the case in the usability test, which lead to one participant failing to complete the task. 
+\begin{figure}[H]
+    \centering
+        \includegraphics[width=\textwidth]{task22improvement}
+    \caption{Task 2.2 changes and justification}
+    \label{task22improvement}
+\end{figure}
+
+\subsubsection*{Task 3.3: Find the mood-graph.} 
+This recommendation, it's justification and it's priority(Severity) is presented in Figure \ref{task33improvement}. 
+This recommendation was implemented by more clearly dividing the two different mood-graphs. This meant changing labels to implify what section they were connected to, and making the user more aware of what section they were in, and what tag-cloud they were looking at. 
+\begin{figure}[h!]
+    \centering
+        \includegraphics[width=\textwidth]{task33improvement}
+    \caption{Task 3.3 changes and justification}
+    \label{task33improvement}
+\end{figure}
+
+\subsubsection*{Task 5.1: Find all milestones for the current active repository.}
+This recommendation, it's justification and it's priority(Severity) is presented in Figure \ref{task51improvement}. This improvement concerned missing feedback, when no milestones were made for a project. This lead to one participant failing to complete the task and therefore had a high priority. The improvement was implemented by adding a check to provide the user with appropriate feedback, if the chosen project had no milestones. 
+\begin{figure}[h!]
+    \centering
+        \includegraphics[width=\textwidth]{task51improvement}
+    \caption{Task 5.1 changes and justification}
+    \label{task51improvement}
+\end{figure}
+
+\subsubsection*{Task 5.3: Find repository related issues.} 
+This recommendation, it's justification and it's priority(Severity) is presented in Figure \ref{task53improvement}. Task 5.3 generated the most errors, and also two critical errors leading to failure of completion. Therefore the improvement was given a high priority, and was implemented by clearly distincting milestone issues and the more general repository issues. We moved milestone issues to be more clearly visible under the \emph{Milestone sub-menu}, and added the repository issues under the \emph{Repository sub-menu}. 
+\begin{figure}[H]
+    \centering
+        \includegraphics[width=\textwidth]{task53improvement}
+    \caption{Task 5.3 changes and justification}
+    \label{task53improvement}
+\end{figure}
+
+\subsection*{Unimplemented Changes}
+This section presents the proposed changes which were not implemented to the PeacefulBanana application, and their justifications are presented in Figure \ref{unshareimprovement} and Figure \ref{commitimprovement}. The \emph{unshare functionality change} was omitted, since allowing user's to change their reflection outcomes a long time after they occured, would not improve reflection for user's but instead obscure the outcome. The \emph{commit impact change} was omitted, because of it's low priority. User's generally had a bad attitude towards what the commit impact captured, but reported they would rather have it there than not, as long as the team is aware that it might not reflect the correct project activity. 
 \subsubsection*{Add unshare functionality}
 \begin{figure}[h!]
     \centering
@@ -283,46 +335,6 @@ Feedback on recommendations on improvement was primarily to streamline the regis
         \includegraphics[width=\textwidth]{commitimprovement}
     \caption{Remove commit impact.}
     \label{commitimprovement}
-\end{figure}
-
-\subsubsection*{Task 1: Start application, login, link account with GitHub and set an active repository. } 
-\begin{figure}[h!]
-    \centering
-        \includegraphics[width=\textwidth]{task1improvement}
-    \caption{Task 1 changes and justification}
-    \label{task1improvement}
-\end{figure}
-
-\subsubsection*{Task 2.2: Find the \emph{Congratulations} notification and archive it. Verify activation.}
-\begin{figure}[H]
-    \centering
-        \includegraphics[width=\textwidth]{task22improvement}
-    \caption{Task 2.2 changes and justification}
-    \label{task22improvement}
-\end{figure}
-
-\subsubsection*{Task 3.3: Find the mood-graph.} 
-\begin{figure}[h!]
-    \centering
-        \includegraphics[width=\textwidth]{task33improvement}
-    \caption{Task 3.3 changes and justification}
-    \label{task33improvement}
-\end{figure}
-
-\subsubsection*{Task 5.1: Find all milestones for the current active repository.}
-\begin{figure}[h!]
-    \centering
-        \includegraphics[width=\textwidth]{task51improvement}
-    \caption{Task 5.1 changes and justification}
-    \label{task51improvement}
-\end{figure}
-
-\subsubsection*{Task 5.3: Find repository related issues.} 
-\begin{figure}[H]
-    \centering
-        \includegraphics[width=\textwidth]{task53improvement}
-    \caption{Task 5.3 changes and justification}
-    \label{task53improvement}
 \end{figure}
 
 \subsection{Conclusion}
