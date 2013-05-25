@@ -104,7 +104,7 @@
 
 [] Say more about task on time complexity
 
-[] Increase column of Post task questionnaire figure
+[X] Increase column of Post task questionnaire figure
 
 [] Recommendations: What have we done with the recommendations results?
 
