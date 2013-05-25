@@ -69,13 +69,13 @@
 
 [X] Clarify how 4.3.1 influences our work, and relates to our work 
 
-[] 4.4 Scenarios need to be read and rewritten. Discard the course of IT2901 and instead call it a development team?
+[X] 4.4 Scenarios need to be read and rewritten. Discard the course of IT2901 and instead call it a development team?
 
 [s] Consider expanding scenario 2
 
 [] Add analysis of scenarios with requirements
 
-[] Explain how we recruited evaluators
+[] Add screenshot of tagcloud and screenshot of preparation/workshop
 
 ## State of the art
 [X] Move this chapter earlier? Discuss
