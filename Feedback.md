@@ -98,11 +98,11 @@
 
 ## Evaluation
 ### Usability
-[] How have we chosen participants, at which stage of development were they recruited and which version of the system did they use,
+[X] How have we chosen participants, at which stage of development were they recruited and which version of the system did they use,
 
 [X] Reposition Scenario 1 completion rate figure
 
-[] Say more about task on time complexity
+[X] Say more about task on time complexity
 
 [X] Increase column of Post task questionnaire figure
 
