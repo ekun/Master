@@ -1,7 +1,7 @@
 %!TEX root = main.tex
 \chapter{Requirements}
 \label{chap:requirements}
-In this chapter both functional and non-functional requirements the application should meet, in order to better support elaboration and implementation of the final application. 
+This chapter describes both functional and non-functional requirements the application should meet, in order to better support elaboration and implementation of the final application. Because of the time limitation, we did not expect to be able to implement every requirement, although all requirements were still a viable implementation in terms of the goals for this thesis. Since some of the requirements build on and is dependent on each other, the requirements described were used as a guide when implementing and not as a strict top-down list. 
 
 \section{Functional Requirement}
 \label{cha:funcreq}
@@ -32,6 +32,7 @@ Net Benefits = Total Benefits - Total Cost
 A requirement that is hard to implement fully, but is of little importance to the project as a whole could be dropped in benefit for a more important one (or a less difficult one), if time or costs involved are deemed to be to large.
 
 \subsection{General Requirements}
+The requirements in this section are the most general requirements for the PeacefulBanana application. These are related to the most common functionality users encounter during use, i.e. getting started with the application and logging in. All of the general requirements are set as \emph{H - Essential}, meaning they have a high importance, since all other requirements depend on these. 
 \begin{itemize}
     \vspace{0.5cm}
 	\item[\textbf{FR1}] Users must be able to register a new account. \\
@@ -90,6 +91,7 @@ A requirement that is hard to implement fully, but is of little importance to th
     \vspace{0.5cm}
 
 \subsection{GitHub Requirements}
+The requirements in this section are related to what the application needs in order to collect satisfactory data from GitHub. This includes authorizing the application for use on a user's GitHub account and synchronization. 
     \item[\textbf{GR1}] GitHub account authorization\\
         \textit{\small{The application should be able to authorize the application with users GitHub account}}
 
@@ -147,6 +149,7 @@ A requirement that is hard to implement fully, but is of little importance to th
     \vspace{0.5cm}
 
 \subsubsection{Team Requirements}
+These requirements are concerned around connecting user and team specific features in the application with GitHub. This enables users to create a team consisting of users from their GitHub project, changing their roles on the PeacefulBanana application and joining other teams the user is a part of. The notion of a team is necessary in order to make use of the sharing of reflection notes, as mentioned in both scenarios in Section \ref{sec:scenarios}. 
     \item[\textbf{TR1}] Create a team\\
         \textit{\small{As a [User] I want to [create a team] so my fellow collaborators can join the team.}}
 
@@ -204,6 +207,7 @@ A requirement that is hard to implement fully, but is of little importance to th
     \vspace{0.5cm}
 
 \subsubsection{Milestone Requirements}
+These requirements are related to both individual and collaborative use, as part of a preparation for the retrospective sessions mentioned in scenario 2, Section \ref{scenario2}. 
     \item[\textbf{MR1}] Active Milestones\\
         \textit{\small{As a [User] I want to [see what milestones are being worked on] so that I can see if the issues related to these milestones.}}
 
@@ -233,8 +237,7 @@ A requirement that is hard to implement fully, but is of little importance to th
     \vspace{0.5cm}
 
 \subsection{Architectural Requirements}
-The application is designed with a client-server architecture in mind, so the requirements here is divided to the specific parts of the architecture. In this case the client requirements are for the the websites graphical user interface and the server requirements are for the servers back end functionality.
-
+The application is designed with a client-server architecture in mind, so the requirements here are divided to the specific parts of the architecture. In this case the client requirements concerns the application's graphical user interface and the server requirements concerns the application's back end functionality.
 \begin{figure}[H]
 \centering
     \includegraphics[width=0.8\textwidth]{client-server}
@@ -243,7 +246,7 @@ The application is designed with a client-server architecture in mind, so the re
 \end{figure}
 
 \subsubsection{Client Requirements}
-These requirements are for the server graphical user interface and the functionality they need to have in order for them to do the scenarios defined in section \ref{sec:scenarios}. 
+These requirements are for the application graphical user interface and the functionality they need to have in order for them to perform the scenarios defined in section \ref{sec:scenarios}. Especially the core functionality featured in the \emph{Daily Reflection Note} and the sharing and inspection of these. 
     \item[\textbf{CR1}] Reflection Notes\\
         \textit{\small{As a [User] I want to [save my daily reflection notes] so I can review them at a later time.}}
 
@@ -258,8 +261,8 @@ These requirements are for the server graphical user interface and the functiona
         \end{tabular}
     \vspace{0.5cm}
 
-    \item[\textbf{CR2}] Connect feelings/mood with reflection notes\\
-        \textit{\small{As a [User] I want to [connect my mood/feelings to a reflection note] so I can revisit the feelings in the retrospective sessions.}}
+    \item[\textbf{CR2}] Connect feelings \& mood with reflection notes\\
+        \textit{\small{As a [User] I want to [connect my mood \& feelings to a reflection note] so I can revisit the feelings in the retrospective sessions.}}
 
         \begin{tabular}{| l | p{8cm} |}
             \hline
@@ -272,7 +275,7 @@ These requirements are for the server graphical user interface and the functiona
         \end{tabular}
     \vspace{0.5cm}
 
-    \item[\textbf{CR3}] Tagcloud\\
+    \item[\textbf{CR3}] Tag-cloud\\
         \textit{\small{As a [User] I want to [see a tag cloud of my most active tags] so I can remember the situations I worked most on and reflect upon them.}}
 
         \begin{tabular}{| l | p{8cm} |}
@@ -399,7 +402,7 @@ These requirements are for the server graphical user interface and the functiona
     \vspace{0.5cm}
 
 \subsubsection{Server Requirements}
-These requirements is designed to ensure that the application works as described in the scenarios in section \ref{sec:scenarios} and that the data is handled in a proper manner.
+These requirements are designed to ensure that the application works as intended in the scenarios in section \ref{sec:scenarios} and that the data is handled in a satisfactory manner. This includes a safely-encrypted persistent storage solution, MySQL and the required domain classes. 
     \item[\textbf{SR1}] Persistent Storage\\
         \textit{\small{Create MySQL database support for creating and performing actions on persistent databases by the application}}
 

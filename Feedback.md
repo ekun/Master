@@ -73,7 +73,7 @@
 
 [s] Consider expanding scenario 2
 
-[] Add analysis of scenarios with requirements
+[X] Add analysis of scenarios with requirements
 
 [X] Add screenshot of tagcloud and screenshot of preparation/workshop
 
