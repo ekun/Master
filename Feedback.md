@@ -75,7 +75,7 @@
 
 [] Add analysis of scenarios with requirements
 
-[] Add screenshot of tagcloud and screenshot of preparation/workshop
+[X] Add screenshot of tagcloud and screenshot of preparation/workshop
 
 ## State of the art
 [X] Move this chapter earlier? Discuss
