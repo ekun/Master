@@ -4,7 +4,7 @@
 [s] Discuss title
 
 ## Abstract
-[s] Revise the whole shebang
+[X] Revise the whole shebang
 
 ## Introduction
 [s] Introduce reflection technology short
