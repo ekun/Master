@@ -4,7 +4,7 @@
 [s] Discuss title
 
 ## Abstract
-[s] Revise the whole shebang
+[X] Revise the whole shebang
 
 ## Introduction
 [s] Introduce reflection technology short
@@ -15,7 +15,7 @@
 [X] Add something about the date/quality of date.
 
 ### Core Concepts
-[] The purpose of the chapter is unclear
+[X] The purpose of the chapter is unclear
 
 [X] Change figure of Figure 1.1 "tagging", figure is unclear
 
@@ -39,7 +39,7 @@
 ## PeacefulBanana
 [s] Improve description , so the purpose of the chapter is more clear. 
 
-[s] Add figures of chapter/screenshots
+[X] Add figures of chapter/screenshots
 
 [X] Clarify what we share in the tool. Experience vs reflection outcome vs reflection session
 
@@ -49,7 +49,7 @@
 [X] Monica thought most of our work fitted in the conduct reflection phase?
 
 ## Problem Elaboration
-[s] Seems more like an overview than a problem elaboration - Revise
+[X] Seems more like an overview than a problem elaboration - Revise
 
 [X] Don't jump ahead, don't refer to stuff that comes later in the report. 
 
@@ -73,14 +73,14 @@
 
 [s] Consider expanding scenario 2
 
-[] Add analysis of scenarios with requirements
+[X] Add analysis of scenarios with requirements
 
-[] Add screenshot of tagcloud and screenshot of preparation/workshop
+[X] Add screenshot of tagcloud and screenshot of preparation/workshop
 
 ## State of the art
 [X] Move this chapter earlier? Discuss
 
-[] Related work - conclude what it has to do with our work
+[X] Related work - conclude what it has to do with our work
 
 ## Requirements
 [s] Set in perspective to the stuff at end of chapter 4(scenarios)
@@ -115,4 +115,4 @@
 
 ## Conclusion
 ### Future work
-[s] Stay at a higher level
+[X] Stay at a higher level
