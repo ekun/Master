@@ -7,7 +7,7 @@ through a design process that resulted in a basis for implementation. In this se
 \section{Responsive web design}
 Responsive web design\citep{responsivearticle} is a web design approach aimed at developing websites in order to provide an optimal viewing experience on a wide range of devices, from large desktop monitors to smartphones and tablets. This includes easy reading and navigation with minimal resizing, panning, and scrolling.
 
-Any site designed to be responsive, adapts the layout to the viewing environment, along with fluid proportion-based grids and flexible images.
+Any site designed to be responsive, adapts the layout to the viewing environment, along with fluid proportion-based grids and flexible images. An illustration of how responsive web design adapts to different devices can be seen in Figure \ref{responsivelayout}. 
 
 \begin{figure}[H]
 \centering
@@ -19,6 +19,7 @@ Any site designed to be responsive, adapts the layout to the viewing environment
 \subsection{Fluid grid}
 A definition on fluid is : ``A fluid is a substance that continually deforms (flows) under an applied shear stress''\citep{fluidgrid}. In a web-design context, fluid will be the design and layout, and shear stress will be the device used to access the content.
 Regardless of what the device or screen size is, components in fluid designs are going to flow and adapt to the user environment. Fluid grids define a maximum layout size and the grid is divided into columns for easier handling. These grids can then be designed with proportional widths and heights. The fluid grid and it's columns can be seen in Figure \ref{responsivelayout}.
+
 The fluid grid\citep{fluidgrid, fluidarticle} concept states that page elements should be sized in relative units, like percentages or ems, instead of absolute units like pixels or points. Since fluid grids flow naturally based on the dimensions of its parent container-component, specific adjustments for various devices are therefore kept to a minimum. In the fluid grid, flexible images are also sized in relative units, up to 100\%, in order to prevent them from stretching outside their containing element\citep{fluidimages}. This means all kinds of elements on a web-page can be treated as proportions measured against their container, and not in absolute pixels. 
 
 \section{Mockups}
@@ -57,19 +58,20 @@ Bootstrap is also modular, which means it is composed of a series of components 
 Bootstrap ships with the standard 940 pixel wide, grid layout. Developers can choose to use a variable-width layout if they wish. In any case the Bootstrap toolkit has four major variations in order to adapt content and grid width to different resolutions and devices: mobile phones, both portrait and landscape format, tablets and desktop computers with both low and high resolution and wide-screen support.
 
 \subsection{Bootstrap components}
-Bootstrap features a set of CSS style sheet, which defines styles for the major HTML elements. These style sheets allow for a platform-independent, multi browser enabled and consistent appearance for text, tables and other elements. \\
-Bootstrap also comes with additional commonly used interface components. Such components are buttons, button-groups, buttons with drop-down option, navigation lists, tabs, breadcrumbs, pagination, different alerts and so on. 
+Bootstrap features a set of CSS style sheet, which defines styles for the major HTML elements. These style sheets allow for a platform-independent, multi browser enabled and consistent appearance for text, tables and other elements. 
+Bootstrap also comes with additional commonly used interface components. Such components are buttons (See Figure \ref{bootstrapbutton}, button-groups, buttons with drop-down option, navigation lists, tabs, breadcrumbs, pagination, different alerts and so on. 
 \begin{figure}[H]
 \centering
-	\includegraphics[width=\textwidth]{bootstrapbuttons}
-\caption{Example of Twitter Bootstrap button types \citep{twitterbootstrap}}
+	\includegraphics[width=0.95\textwidth, keepaspectratio=true]{bootstrapbuttons}
+\caption{Example of Twitter Bootstrap button components \citep{twitterbootstrap}}
 \label{bootstrapbutton}
 \end{figure}
 
 \subsection{Icons}
 Twitter Bootstrap comes with 140 sprite form icons, in both dark gray and white\footnote{Bootstrap icons: \url{http://twitter.github.com/bootstrap/base-css.html\#icons}} 
 
-At their site they feature some examples that can be used as a basis for development. We decided to base our web application design on this layout, as it suited our needs and was very close to our initial mock-up
+\subsection{Design Examples}
+At the Twitter web-site they feature some examples that can be used as a basis for development. We decided to base our web application design on this layout, as it suited our needs and was very close to our initial mock-up. Figure \ref{bootstrapexample} shows the example project we chose for the PeacefulBanana application. 
 \begin{figure}[H]
 \centering
 	\includegraphics[width=\textwidth]{bootstrapexample}
@@ -77,7 +79,7 @@ At their site they feature some examples that can be used as a basis for develop
 \label{bootstrapexample}
 \end{figure}
 
-Visiting the site on a mobile device with a smaller screen, the responsive fluid layout would optimize the page to look like this:
+Visiting the site on a mobile device with a smaller screen, the responsive fluid layout would optimize the page for that device, as shown in Figure \ref{bootstrapresponsive}.
 \begin{figure}[H]
 \centering
 	\includegraphics[width=\textwidth]{responsivemenuexample}
@@ -85,26 +87,26 @@ Visiting the site on a mobile device with a smaller screen, the responsive fluid
 \label{bootstrapresponsive}
 \end{figure}
 
-And this is how our web-app looked after implementing bootstrap for a fully fluid and responsive web-application:
+Figure \ref{initialsetup} is how our web-app looked after implementing bootstrap for a fully fluid and responsive web-application:
 \begin{figure}[H]
 \centering
 	\includegraphics[width=\textwidth]{initial}
 \caption{PeacefulBanana - Initial setup with Twitter Bootstrap}
-\label{teamscreen}
+\label{initialsetup}
 \end{figure}
 
 \section{PeacefulBanana Design}
-After setting up and integrating the twitter bootstrap framework, the PeacefulBanana web-application was born, fully responsive and available on multiple platforms. This is how the final PeacefulBanana design looks like, it is based on the bootstrap example previously shown:
+After setting up and integrating the twitter bootstrap framework, the PeacefulBanana web-application was born, fully responsive and available on multiple platforms. Figure \ref{finalhome} shows the final PeacefulBanana design, which emerged from the starting design shown in Figure \ref{initialsetup}:
 \begin{figure}[H]
 \centering
 	\includegraphics[width=\textwidth]{finalhome}
 \caption{PeacefulBanana - Final home screen}
 \label{finalhome}
 \end{figure}
-The design is based on the Twitter Bootstrap framework and the principles of responsive web-design and a fluid layout. More specifically it is based on the fluid layout example\footnote{\url{http://twitter.github.com/bootstrap/examples/fluid.html}}. The PeacefulBanana layout features a navigation-menu on top with different tabs, leading to different content. Each of these tabs contain sidebars, which acts as sub-menus. The tool also integrates a user-menu, which is a dropdown with different actions that relates to the user, like settings. 
+The design is based on the Twitter Bootstrap framework and the principles of responsive web-design and a fluid layout. More specifically it is based on the fluid layout example from Figure \ref{bootstrapexample}\footnote{\url{http://twitter.github.com/bootstrap/examples/fluid.html}}. The PeacefulBanana layout features a navigation-menu on top with different tabs, leading to different content. Each of these tabs contain sidebars, which acts as sub-menus. The tool also integrates a user-menu, which is a drop-down with different actions that relates to the user, like settings.
 
 \subsection{Icons}
-The PeacefulBanana tool makes extensive use of the icons included in Twitter Bootstrap, in order to further define what action you can expect from a tab. For example a home icon on the \textit{Home} tab, a globe on the \textit{Team} tab and a user icon on the \textit{User dropdown}.
+The PeacefulBanana tool makes extensive use of the icons included in Twitter Bootstrap, in order to further define what action you can expect from a tab. For example a home icon on the \textit{Home} tab, a globe on the \textit{Team} tab and a user icon on the \textit{User dropdown}, which can be seen in Figure \ref{iconexample}.
 \begin{figure}[H]
 \centering
 	\includegraphics[width=\textwidth]{iconexample}
@@ -159,6 +161,7 @@ This stage is not something we focused on, since most of the use of PeacefulBana
 \end{figure}
 
 \subsection{Core Functionality}
+\label{sec:corefunctionality}
 This section will describe the core functionality in the PeacefulBanana application and the relationship between the application and the CSRL model in section \ref{subsec:mirrorcsrl}. 
 \paragraph{Daily reflection note}\mbox{}\\
 Scaffolding is the act of creating a skeleton or a frame for the work to be done.
@@ -171,7 +174,7 @@ In order to encourage users to reflect on their daily work and to avoid generic 
     \caption{PeacefulBanana reflection note}
     \label{dailynotefunc}
 \end{figure}
-
+\clearpage
 \paragraph{Mood graphs}\mbox{}\\
 When creating a reflection note, users can connect their current mood, that is how they felt, to the reflection note. By adding the ability to connect mood to notes each day, the tool can present meaningful mood-averages back to the users. These mood averages are used by PeacefulBanana to generate a mood-graph, depicting a user's or a team's mood over a period of time. 
 

@@ -6,25 +6,23 @@ This chapter describes both functional and non-functional requirements the appli
 \section{Functional Requirement}
 \label{cha:funcreq}
 The requirements detailed in this chapter are prioritized according to how important they are for the implementation, with a three step scale. 
-
-\vspace{0.5cm}
+\vspace{0.4cm}
 \begin{itemize}
     \item[\textbf{H}]{High-priority requirements must be met by the application.} 
     \item[\textbf{M}]{Medium-priority requirements should be met by the application, but omission will severely limit the application.}
     \item[\textbf{L}]{Low-priority requirements is not vital to the application, but should be met if all high and medium requirements are met.}
 \end{itemize}
-\vspace{0.5cm}
+\vspace{0.4cm}
 
 For this thesis, a three step scale provides us with adequate data for decisions without sacrificing too much fidelity.
 In addition to prioritizing the requirements based on importance, the requirements will also be prioritized according to how hard and time consuming they are to implement. These priorities will use the H-M-L scale as described below. 
-
-\vspace{0.5cm}
+\vspace{0.4cm}
 \begin{itemize}
     \item[\textbf{H}]{High is something that will take more than 10 hours to implement.}
     \item[\textbf{M}]{Medium is something that will take between 5 and 10 hours to implement.}
     \item[\textbf{L}]{Low is something that will take less than 5 hours to implement.}
 \end{itemize}
-\vspace{0.5cm}
+\vspace{0.4cm}
 Annotating requirements with both importance and difficulty priorities provides a a way to perform a \emph{cost/benefit} analysis for each of the requirements. A cost/benefit analysis is a way of weighing the total value of benefits against the costs of implementing them\citep{cellini2010cost}.
 \begin{equation}
 Net Benefits = Total Benefits - Total Cost
@@ -32,6 +30,7 @@ Net Benefits = Total Benefits - Total Cost
 A requirement that is hard to implement fully, but is of little importance to the project as a whole could be dropped in benefit for a more important one (or a less difficult one), if time or costs involved are deemed to be to large.
 
 \subsection{General Requirements}
+\label{sec:genreq}
 The requirements in this section are the most general requirements for the PeacefulBanana application. These are related to the most common functionality users encounter during use, i.e. getting started with the application and logging in. All of the general requirements are set as \emph{H - Essential}, meaning they have a high importance, since all other requirements depend on these. 
 \begin{itemize}
     \vspace{0.5cm}
@@ -91,6 +90,7 @@ The requirements in this section are the most general requirements for the Peace
     \vspace{0.5cm}
 
 \subsection{GitHub Requirements}
+\label{sec:githubreq}
 The requirements in this section are related to what the application needs in order to collect satisfactory data from GitHub. This includes authorizing the application for use on a user's GitHub account and synchronization. 
     \item[\textbf{GR1}] GitHub account authorization\\
         \textit{\small{The application should be able to authorize the application with users GitHub account}}
@@ -149,6 +149,7 @@ The requirements in this section are related to what the application needs in or
     \vspace{0.5cm}
 
 \subsubsection{Team Requirements}
+\label{sec:teamreq}
 These requirements are concerned around connecting user and team specific features in the application with GitHub. This enables users to create a team consisting of users from their GitHub project, changing their roles on the PeacefulBanana application and joining other teams the user is a part of. The notion of a team is necessary in order to make use of the sharing of reflection notes, as mentioned in both scenarios in Section \ref{sec:scenarios}. 
     \item[\textbf{TR1}] Create a team\\
         \textit{\small{As a [User] I want to [create a team] so my fellow collaborators can join the team.}}
@@ -403,6 +404,7 @@ These requirements are for the application graphical user interface and the func
     \vspace{0.5cm}
 
 \subsubsection{Server Requirements}
+\label{sec:serverreq}
 These requirements are designed to ensure that the application works as intended in the scenarios in section \ref{sec:scenarios} and that the data is handled in a satisfactory manner. This includes a safely-encrypted persistent storage solution, MySQL and the required domain classes. 
     \item[\textbf{SR1}] Persistent Storage\\
         \textit{\small{Create MySQL database support for creating and performing actions on persistent databases by the application}}
