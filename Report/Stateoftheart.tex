@@ -22,13 +22,18 @@ The long range goal of Hackystat is to facilitate \emph{"collective intelligence
 
 \subsection{GitHub tools}
 \label{subsec:gittools}
-Is there any other similar tools already developed? There are project development tools which integrates with GitHub in order to populate and enhance Kanban boards, but these have no features for experience collection and promoting reflection. Most of these tools are aimed at project management and agile development. 
-Tools using GitHub api: \\
-\subsubsection*{GitHub Burndown App}
-Node.js one of a kind app to create burn-down charts from GitHub issues. 
-https://github.com/radekstepan/github-burndown-chart
+In this section we will introduce some tools which are related to GitHub and using project data from GitHub. There are project development tools which integrates with GitHub in order to populate and enhance KanBan or Scrum boards, but these have no features for experience collection and promoting reflection. Most of these tools are aimed at project management and agile development. 
+\subsubsection*{GitHub Burn-down App}
+Made with Node.js, this application is a one of a kind app to create burn-down charts from GitHub issues\footnote{\url{https://github.com/radekstepan/github-burndown-chart}}. An example of a created burn-down chart with this application can be seen in Figure \ref{githubburndownexample}. 
+\begin{figure}[H]
+\centering
+	\includegraphics[width=\textwidth]{githubburndownexample}
+\caption{GitHub Burn-down application}
+\label{githubburndownexample}
+\end{figure}
+
 \subsubsection*{HuBoard}
-GitHub issues made awesome: \url{http://huboard.com/} \\
+\emph{GitHub issues made awesome.} \footnote{\url{http://huboard.com/}} \\
 HuBoard is a project management tool, which takes your GitHub issues and milestones and generates a Kanban\footnote{Kanban is a software development method with focus on Just-in-time delivery. Developers pick tasks from a queue. \url{http://www.kanbanblog.com/explained/index.html}} board built from the GitHub api. \\
 This tool features the idea of scaffolding issues and milestones into something useful for a different context, although it is limited to issues and have no features for capturing experience and promoting reflection. 
 \subsubsection*{Agile Bench}
@@ -45,13 +50,18 @@ AgileZen also organizes work in a Kan-ban board, with user-stories\footnote{Agil
 \section{Discussion}
 There are several tools that display data collected from VCS like GitHub as described in the previous section, although these tools display data in a different context and with a different goal. Where as we aim to display data for the purposes of connecting these data with experiences to trigger reflection, these tools display data for project management purposes or to gather research data(I.e. \emph{HackyStat}). Common for all the tools introduced in section \ref{subsec:gittools} are their tight connection with GitHub which allows for efficient data collection.
 
+\subsubsection{HackyStat}
 \emph{HackyStat} is very general, but aims at collecting usage statistics from software development teams or users. These data are used for reports which are stored for later use to facilitate \emph{Collective intelligence}. We used this for inspiration towards the notion of storing reflection notes for later use, both individually and collaboratively as a team as preparation before the retrospective session.   
 
+\subsubsection{GitHub Burn-Down Chart}
 The \emph{GitHub Burn-down} application is a small, yet informative application for development teams using scrum as their agile development process. The application creates a burn-down chart of the current GitHub-project milestone and displays all issues connected to it. The burn-down application has no direct connection to reflection and it's functionality were therefore not implemented, but was used for inspiration when designing the interaction between GitHub and the PeacefulBanana application. 
 
+\subsubsection{HuBoard}
 \emph{HuBoard} is similar to the GitHub burn-down application in the sense that it connects with GitHub and makes use of project milestones and issues that are present, in order to generate a KanBan board\footnote{Agile process for just-in-time(JIT) production}. This tailors the milestones and issues to be used in a better way, more suited for agile development methods. Similar to the GitHub burn-down application discussed above we looked at the integration with GitHub and used that for inspiration on how to best connect and collect data from GitHub through our own application. 
 HuBoard also provided design related inspiration, as the tool is implemented with the \emph{Twitter Bootstrap} framework.
 
+\subsubsection{Agile Bench}
 \emph{Agile Bench} provided several ideas we wanted to bring to the PeacefulBanana application. Agile Bench uses \#-Hash-tags to annotate commits, much in the same way we intended with PeacefulBanana. Also, giving users the possibility to attach feelings and general comments to specific milestones or issues are definitely ideas we wanted to integrate in the application.
 
+\subsubsection{AgileZen}
 \emph{AgileZen} provided some ideas in the aspect of teams with users and giving the users different roles(i.e. manager or developer). AgileZen also uses \#hash-tags to annotate commits, which provided even more justification that hash-tags was a viable way of annotating commits.  

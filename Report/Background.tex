@@ -37,19 +37,21 @@ MIRROR presents a reflection-learning cycle based on the CSRL cycle in Figure \r
 \label{mirrormodel}
 \end{figure}
 
-These are the different parts the MIRROR-model introduces. Our thesis builds mainly on the two first phases, the \emph{Plan and do work} and \emph{Initiate reflection} phase. The application developed supports these phases during work, collecting experiences and reflection and making the results available for later use. The application also enables teams and team-members to prepare for the reflection session. Team-leaders can also initiate the reflection session, by creating a frame or a plan for the team reflection session. 
+Figure \ref{mirrormodel} depicts the different stages the MIRROR-model introduces. Our thesis builds mainly on the two first phases, the \emph{Plan and do work} and \emph{Initiate reflection} phase. The application developed supports these phases during work, collecting experiences and reflection and making the results available for later use. The application also enables teams and team-members to prepare for the reflection session. Team-leaders can also initiate the reflection session, by creating a frame or a plan for the team reflection session. 
+\clearpage
 \subsubsection{Plan and do work}
 The \emph{plan and do work} stage is any work related activity. This includes everyday work, planning and monitoring. It also includes simulated work in both real and virtual environments, and the activity can be both individual or collaborative. The data resulting from this phase can be used to reconstruct and make sense of work experiences. 
 
 \subsubsection{Initiate reflection}
-The \emph{Initiate reflection} stage is where the reflection cycle starts when reflection has been triggered. The initiation of reflection includes setting the objective for the reflection session and making a plan for it. The result of this phase is a more or less explicit frame to be used during the reflection session. This frame can be seen as the "setup" of the reflection session, creating some context and scaffolding for the session. Having such a frame allows for an efficient time-use and keeping the discussion to the topics that have been identified in the frame. 
+The \emph{Initiate reflection} stage is where the reflection cycle starts when reflection has been triggered. The initiation of reflection includes setting the objective for the reflection session and making a plan for it. The result of this phase is a frame to be used during the reflection session. This frame can be seen as the \emph{"setup"} of the reflection session, creating a context for the session. Such a frame allows for an efficient time-use and keeping the discussion to the topics that have been identified in the frame. 
+
 \subsubsection{Conduct reflection session}
-The \emph{Conduct reflection session} stage is the reflection session itself, and is based on the frame identified in the \emph{Initiate reflection} stage. The reflection stage will in our context feature agile software development teams in a retrospective reflection session. Activities during this stage is using the frame identified to create a discussion around the experience collected by application and how to use the reflection outcomes to improve work. 
+The \emph{Conduct reflection session} stage is the reflection session itself, and is based on the frame identified in the \emph{Initiate reflection}stage. The reflection stage will in our context feature agile software development teams in a retrospective reflection session. Activities during this stage use the identified frame to create a discussion around the experience collected by the application and use the reflection outcomes to improve work. 
 
 \subsubsection{Apply reflection outcome}
 The \emph{Apply reflection outcome} stage, is where the reflection outcomes are used to create a change in the daily work routine of the teams. This includes what to change and who will be involved in the change. How to make the change, f.ex if it can be immediately applied and if it should be recommended to other teams as well. 
 
-In this thesis, we will utilize this model during both the development and evaluation of the proof-of-concept prototype. This prototype will capture experiences and store them for use in reflection sessions. This will make it easy for users to revisit the experience and reflect upon them, be it individually or collaboratively with a team. The challenge will be to apply the correct steps in order to collect the most important information for the different contexts, and discard the less important data. This is vital in order for our tool to collect the behavior, ideas and feelings connected to the experience, in order to revisit and reflect upon it. 
+We will utilize this model during both the development and evaluation of the proof-of-concept prototype. This prototype will capture experiences and store them for use in reflection sessions. This will make it easy for users to revisit the experience and reflect upon them, be it individually or collaboratively with a team. The challenge will be to apply the correct steps in order to collect the most important information for the different contexts, and discard the less important data. This is vital in order for our tool to collect the behavior, ideas and feelings connected to an experience.
 
 \section{Agile Software Development}
 Theoretical background about agile development. Normally a project is divided into milestones, these milestones will then again be divided into issues and weighted on how much work is required to finish working on each of them.\linebreak
@@ -62,27 +64,25 @@ We are uncovering better ways of developing software by doing it and helping oth
 \item Customer collaboration over contract negotiation
 \item Responding to change over following a plan
 \end{itemize}
-That is, while there is value in the items on
-the right, we value the items on the left more.\\*
 \end{quotation}
 
 \begin{figure}[!htpb]
 \centering
 	\includegraphics[width=0.8\textwidth, keepaspectratio=true]{agile_model}
 \caption{Agile software development poster \citep{agilemethodologyposter}}
-\label{logo}
+\label{agileposter}
 \end{figure}
 
-The poster above represents the different iterations a team of developers iterates through when using agile development methodology.
-
+Figure \ref{agileposter} represents the different iterations a team of developers iterates through when using agile development methodology.
+\clearpage
 \subsection{Scrum}
-Scrum is a type of agile development, it has set intervals(normally 2 to 4 weeks) for each milestone with each milestone containing about the same amount of work.
+Scrum is a type of agile development, it has set intervals(normally 2 to 4 weeks) for each milestone with each milestone containing about the same amount of work \citep{scrumguide}.
 
 \begin{figure}[!htpb]
 \centering
 	\includegraphics[width=0.8\textwidth]{scrumboard}
 \caption{Example of scrum board \citep{scrumboard}}
-\label{logo}
+\label{scrumboard}
 \end{figure}
 
-A scrum board as shown above is used for each milestone to show which issues have been started on and who is working on which feature. The chart to the right is a burn-down chart, stating how many hours the team has to work in order to complete on time.
+A scrum board as shown in Figure \ref{scrumboard}, is used for each milestone to show which issues have been started on and who is working on which feature. The chart to the right in the figure is a burn-down chart, stating how many hours the team has to work in order to complete on time.
