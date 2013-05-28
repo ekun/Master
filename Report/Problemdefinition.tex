@@ -45,14 +45,14 @@ When a user is ready to push one or more local commits to the project repository
 \begin{quote}
 \em GitHub Issues can be assigned to a user to make it easy to know who's working on what, or which issues you need to tackle next.
 \end{quote}
-\begin{figure}[H]
+\begin{figure}[h!]
 \centering
 	\includegraphics[width=\textwidth]{githubissuetracker}
 \caption{Example of GitHub's issue tracker overview. This particular example is from Twitter Bootstrap's current issue tracker}
 \label{githubissuetracker}
 \end{figure}
 
-Every GitHub repository has an issue tracker, that allows users to track bugs and focus on features. An example of such an issue tracker can be seen in Figure \ref{githubissuetracker}, which depicts the current issue tracker of Twitter Bootstrap's public repository\footnote{\url{https://github.com/twitter/bootstrap/issues}}. Milestones and issues help manage large projects, where issues especially makes for a great TODO list, similar to a product backlog. Only {\bf collaborators}\footnote{A collaborator on GitHub is a user who have contribution-rights for a specific repository. } can create and view issues on private repositories. On public repositories anyone can create and view issues. 
+Every GitHub repository has an issue tracker, that allows users to track bugs and focus on features. An example of such an issue tracker can be seen in Figure \ref{githubissuetracker}, which depicts the current issue tracker of Twitter Bootstrap's public repository\footnote{\url{https://github.com/twitter/bootstrap/issues}}. Milestones and issues help manage large projects, where issues especially makes for a great TODO list, similar to a product backlog. Only collaborators\footnote{A collaborator on GitHub is a user who have contribution-rights for a specific repository.} can create and view issues on private repositories. On public repositories anyone can create and view issues. 
 \begin{itemize}
 \item GitHub issues can be assigned to a user, which makes it easy to know who's working on what, or which issues should be handled next. Milestones are a good way of helping team members to work towards a goal. A team can set a due date, name a milestone and then start assigning issues to that milestone. An example of a Milestone could be a due date of a project demo or delivery. Any number of issues can then be assigned to this milestone, and thus be connected to it. 
 \item Issues know all about commits. GitHub enables referencing and closing issues with Commit Messages. By using a few simple keywords you can close an issue right from a commit message, or just leave a note on the issue.The syntax to do this is as follows: To close issue \#35 , a commit message containing 'closes \#35' , will close issue number 35 when pushed to GitHub. Other keywords are: close, closes, closed, fixes, fixed. 
@@ -86,7 +86,7 @@ The application provides the team with a printable template or frame they can fo
 \end{figure}
 \begin{figure}[H]
 \centering
-	\includegraphics[width=0.785\textwidth, keepaspectratio=true]{retrospectivetable}
+	\includegraphics[width=0.9\textwidth, keepaspectratio=true]{retrospectivetable}
 \caption{Agile retrospectives - from beginning to end \citep{Derby2006}}
 \label{fig:retrospectivetable}
 \end{figure}
@@ -116,9 +116,9 @@ This summary compares the commit activity of the user with the team's, and also 
 
 \subsection{Scenario 2 - Team use after each iteration}
 \label{scenario2}
-In this scenario, users will be using the application as part of the preparation for the agile retrospective sessions. As a requirement users need to use the application as described in Scenario 1(section \ref{scenario1}). This means going through the daily reflection note process each day they have contributed to a project. Based on the notion that iterations in agile teams often last for 30 days or less\citep{scrumguide}, the scenario was created with the aspect of iterations lasting at least two weeks each. This way enough data can be gathered through the reflection notes, and experiences are still fresh. \\
-Users will individually be able to prepare for these retrospective sessions, while the team can use the application collaboratively as preparation for the session as well.
-Users will in this scenario use the application to indicate how the project has been progressing over the last iteration, tightly coupled with one or several milestones. They will be able to generate tag clouds based on the trending issues in the relevant milestones, activity graphs and mood trajectories. Examples of such a tag-cloud and mood-graph can be seen in Figure \ref{tagcloudfuncscenario} and Figure \ref{moodgraphscenario}. Also if the users have chosen to share any of the individual reflection notes from scenario 1, these will be visible and can be used by the team as a whole to draw conclusions from the previous iteration, create a discussion and make comparisons. The application will enable the team to see the whole iteration more clearly, but also enable teams to dive into certain issues or milestones that showed to be of particular interest, and thus create a discussion around the experiences made by the team members. 
+In this scenario, users will be using the application as part of the preparation for the agile retrospective sessions. As a requirement users need to use the application as described in Scenario 1 (Section \ref{scenario1}). This means going through the daily reflection note process each day they have contributed to a project. Based on the notion that iterations in agile teams often last for 30 days or less \citep{scrumguide}, the scenario was created with the aspect of iterations lasting at least two weeks each. This way enough data can be gathered through the reflection notes, and experiences are still fresh. \\
+Users will be able to individually prepare for these retrospective sessions, while the team can use the application collaboratively as preparation for the session as well.
+Users will in this scenario use the application to indicate how the project has been progressing over the last iteration, tightly coupled with one or several milestones. They will be able to generate tag clouds based on the trending issues in the relevant milestones, activity graphs and mood trajectories. Examples of such a tag-cloud and mood-graph can be seen in Figure \ref{tagcloudfuncscenario} and Figure \ref{moodgraphscenario}. Also if the users have chosen to share any of the individual reflection notes from scenario 1, these will be visible and can be used by the team as a whole to draw conclusions from the previous iteration, create a discussion and make comparisons. The application will enable the team to see the whole iteration more clearly, but also enable teams to dive into certain issues or milestones that showed to be of particular interest, and thus create a discussion around the experiences made by the team members. \\
 
 As a final part of the scenario, teams will be able to create a \emph{workshop} based on any previous iteration period. When the workshop has been created, the team manager or the team as a whole get a set of system generated questions that relate to the workshop iteration. These data are gathered from the team's reflection notes and general GitHub data, and try to present what issues the team have been working the most on for the iteration. The team will, after selecting the questions or topics they want to discuss in the retrospective session, be able to print these as a guide the team can follow during the session. Their reflection outcomes or lessons learned can be noted on the paper by each team member, together with thoughts or comments.
 \begin{figure}[H]
