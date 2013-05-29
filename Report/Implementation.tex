@@ -61,10 +61,13 @@ Awesome cloud is a plugin for jQuery for creating a tag cloud. It retrieves data
 \label{sec:database}
 The PeacefulBanana application was deployed on a Ubuntu server running Apache Tomcat v7. Server related requirements is described in Section \ref{sec:serverreq}.  
 During development we ran the application on a H2\footnote{\url{http://www.h2database.com/}} in-memory database. However the need for persistent storage arose, so we migrated to a MySQL database in order for the data to stay unchanged when we had to roll out updates to the tool. This choice was essential for the tool to function as described in the requirements, but the H2 database was more convenient and faster to debug during development.
+
 \subsubsection{MySQL}
+\label{sec:mysql}
 MySQL\footnote{MySQL: \url{http://www.mysql.com/}} is the world's largest open source relational database management system and can be used for a variety of applications. It is most commonly used with Web applications and works very well with dynamic web-pages, meaning that the content of each page is generated based on data loaded from a database as the page loads.
 
 \subsubsection{Database description}
+\label{sec:databasedesc}
 The PeacefulBanana GitHub specific domain-classes can be seen in Figure \ref{GithubDomainClasses}, and shows the relationship between the different data retrieved through the GitHub API. 
 All \emph{User specific} domain-classes can be seen in Figure \ref{UsersDomainClasses}.
 

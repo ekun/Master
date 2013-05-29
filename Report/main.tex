@@ -7,17 +7,17 @@
 }
 
 \author{Marius Nedal Glittum, Even Stene}
-
-
 \usepackage{float}
 \usepackage[parfill]{parskip}
 \usepackage[square,authoryear]{natbib}
 \usepackage{graphicx}
 \graphicspath{{images//}}
 \usepackage{enumitem}
+\raggedbottom
 \usepackage{colortbl}
 \usepackage{apalike}
 \usepackage{hyperref}
+\usepackage[bottom]{footmisc}
 \usepackage{mathtools}
 \usepackage{tabularx}
 \usepackage{pdfpages}
@@ -37,7 +37,6 @@
 
 \begin{document}
 
-%\maketitle
 \pagenumbering{roman}
 
 \input{Preface}
@@ -72,6 +71,12 @@
 
 \input{Conclusion}
 
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Bibliography}
+
+\bibliographystyle{apalike}
+\bibliography{literature}
 \begin{appendices}
 	% Appendix %
 	\input{quickstart}
@@ -83,7 +88,7 @@
 	% END appendix s%
 \end{appendices}
 
-\bibliographystyle{apalike}
-\bibliography{literature}
+
+
 
 \end{document}
