@@ -1,9 +1,9 @@
 %!TEX root = main.tex
 \chapter{Background}
 \label{chap:background}
-In this chapter we present the theoretical background for this thesis. 
+In this chapter we present the theoretical background for this thesis. This includes information on Computer-supported reflection, agile development and the notion of self-organizing teams and a teams importance in agile development. 
 
-\section{Computer supported reflection}
+\section{Computer-supported reflection}
 Reflection is critical to workplace learning, enabling employees to make sense of complex and dynamic situations\citep{Schon1983}. Boud et al.\citep{boudreflection1985} defined learning through reflection as: 
 \begin{quote}
 \emph{Those intellectual and affective activities in which individuals engage to explore their experiences in order to lead to new understandings and appreciations.}
@@ -54,29 +54,43 @@ The \emph{Apply reflection outcome} stage, is where the reflection outcomes are 
 We will utilize this model during both the development and evaluation of the proof-of-concept prototype. This prototype will capture experiences and store them for use in reflection sessions. This will make it easy for users to revisit the experience and reflect upon them, be it individually or collaboratively with a team. The challenge will be to apply the correct steps in order to collect the most important information for the different contexts, and discard the less important data. This is vital in order for our tool to collect the behavior, ideas and feelings connected to an experience.
 
 \section{Agile Software Development}
-Theoretical background about agile development. Normally a project is divided into milestones, these milestones will then again be divided into issues and weighted on how much work is required to finish working on each of them.\linebreak
-\emph{Manifesto for Agile Software Development:}\citep{agilemanifesto}
+Agile software development consists of several different methods \citep{abrahamsson2002agile}, among which Scrum \citep{schwaber2002agile} and Extreme Programming(XP) \citep{beck2004extreme} are the most used. Out of the two, Scrum has more focus on the project management part of agile development, while XP concerns itself mostly with implementation of software. This thesis is focused on agile teams using Scrum, as Scrum is the method used by our evaluation participants. 
+
+Agile projects using Scrum divides projects into iterations called \emph{sprints}, which often are project milestones. Iterations start out with a planning stage and ends with a review during a \emph{retrospective session}. 
+Features that are to be implemented is gathered in a \emph{backlog}, and the implementation order is decided by the product owner. Scrum has set intervals, which normally lasts from 2-4 weeks for each iteration, with each iteration containing roughly the same amount of work \citep{scrumguide}.
+
+Scrum teams are \emph{self-governing} or \emph{self-governed}, which means an "autonomous team" or basically a team that manages itself. Guzzo and Dickson describe self-governing teams as:
+\begin{quote}
+\emph {...teams of employees who typically perform highly related or interdependent jobs,
+who are identified and identifiable as a social unit in an organization, and who
+are given significant authority and responsibility for many aspects of their work,
+such as planning, scheduling, assigning tasks to members, and making decisions
+with economic consequences}
+\end{quote}
+Such autonomous teams encourage involvement, with team members having an increased commitment and attachment towards the organization and the product they deliver. Also bringing the decision making to the developers, increases the speed of decisions and efficiency, shown by \citep{tata2004team}. The same authors found that in order to achieve the benefits of an autonomous team, developers need to have an impact on management related decisions, and not just symbolic. Autonomous teams have also been shown to be more productive than more traditional teams \citep{kirkman1999beyond}. 
+Scrum teams are given a high grade of responsibility for their own work, including scheduling, planning and decision-making \citep{schwaber2002agile}. Although autonomous teams have a high grade of independence, organizations should provide some sort of control, in order to prevent the teams from sliding out from internal arguments, while still allowing the team to remain agile and unhindered \citep{takeuchi1986new}.
+
+The Scrum master in a Scrum team, can be seen as the facilitator for the team, but is not an organizer. The team is self-organizing and decides collaboratively on what to do, while the Scrum master can be seen as its protector. The main role for a Scrum master is to enable the team to perform at its highest level, i.e. facilitating meetings, communication with the product owner regarding backlog, and removing any progress obstructions \citep{schwaber2002agile}. The team leader can basically be anyone, but is often filled by a project manager. 
+
+Manifesto for Agile Software Development:\citep{agilemanifesto}
 \begin{quotation}
-We are uncovering better ways of developing software by doing it and helping others do it. Through this work we have come to value:
+\emph{We are uncovering better ways of developing software by doing it and helping others do it. Through this work we have come to value:}
 \begin{itemize}
-\item Individuals and interactions over processes and tools
-\item Working software over comprehensive documentation
-\item Customer collaboration over contract negotiation
-\item Responding to change over following a plan
+\item \emph{Individuals and interactions over processes and tools.}
+\item \emph{Working software over comprehensive documentation.}
+\item \emph{Customer collaboration over contract negotiation.}
+\item \emph{Responding to change over following a plan.}
 \end{itemize}
 \end{quotation}
 
 \begin{figure}[!htpb]
 \centering
-	\includegraphics[width=0.8\textwidth, keepaspectratio=true]{agile_model}
-\caption{Agile software development poster \citep{agilemethodologyposter}}
-\label{agileposter}
+	\includegraphics[width=\textwidth, keepaspectratio=true]{scrumsprint}
+\caption{Agile software development poster \citep{scrumsprint}}
+\label{scrumsprint}
 \end{figure}
 
 Figure \ref{agileposter} represents the different iterations a team of developers iterates through when using agile development methodology.
-\clearpage
-\subsection{Scrum}
-Scrum is a type of agile development, it has set intervals(normally 2 to 4 weeks) for each milestone with each milestone containing about the same amount of work \citep{scrumguide}.
 
 \begin{figure}[!htpb]
 \centering
